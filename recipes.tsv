@@ -1,0 +1,944 @@
+Recipe	Item	Amount	Runtime	Building	Draw	Size
+Iron Ingot	Iron Ore	-1	2	Smelter	4	54
+Iron Ingot	Iron Ingot	1	2	Smelter	4	54
+Copper Ingot	Copper Ore	-1	2	Smelter	4	54
+Copper Ingot	Copper Ingot	1	2	Smelter	4	54
+Caterium Ingot	Caterium Ore	-3	4	Smelter	4	54
+Caterium Ingot	Caterium Ingot	1	4	Smelter	4	54
+Iron Plate	Iron Ingot	-3	6	Constructor	4	80
+Iron Plate	Iron Plate	2	6	Constructor	4	80
+Iron Rod	Iron Ingot	-1	4	Constructor	4	80
+Iron Rod	Iron Rod	1	4	Constructor	4	80
+Screw	Iron Rod	-1	6	Constructor	4	80
+Screw	Screw	4	6	Constructor	4	80
+Cast Screw	Iron Ingot	-5	24	Constructor	4	80
+Cast Screw	Screw	20	24	Constructor	4	80
+Copper Sheet	Copper Ingot	-2	6	Constructor	4	80
+Copper Sheet	Copper Sheet	1	6	Constructor	4	80
+Wire	Copper Ingot	-1	4	Constructor	4	80
+Wire	Wire	2	4	Constructor	4	80
+Iron Wire	Iron Ingot	-5	24	Constructor	4	80
+Iron Wire	Wire	9	24	Constructor	4	80
+Caterium Wire	Caterium Ingot	-1	4	Constructor	4	80
+Caterium Wire	Wire	8	4	Constructor	4	80
+Cable	Cable	1	2	Constructor	4	80
+Cable	Wire	-2	2	Constructor	4	80
+Quickwire	Caterium Ingot	-1	5	Constructor	4	80
+Quickwire	Quickwire	5	5	Constructor	4	80
+Concrete	Limestone	-3	4	Constructor	4	80
+Concrete	Concrete	1	4	Constructor	4	80
+Quartz Crystal	Raw Quartz	-5	8	Constructor	4	80
+Quartz Crystal	Quartz Crystal	3	8	Constructor	4	80
+Silica	Raw Quartz	-3	8	Constructor	4	80
+Silica	Silica	5	8	Constructor	4	80
+RIP	RIP	1	12	Assembler	15	150
+RIP	Iron Plate	-6	12	Assembler	15	150
+RIP	Screw	-12	12	Assembler	15	150
+Bolted RIP	RIP	3	12	Assembler	15	150
+Bolted RIP	Iron Plate	-18	12	Assembler	15	150
+Bolted RIP	Screw	-50	12	Assembler	15	150
+Stitched RIP	RIP	3	32	Assembler	15	150
+Stitched RIP	Iron Plate	-10	32	Assembler	15	150
+Stitched RIP	Wire	-20	32	Assembler	15	150
+MF	MF	2	60	Assembler	15	150
+MF	RIP	-3	60	Assembler	15	150
+MF	Iron Rod	-12	60	Assembler	15	150
+Rotor	Rotor	1	15	Assembler	15	150
+Rotor	Iron Rod	-5	15	Assembler	15	150
+Rotor	Screw	-25	15	Assembler	15	150
+Smart Plating	Smart Plating	1	30	Assembler	15	150
+Smart Plating	RIP	-1	30	Assembler	15	150
+Smart Plating	Rotor	-1	30	Assembler	15	150
+Fused Wire	Wire	30	20	Assembler	15	150
+Fused Wire	Copper Ingot	-4	20	Assembler	15	150
+Fused Wire	Caterium Ingot	-1	20	Assembler	15	150
+AI Limiter	AI Limiter	1	12	Assembler	15	150
+AI Limiter	Copper Sheet	-5	12	Assembler	15	150
+AI Limiter	Quickwire	-20	12	Assembler	15	150
+Black Powder	Black Powder	2	4	Assembler	15	150
+Black Powder	Coal	-1	4	Assembler	15	150
+Black Powder	Sulfur	-1	4	Assembler	15	150
+Fine Conrete	Concrete	10	12	Assembler	15	150
+Fine Conrete	Silica	-3	12	Assembler	15	150
+Fine Conrete	Limestone	-12	12	Assembler	15	150
+Cheap Silica	Raw Quartz	-3	8	Assembler	15	150
+Cheap Silica	Limestone	-5	8	Assembler	15	150
+Cheap Silica	Silica	7	8	Assembler	15	150
+Iron Alloy Ingot	Iron Ingot	15	12	Foundry	16	90
+Iron Alloy Ingot	Iron Ore	-8	12	Foundry	16	90
+Iron Alloy Ingot	Copper Ore	-2	12	Foundry	16	90
+Copper Alloy Ingot	Copper Ingot	10	6	Foundry	16	90
+Copper Alloy Ingot	Iron Ore	-5	6	Foundry	16	90
+Copper Alloy Ingot	Copper Ore	-5	6	Foundry	16	90
+xxx	MF	3	60	Assembler	15	150
+xxx	RIP	-2	60	Assembler	15	150
+xxx	Steel Pipe	-10	60	Assembler	15	150
+EIB	EIB	1	10	Assembler	15	150
+EIB	Steel Beam	-3	10	Assembler	15	150
+EIB	Concrete	-6	10	Assembler	15	150
+Nobelisk	Nobelisk	1	6	Assembler	15	150
+Nobelisk	Black Powder	-2	6	Assembler	15	150
+Nobelisk	Steel Pipe	-2	6	Assembler	15	150
+Versatile Framework	Versatile Framework	2	24	Assembler	15	150
+Versatile Framework	MF	-1	24	Assembler	15	150
+Versatile Framework	Steel Beam	-12	24	Assembler	15	150
+Automated Wiring	Automated Wiring	1	24	Assembler	15	150
+Automated Wiring	Stator	-1	24	Assembler	15	150
+Automated Wiring	Cable	-20	24	Assembler	15	150
+Steel Ingot	Steel Ingot	3	4	Foundry	16	90
+Steel Ingot	Coal	-3	4	Foundry	16	90
+Steel Ingot	Iron Ore	-3	4	Foundry	16	90
+Steel Beam	Steel Beam	1	4	Constructor	4	80
+Steel Beam	Steel Ingot	-4	4	Constructor	4	80
+Steel Pipe	Steel Pipe	2	6	Constructor	4	80
+Steel Pipe	Steel Ingot	-3	6	Constructor	4	80
+Stator	Stator	1	12	Assembler	15	150
+Stator	Steel Pipe	-3	12	Assembler	15	150
+Stator	Wire	-8	12	Assembler	15	150
+Motor	Motor	1	12	Assembler	15	150
+Motor	Stator	-2	12	Assembler	15	150
+Motor	Rotor	-2	12	Assembler	15	150
+Plastic	Plastic	2	6	Refinery	30	200
+Plastic	HOR	1	6	Refinery	30	200
+Plastic	Crude Oil	-3	6	Refinery	30	200
+Residual Plastic	Plastic	2	6	Refinery	30	200
+Residual Plastic	Polymer Resin	-6	6	Refinery	30	200
+Residual Plastic	Water	-2	6	Refinery	30	200
+Rubber	Rubber	2	6	Refinery	30	200
+Rubber	HOR	2	6	Refinery	30	200
+Rubber	Crude Oil	-3	6	Refinery	30	200
+Residual Rubber	Rubber	2	6	Refinery	30	200
+Residual Rubber	Polymer Resin	-4	6	Refinery	30	200
+Residual Rubber	Water	-4	6	Refinery	30	200
+Petroleum Coke	Petroleum Coke	12	6	Refinery	30	200
+Petroleum Coke	HOR	-4	6	Refinery	30	200
+Fuel	Fuel	4	6	Refinery	30	200
+Fuel	Polymer Resin	3	6	Refinery	30	200
+Fuel	Crude Oil	-6	6	Refinery	30	200
+Residual Fuel	Fuel	4	6	Refinery	30	200
+Residual Fuel	HOR	-6	6	Refinery	30	200
+HOR	HOR	4	6	Refinery	30	200
+HOR	Polymer Resin	2	6	Refinery	30	200
+HOR	Crude Oil	-3	6	Refinery	30	200
+Recycled Plastic	Plastic	12	12	Refinery	30	200
+Recycled Plastic	Rubber	-6	12	Refinery	30	200
+Recycled Plastic	Fuel	-6	12	Refinery	30	200
+Recycled Rubber	Plastic	-6	12	Refinery	30	200
+Recycled Rubber	Rubber	12	12	Refinery	30	200
+Recycled Rubber	Fuel	-6	12	Refinery	30	200
+Diluted Fuel	Packaged Fuel	2	2	Refinery	30	200
+Diluted Fuel	HOR	-1	2	Refinery	30	200
+Diluted Fuel	Packaged Water	-2	2	Refinery	30	200
+Packaged Water	Water	-2	2	Packager	10	64
+Packaged Water	Canister	-2	2	Packager	10	64
+Packaged Water	Packaged Water	2	2	Packager	10	64
+Unpack Fuel	Packaged Fuel	-2	2	Packager	10	64
+Unpack Fuel	Fuel	2	2	Packager	10	64
+Unpack Fuel	Canister	2	2	Packager	10	64
+Polyester Fabric	Fabric	1	2	Refinery	30	200
+Polyester Fabric	Polymer Resin	-1	2	Refinery	30	200
+Polyester Fabric	Water	-1	2	Refinery	30	200
+Pure Iron	Iron Ore	-7	12	Refinery	30	200
+Pure Iron	Water	-4	12	Refinery	30	200
+Pure Iron	Iron Ingot	13	12	Refinery	30	200
+Pure Copper	Copper Ore	-6	24	Refinery	30	200
+Pure Copper	Water	-4	24	Refinery	30	200
+Pure Copper	Copper Ingot	15	24	Refinery	30	200
+Pure Caterium	Caterium Ore	-2	5	Refinery	30	200
+Pure Caterium	Water	-2	5	Refinery	30	200
+Pure Caterium	Caterium Ingot	1	5	Refinery	30	200
+Wet Concrete	Limestone	-6	3	Refinery	30	200
+Wet Concrete	Water	-5	3	Refinery	30	200
+Wet Concrete	Concrete	4	3	Refinery	30	200
+Steamed Copper Sheet	Copper Ingot	-3	8	Refinery	30	200
+Steamed Copper Sheet	Water	-3	8	Refinery	30	200
+Steamed Copper Sheet	Copper Sheet	3	8	Refinery	30	200
+Pure Quartz	Raw Quartz	-9	8	Refinery	30	200
+Pure Quartz	Quartz Crystal	7	8	Refinery	30	200
+Pure Quartz	Water	-5	8	Refinery	30	200
+xxx	Beacon	1	8	Manufacturer	55	360
+xxx	Iron Plate	-3	8	Manufacturer	55	360
+xxx	Iron Rod	-1	8	Manufacturer	55	360
+xxx	Wire	-15	8	Manufacturer	55	360
+xxx	Cable	-2	8	Manufacturer	55	360
+Computer	Computer	1	24	Manufacturer	55	360
+Computer	Circuit Board	-4	24	Manufacturer	55	360
+Computer	Cable	-8	24	Manufacturer	55	360
+Computer	Plastic	-16	24	Manufacturer	55	360
+Computer	Screw	0	24	Manufacturer	55	360
+Caterium Computer	Computer	1	16	Manufacturer	55	360
+Caterium Computer	Quickwire	-14	16	Manufacturer	55	360
+Caterium Computer	Rubber	-6	16	Manufacturer	55	360
+Caterium Computer	Circuit Board	-4	16	Manufacturer	55	360
+Crystal Oscillator	Crystal Oscillator	2	120	Manufacturer	55	360
+Crystal Oscillator	Quartz Crystal	-36	120	Manufacturer	55	360
+Crystal Oscillator	Cable	-28	120	Manufacturer	55	360
+Crystal Oscillator	RIP	-5	120	Manufacturer	55	360
+Insulated Oscillator	Crystal Oscillator	1	32	Manufacturer	55	360
+Insulated Oscillator	Quartz Crystal	-10	32	Manufacturer	55	360
+Insulated Oscillator	Rubber	-7	32	Manufacturer	55	360
+Insulated Oscillator	AI Limiter	-1	32	Manufacturer	55	360
+HSC	HSC	1	16	Manufacturer	55	360
+HSC	Quickwire	-56	16	Manufacturer	55	360
+HSC	Cable	-10	16	Manufacturer	55	360
+HSC	Circuit Board	-1	16	Manufacturer	55	360
+Silicon HSC	HSC	2	40	Manufacturer	55	360
+Silicon HSC	Quickwire	-60	40	Manufacturer	55	360
+Silicon HSC	Silica	-25	40	Manufacturer	55	360
+Silicon HSC	Circuit Board	-2	40	Manufacturer	55	360
+Copper Rotor	Rotor	3	16	Assembler	15	150
+Copper Rotor	Copper Sheet	-6	16	Assembler	15	150
+Copper Rotor	Screw	-52	16	Assembler	15	150
+Steel Rotor	Rotor	1	12	Assembler	15	150
+Steel Rotor	Steel Pipe	-2	12	Assembler	15	150
+Steel Rotor	Wire	-6	12	Assembler	15	150
+Quickwire Stator	Stator	2	15	Assembler	15	150
+Quickwire Stator	Steel Pipe	-4	15	Assembler	15	150
+Quickwire Stator	Quickwire	-15	15	Assembler	15	150
+Quickwire Cable	Cable	11	24	Assembler	15	150
+Quickwire Cable	Quickwire	-3	24	Assembler	15	150
+Quickwire Cable	Rubber	-2	24	Assembler	15	150
+Fused Quickwire	Quickwire	12	8	Assembler	15	150
+Fused Quickwire	Caterium Ingot	-1	8	Assembler	15	150
+Fused Quickwire	Copper Ingot	-5	8	Assembler	15	150
+Circuit Board	Circuit Board	1	8	Assembler	15	150
+Circuit Board	Copper Sheet	-2	8	Assembler	15	150
+Circuit Board	Plastic	-4	8	Assembler	15	150
+Electrode Circuit Board	Circuit Board	1	12	Assembler	15	150
+Electrode Circuit Board	Rubber	-4	12	Assembler	15	150
+Electrode Circuit Board	Petroleum Coke	-8	12	Assembler	15	150
+Silicon Circuit Board	Circuit Board	5	24	Assembler	15	150
+Silicon Circuit Board	Silica	-11	24	Assembler	15	150
+Silicon Circuit Board	Copper Sheet	-11	24	Assembler	15	150
+Caterium Circuit Board	Circuit Board	7	48	Assembler	15	150
+Caterium Circuit Board	Plastic	-10	48	Assembler	15	150
+Caterium Circuit Board	Quickwire	-30	48	Assembler	15	150
+Crystal Computer	Computer	2	36	Assembler	15	150
+Crystal Computer	Circuit Board	-3	36	Assembler	15	150
+Crystal Computer	Crystal Oscillator	-1	36	Assembler	15	150
+Compacted Coal	Compacted Coal	5	12	Assembler	15	150
+Compacted Coal	Coal	-5	12	Assembler	15	150
+Compacted Coal	Sulfur	-5	12	Assembler	15	150
+Fine Black Powder	Black Powder	4	16	Assembler	15	150
+Fine Black Powder	Sulfur	-2	16	Assembler	15	150
+Fine Black Powder	Compacted Coal	-1	16	Assembler	15	150
+Heavy Modular Frame	Heavy Modular Frame	1	30	Manufacturer	55	360
+Heavy Modular Frame	MF	-5	30	Manufacturer	55	360
+Heavy Modular Frame	Steel Pipe	-20	30	Manufacturer	55	360
+Heavy Modular Frame	EIB	-5	30	Manufacturer	55	360
+Heavy Modular Frame	Screw	-120	30	Manufacturer	55	360
+Heavy Flexible Frame	Heavy Modular Frame	1	16	Manufacturer	55	360
+Heavy Flexible Frame	MF	-5	16	Manufacturer	55	360
+Heavy Flexible Frame	EIB	-3	16	Manufacturer	55	360
+Heavy Flexible Frame	Rubber	-20	16	Manufacturer	55	360
+Heavy Flexible Frame	Screw	-104	16	Manufacturer	55	360
+Heavy Encased Frame	Heavy Modular Frame	3	64	Manufacturer	55	360
+Heavy Encased Frame	MF	-8	64	Manufacturer	55	360
+Heavy Encased Frame	EIB	-10	64	Manufacturer	55	360
+Heavy Encased Frame	Steel Pipe	-36	64	Manufacturer	55	360
+Heavy Encased Frame	Concrete	-22	64	Manufacturer	55	360
+Encased Industrial Pipe	EIB	1	15	Assembler	15	150
+Encased Industrial Pipe	Steel Pipe	-6	15	Assembler	15	150
+Encased Industrial Pipe	Concrete	-5	15	Assembler	15	150
+Steeled Frame	MF	3	60	Assembler	15	150
+Steeled Frame	RIP	-2	60	Assembler	15	150
+Steeled Frame	Steel Pipe	-10	60	Assembler	15	150
+Bolted Frame	MF	2	24	Assembler	15	150
+Bolted Frame	RIP	-3	24	Assembler	15	150
+Bolted Frame	Screw	-56	24	Assembler	15	150
+Steel Coated Plate	Iron Plate	18	24	Assembler	15	150
+Steel Coated Plate	Steel Ingot	-3	24	Assembler	15	150
+Steel Coated Plate	Plastic	-2	24	Assembler	15	150
+Coated Iron Plate	Iron Plate	10	8	Assembler	15	150
+Coated Iron Plate	Iron Ingot	-5	8	Assembler	15	150
+Coated Iron Plate	Plastic	-1	8	Assembler	15	150
+Adhered Iron Plate	RIP	1	16	Assembler	15	150
+Adhered Iron Plate	Iron Plate	-3	16	Assembler	15	150
+Adhered Iron Plate	Rubber	-1	16	Assembler	15	150
+Steel Screw	Screw	52	12	Constructor	4	80
+Steel Screw	Steel Beam	-1	12	Constructor	4	80
+Solid Steel Ingot	Steel Ingot	3	3	Foundry	16	90
+Solid Steel Ingot	Iron Ingot	-2	3	Foundry	16	90
+Solid Steel Ingot	Coal	-2	3	Foundry	16	90
+Steel Rod	Steel Ingot	-1	5	Constructor	4	80
+Steel Rod	Iron Rod	4	5	Constructor	4	80
+Supercomputer	Supercomputer	1	32	Manufacturer	55	360
+Supercomputer	Computer	-4	32	Manufacturer	55	360
+Supercomputer	AI Limiter	-2	32	Manufacturer	55	360
+Supercomputer	HSC	-3	32	Manufacturer	55	360
+Supercomputer	Plastic	-28	32	Manufacturer	55	360
+Alumina Solution	Bauxite	-12	6	Refinery	30	200
+Alumina Solution	Water	-18	6	Refinery	30	200
+Alumina Solution	Alumina Solution	12	6	Refinery	30	200
+Alumina Solution	Silica	5	6	Refinery	30	200
+Aluminum Scrap	Alumina Solution	-4	1	Refinery	30	200
+Aluminum Scrap	Coal	-2	1	Refinery	30	200
+Aluminum Scrap	Aluminum Scrap	6	1	Refinery	30	200
+Aluminum Scrap	Water	2	1	Refinery	30	200
+Alclad Sheet	Aluminum Ingot	-3	6	Assembler	15	150
+Alclad Sheet	Copper Ingot	-1	6	Assembler	15	150
+Alclad Sheet	Alclad Sheet	3	6	Assembler	15	150
+Aluminum Casing	Aluminum Casing	2	2	Constructor	4	80
+Aluminum Casing	Aluminum Ingot	-3	2	Constructor	4	80
+Aluminum Ingot	Aluminum Scrap	-6	4	Foundry	16	90
+Aluminum Ingot	Silica	-5	4	Foundry	16	90
+Aluminum Ingot	Aluminum Ingot	4	4	Foundry	16	90
+Alclad Casing	Aluminum Ingot	-20	8	Assembler	15	150
+Alclad Casing	Copper Ingot	-10	8	Assembler	15	150
+Alclad Casing	Aluminum Casing	15	8	Assembler	15	150
+Electrode Scrap	Aluminum Scrap	20	4	Refinery	30	200
+Electrode Scrap	Alumina Solution	-12	4	Refinery	30	200
+Electrode Scrap	Water	7	4	Refinery	30	200
+Electrode Scrap	Petroleum Coke	-4	4	Refinery	30	200
+Pure Aluminum Ingot	Aluminum Scrap	-2	2	Smelter	4	54
+Pure Aluminum Ingot	Aluminum Ingot	1	2	Smelter	4	54
+Battery	Sulfuric Acid	-2.5	3	Blender	75	288
+Battery	Aluminum Casing	-1	3	Blender	75	288
+Battery	Alumina Solution	-2	3	Blender	75	288
+Battery	Battery	1	3	Blender	75	288
+Battery	Water	1.5	3	Blender	75	288
+Sulfuric Acid	Water	-5	6	Refinery	30	200
+Sulfuric Acid	Sulfur	-5	6	Refinery	30	200
+Sulfuric Acid	Sulfuric Acid	5	6	Refinery	30	200
+Sloppy Alumina	Bauxite	-10	3	Refinery	30	200
+Sloppy Alumina	Water	-10	3	Refinery	30	200
+Sloppy Alumina	Alumina Solution	12	3	Refinery	30	200
+Radio Control Unit	Radio Control Unit	2	48	Manufacturer	55	360
+Radio Control Unit	Aluminum Casing	-32	48	Manufacturer	55	360
+Radio Control Unit	Crystal Oscillator	-1	48	Manufacturer	55	360
+Radio Control Unit	Computer	-1	48	Manufacturer	55	360
+Fused Modular Frame	Fused Modular Frame	1	40	Blender	75	288
+Fused Modular Frame	Heavy Modular Frame	-1	40	Blender	75	288
+Fused Modular Frame	Aluminum Casing	-50	40	Blender	75	288
+Fused Modular Frame	Nitrogen	-25	40	Blender	75	288
+Cooling System	Cooling System	1	10	Blender	75	288
+Cooling System	Heat Sink	-2	10	Blender	75	288
+Cooling System	Rubber	-2	10	Blender	75	288
+Cooling System	Water	-5	10	Blender	75	288
+Cooling System	Nitrogen	-25	10	Blender	75	288
+Blender Diluted Fuel	Fuel	10	6	Blender	75	288
+Blender Diluted Fuel	HOR	-5	6	Blender	75	288
+Blender Diluted Fuel	Water	-10	6	Blender	75	288
+Encased Uranium Cell	Uranium	-10	12	Blender	75	288
+Encased Uranium Cell	Concrete	-3	12	Blender	75	288
+Encased Uranium Cell	Sulfuric Acid	-8	12	Blender	75	288
+Encased Uranium Cell	Encased Uranium Cell	5	12	Blender	75	288
+Encased Uranium Cell	Sulfuric Acid	2	12	Blender	75	288
+Infused Uranium Cell	Encased Uranium Cell	4	12	Manufacturer	55	360
+Infused Uranium Cell	Uranium	-5	12	Manufacturer	55	360
+Infused Uranium Cell	Silica	-3	12	Manufacturer	55	360
+Infused Uranium Cell	Sulfur	-5	12	Manufacturer	55	360
+Infused Uranium Cell	Quickwire	-15	12	Manufacturer	55	360
+Uranium Fuel Rod	Uranium Fuel Rod	1	150	Manufacturer	55	360
+Uranium Fuel Rod	Encased Uranium Cell	-50	150	Manufacturer	55	360
+Uranium Fuel Rod	EIB	-3	150	Manufacturer	55	360
+Uranium Fuel Rod	Electromagnetic Control Rod	-5	150	Manufacturer	55	360
+Uranium Fuel Unit	Uranium Fuel Rod	3	300	Manufacturer	55	360
+Uranium Fuel Unit	Encased Uranium Cell	-100	300	Manufacturer	55	360
+Uranium Fuel Unit	Electromagnetic Control Rod	-10	300	Manufacturer	55	360
+Uranium Fuel Unit	Crystal Oscillator	-3	300	Manufacturer	55	360
+Uranium Fuel Unit	Rotor	-10	300	Manufacturer	55	360
+Electromagnetic Control Rod	Stator	-3	30	Assembler	15	150
+Electromagnetic Control Rod	AI Limiter	-2	30	Assembler	15	150
+Electromagnetic Control Rod	Electromagnetic Control Rod	2	30	Assembler	15	150
+Electromagnetic Connection Rod	Stator	-2	15	Assembler	15	150
+Electromagnetic Connection Rod	HSC	-1	15	Assembler	15	150
+Electromagnetic Connection Rod	Electromagnetic Control Rod	2	15	Assembler	15	150
+Heat Sink	Alclad Sheet	-5	8	Assembler	15	150
+Heat Sink	Copper Sheet	-3	8	Assembler	15	150
+Heat Sink	Heat Sink	1	8	Assembler	15	150
+Assembly Director System	Assembly Director System	1	80	Assembler	15	150
+Assembly Director System	Adaptive Control Unit	-2	80	Assembler	15	150
+Assembly Director System	Supercomputer	-1	80	Assembler	15	150
+Modular Engine	Modular Engine	1	60	Manufacturer	55	360
+Modular Engine	Motor	-2	60	Manufacturer	55	360
+Modular Engine	Rubber	-15	60	Manufacturer	55	360
+Modular Engine	Smart Plating	-2	60	Manufacturer	55	360
+Adaptive Control Unit	Adaptive Control Unit	1	120	Manufacturer	55	360
+Adaptive Control Unit	Automated Wiring	-5	120	Manufacturer	55	360
+Adaptive Control Unit	Circuit Board	-5	120	Manufacturer	55	360
+Adaptive Control Unit	Heavy Modular Frame	-1	120	Manufacturer	55	360
+Adaptive Control Unit	Computer	-2	120	Manufacturer	55	360
+Magnetic Field Generator	Magnetic Field Generator	2	120	Manufacturer	55	360
+Magnetic Field Generator	Versatile Framework	-5	120	Manufacturer	55	360
+Magnetic Field Generator	Electromagnetic Control Rod	-2	120	Manufacturer	55	360
+Magnetic Field Generator	Battery	-10	120	Manufacturer	55	360
+Rifle Cartridge	Rifle Cartridge	5	20	Manufacturer	55	360
+Rifle Cartridge	Beacon	-1	20	Manufacturer	55	360
+Rifle Cartridge	Steel Pipe	-10	20	Manufacturer	55	360
+Rifle Cartridge	Black Powder	-10	20	Manufacturer	55	360
+Rifle Cartridge	Rubber	-10	20	Manufacturer	55	360
+Gas Filter	Gas Filter	1	8	Manufacturer	55	360
+Gas Filter	Coal	-5	8	Manufacturer	55	360
+Gas Filter	Rubber	-2	8	Manufacturer	55	360
+Gas Filter	Fabric	-2	8	Manufacturer	55	360
+Coal Generator	Coal	-1	4	Coal Generator	0	260
+Coal Generator	Water	-3	4	Coal Generator	0	260
+Coal Generator	MW	5	4	Coal Generator	0	260
+Radio Connection Unit	Heat Sink	-4	16	Manufacturer	55	360
+Radio Connection Unit	HSC	-2	16	Manufacturer	55	360
+Radio Connection Unit	Quartz Crystal	-12	16	Manufacturer	55	360
+Radio Connection Unit	Radio Control Unit	1	16	Manufacturer	55	360
+Radio Control System	Radio Control Unit	3	40	Manufacturer	55	360
+Radio Control System	Crystal Oscillator	-1	40	Manufacturer	55	360
+Radio Control System	Circuit Board	-10	40	Manufacturer	55	360
+Radio Control System	Aluminum Casing	-60	40	Manufacturer	55	360
+Radio Control System	Rubber	-30	40	Manufacturer	55	360
+Silicon HSC	HSC	2	40	Manufacturer	55	360
+Silicon HSC	Quickwire	-60	40	Manufacturer	55	360
+Silicon HSC	Silica	-25	40	Manufacturer	55	360
+Silicon HSC	Circuit Board	-2	40	Manufacturer	55	360
+Plastic Smart Plating	Smart Plating	2	24	Manufacturer	55	360
+Plastic Smart Plating	RIP	-1	24	Manufacturer	55	360
+Plastic Smart Plating	Rotor	-1	24	Manufacturer	55	360
+Plastic Smart Plating	Plastic	-3	24	Manufacturer	55	360
+Thermal Propulsion Rocket	Thermal Propulsion Rocket	2	120	Manufacturer	55	360
+Thermal Propulsion Rocket	Modular Engine	-5	120	Manufacturer	55	360
+Thermal Propulsion Rocket	Turbo Motor	-2	120	Manufacturer	55	360
+Thermal Propulsion Rocket	Cooling System	-6	120	Manufacturer	55	360
+Thermal Propulsion Rocket	Fused Modular Frame	-2	120	Manufacturer	55	360
+Flexible Framework	Versatile Framework	2	16	Manufacturer	55	360
+Flexible Framework	Modular Frame	-1	16	Manufacturer	55	360
+Flexible Framework	Steel Beam	-6	16	Manufacturer	55	360
+Flexible Framework	Rubber	-8	16	Manufacturer	55	360
+Automated Speed Wiring	Automated Wiring	4	32	Manufacturer	55	360
+Automated Speed Wiring	Stator	-2	32	Manufacturer	55	360
+Automated Speed Wiring	Wire	-40	32	Manufacturer	55	360
+Automated Speed Wiring	HSC	-1	32	Manufacturer	55	360
+Turbo Motor	Turbo Motor	1	32	Manufacturer	55	360
+Turbo Motor	Cooling System	-4	32	Manufacturer	55	360
+Turbo Motor	Radio Control Unit	-2	32	Manufacturer	55	360
+Turbo Motor	Motor	-4	32	Manufacturer	55	360
+Turbo Motor	Rubber	-24	32	Manufacturer	55	360
+Rigour Motor	Motor	6	48	Manufacturer	55	360
+Rigour Motor	Rotor	-3	48	Manufacturer	55	360
+Rigour Motor	Stator	-3	48	Manufacturer	55	360
+Rigour Motor	Crystal Oscillator	-1	48	Manufacturer	55	360
+Classic Battery	Battery	4	8	Manufacturer	55	360
+Classic Battery	Sulfur	-6	8	Manufacturer	55	360
+Classic Battery	Alclad Sheet	-7	8	Manufacturer	55	360
+Classic Battery	Plastic	-8	8	Manufacturer	55	360
+Classic Battery	Wire	-12	8	Manufacturer	55	360
+Turbo Electric Motor	Turbo Motor	3	64	Manufacturer	55	360
+Turbo Electric Motor	Motor	-7	64	Manufacturer	55	360
+Turbo Electric Motor	Radio Control Unit	-9	64	Manufacturer	55	360
+Turbo Electric Motor	Electromagnetic Control Rod	-5	64	Manufacturer	55	360
+Turbo Electric Motor	Rotor	-7	64	Manufacturer	55	360
+Turbo Pressure Motor	Turbo Motor	2	32	Manufacturer	55	360
+Turbo Pressure Motor	Motor	-4	32	Manufacturer	55	360
+Turbo Pressure Motor	Pressure Conversion Cube	-1	32	Manufacturer	55	360
+Turbo Pressure Motor	Packaged Nitrogen	-24	32	Manufacturer	55	360
+Turbo Pressure Motor	Stator	-8	32	Manufacturer	55	360
+Plutonium Fuel Rod	Plutonium Fuel Rod	1	240	Manufacturer	55	360
+Plutonium Fuel Rod	Encased Plutonium Cell	-30	240	Manufacturer	55	360
+Plutonium Fuel Rod	Steel Beam	-18	240	Manufacturer	55	360
+Plutonium Fuel Rod	Electromagnetic Control Rod	-6	240	Manufacturer	55	360
+Plutonium Fuel Rod	Heat Sink	-10	240	Manufacturer	55	360
+Uranium Reactor	Uranium Fuel Rod	-1	300	Nuclear Power Plant	0	1548
+Uranium Reactor	MW	12500	300	Nuclear Power Plant	0	1548
+Uranium Reactor	Uranium Waste	50	300	Nuclear Power Plant	0	1548
+Plutonium Reactor	Plutonium Fuel Rod	-1	600	Nuclear Power Plant	0	1548
+Plutonium Reactor	MW	25000	600	Nuclear Power Plant	0	1548
+Plutonium Reactor	Plutonium Waste	10	600	Nuclear Power Plant	0	1548
+Non-fissile Uranium	Uranium Waste	-15	24	Blender	75	288
+Non-fissile Uranium	Silica	-10	24	Blender	75	288
+Non-fissile Uranium	Nitric Acid	-6	24	Blender	75	288
+Non-fissile Uranium	Sulfuric Acid	-6	24	Blender	75	288
+Non-fissile Uranium	Non-fissile Uranium	20	24	Blender	75	288
+Non-fissile Uranium	Water	6	24	Blender	75	288
+Fertile Uranium	Uranium	-5	12	Blender	75	288
+Fertile Uranium	Uranium Waste	-5	12	Blender	75	288
+Fertile Uranium	Nitric Acid	-3	12	Blender	75	288
+Fertile Uranium	Sulfuric Acid	-5	12	Blender	75	288
+Fertile Uranium	Non-fissile Uranium	20	12	Blender	75	288
+Fertile Uranium	Water	8	12	Blender	75	288
+Cooling Device	Heat Sink	-5	32	Blender	75	288
+Cooling Device	Motor	-1	32	Blender	75	288
+Cooling Device	Nitrogen	-24	32	Blender	75	288
+Cooling Device	Cooling System	2	32	Blender	75	288
+Heat-Fused Frame	Heavy Modular Frame	-1	20	Blender	75	288
+Heat-Fused Frame	Aluminum Ingot	-50	20	Blender	75	288
+Heat-Fused Frame	Nitric Acid	-8	20	Blender	75	288
+Heat-Fused Frame	Fuel	-10	20	Blender	75	288
+Heat-Fused Frame	Fused Modular Frame	1	20	Blender	75	288
+Instant Scrap	Bauxite	-15	6	Blender	75	288
+Instant Scrap	Coal	-10	6	Blender	75	288
+Instant Scrap	Sulfuric Acid	-5	6	Blender	75	288
+Instant Scrap	Water	-6	6	Blender	75	288
+Instant Scrap	Aluminum Scrap	30	6	Blender	75	288
+Instant Scrap	Water	5	6	Blender	75	288
+Nitric Acid	Nitrogen	-12	6	Blender	75	288
+Nitric Acid	Water	-3	6	Blender	75	288
+Nitric Acid	Iron Plate	-1	6	Blender	75	288
+Nitric Acid	Nitric Acid	3	6	Blender	75	288
+Pressure Conversion Cube	Fused Modular Frame	-1	60	Assembler	15	150
+Pressure Conversion Cube	Radio Control Unit	-2	60	Assembler	15	150
+Pressure Conversion Cube	Pressure Conversion Cube	1	60	Assembler	15	150
+Encased Plutonium Cell	Encased Plutonium Cell	1	12	Assembler	15	150
+Encased Plutonium Cell	Plutonium Pellet	-2	12	Assembler	15	150
+Encased Plutonium Cell	Concrete	-4	12	Assembler	15	150
+Plutonium Fuel Unit	Plutonium Fuel Rod	1	120	Assembler	15	150
+Plutonium Fuel Unit	Encased Plutonium Cell	-20	120	Assembler	15	150
+Plutonium Fuel Unit	Pressure Conversion Cube	-1	120	Assembler	15	150
+OC Supercomputer	Radio Control Unit	-2	20	Assembler	15	150
+OC Supercomputer	Cooling System	-2	20	Assembler	15	150
+OC Supercomputer	Supercomputer	1	20	Assembler	15	150
+Heat Exchanger	Aluminum Casing	-3	6	Assembler	15	150
+Heat Exchanger	Rubber	-3	6	Assembler	15	150
+Heat Exchanger	Heat Sink	1	6	Assembler	15	150
+Copper Powder	Copper Powder	5	6	Constructor	4	80
+Copper Powder	Copper Ingot	-30	6	Constructor	4	80
+Empty Fluid Tank	Empty Fluid Tank	1	1	Constructor	4	80
+Empty Fluid Tank	Aluminum Ingot	-1	1	Constructor	4	80
+Plutonium Pellet	Plutonium Pellet	30	60	Particle Accelerator	1000	912
+Plutonium Pellet	Non-fissile Uranium	-100	60	Particle Accelerator	1000	912
+Plutonium Pellet	Uranium Waste	-25	60	Particle Accelerator	1000	912
+Instant Plutonium Cell	Non-fissile Uranium	-150	120	Particle Accelerator	1000	912
+Instant Plutonium Cell	Aluminum Casing	-20	120	Particle Accelerator	1000	912
+Instant Plutonium Cell	Encased Plutonium Cell	20	120	Particle Accelerator	1000	912
+Nuclear Pasta	Nuclear Pasta	1	120	Particle Accelerator	1000	912
+Nuclear Pasta	Copper Powder	-200	120	Particle Accelerator	1000	912
+Nuclear Pasta	Pressure Conversion Cube	-1	120	Particle Accelerator	1000	912
+Fuel Generator	MW	4.166666667	1	Fuel Generator	0	400
+Fuel Generator	Fuel	-0.3333333333	1	Fuel Generator	0	400
+Coke Generator	Petroleum Coke	-1.666666667	4	Fuel Generator	0	400
+Coke Generator	Water	-3	4	Fuel Generator	0	400
+Coke Generator	MW	5	4	Fuel Generator	0	400
+Package Nitrogen	Nitrogen	-4	1	Packager	10	64
+Package Nitrogen	Empty Fluid Tank	-1	1	Packager	10	64
+Package Nitrogen	Packaged Nitrogen	1	1	Packager	10	64
+Unpack Nitrogen	Nitrogen	4	1	Packager	10	64
+Unpack Nitrogen	Empty Fluid Tank	1	1	Packager	10	64
+Unpack Nitrogen	Packaged Nitrogen	-1	1	Packager	10	64
+Reanimated SAM	SAM	-4	2	Smelter	4	54
+Reanimated SAM	Reanimated SAM	1	2	Smelter	4	54
+Basic Iron Ingot	Iron Ingot	10	12	Foundry	16	90
+Basic Iron Ingot	Iron Ore	-5	12	Foundry	16	90
+Basic Iron Ingot	Limestone	-8	12	Foundry	16	90
+Molded Beam	Steel Beam	9	12	Foundry	16	90
+Molded Beam	Steel Ingot	-24	12	Foundry	16	90
+Molded Beam	Concrete	-16	12	Foundry	16	90
+Iron Pipe	Steel Pipe	5	12	Constructor	4	80
+Iron Pipe	Iron Ingot	-20	12	Constructor	4	80
+Molded Steel Pipe	Steel Ingot	-5	6	Foundry	16	90
+Molded Steel Pipe	Concrete	-3	6	Foundry	16	90
+Molded Steel Pipe	Steel Pipe	5	6	Foundry	16	90
+Bolted Iron Plate	RIP	3	12	Assembler	15	150
+Bolted Iron Plate	Iron Plate	-18	12	Assembler	15	150
+Bolted Iron Plate	Screw	-50	12	Assembler	15	150
+Insulated Cable	Cable	20	12	Assembler	15	150
+Insulated Cable	Wire	-9	12	Assembler	15	150
+Insulated Cable	Rubber	-6	12	Assembler	15	150
+Rubber Concrete	Concrete	9	6	Assembler	15	150
+Rubber Concrete	Limestone	-10	6	Assembler	15	150
+Rubber Concrete	Rubber	-2	6	Assembler	15	150
+Plastic AI Limiter	AI Limiter	2	15	Assembler	15	150
+Plastic AI Limiter	Plastic	-7	15	Assembler	15	150
+Plastic AI Limiter	Quickwire	-30	15	Assembler	15	150
+Fused Quartz Crystal	Quartz Crystal	18	20	Foundry	16	90
+Fused Quartz Crystal	Raw Quartz	-25	20	Foundry	16	90
+Fused Quartz Crystal	Coal	-12	20	Foundry	16	90
+Steel Cast Plate	Iron Plate	3	4	Foundry	16	90
+Steel Cast Plate	Iron Ingot	-1	4	Foundry	16	90
+Steel Cast Plate	Steel Ingot	-1	4	Foundry	16	90
+Insulated Crystal Oscillator	Crystal Oscillator	1	32	Manufacturer	55	360
+Insulated Crystal Oscillator	AI Limiter	-1	32	Manufacturer	55	360
+Insulated Crystal Oscillator	Rubber	-7	32	Manufacturer	55	360
+Insulated Crystal Oscillator	Quartz Crystal	-10	32	Manufacturer	55	360
+Tempered Copper Ingot	Copper Ore	-5	12	Foundry	16	90
+Tempered Copper Ingot	Petroleum Coke	-8	12	Foundry	16	90
+Tempered Copper Ingot	Copper Ingot	12	12	Foundry	16	90
+Automated Miner	Automated Miner	1	60	Assembler	15	150
+Automated Miner	Steel Pipe	-4	60	Assembler	15	150
+Automated Miner	Iron Plate	-4	60	Assembler	15	150
+Aluminum Beam	Steel Beam	3	8	Constructor	4	80
+Aluminum Beam	Aluminum Ingot	-3	8	Constructor	4	80
+SAM Fluctator	SAM Fluctator	1	6	Manufacturer	55	360
+SAM Fluctator	Reanimated SAM	-6	6	Manufacturer	55	360
+SAM Fluctator	Wire	-5	6	Manufacturer	55	360
+SAM Fluctator	Steel Pipe	-3	6	Manufacturer	55	360
+Turbofuel	Turbofuel	5	16	Refinery	30	200
+Turbofuel	Compacted Coal	-4	16	Refinery	30	200
+Turbofuel	Fuel	-6	16	Refinery	30	200
+Turbofuel Generator	MW	4.166666667	1	Fuel Generator	0	400
+Turbofuel Generator	Turbofuel	-0.125	1	Fuel Generator	0	400
+Turbo Blend Fuel	Turbofuel	6	8	Blender	75	288
+Turbo Blend Fuel	Fuel	-2	8	Blender	75	288
+Turbo Blend Fuel	HOR	-4	8	Blender	75	288
+Turbo Blend Fuel	Sulfur	-3	8	Blender	75	288
+Turbo Blend Fuel	Coal	-3	8	Blender	75	288
+Coated Cable	Cable	9	8	Refinery	30	200
+Coated Cable	Wire	-5	8	Refinery	30	200
+Coated Cable	HOR	-2	8	Refinery	30	200
+Rocket Fuel	Turbofuel	-6	6	Blender	75	288
+Rocket Fuel	Nitric Acid	-1	6	Blender	75	288
+Rocket Fuel	Rocket Fuel	10	6	Blender	75	288
+Rocket Fuel	Compacted Coal	1	6	Blender	75	288
+Nitro Rocket Fuel	Rocket Fuel	6	2.4	Blender	75	288
+Nitro Rocket Fuel	Fuel	-4	2.4	Blender	75	288
+Nitro Rocket Fuel	Nitrogen	-3	2.4	Blender	75	288
+Nitro Rocket Fuel	Sulfur	-4	2.4	Blender	75	288
+Nitro Rocket Fuel	Coal	-2	2.4	Blender	75	288
+Nitro Rocket Fuel	Compacted Coal	1	2.4	Blender	75	288
+Time Crystal	Diamond	-2	10	Converter	250	256
+Time Crystal	Time Crystal	1	10	Converter	250	256
+Iron Ficsite	Iron Ingot	-24	6	Converter	250	256
+Iron Ficsite	Ficsite Ingot	1	6	Converter	250	256
+Iron Ficsite	Reanimated SAM	-4	6	Converter	250	256
+Catermiun Ficsite	Caterium Ingot	-4	4	Converter	250	256
+Catermiun Ficsite	Ficsite Ingot	1	4	Converter	250	256
+Catermiun Ficsite	Reanimated SAM	-3	4	Converter	250	256
+Aluminum Ficsite	Aluminum Ingot	-4	2	Converter	250	256
+Aluminum Ficsite	Ficsite Ingot	1	2	Converter	250	256
+Aluminum Ficsite	Reanimated SAM	-2	2	Converter	250	256
+Limestone to Iron Ore	Limestone	-24	6	Converter	250	256
+Limestone to Iron Ore	Iron Ore	12	6	Converter	250	256
+Limestone to Iron Ore	Reanimated SAM	-1	6	Converter	250	256
+Sulfur to Copper Ore	Sulfur	-12	6	Converter	250	256
+Sulfur to Copper Ore	Copper Ore	12	6	Converter	250	256
+Sulfur to Copper Ore	Reanimated SAM	-1	6	Converter	250	256
+Raw Quartz to Copper Ore	Raw Quartz	-10	6	Converter	250	256
+Raw Quartz to Copper Ore	Copper Ore	12	6	Converter	250	256
+Raw Quartz to Copper Ore	Reanimated SAM	-1	6	Converter	250	256
+Sulfur to Limestone	Sulfur	-2	6	Converter	250	256
+Sulfur to Limestone	Limestone	12	6	Converter	250	256
+Sulfur to Limestone	Reanimated SAM	-1	6	Converter	250	256
+Limestone to Coal	Limestone	-36	6	Converter	250	256
+Limestone to Coal	Coal	12	6	Converter	250	256
+Limestone to Coal	Reanimated SAM	-1	6	Converter	250	256
+Iron Ore to Coal	Iron Ore	-18	6	Converter	250	256
+Iron Ore to Coal	Coal	12	6	Converter	250	256
+Iron Ore to Coal	Reanimated SAM	-1	6	Converter	250	256
+Iron Ore to Sulfur	Iron Ore	-30	6	Converter	250	256
+Iron Ore to Sulfur	Sulfur	12	6	Converter	250	256
+Iron Ore to Sulfur	Reanimated SAM	-1	6	Converter	250	256
+Coal to Sulfur	Coal	-20	6	Converter	250	256
+Coal to Sulfur	Sulfur	12	6	Converter	250	256
+Coal to Sulfur	Reanimated SAM	-1	6	Converter	250	256
+Copper Ore to Caterium Ore	Copper Ore	-15	6	Converter	250	256
+Copper Ore to Caterium Ore	Caterium Ore	12	6	Converter	250	256
+Copper Ore to Caterium Ore	Reanimated SAM	-1	6	Converter	250	256
+Raw Quartz to Caterium Ore	Raw Quartz	-12	6	Converter	250	256
+Raw Quartz to Caterium Ore	Caterium Ore	12	6	Converter	250	256
+Raw Quartz to Caterium Ore	Reanimated SAM	-1	6	Converter	250	256
+Coal to Raw Quartz	Coal	-24	6	Converter	250	256
+Coal to Raw Quartz	Raw Quartz	12	6	Converter	250	256
+Coal to Raw Quartz	Reanimated SAM	-1	6	Converter	250	256
+Bauxite to Raw Quartz	Bauxite	-10	6	Converter	250	256
+Bauxite to Raw Quartz	Raw Quartz	12	6	Converter	250	256
+Bauxite to Raw Quartz	Reanimated SAM	-1	6	Converter	250	256
+Copper Ore to Bauxite	Copper Ore	-18	6	Converter	250	256
+Copper Ore to Bauxite	Bauxite	12	6	Converter	250	256
+Copper Ore to Bauxite	Reanimated SAM	-1	6	Converter	250	256
+Caterium Ore to Bauxite	Caterium Ore	-15	6	Converter	250	256
+Caterium Ore to Bauxite	Bauxite	12	6	Converter	250	256
+Caterium Ore to Bauxite	Reanimated SAM	-1	6	Converter	250	256
+Caterium Ore to Nitrogen	Caterium Ore	-12	6	Converter	250	256
+Caterium Ore to Nitrogen	Nitrogen	12	6	Converter	250	256
+Caterium Ore to Nitrogen	Reanimated SAM	-1	6	Converter	250	256
+Bauxite to Nitrogen	Bauxite	-10	6	Converter	250	256
+Bauxite to Nitrogen	Nitrogen	12	6	Converter	250	256
+Bauxite to Nitrogen	Reanimated SAM	-1	6	Converter	250	256
+Bauxite to Uranium Ore	Bauxite	-48	6	Converter	250	256
+Bauxite to Uranium Ore	Uranium Ore	12	6	Converter	250	256
+Bauxite to Uranium Ore	Reanimated SAM	-1	6	Converter	250	256
+Diamond	Diamond	1	2	Particle Accelerator	1000	912
+Diamond	Coal	-20	2	Particle Accelerator	1000	912
+Dark Matter Crystal	Dark Matter Crystal	1	2	Particle Accelerator	1000	912
+Dark Matter Crystal	Diamond	-1	2	Particle Accelerator	1000	912
+Dark Matter Crystal	Dark Matter Residue	-5	2	Particle Accelerator	1000	912
+Dark Matter Crystallization	Dark Matter Crystal	1	3	Particle Accelerator	1000	912
+Dark Matter Crystallization	Dark Matter Residue	-10	3	Particle Accelerator	1000	912
+Turbo Diamonds	Diamond	3	3	Particle Accelerator	1000	912
+Turbo Diamonds	Coal	-30	3	Particle Accelerator	1000	912
+Turbo Diamonds	Packaged Turbo Fuel	-2	3	Particle Accelerator	1000	912
+Cloudy Diamonds	Diamond	1	3	Particle Accelerator	1000	912
+Cloudy Diamonds	Coal	-12	3	Particle Accelerator	1000	912
+Cloudy Diamonds	Limestone	-24	3	Particle Accelerator	1000	912
+Dark Matter Trap	Time Crystal	-1	2	Particle Accelerator	1000	912
+Dark Matter Trap	Dark Matter Residue	-5	2	Particle Accelerator	1000	912
+Dark Matter Trap	Dark Matter Crystal	2	2	Particle Accelerator	1000	912
+Ficsite Trigon	Ficsite Trigon	3	6	Constructor	4	80
+Ficsite Trigon	Ficsite Ingot	-1	6	Constructor	4	80
+Oil-Based Diamonds	Crude Oil	-10	3	Particle Accelerator	1000	912
+Oil-Based Diamonds	Diamond	2	3	Particle Accelerator	1000	912
+Power Shard	Power Shard	1	12	Quantum Encoder	2000	1200
+Power Shard	Time Crystal	-2	12	Quantum Encoder	2000	1200
+Power Shard	Dark Matter Crystal	-2	12	Quantum Encoder	2000	1200
+Power Shard	Quartz Crystal	-12	12	Quantum Encoder	2000	1200
+Power Shard	Excited Photonic Matter	-12	12	Quantum Encoder	2000	1200
+Power Shard	Dark Matter Residue	12	12	Quantum Encoder	2000	1200
+Superposition Oscillator	Superposition Oscillator	1	12	Quantum Encoder	2000	1200
+Superposition Oscillator	Dark Matter Residue	25	12	Quantum Encoder	2000	1200
+Superposition Oscillator	Dark Matter Crystal	-6	12	Quantum Encoder	2000	1200
+Superposition Oscillator	Crystal Oscillator	-1	12	Quantum Encoder	2000	1200
+Superposition Oscillator	Alclad Sheet	-9	12	Quantum Encoder	2000	1200
+Superposition Oscillator	Excited Photonic Matter	-25	12	Quantum Encoder	2000	1200
+Neural-Quantum Processor	Neural-Quantum Processor	1	20	Quantum Encoder	2000	1200
+Neural-Quantum Processor	Dark Matter Residue	25	20	Quantum Encoder	2000	1200
+Neural-Quantum Processor	Time Crystal	-5	20	Quantum Encoder	2000	1200
+Neural-Quantum Processor	Supercomputer	-1	20	Quantum Encoder	2000	1200
+Neural-Quantum Processor	Ficsite Trigon	-15	20	Quantum Encoder	2000	1200
+Neural-Quantum Processor	Excited Photonic Matter	-25	20	Quantum Encoder	2000	1200
+Ficsonium Fuel Rod	Ficsonium Fuel Rod	1	24	Quantum Encoder	2000	1200
+Ficsonium Fuel Rod	Dark Matter Residue	20	24	Quantum Encoder	2000	1200
+Ficsonium Fuel Rod	Ficsonium	-2	24	Quantum Encoder	2000	1200
+Ficsonium Fuel Rod	Ficsite Trigon	-2	24	Quantum Encoder	2000	1200
+Ficsonium Fuel Rod	Excited Photonic Matter	-40	24	Quantum Encoder	2000	1200
+Ficsonium Fuel Rod	Electromagnetic Control Rod	-20	24	Quantum Encoder	2000	1200
+AI Expansion Server	AI Expansion Server	1	15	Quantum Encoder	2000	1200
+AI Expansion Server	Dark Matter Residue	25	15	Quantum Encoder	2000	1200
+AI Expansion Server	Magnetic Field Generator	-1	15	Quantum Encoder	2000	1200
+AI Expansion Server	Neural-Quantum Processor	-1	15	Quantum Encoder	2000	1200
+AI Expansion Server	Superposition Oscillator	-1	15	Quantum Encoder	2000	1200
+AI Expansion Server	Excited Photonic Matter	-25	15	Quantum Encoder	2000	1200
+Excited Photonic Matter	Excited Photonic Matter	10	3	Converter	250	256
+Dark Matter Residue	Dark Matter Residue	10	6	Converter	250	256
+Dark Matter Residue	Reanimated SAM	-5	6	Converter	250	256
+Ficsonium	Ficsonium	1	6	Particle Accelerator	1000	912
+Ficsonium	Plutonium Waste	-1	6	Particle Accelerator	1000	912
+Ficsonium	Singularity Cell	-1	6	Particle Accelerator	1000	912
+Ficsonium	Dark Matter Residue	-20	6	Particle Accelerator	1000	912
+Biochemical Sculptor	Biochemical Sculptor	4	120	Blender	75	288
+Biochemical Sculptor	Assembly Director System	-1	120	Blender	75	288
+Biochemical Sculptor	Ficsite Trigon	-80	120	Blender	75	288
+Biochemical Sculptor	Water	-20	120	Blender	75	288
+Petroleum Diamonds	Diamond	1	2	Particle Accelerator	1000	912
+Petroleum Diamonds	Petroleum Coke	-24	2	Particle Accelerator	1000	912
+Ionized Fuel	Ionized Fuel	16	24	Refinery	30	200
+Ionized Fuel	Rocket Fuel	-16	24	Refinery	30	200
+Ionized Fuel	Power Shard	-1	24	Refinery	30	200
+Ionized Fuel	Compacted Coal	2	24	Refinery	30	200
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
+					#N/A	#N/A
