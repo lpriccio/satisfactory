@@ -59,7 +59,7 @@ def render_summary():
 
     if balance_data:
         df = pd.DataFrame(balance_data)
-        st.dataframe(df, use_container_width=True, hide_index=True)
+        st.dataframe(df, width="stretch", hide_index=True)
     else:
         st.info("No items in chain")
 
@@ -99,7 +99,7 @@ def render_summary():
             })
 
         st.dataframe(
-            pd.DataFrame(machine_data), use_container_width=True, hide_index=True
+            pd.DataFrame(machine_data), width="stretch", hide_index=True
         )
     else:
         st.info("No machines needed")
@@ -115,7 +115,7 @@ def render_summary():
             for item, rate in sorted(totals.base_resources.items())
         ]
         st.dataframe(
-            pd.DataFrame(resource_data), use_container_width=True, hide_index=True
+            pd.DataFrame(resource_data), width="stretch", hide_index=True
         )
     else:
         st.success("No external resources needed - fully self-sufficient!")
@@ -233,7 +233,7 @@ def render_combine_tab():
             if balance_data:
                 st.dataframe(
                     pd.DataFrame(balance_data),
-                    use_container_width=True,
+                    width="stretch",
                     hide_index=True,
                 )
 
