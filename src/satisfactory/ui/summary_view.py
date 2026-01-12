@@ -5,6 +5,8 @@ import math
 import pandas as pd
 import streamlit as st
 
+from satisfactory.models.game_mode import GameMode
+
 
 def render_summary():
     """Render aggregate totals and infrastructure summary."""
@@ -17,15 +19,21 @@ def render_summary():
 
     st.subheader(f"Summary: {chain.name}")
 
-    # Three columns for key metrics
-    col1, col2, col3 = st.columns(3)
+    mode = st.session_state.game_mode
 
-    with col1:
-        power_label = "Power Draw" if totals.total_power >= 0 else "Power Generated"
-        st.metric(f"⚡ {power_label}", f"{abs(totals.total_power):.1f} MW")
-    with col2:
-        st.metric("📐 Total Floor Space", f"{totals.total_floor_space / 64 *3.0:.0f}Fd (@3x)")
-    with col3:
+    # Key metrics - vary by game mode
+    if mode.has_power:
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            power_label = "Power Draw" if totals.total_power >= 0 else "Power Generated"
+            st.metric(f"⚡ {power_label}", f"{abs(totals.total_power):.1f} MW")
+        with col2:
+            st.metric("📐 Total Floor Space", f"{totals.total_floor_space / 64 *3.0:.0f}Fd (@3x)")
+        with col3:
+            machine_total = sum(totals.machine_counts.values())
+            st.metric("🏭 Total Machines", f"{machine_total:.2f}")
+    else:
+        # Factorio - just show machine count
         machine_total = sum(totals.machine_counts.values())
         st.metric("🏭 Total Machines", f"{machine_total:.2f}")
 
@@ -194,21 +202,26 @@ def render_combine_tab():
             # Display combined results
             st.subheader("Combined Results")
 
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                power_label = (
-                    "Power Draw"
-                    if combined_totals.total_power >= 0
-                    else "Power Generated"
-                )
-                st.metric(
-                    f"⚡ {power_label}", f"{abs(combined_totals.total_power):.1f} MW"
-                )
-            with col2:
-                st.metric(
-                    "📐 Floor Space", f"{combined_totals.total_floor_space:.0f} units"
-                )
-            with col3:
+            mode = st.session_state.game_mode
+            if mode.has_power:
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    power_label = (
+                        "Power Draw"
+                        if combined_totals.total_power >= 0
+                        else "Power Generated"
+                    )
+                    st.metric(
+                        f"⚡ {power_label}", f"{abs(combined_totals.total_power):.1f} MW"
+                    )
+                with col2:
+                    st.metric(
+                        "📐 Floor Space", f"{combined_totals.total_floor_space:.0f} units"
+                    )
+                with col3:
+                    machine_total = sum(combined_totals.machine_counts.values())
+                    st.metric("🏭 Machines", f"{machine_total:.2f}")
+            else:
                 machine_total = sum(combined_totals.machine_counts.values())
                 st.metric("🏭 Machines", f"{machine_total:.2f}")
 

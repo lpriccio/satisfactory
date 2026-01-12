@@ -80,6 +80,10 @@ class BuildChain:
     # Speed multipliers for recipes (recipe_name -> multiplier, default 1.0)
     speed_multipliers: dict[str, float] = field(default_factory=dict)
 
+    # Productivity multipliers for recipes (recipe_name -> multiplier, default 1.0)
+    # Only affects outputs, not inputs (Factorio-specific)
+    productivity_multipliers: dict[str, float] = field(default_factory=dict)
+
     # Items marked as imported (no production chain) - item-level default
     imported_items: set[str] = field(default_factory=set)
 
@@ -131,6 +135,7 @@ class BuildChain:
             "root_node": self.root_node.to_dict() if self.root_node else None,
             "recipe_selections": self.recipe_selections,
             "speed_multipliers": self.speed_multipliers,
+            "productivity_multipliers": self.productivity_multipliers,
             "imported_items": list(self.imported_items),
             "imported_node_overrides": {
                 "|".join(path): val
@@ -151,6 +156,7 @@ class BuildChain:
             target_rate=data["target_rate"],
             recipe_selections=data.get("recipe_selections", {}),
             speed_multipliers=data.get("speed_multipliers", {}),
+            productivity_multipliers=data.get("productivity_multipliers", {}),
             imported_items=set(data.get("imported_items", [])),
             imported_node_overrides={
                 tuple(key.split("|")): val

@@ -20,6 +20,7 @@ class DependencyCalculator:
         target_rate: float,
         recipe_selections: dict[str, str],
         speed_multipliers: dict[str, float],
+        productivity_multipliers: dict[str, float],
         imported_items: set[str],
         imported_node_overrides: dict[tuple[str, ...], bool] | None = None,
         parent_id: Optional[UUID] = None,
@@ -33,6 +34,7 @@ class DependencyCalculator:
             target_rate: Desired items/min output
             recipe_selections: User's recipe choices (item -> recipe_name)
             speed_multipliers: Recipe speed multipliers (recipe_name -> multiplier)
+            productivity_multipliers: Productivity multipliers (outputs only, Factorio)
             imported_items: Items marked as imported (item-level default)
             imported_node_overrides: Per-node import overrides by path
             parent_id: Parent node ID for tree structure
@@ -98,11 +100,14 @@ class DependencyCalculator:
 
             node.recipe_name = recipe.name
 
-            # Get speed multiplier for this recipe (default 1.0 = 100%)
+            # Get speed and productivity multipliers (default 1.0 = 100%)
             speed = speed_multipliers.get(recipe.name, 1.0)
+            productivity = productivity_multipliers.get(recipe.name, 1.0)
 
-            # Calculate machines needed (speed multiplier reduces machine count)
-            output_rate = recipe.get_output_rate(target_item) * speed
+            # Calculate machines needed
+            # Output rate scales with speed AND productivity
+            # machine_count = target / (base_output * speed * productivity)
+            output_rate = recipe.get_output_rate(target_item) * speed * productivity
             if output_rate > 0:
                 node.machine_count = target_rate / output_rate
                 node.actual_production_rate = target_rate
@@ -119,7 +124,8 @@ class DependencyCalculator:
                     # Negative = generation
                     node.power_consumption = -node.machine_count * power_output
 
-            # Process inputs recursively (input rate scales with speed)
+            # Process inputs recursively
+            # Input rate scales with speed only (NOT productivity)
             for input_io in recipe.inputs:
                 input_rate = (
                     recipe.get_input_rate(input_io.item_name) * speed * node.machine_count
@@ -130,6 +136,7 @@ class DependencyCalculator:
                     target_rate=input_rate,
                     recipe_selections=recipe_selections,
                     speed_multipliers=speed_multipliers,
+                    productivity_multipliers=productivity_multipliers,
                     imported_items=imported_items,
                     imported_node_overrides=imported_node_overrides,
                     parent_id=node.id,
@@ -151,6 +158,7 @@ class DependencyCalculator:
             target_rate=chain.target_rate,
             recipe_selections=chain.recipe_selections,
             speed_multipliers=chain.speed_multipliers,
+            productivity_multipliers=chain.productivity_multipliers,
             imported_items=chain.imported_items,
             imported_node_overrides=chain.imported_node_overrides,
         )

@@ -3,6 +3,7 @@
 import streamlit as st
 
 from satisfactory.models.build_chain import ProductionNode
+from satisfactory.models.game_mode import GameMode
 
 # Tight column layout CSS
 _TIGHT_COLUMNS_CSS = """
@@ -93,8 +94,21 @@ def _render_node_with_controls(node: ProductionNode, chain, depth: int):
                 with col2:
                     st.markdown(f"**{node.item_name}** — 📦 *import {node.target_rate:.2f}/min*")
             else:
-                # Producing: [checkbox] [all btn] Item — Xx | [recipe] | [speed]
-                col1, col1b, col2, col3, col4 = st.columns([0.5, 0.5, 4, 4, 2], gap="small")
+                # Producing: layout depends on game mode
+                mode = st.session_state.game_mode
+                has_productivity = mode.has_productivity
+
+                if has_productivity:
+                    # Factorio: [checkbox] [all] Item | [recipe] | [speed] | [prod]
+                    col1, col1b, col2, col3, col4, col5 = st.columns(
+                        [0.5, 0.5, 3, 3, 1.5, 1.5], gap="small"
+                    )
+                else:
+                    # Satisfactory: [checkbox] [all] Item | [recipe] | [speed]
+                    col1, col1b, col2, col3, col4 = st.columns(
+                        [0.5, 0.5, 4, 4, 2], gap="small"
+                    )
+                    col5 = None
 
                 with col1:
                     new_imported = st.checkbox(
@@ -140,18 +154,38 @@ def _render_node_with_controls(node: ProductionNode, chain, depth: int):
                     # Speed multiplier (100% = 1.0)
                     current_speed = chain.speed_multipliers.get(node.recipe_name, 1.0)
                     new_speed = st.number_input(
-                        "speed",
+                        "spd",
                         min_value=0.01,
-                        max_value=2.5,
+                        max_value=10.0,
                         value=current_speed,
                         step=0.25,
                         format="%.2f",
                         key=f"speed_{node.id}",
                         label_visibility="collapsed",
+                        help="Speed multiplier",
                     )
                     if abs(new_speed - current_speed) > 0.001:
                         chain.speed_multipliers[node.recipe_name] = new_speed
                         st.session_state.tree_changed = True
+
+                if col5 is not None:
+                    with col5:
+                        # Productivity multiplier (Factorio only)
+                        current_prod = chain.productivity_multipliers.get(node.recipe_name, 1.0)
+                        new_prod = st.number_input(
+                            "prd",
+                            min_value=1.0,
+                            max_value=5.0,
+                            value=current_prod,
+                            step=0.1,
+                            format="%.2f",
+                            key=f"prod_{node.id}",
+                            label_visibility="collapsed",
+                            help="Productivity multiplier (outputs only)",
+                        )
+                        if abs(new_prod - current_prod) > 0.001:
+                            chain.productivity_multipliers[node.recipe_name] = new_prod
+                            st.session_state.tree_changed = True
         else:
             # No recipes - base resource, just show as imported
             col1, col2 = st.columns([1, 10], gap="small")

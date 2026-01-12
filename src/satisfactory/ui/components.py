@@ -24,10 +24,12 @@ def _create_or_update_chain(target_item: str, target_rate: float, chain_name: st
     if current and current.target_item == target_item:
         recipe_selections = current.recipe_selections
         speed_multipliers = current.speed_multipliers
+        productivity_multipliers = current.productivity_multipliers
         imported_items = current.imported_items
     else:
         recipe_selections = {}
         speed_multipliers = {}
+        productivity_multipliers = {}
         imported_items = default_imports
 
     new_chain = BuildChain(
@@ -36,6 +38,7 @@ def _create_or_update_chain(target_item: str, target_rate: float, chain_name: st
         target_rate=target_rate,
         recipe_selections=recipe_selections,
         speed_multipliers=speed_multipliers,
+        productivity_multipliers=productivity_multipliers,
         imported_items=imported_items,
     )
     st.session_state.current_chain = st.session_state.calculator.recalculate(
