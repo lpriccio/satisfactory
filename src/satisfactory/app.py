@@ -4,6 +4,7 @@ from pathlib import Path
 
 import streamlit as st
 
+from satisfactory.data.dsp_loader import DSPRecipeDatabase
 from satisfactory.data.factorio_loader import FactorioRecipeDatabase
 from satisfactory.data.loader import RecipeDatabase
 from satisfactory.engine.aggregator import ChainAggregator
@@ -57,6 +58,8 @@ def init_session_state():
         data_path = _get_data_path(mode)
         if mode == GameMode.FACTORIO:
             st.session_state.db = FactorioRecipeDatabase(data_path)
+        elif mode == GameMode.DSP:
+            st.session_state.db = DSPRecipeDatabase(data_path)
         else:
             st.session_state.db = RecipeDatabase(data_path)
 
@@ -125,8 +128,13 @@ def main():
         render_sidebar()
 
     # Main content
-    icon = "🏭" if mode == GameMode.SATISFACTORY else "⚙️"
-    st.title(f"{icon} {mode.display_name} Factory Build Planner")
+    if mode == GameMode.SATISFACTORY:
+        icon = "🏭"
+    elif mode == GameMode.FACTORIO:
+        icon = "⚙️"
+    else:  # DSP
+        icon = "🌟"
+    st.title(f"{icon} {mode.display_name} Build Planner")
 
     # Show some stats about loaded data
     db = st.session_state.db

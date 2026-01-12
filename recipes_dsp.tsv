@@ -1,0 +1,259 @@
+Recipe	Item	Pair	Seconds	Item Count
+				
+CB	Iron	CB,Iron	1	-2
+CB	Copper	CB,Copper	1	-1
+CB	CB	CB,CB	1	2
+Micro	Silicon	Micro,Silicon	2	-2
+Micro	Copper	Micro,Copper	2	-1
+Micro	Micro	Micro,Micro	2	1
+Processor	CB	Processor,CB	3	-2
+Processor	Micro	Processor,Micro	3	-2
+Processor	Processor	Processor,Processor	3	1
+Iron	Iron	Iron,Iron	1	1
+Copper	Copper	Copper,Copper	1	1
+Silicon	Silicon	Silicon,Silicon	2	1
+Casimir	Casimir	Casimir,Casimir	4	1
+Casimir	Hydrogen	Casimir,Hydrogen	4	-12
+Casimir	Graphene	Casimir,Graphene	4	-2
+Casimir	Ti Crystal	Casimir,Ti Crystal	4	-1
+Ti Crystal	Ti Crystal	Ti Crystal,Ti Crystal	4	1
+Ti Crystal	Titanium	Ti Crystal,Titanium	4	-3
+Ti Crystal	Organic Crystal	Ti Crystal,Organic Crystal	4	-1
+Ti Glass	Ti Glass	Ti Glass,Ti Glass	5	2
+Ti Glass	Titanium	Ti Glass,Titanium	5	-2
+Ti Glass	Water	Ti Glass,Water	5	-2
+Ti Glass	Glass	Ti Glass,Glass	5	-2
+Plane Filter	Plane Filter	Plane Filter,Plane Filter	12	1
+Plane Filter	Ti Glass	Plane Filter,Ti Glass	12	-2
+Plane Filter	Casimir	Plane Filter,Casimir	12	-1
+Qchip	Qchip	Qchip,Qchip	6	1
+Qchip	Plane Filter	Qchip,Plane Filter	6	-2
+Qchip	Processor	Qchip,Processor	6	-2
+Plastic	Plastic	Plastic,Plastic	3	1
+Plastic	Refoil	Plastic,Refoil	3	-2
+Plastic	Graphite	Plastic,Graphite	3	-1
+Broadband	Broadband	Broadband,Broadband	8	1
+Broadband	Plastic	Broadband,Plastic	8	-1
+Broadband	Si Crystal	Broadband,Si Crystal	8	-2
+Broadband	Tubes	Broadband,Tubes	8	-2
+Glens	Glens	Glens,Glens	6	1
+Glens	Diamond	Glens,Diamond	6	-4
+Glens	Strange	Glens,Strange	6	-1
+Strange	Strange	Strange,Strange	8	1
+Strange	PC	Strange,PC	8	-2
+Strange	Deut	Strange,Deut	8	-10
+Strange	Iron	Strange,Iron	8	-2
+PC	PC	PC,PC	8	1
+PC	Graphene	PC,Graphene	8	-2
+PC	Green Engine	PC,Green Engine	8	-2
+PC	Copper	PC,Copper	8	-2
+Diamond+	Diamond	Diamond+,Diamond	1.5	2
+Diamond+	Kimberlite	Diamond+,Kimberlite	1.5	-1
+Green Science	Green Science	Green Science,Green Science	24	2
+Green Science	Glens	Green Science,Glens	24	-1
+Green Science	Qchip	Green Science,Qchip	24	-1
+Si Crystal	Si Crystal	Si Crystal,Si Crystal	2	1
+Si Crystal	Silicon	Si Crystal,Silicon	2	-1
+Graphite	Graphite	Graphite,Graphite	2	1
+Graphite	Coal	Graphite,Coal	2	-2
+Purple Science	Purple Science	Purple Science,Purple Science	10	1
+Purple Science	Broadband	Purple Science,Broadband	10	-1
+Purple Science	Processor	Purple Science,Processor	10	-2
+Sail	Sail	Sail,Sail	4	2
+Sail	Graphene	Sail,Graphene	4	-1
+Sail	Combiner	Sail,Combiner	4	-1
+Combiner	Combiner	Combiner,Combiner	3	1
+Combiner	Prism	Combiner,Prism	3	-2
+Combiner	CB	Combiner,CB	3	-1
+Prism	Prism	Prism,Prism	2	2
+Prism	Glass	Prism,Glass	2	-3
+Glass	Glass	Glass,Glass	2	1
+Glass	Stone	Glass,Stone	2	-2
+Rocket	Rocket	Rocket,Rocket	6	1
+Rocket	Component	Rocket,Component	6	-2
+Rocket	Qchip	Rocket,Qchip	6	-2
+Rocket	Deut Rod	Rocket,Deut Rod	6	-4
+Component	Component	Component,Component	8	1
+Component	Sail	Component,Sail	8	-3
+Component	Frame	Component,Frame	8	-3
+Component	Processor	Component,Processor	8	-3
+Tubes	Tubes	Tubes,Tubes	4	2
+Tubes	Graphene	Tubes,Graphene	4	-3
+Tubes	Titanium	Tubes,Titanium	4	-1
+Frame	Frame	Frame,Frame	6	1
+Frame	Silicon	Frame,Silicon	6	-1
+Frame	Ti Alloy	Frame,Ti Alloy	6	-1
+Frame	Tubes	Frame,Tubes	6	-4
+Ti Alloy	Ti Alloy	Ti Alloy,Ti Alloy	12	4
+Ti Alloy	Titanium	Ti Alloy,Titanium	12	-4
+Ti Alloy	Steel	Ti Alloy,Steel	12	-4
+Ti Alloy	H2SO4	Ti Alloy,H2SO4	12	-8
+Steel	Steel	Steel,Steel	3	1
+Steel	Iron	Steel,Iron	3	-3
+Titanium	Titanium	Titanium,Titanium	2	1
+Graphene	Graphene	Graphene,Graphene	2	2
+Graphene	Fire Ice	Graphene,Fire Ice	2	-2
+Graphene	Hydrogen	Graphene,Hydrogen	2	1
+PC+	PC	PC+,PC	4	1
+PC+	Unipolar	PC+,Unipolar	4	-10
+PC+	Copper	PC+,Copper	4	-2
+Green Engine	Green Engine	Green Engine,Green Engine	2	1
+Green Engine	Engine	Green Engine,Engine	2	-2
+Green Engine	Spicy Donut	Green Engine,Spicy Donut	2	-2
+Spicy Donut	Spicy Donut	Spicy Donut,Spicy Donut	1	2
+Spicy Donut	Magnet	Spicy Donut,Magnet	1	-2
+Spicy Donut	Copper	Spicy Donut,Copper	1	-1
+Engine	Engine	Engine,Engine	2	1
+Engine	Iron	Engine,Iron	2	-2
+Engine	Spicy Donut	Engine,Spicy Donut	2	-1
+Engine	Gear	Engine,Gear	2	-1
+Gear	Iron	Gear,Iron	1	-1
+Gear	Gear	Gear,Gear	1	1
+Magnet	Magnet	Magnet,Magnet	1.5	1
+Pro3	Pro3	Pro3,Pro3	2	1
+Pro3	Pro2	Pro3,Pro2	2	-2
+Pro3	Nanotube	Pro3,Nanotube	2	-1
+Pro2	Pro2	Pro2,Pro2	1	1
+Pro2	Pro1	Pro2,Pro1	1	-2
+Pro2	Diamond	Pro2,Diamond	1	-1
+Pro1	Pro1	Pro1,Pro1	0.5	1
+Pro1	Coal	Pro1,Coal	0.5	-1
+Good Tube	Nanotube	Good Tube,Nanotube	4	2
+Good Tube	Spiniform	Good Tube,Spiniform	4	-6
+Diamond	Diamond	Diamond,Diamond	2	1
+Diamond	Graphite	Diamond,Graphite	2	-1
+Graphite	Graphite	Graphite,Graphite	2	1
+Graphite	Coal	Graphite,Coal	2	-2
+Solar Panel	Solar Panel	Solar Panel,Solar Panel	6	1
+Solar Panel	Silicon	Solar Panel,Silicon	6	-10
+Solar Panel	Copper	Solar Panel,Copper	6	-10
+Solar Panel	CB	Solar Panel,CB	6	-5
+Red Missile	Red Missile	Red Missile,Red Missile	2	1
+Red Missile	CB	Red Missile,CB	2	-3
+Red Missile	Copper	Red Missile,Copper	2	-6
+Red Missile	White Engine	Red Missile,White Engine	2	-1
+Red Missile	Combustible Unit	Red Missile,Combustible Unit	2	-2
+Combustible Unit	Combustible Unit	Combustible Unit,Combustible Unit	3	1
+Combustible Unit	Coal	Combustible Unit,Coal	3	-3
+White Engine	White Engine	White Engine,White Engine	3	1
+White Engine	Spicy Donut	White Engine,Spicy Donut	3	-1
+White Engine	Copper	White Engine,Copper	3	-2
+Sort3	Sort3	Sort3,Sort3	1	2
+Sort3	Sort2	Sort3,Sort2	1	-2
+Sort3	Green Engine	Sort3,Green Engine	1	-1
+Sort2	Sort2	Sort2,Sort2	1	2
+Sort2	Sort1	Sort2,Sort1	1	-2
+Sort2	Engine	Sort2,Engine	1	-1
+Sort1	Sort1	Sort1,Sort1	1	1
+Sort1	Iron	Sort1,Iron	1	-1
+Sort1	CB	Sort1,CB	1	-1
+Belt3	Belt3	Belt3,Belt3	1	3
+Belt3	Belt2	Belt3,Belt2	1	-3
+Belt3	Blue Engine	Belt3,Blue Engine	1	-1
+Belt3	Graphene	Belt3,Graphene	1	-1
+Belt2	Belt2	Belt2,Belt2	1	3
+Belt2	Belt1	Belt2,Belt1	1	-3
+Belt2	Green Engine	Belt2,Green Engine	1	-1
+Belt1	Belt1	Belt1,Belt1	1	3
+Belt1	Gear	Belt1,Gear	1	-1
+Belt1	Iron	Belt1,Iron	1	-2
+Blue Engine	Blue Engine	Blue Engine,Blue Engine	3	1
+Blue Engine	Green Engine	Blue Engine,Green Engine	3	-2
+Blue Engine	Magnet	Blue Engine,Magnet	3	-3
+Blue Engine	Graphite	Blue Engine,Graphite	3	-1
+Drone	Drone	Drone,Drone	4	1
+Drone	Iron	Drone,Iron	4	-5
+Drone	Processor	Drone,Processor	4	-2
+Drone	Thruster	Drone,Thruster	4	-2
+Thruster	Thruster	Thruster,Thruster	4	1
+Thruster	Steel	Thruster,Steel	4	-2
+Thruster	Copper	Thruster,Copper	4	-3
+Vessel	Vessel	Vessel,Vessel	6	1
+Vessel	Ti Alloy	Vessel,Ti Alloy	6	-10
+Vessel	Processor	Vessel,Processor	6	-10
+Vessel	Fancy Thruster	Vessel,Fancy Thruster	6	-2
+Fancy Thruster	Fancy Thruster	Fancy Thruster,Fancy Thruster	6	1
+Fancy Thruster	Ti Alloy	Fancy Thruster,Ti Alloy	6	-5
+Fancy Thruster	Green Engine	Fancy Thruster,Green Engine	6	-5
+Fidget Spinner	Fidget Spinner	Fidget Spinner,Fidget Spinner	2	1
+Fidget Spinner	Iron	Fidget Spinner,Iron	2	-2
+Fidget Spinner	Processor	Fidget Spinner,Processor	2	-1
+Fidget Spinner	White Engine	Fidget Spinner,White Engine	2	-1
+Logistics Distributor	Logistics Distributor	Logistics Distributor,Logistics Distributor	8	1
+Logistics Distributor	Iron	Logistics Distributor,Iron	8	-8
+Logistics Distributor	Plasma Exciter	Logistics Distributor,Plasma Exciter	8	-4
+Logistics Distributor	Processor	Logistics Distributor,Processor	8	-3
+Plasma Exciter	Plasma Exciter	Plasma Exciter,Plasma Exciter	2	1
+Plasma Exciter	Prism	Plasma Exciter,Prism	2	-4
+Plasma Exciter	Spicy Donut	Plasma Exciter,Spicy Donut	2	-2
+Planetary Tower	Planetary Tower	Planetary Tower,Planetary Tower	20	1
+Planetary Tower	Steel	Planetary Tower,Steel	20	-40
+Planetary Tower	Titanium	Planetary Tower,Titanium	20	-40
+Planetary Tower	Processor	Planetary Tower,Processor	20	-40
+Planetary Tower	PC	Planetary Tower,PC	20	-20
+Interstellar Tower	Interstellar Tower	Interstellar Tower,Interstellar Tower	30	1
+Interstellar Tower	Planetary Tower	Interstellar Tower,Planetary Tower	30	-1
+Interstellar Tower	TI Alloy	Interstellar Tower,TI Alloy	30	-40
+Interstellar Tower	PC	Interstellar Tower,PC	30	-20
+Oribtal Collector	Oribtal Collector	Oribtal Collector,Oribtal Collector	30	1
+Oribtal Collector	Interstellar Tower	Oribtal Collector,Interstellar Tower	30	-1
+Oribtal Collector	Blue Engine	Oribtal Collector,Blue Engine	30	-50
+Oribtal Collector	Fancy Thruster	Oribtal Collector,Fancy Thruster	30	-20
+Oribtal Collector	Charged Accumulator	Oribtal Collector,Charged Accumulator	30	-20
+Accumulator	Accumulator	Accumulator,Accumulator	3	1
+Accumulator	Iron	Accumulator,Iron	3	-6
+Accumulator	Blue Engine	Accumulator,Blue Engine	3	-1
+Accumulator	Si Crystal	Accumulator,Si Crystal	3	-3
+Energy Exchanger	Energy Exchanger	Energy Exchanger,Energy Exchanger	15	1
+Energy Exchanger	Ti Alloy	Energy Exchanger,Ti Alloy	15	-40
+Energy Exchanger	Steel	Energy Exchanger,Steel	15	-40
+Energy Exchanger	Processor	Energy Exchanger,Processor	15	-40
+Energy Exchanger	PC	Energy Exchanger,PC	15	-8
+Deut Rod	Deut Rod	Deut Rod,Deut Rod	12	-2
+Deut Rod	Ti Alloy	Deut Rod,Ti Alloy	12	-1
+Deut Rod	Deut	Deut Rod,Deut	12	-20
+Deut Rod	Blue Engine	Deut Rod,Blue Engine	12	-1
+Shell	Shell	Shell,Shell	1.5	1
+Shell	Copper	Shell,Copper	1.5	-9
+Shell	Combustible Unit	Shell,Combustible Unit	1.5	-2
+Explosive Unit	Explosive Unit	Explosive Unit,Explosive Unit	6	2
+Explosive Unit	Combustible Unit	Explosive Unit,Combustible Unit	6	-2
+Explosive Unit	Plastic	Explosive Unit,Plastic	6	-2
+Explosive Unit	H2SO4	Explosive Unit,H2SO4	6	-1
+Yellow Shell	Yellow Shell	Yellow Shell,Yellow Shell	3	1
+Yellow Shell	Shell	Yellow Shell,Shell	3	-1
+Yellow Shell	Titanium	Yellow Shell,Titanium	3	-6
+Yellow Shell	Explosive Unit	Yellow Shell,Explosive Unit	3	-2
+Corvette	Corvette	Corvette,Corvette	5	-2
+Corvette	Ti Alloy	Corvette,Ti Alloy	5	-2
+Corvette	Fancy Thruster	Corvette,Fancy Thruster	5	-2
+Corvette	Processor	Corvette,Processor	5	-2
+Corvette	PC	Corvette,PC	5	-2
+Sort4	Sort4	Sort4,Sort4	1	1
+Sort4	Sort3	Sort4,Sort3	1	-2
+Sort4	Blue Engine	Sort4,Blue Engine	1	-1
+Sort4	Processor	Sort4,Processor	1	-1
+Yellow Missile	Yellow Missile	Yellow Missile,Yellow Missile	4	2
+Yellow Missile	Red Missile	Yellow Missile,Red Missile	4	-2
+Yellow Missile	Processor	Yellow Missile,Processor	4	-4
+Yellow Missile	Explosive Unit	Yellow Missile,Explosive Unit	4	-4
+Yellow Missile	Thruster	Yellow Missile,Thruster	4	-2
+Tubes+	Tubes	Tubes+,Tubes	4	2
+Tubes+	Stalagmite	Tubes+,Stalagmite	4	-6
+Yellow Science	Yellow Science	Yellow Science,Yellow Science	8	1
+Yellow Science	Diamond	Yellow Science,Diamond	8	-1
+Yellow Science	Ti Crystal	Yellow Science,Ti Crystal	8	-1
+Red Science	Red Science	Red Science,Red Science	6	1
+Red Science	Graphite	Red Science,Graphite	6	-2
+Red Science	Hydrogen	Red Science,Hydrogen	6	-2
+Blue Science	Blue Science	Blue Science,Blue Science	3	1
+Blue Science	CB	Blue Science,CB	3	-1
+Blue Science	Spicy Donut	Blue Science,Spicy Donut	3	-1
+Green Missile	Green Missile	Green Missile,Green Missile	6	3
+Green Missile	Yellow Missile	Green Missile,Yellow Missile	6	-3
+Green Missile	Crystal Explosive Unit	Green Missile,Crystal Explosive Unit	6	-6
+Green Missile	Strange Matter	Green Missile,Strange Matter	6	-3
+Crystal Explosive	Crystal Explosive	Crystal Explosive,Crystal Explosive	24	8
+Crystal Explosive	Explosive Unit	Crystal Explosive,Explosive Unit	24	-8
+Crystal Explosive	Casimir	Crystal Explosive,Casimir	24	-1
+Crystal Explosive	Si Crystal	Crystal Explosive,Si Crystal	24	-8
