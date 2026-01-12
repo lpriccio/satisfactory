@@ -43,7 +43,6 @@ class ChainAggregator:
             # Track as base resource consumption
             totals.gross_consumption[node.item_name] = (
                 totals.gross_consumption.get(node.item_name, 0.0)
-                + node.target_rate
             )
             return
 
