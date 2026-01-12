@@ -21,7 +21,9 @@ class DependencyCalculator:
         recipe_selections: dict[str, str],
         speed_multipliers: dict[str, float],
         imported_items: set[str],
+        imported_node_overrides: dict[tuple[str, ...], bool] | None = None,
         parent_id: Optional[UUID] = None,
+        parent_path: tuple[str, ...] = (),
     ) -> ProductionNode:
         """
         Recursively build production tree for target item at desired rate.
@@ -31,18 +33,31 @@ class DependencyCalculator:
             target_rate: Desired items/min output
             recipe_selections: User's recipe choices (item -> recipe_name)
             speed_multipliers: Recipe speed multipliers (recipe_name -> multiplier)
-            imported_items: Items marked as imported (stop recursion)
+            imported_items: Items marked as imported (item-level default)
+            imported_node_overrides: Per-node import overrides by path
             parent_id: Parent node ID for tree structure
+            parent_path: Path of item names from root to parent
         """
+        if imported_node_overrides is None:
+            imported_node_overrides = {}
+
+        current_path = parent_path + (target_item,)
+
         node = ProductionNode(
             id=uuid4(),
             item_name=target_item,
             target_rate=target_rate,
             parent_id=parent_id,
+            path=current_path,
         )
 
-        # Check if imported
-        if target_item in imported_items:
+        # Check if imported (per-node override takes precedence)
+        if current_path in imported_node_overrides:
+            is_imported = imported_node_overrides[current_path]
+        else:
+            is_imported = target_item in imported_items
+
+        if is_imported:
             node.is_imported = True
             return node
 
@@ -116,7 +131,9 @@ class DependencyCalculator:
                     recipe_selections=recipe_selections,
                     speed_multipliers=speed_multipliers,
                     imported_items=imported_items,
+                    imported_node_overrides=imported_node_overrides,
                     parent_id=node.id,
+                    parent_path=current_path,
                 )
                 node.children.append(child_node)
 
@@ -135,5 +152,6 @@ class DependencyCalculator:
             recipe_selections=chain.recipe_selections,
             speed_multipliers=chain.speed_multipliers,
             imported_items=chain.imported_items,
+            imported_node_overrides=chain.imported_node_overrides,
         )
         return chain

@@ -4,9 +4,29 @@ import streamlit as st
 
 from satisfactory.models.build_chain import ProductionNode
 
+# Tight column layout CSS
+_TIGHT_COLUMNS_CSS = """
+<style>
+    /* Reduce gap between columns in the tree view */
+    div[data-testid="column"] {
+        padding-left: 0.2rem !important;
+        padding-right: 0.2rem !important;
+    }
+    /* Make checkbox and button columns minimal width */
+    div[data-testid="column"]:has(> div > div > div > input[type="checkbox"]),
+    div[data-testid="column"]:has(> div > div > button) {
+        flex: 0 0 2.5rem !important;
+        min-width: 2.5rem !important;
+    }
+</style>
+"""
+
 
 def render_dependency_tree():
     """Render hierarchical dependency tree with integrated recipe controls."""
+    # Inject CSS for tighter column layout
+    st.markdown(_TIGHT_COLUMNS_CSS, unsafe_allow_html=True)
+
     chain = st.session_state.current_chain
     if not chain or not chain.root_node:
         st.info("Create a build chain to see the dependency tree")
@@ -50,11 +70,11 @@ def _render_node_with_controls(node: ProductionNode, chain, depth: int):
     with container:
         if has_recipes:
             # Has recipes - show checkbox, item, recipe dropdown, speed
-            is_imported = node.item_name in chain.imported_items
+            is_imported = chain.is_path_imported(node.path)
 
             if is_imported:
-                # Imported: [checkbox] Item — import X/min
-                col1, col2 = st.columns([1, 7])
+                # Imported: [checkbox] [all btn] Item — import X/min
+                col1, col1b, col2 = st.columns([0.5, 0.5, 10], gap="small")
                 with col1:
                     new_imported = st.checkbox(
                         "imp",
@@ -63,13 +83,18 @@ def _render_node_with_controls(node: ProductionNode, chain, depth: int):
                         label_visibility="collapsed",
                     )
                     if not new_imported:
-                        chain.imported_items.discard(node.item_name)
+                        chain.set_node_import(node.path, False)
+                        st.session_state.tree_changed = True
+                with col1b:
+                    if st.button("∀", key=f"all_{node.id}", help=f"Produce ALL {node.item_name}"):
+                        # Currently imported → produce all
+                        chain.set_item_import(node.item_name, False)
                         st.session_state.tree_changed = True
                 with col2:
                     st.markdown(f"**{node.item_name}** — 📦 *import {node.target_rate:.2f}/min*")
             else:
-                # Producing: [checkbox] Item — Xx | [recipe] | [speed]
-                col1, col2, col3, col4 = st.columns([1, 3, 3, 2])
+                # Producing: [checkbox] [all btn] Item — Xx | [recipe] | [speed]
+                col1, col1b, col2, col3, col4 = st.columns([0.5, 0.5, 4, 4, 2], gap="small")
 
                 with col1:
                     new_imported = st.checkbox(
@@ -79,7 +104,13 @@ def _render_node_with_controls(node: ProductionNode, chain, depth: int):
                         label_visibility="collapsed",
                     )
                     if new_imported:
-                        chain.imported_items.add(node.item_name)
+                        chain.set_node_import(node.path, True)
+                        st.session_state.tree_changed = True
+
+                with col1b:
+                    if st.button("∀", key=f"all_{node.id}", help=f"Import ALL {node.item_name}"):
+                        # Currently producing → import all
+                        chain.set_item_import(node.item_name, True)
                         st.session_state.tree_changed = True
 
                 with col2:
@@ -123,7 +154,7 @@ def _render_node_with_controls(node: ProductionNode, chain, depth: int):
                         st.session_state.tree_changed = True
         else:
             # No recipes - base resource, just show as imported
-            col1, col2 = st.columns([1, 7])
+            col1, col2 = st.columns([1, 10], gap="small")
             with col1:
                 st.markdown("📦")
             with col2:

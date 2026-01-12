@@ -15,6 +15,7 @@ class ProductionNode:
     target_rate: float = 0.0  # Desired output rate (items/min)
     machine_count: float = 0.0  # Fractional machines needed
     is_imported: bool = False  # If True, no production chain needed
+    path: tuple[str, ...] = ()  # Path from root (tuple of item names)
 
     # Calculated fields
     actual_production_rate: float = 0.0
@@ -34,6 +35,7 @@ class ProductionNode:
             "target_rate": self.target_rate,
             "machine_count": self.machine_count,
             "is_imported": self.is_imported,
+            "path": list(self.path),
             "actual_production_rate": self.actual_production_rate,
             "power_consumption": self.power_consumption,
             "floor_space": self.floor_space,
@@ -51,6 +53,7 @@ class ProductionNode:
             target_rate=data.get("target_rate", 0.0),
             machine_count=data.get("machine_count", 0.0),
             is_imported=data.get("is_imported", False),
+            path=tuple(data.get("path", [])),
             actual_production_rate=data.get("actual_production_rate", 0.0),
             power_consumption=data.get("power_consumption", 0.0),
             floor_space=data.get("floor_space", 0.0),
@@ -77,12 +80,45 @@ class BuildChain:
     # Speed multipliers for recipes (recipe_name -> multiplier, default 1.0)
     speed_multipliers: dict[str, float] = field(default_factory=dict)
 
-    # Items marked as imported (no production chain)
+    # Items marked as imported (no production chain) - item-level default
     imported_items: set[str] = field(default_factory=set)
+
+    # Per-node import overrides by path (tuple of item names from root)
+    # True = imported, False = not imported (overrides imported_items)
+    imported_node_overrides: dict[tuple[str, ...], bool] = field(default_factory=dict)
 
     # Metadata
     created_at: str = ""
     updated_at: str = ""
+
+    def is_path_imported(self, path: tuple[str, ...]) -> bool:
+        """Check if a node path should be imported (considering overrides)."""
+        if path in self.imported_node_overrides:
+            return self.imported_node_overrides[path]
+        # Fall back to item-level import status
+        return path[-1] in self.imported_items if path else False
+
+    def set_node_import(self, path: tuple[str, ...], imported: bool) -> None:
+        """Set import status for a specific node (creates override)."""
+        item_name = path[-1] if path else ""
+        item_default = item_name in self.imported_items
+        if imported == item_default:
+            # Matches default, remove override if present
+            self.imported_node_overrides.pop(path, None)
+        else:
+            # Override needed
+            self.imported_node_overrides[path] = imported
+
+    def set_item_import(self, item_name: str, imported: bool) -> None:
+        """Set import status for ALL nodes of an item type (clears overrides)."""
+        if imported:
+            self.imported_items.add(item_name)
+        else:
+            self.imported_items.discard(item_name)
+        # Clear all per-node overrides for this item
+        paths_to_remove = [p for p in self.imported_node_overrides if p and p[-1] == item_name]
+        for p in paths_to_remove:
+            del self.imported_node_overrides[p]
 
     def to_dict(self) -> dict:
         """Serialize for JSON storage."""
@@ -96,6 +132,10 @@ class BuildChain:
             "recipe_selections": self.recipe_selections,
             "speed_multipliers": self.speed_multipliers,
             "imported_items": list(self.imported_items),
+            "imported_node_overrides": {
+                "|".join(path): val
+                for path, val in self.imported_node_overrides.items()
+            },
             "created_at": self.created_at,
             "updated_at": self.updated_at,
         }
@@ -112,6 +152,10 @@ class BuildChain:
             recipe_selections=data.get("recipe_selections", {}),
             speed_multipliers=data.get("speed_multipliers", {}),
             imported_items=set(data.get("imported_items", [])),
+            imported_node_overrides={
+                tuple(key.split("|")): val
+                for key, val in data.get("imported_node_overrides", {}).items()
+            },
             created_at=data.get("created_at", ""),
             updated_at=data.get("updated_at", ""),
         )

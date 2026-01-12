@@ -166,9 +166,9 @@ class RecipeDatabase:
     def get_default_imported_items(self) -> set[str]:
         """Get items that should be imported by default.
 
-        Includes true base resources and raw ores (Converter-only items).
+        Includes true base resources, raw ores (Converter-only items), and Water.
         """
-        return self.get_base_resources() | self.get_raw_resources()
+        return self.get_base_resources() | self.get_raw_resources() | {"Water"}
 
     def get_non_converter_recipes(self, item_name: str) -> list[Recipe]:
         """Get recipes that produce an item, excluding Converter recipes."""

@@ -24,7 +24,7 @@ def render_summary():
         power_label = "Power Draw" if totals.total_power >= 0 else "Power Generated"
         st.metric(f"⚡ {power_label}", f"{abs(totals.total_power):.1f} MW")
     with col2:
-        st.metric("📐 Total Floor Space", f"{totals.total_floor_space:.0f} units")
+        st.metric("📐 Total Floor Space", f"{totals.total_floor_space / 64 *3.0:.0f}Fd (@3x)")
     with col3:
         machine_total = sum(totals.machine_counts.values())
         st.metric("🏭 Total Machines", f"{machine_total:.2f}")
