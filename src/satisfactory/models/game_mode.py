@@ -51,4 +51,4 @@ class GameMode(Enum):
             return "#0a1628"  # Dark blue
         elif self == GameMode.FACTORIO:
             return "#1a0a28"  # Deep purple
-        return "#0a2820"  # Dark teal for DSP
+        return "#1a1a1a"  # Very dark gray for DSP
