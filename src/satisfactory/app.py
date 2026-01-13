@@ -81,6 +81,56 @@ def init_session_state():
         st.session_state.current_chain = None
 
 
+def _handle_url_params():
+    """Handle URL query parameters for deep linking to chains."""
+    params = st.query_params
+
+    # Handle game mode from URL (only on first load)
+    if "game" in params and "_url_params_processed" not in st.session_state:
+        game_value = params["game"]
+        for mode in GameMode:
+            if mode.value == game_value:
+                st.session_state.game_mode = mode
+                break
+
+    # Mark URL params as processed (chain loading happens after init)
+    st.session_state._url_params_processed = True
+
+
+def _load_chain_from_url():
+    """Load chain specified in URL params (called after storage is initialized)."""
+    params = st.query_params
+
+    if "chain" in params and not st.session_state.get("_url_chain_loaded"):
+        chain_name = params["chain"]
+        storage = st.session_state.storage
+
+        # Find chain by name
+        for filepath, name, target, rate in storage.list_chains():
+            if name == chain_name:
+                loaded = storage.load(filepath)
+                st.session_state.prev_target_item = loaded.target_item
+                st.session_state.prev_target_rate = loaded.target_rate
+                st.session_state.chain_name_override = loaded.name
+                st.session_state.widget_key_version = st.session_state.get("widget_key_version", 0) + 1
+                st.session_state.current_chain = st.session_state.calculator.recalculate(loaded)
+                st.session_state._url_chain_loaded = True
+                return True
+    return False
+
+
+def update_url_params():
+    """Update URL query params to reflect current state."""
+    mode = st.session_state.get("game_mode", GameMode.SATISFACTORY)
+    chain = st.session_state.get("current_chain")
+
+    new_params = {"game": mode.value}
+    if chain and chain.name:
+        new_params["chain"] = chain.name
+
+    st.query_params.update(new_params)
+
+
 def main():
     """Main application entry point."""
     st.set_page_config(
@@ -88,6 +138,9 @@ def main():
         page_icon="🏭",
         layout="wide",
     )
+
+    # Handle URL params before anything else
+    _handle_url_params()
 
     # Game mode selector at very top of sidebar (before init to catch changes)
     with st.sidebar:
@@ -113,6 +166,10 @@ def main():
         st.divider()
 
     init_session_state()
+
+    # Load chain from URL if specified (after storage is ready)
+    if _load_chain_from_url():
+        st.rerun()
 
     mode = st.session_state.game_mode
 
@@ -162,6 +219,9 @@ def main():
 
     with tab3:
         render_combine_tab()
+
+    # Keep URL in sync with current state
+    update_url_params()
 
 
 if __name__ == "__main__":
