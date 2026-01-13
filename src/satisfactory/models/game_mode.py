@@ -9,6 +9,7 @@ class GameMode(Enum):
     SATISFACTORY = "satisfactory"
     FACTORIO = "factorio"
     DSP = "dsp"
+    FOUNDRY = "foundry"
 
     @property
     def display_name(self) -> str:
@@ -22,6 +23,8 @@ class GameMode(Enum):
             return "recipes.tsv"
         elif self == GameMode.FACTORIO:
             return "recipes_factorio.tsv"
+        elif self == GameMode.FOUNDRY:
+            return "recipes_foundry.tsv"
         return "recipes_dsp.tsv"
 
     @property
@@ -43,6 +46,7 @@ class GameMode(Enum):
     @property
     def has_productivity(self) -> bool:
         # Factorio has productivity modules, DSP has proliferator
+        # Foundry doesn't have productivity bonuses
         return self in (GameMode.FACTORIO, GameMode.DSP)
 
     @property
@@ -51,4 +55,6 @@ class GameMode(Enum):
             return "#0a1628"  # Dark blue
         elif self == GameMode.FACTORIO:
             return "#1a0a28"  # Deep purple
+        elif self == GameMode.FOUNDRY:
+            return "#1a2810"  # Dark olive/green for Foundry
         return "#1a1a1a"  # Very dark gray for DSP

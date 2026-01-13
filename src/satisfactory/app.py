@@ -60,6 +60,9 @@ def init_session_state():
             st.session_state.db = FactorioRecipeDatabase(data_path)
         elif mode == GameMode.DSP:
             st.session_state.db = DSPRecipeDatabase(data_path)
+        elif mode == GameMode.FOUNDRY:
+            # Foundry uses same TSV format as Factorio
+            st.session_state.db = FactorioRecipeDatabase(data_path)
         else:
             st.session_state.db = RecipeDatabase(data_path)
 
@@ -132,6 +135,8 @@ def main():
         icon = "🏭"
     elif mode == GameMode.FACTORIO:
         icon = "⚙️"
+    elif mode == GameMode.FOUNDRY:
+        icon = "🔨"
     else:  # DSP
         icon = "🌟"
     st.title(f"{icon} {mode.display_name} Build Planner")
