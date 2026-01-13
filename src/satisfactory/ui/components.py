@@ -4,6 +4,20 @@ import streamlit as st
 
 from satisfactory.models.build_chain import BuildChain
 
+# CSS for compact dropdown in sidebar
+_COMPACT_DROPDOWN_CSS = """
+<style>
+    /* Compact selectbox in sidebar */
+    section[data-testid="stSidebar"] div[data-testid="stSelectbox"] > div > div {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.4rem;
+    }
+    section[data-testid="stSidebar"] div[data-testid="stSelectbox"] option {
+        font-size: 0.8rem;
+    }
+</style>
+"""
+
 
 def _get_default_chain_name(target_item: str, storage) -> str:
     """Generate default chain name like 'Product 1', 'Product 2', etc."""
@@ -66,6 +80,9 @@ def render_sidebar():
     # Saved chains section first (so loading can set defaults)
     st.subheader("Saved Chains")
 
+    # Inject compact dropdown CSS
+    st.markdown(_COMPACT_DROPDOWN_CSS, unsafe_allow_html=True)
+
     saved_chains = storage.list_chains()
     if saved_chains:
         # Build options for dropdown
@@ -74,7 +91,8 @@ def render_sidebar():
             label = f"{name} ({target} @ {rate:.1f}/min)"
             chain_options[label] = filepath
 
-        col1, col2 = st.columns([4, 1])
+        # Full-width dropdown with delete button on same row
+        col1, col2 = st.columns([9, 1])
         with col1:
             selected_label = st.selectbox(
                 "Load Chain",
@@ -84,7 +102,7 @@ def render_sidebar():
             )
         with col2:
             selected_path = chain_options[selected_label]
-            if selected_path and st.button("X", key="delete_selected"):
+            if selected_path and st.button("X", key="delete_selected", help="Delete"):
                 storage.delete(selected_path)
                 st.session_state.widget_key_version += 1
                 st.rerun()
