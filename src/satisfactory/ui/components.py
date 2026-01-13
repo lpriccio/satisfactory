@@ -7,13 +7,21 @@ from satisfactory.models.build_chain import BuildChain
 # CSS for compact dropdown in sidebar
 _COMPACT_DROPDOWN_CSS = """
 <style>
-    /* Compact selectbox in sidebar */
-    section[data-testid="stSidebar"] div[data-testid="stSelectbox"] > div > div {
-        font-size: 0.8rem;
-        padding: 0.2rem 0.4rem;
+    /* Compact selectbox in sidebar - target baseweb components */
+    section[data-testid="stSidebar"] div[data-baseweb="select"] {
+        font-size: 0.75rem !important;
     }
-    section[data-testid="stSidebar"] div[data-testid="stSelectbox"] option {
-        font-size: 0.8rem;
+    section[data-testid="stSidebar"] div[data-baseweb="select"] > div {
+        padding: 2px 8px !important;
+        min-height: 28px !important;
+    }
+    section[data-testid="stSidebar"] div[data-baseweb="select"] span {
+        font-size: 0.75rem !important;
+    }
+    /* Dropdown menu items */
+    ul[data-testid="stSelectboxVirtualDropdown"] li {
+        font-size: 0.75rem !important;
+        padding: 4px 8px !important;
     }
 </style>
 """
@@ -91,21 +99,18 @@ def render_sidebar():
             label = f"{name} ({target} @ {rate:.1f}/min)"
             chain_options[label] = filepath
 
-        # Full-width dropdown with delete button on same row
-        col1, col2 = st.columns([9, 1])
-        with col1:
-            selected_label = st.selectbox(
-                "Load Chain",
-                options=list(chain_options.keys()),
-                key=f"load_chain_select_{st.session_state.widget_key_version}",
-                label_visibility="collapsed",
-            )
-        with col2:
-            selected_path = chain_options[selected_label]
-            if selected_path and st.button("X", key="delete_selected", help="Delete"):
-                storage.delete(selected_path)
-                st.session_state.widget_key_version += 1
-                st.rerun()
+        # Full-width dropdown
+        selected_label = st.selectbox(
+            "Load Chain",
+            options=list(chain_options.keys()),
+            key=f"load_chain_select_{st.session_state.widget_key_version}",
+            label_visibility="collapsed",
+        )
+        selected_path = chain_options[selected_label]
+        if selected_path and st.button("Delete Selected", key="delete_selected"):
+            storage.delete(selected_path)
+            st.session_state.widget_key_version += 1
+            st.rerun()
 
         # Handle loading when selection changes
         if selected_label != "(New Chain)" and chain_options[selected_label]:
