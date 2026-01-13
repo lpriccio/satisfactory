@@ -164,9 +164,11 @@ def render_sidebar():
         key=f"target_rate_input_{st.session_state.widget_key_version}",
     )
 
-    # Detect if target item changed - reset chain name
-    if target_item != st.session_state.prev_target_item:
+    # Detect if target item changed - reset chain name and force widget refresh
+    target_item_changed = target_item != st.session_state.prev_target_item
+    if target_item_changed:
         st.session_state.chain_name_override = None
+        st.session_state.widget_key_version += 1
 
     # Chain name
     if st.session_state.chain_name_override is not None:
@@ -186,7 +188,7 @@ def render_sidebar():
 
     # Auto-create/update chain when target or rate changes
     needs_update = (
-        target_item != st.session_state.prev_target_item
+        target_item_changed
         or target_rate != st.session_state.prev_target_rate
     )
 

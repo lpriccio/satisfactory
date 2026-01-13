@@ -40,7 +40,7 @@ def init_session_state():
     mode = st.session_state.game_mode
 
     # Check if we need to reinitialize for a different game mode
-    current_mode_key = f"_initialized_mode"
+    current_mode_key = "_initialized_mode"
     if st.session_state.get(current_mode_key) != mode:
         # Clear game-specific state when switching modes
         st.session_state.db = None
@@ -51,6 +51,8 @@ def init_session_state():
         st.session_state.prev_target_item = None
         st.session_state.prev_target_rate = None
         st.session_state.chain_name_override = None
+        # Increment widget key to force all widgets to refresh with new defaults
+        st.session_state.widget_key_version = st.session_state.get("widget_key_version", 0) + 1
         st.session_state[current_mode_key] = mode
 
     # Initialize database based on game mode
