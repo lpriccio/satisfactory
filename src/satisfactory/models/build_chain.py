@@ -21,6 +21,8 @@ class ProductionNode:
     actual_production_rate: float = 0.0
     power_consumption: float = 0.0
     floor_space: float = 0.0
+    speed_multiplier: float = 1.0  # Applied speed multiplier for this node
+    productivity_multiplier: float = 1.0  # Applied productivity (outputs only)
 
     # Tree structure
     children: list["ProductionNode"] = field(default_factory=list)
@@ -39,6 +41,8 @@ class ProductionNode:
             "actual_production_rate": self.actual_production_rate,
             "power_consumption": self.power_consumption,
             "floor_space": self.floor_space,
+            "speed_multiplier": self.speed_multiplier,
+            "productivity_multiplier": self.productivity_multiplier,
             "children": [c.to_dict() for c in self.children],
             "parent_id": str(self.parent_id) if self.parent_id else None,
         }
@@ -57,6 +61,8 @@ class ProductionNode:
             actual_production_rate=data.get("actual_production_rate", 0.0),
             power_consumption=data.get("power_consumption", 0.0),
             floor_space=data.get("floor_space", 0.0),
+            speed_multiplier=data.get("speed_multiplier", 1.0),
+            productivity_multiplier=data.get("productivity_multiplier", 1.0),
             parent_id=UUID(data["parent_id"]) if data.get("parent_id") else None,
         )
         node.children = [cls.from_dict(c) for c in data.get("children", [])]

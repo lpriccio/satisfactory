@@ -50,18 +50,24 @@ class ChainAggregator:
         if not recipe:
             return
 
+        # Get multipliers from node (default 1.0 for backwards compat)
+        speed = node.speed_multiplier
+        productivity = node.productivity_multiplier
+
         # Track production (all outputs, including byproducts)
+        # Production scales with speed AND productivity
         for output in recipe.outputs:
             if output.item_name == "MW":
                 continue  # Power tracked separately
-            output_rate = recipe.get_output_rate(output.item_name) * node.machine_count
+            output_rate = recipe.get_output_rate(output.item_name) * speed * productivity * node.machine_count
             totals.gross_production[output.item_name] = (
                 totals.gross_production.get(output.item_name, 0.0) + output_rate
             )
 
         # Track consumption (inputs used by this node)
+        # Consumption scales with speed only (NOT productivity)
         for input_io in recipe.inputs:
-            input_rate = recipe.get_input_rate(input_io.item_name) * node.machine_count
+            input_rate = recipe.get_input_rate(input_io.item_name) * speed * node.machine_count
             totals.gross_consumption[input_io.item_name] = (
                 totals.gross_consumption.get(input_io.item_name, 0.0) + input_rate
             )

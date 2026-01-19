@@ -104,6 +104,10 @@ class DependencyCalculator:
             speed = speed_multipliers.get(recipe.name, 1.0)
             productivity = productivity_multipliers.get(recipe.name, 1.0)
 
+            # Store on node for aggregator
+            node.speed_multiplier = speed
+            node.productivity_multiplier = productivity
+
             # Calculate machines needed
             # Output rate scales with speed AND productivity
             # machine_count = target / (base_output * speed * productivity)
