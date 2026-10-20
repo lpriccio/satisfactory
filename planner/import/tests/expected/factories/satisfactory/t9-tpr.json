@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "name": "tpr",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-tpr-r4",
+      "recipe": "SpaceElevatorPart_8",
+      "machines": 1
+    },
+    {
+      "id": "t9-tpr-r6",
+      "recipe": "SpaceElevatorPart_4",
+      "machines": 2.5
+    },
+    {
+      "id": "t9-tpr-r8",
+      "recipe": "SpaceElevatorPart_1",
+      "machines": 2.5
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.695Z",
+  "updatedAt": "2026-10-20T04:13:46.194Z",
+  "id": "t9-tpr",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"tpr\" (template A, scale 1, shard 1).\nWorkbook size total: 1890 m² (118 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

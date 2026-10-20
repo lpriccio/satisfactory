@@ -843,6 +843,12 @@ pub(crate) mod tests {
         PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("..")
     }
 
+    /// Frozen copies of the original import output. The live files under
+    /// factories/ are yours to edit in the app, so tests never compare to them.
+    pub(crate) fn expected_dir() -> PathBuf {
+        PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/expected")
+    }
+
     /// A scratch planner root holding copies of the given data files.
     pub(crate) fn temp_root(tag: &str, data_files: &[&str]) -> PathBuf {
         let root =
@@ -939,7 +945,7 @@ pub(crate) mod tests {
         let Some((root, report)) = imported() else {
             return;
         };
-        let committed = Store::new(planner_dir());
+        let committed = Store::new(expected_dir());
         let fresh = Store::new(root);
         assert_eq!(report.imported.len(), 49, "skipped: {:?}", report.skipped);
         let mut diffs = vec![];

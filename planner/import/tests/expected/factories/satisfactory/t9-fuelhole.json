@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "name": "fuelhole",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-fuelhole-r3",
+      "recipe": "Alternate_DilutedFuel",
+      "machines": 1.6
+    },
+    {
+      "id": "t9-fuelhole-r4",
+      "recipe": "Alternate_HeavyOilResidue",
+      "machines": 2
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.605Z",
+  "updatedAt": "2026-10-20T04:13:46.099Z",
+  "id": "t9-fuelhole",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"fuelhole\" (template B, scale 1).\nWorkbook size total: 860.8 m² (34 foundations).\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

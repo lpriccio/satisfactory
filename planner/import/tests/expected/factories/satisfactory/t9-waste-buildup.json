@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "name": "waste buildup",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-waste-buildup-r4",
+      "recipe": "PlutoniumFuelRod",
+      "machines": 20.8,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-waste-buildup-r5",
+      "recipe": "Alternate_InstantPlutoniumCell",
+      "machines": 15.6,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-waste-buildup-r6",
+      "recipe": "NonFissileUranium",
+      "machines": 23.4,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-waste-buildup-r7",
+      "recipe": "SulfuricAcid",
+      "machines": 7.02,
+      "clock": 2.5000000000000004
+    },
+    {
+      "id": "t9-waste-buildup-r8",
+      "recipe": "NitricAcid",
+      "machines": 11.7,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-waste-buildup-r9",
+      "recipe": "AluminumSheet",
+      "machines": 8.66666666666667,
+      "clock": 2.500000000000003
+    },
+    {
+      "id": "t9-waste-buildup-r10",
+      "recipe": "Alternate_AlcladCasing",
+      "machines": 1.38666666666667,
+      "clock": 2.4999999999999964
+    },
+    {
+      "id": "t9-waste-buildup-r11",
+      "recipe": "Alternate_SteelBeam_Aluminum",
+      "machines": 4.16,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-waste-buildup-r12",
+      "recipe": "Wire",
+      "machines": 12.48,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-waste-buildup-r13",
+      "recipe": "Alternate_SteamedCopperSheet",
+      "machines": 6.93333333333333,
+      "clock": 2.4999999999999964
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.661Z",
+  "updatedAt": "2026-10-20T04:13:46.159Z",
+  "id": "t9-waste-buildup",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"waste buildup\" (template A, scale 52, shard 2.5).\nWorkbook size total: 38610 m² (2,413 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

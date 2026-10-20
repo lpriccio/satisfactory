@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "name": "bigosc",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-bigosc-r4",
+      "recipe": "Alternate_CrystalOscillator",
+      "machines": 19.92,
+      "clock": 2.4999999999999996
+    },
+    {
+      "id": "t9-bigosc-r5",
+      "recipe": "Alternate_PureQuartzCrystal",
+      "machines": 7.11428571428571,
+      "clock": 2.500000000000003
+    },
+    {
+      "id": "t9-bigosc-r6",
+      "recipe": "AILimiter",
+      "machines": 7.47,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-bigosc-r7",
+      "recipe": "Alternate_SteamedCopperSheet",
+      "machines": 8.3,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-bigosc-r8",
+      "recipe": "Alternate_Quickwire",
+      "machines": 26.892,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-bigosc-r9",
+      "recipe": "Alternate_PureCateriumIngot",
+      "machines": 19.92,
+      "clock": 2.4999999999999996
+    },
+    {
+      "id": "t9-bigosc-r10",
+      "recipe": "Alternate_PureCopperIngot",
+      "machines": 31.872,
+      "clock": 2.5000000000000004
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.544Z",
+  "updatedAt": "2026-10-20T04:13:46.038Z",
+  "id": "t9-bigosc",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"bigosc\" (template A, scale 49.8, shard 2.5).\nWorkbook size total: 26250 m² (1,641 foundations incl. support).\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

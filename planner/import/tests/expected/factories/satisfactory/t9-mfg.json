@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "name": "mfg",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-mfg-r3",
+      "recipe": "SpaceElevatorPart_6",
+      "machines": 1
+    },
+    {
+      "id": "t9-mfg-r4",
+      "recipe": "SpaceElevatorPart_2",
+      "machines": 0.5
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.596Z",
+  "updatedAt": "2026-10-20T04:13:46.089Z",
+  "id": "t9-mfg",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"mfg\" (template B, scale 1).\nWorkbook size total: 0 m² (0 foundations).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

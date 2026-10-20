@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "name": "gh",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-gh-r4",
+      "recipe": "FusedModularFrame",
+      "machines": 6
+    },
+    {
+      "id": "t9-gh-r6",
+      "recipe": "Alternate_HeatSink_1",
+      "machines": 8
+    },
+    {
+      "id": "t9-gh-r7",
+      "recipe": "Alternate_CoolingDevice",
+      "machines": 6,
+      "note": "Workbook rates differ from the game: Heat Sink: workbook -9.375/min, game -10/min; Motor: workbook -1.875/min, game -2.5/min; Nitrogen Gas: workbook -45/min, game -60/min; Cooling System: workbook 3.75/min, game 5/min"
+    },
+    {
+      "id": "t9-gh-r9",
+      "recipe": "MotorTurbo",
+      "machines": 1
+    },
+    {
+      "id": "t9-gh-r11",
+      "recipe": "PressureConversionCube",
+      "machines": 1
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.703Z",
+  "updatedAt": "2026-10-20T04:13:46.202Z",
+  "id": "t9-gh",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"gh\" (template A, scale 1, shard 1).\nWorkbook size total: 5166 m² (323 foundations incl. support).\nSloop Bonus: Turbo Motor 1.875/min; Pressure Conversion Cube 1/min",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

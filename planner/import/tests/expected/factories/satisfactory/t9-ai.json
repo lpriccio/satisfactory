@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "name": "ai",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-ai-r4",
+      "recipe": "AILimiter",
+      "machines": 24
+    },
+    {
+      "id": "t9-ai-r5",
+      "recipe": "Quickwire",
+      "machines": 40
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.592Z",
+  "updatedAt": "2026-10-20T04:13:46.082Z",
+  "id": "t9-ai",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"ai\" (template A, scale 24, shard 1).\nWorkbook size total: 6800 m² (425 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

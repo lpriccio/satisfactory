@@ -79,7 +79,8 @@ fn nuclear_plant_burns_rods_and_makes_waste() {
 #[test]
 fn pasta_matches_the_workbook() {
     let d = real("satisfactory");
-    let f = Store::new(root())
+    // The frozen import, not your live (editable) save.
+    let f = Store::new(root().join("import/tests/expected"))
         .load_factory(GameId::Satisfactory, "t9-pasta")
         .unwrap();
     let p = solve(&d, &f);

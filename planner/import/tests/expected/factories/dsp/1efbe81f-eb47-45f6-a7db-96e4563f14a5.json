@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "id": "1efbe81f-eb47-45f6-a7db-96e4563f14a5",
+  "game": "dsp",
+  "name": "Purple Science 1",
+  "mode": "target",
+  "objective": "min-raw",
+  "targets": [
+    {
+      "item": "Purple Science",
+      "rate": 10000
+    }
+  ],
+  "recipeChoice": {
+    "Tubes": "Tubes+"
+  },
+  "lineSettings": {
+    "Purple Science": {
+      "prodBonus": 0.25
+    },
+    "Broadband": {
+      "prodBonus": 0.25
+    },
+    "Plastic": {
+      "prodBonus": 0.25
+    },
+    "Graphite": {
+      "prodBonus": 0.25
+    },
+    "Si Crystal": {
+      "prodBonus": 0.25
+    },
+    "Silicon": {
+      "prodBonus": 0.25
+    },
+    "Tubes+": {
+      "prodBonus": 0.25
+    },
+    "Processor": {
+      "prodBonus": 0.25
+    },
+    "CB": {
+      "prodBonus": 0.25
+    },
+    "Iron": {
+      "prodBonus": 0.25
+    },
+    "Copper": {
+      "prodBonus": 0.25
+    },
+    "Micro": {
+      "prodBonus": 0.25
+    }
+  },
+  "lines": [],
+  "imports": {
+    "items": [
+      "Ti Alloy"
+    ],
+    "edges": [],
+    "exclude": []
+  },
+  "spacing": 4,
+  "createdAt": "2026-09-07T01:04:59.348Z",
+  "updatedAt": "2026-09-07T01:04:59.348Z"
+}

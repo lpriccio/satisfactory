@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "name": "steelhex",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-steelhex-r8",
+      "recipe": "Alternate_CopperAlloyIngot",
+      "machines": 11.2
+    },
+    {
+      "id": "t9-steelhex-r9",
+      "recipe": "Alternate_IngotIron",
+      "machines": 40
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.648Z",
+  "updatedAt": "2026-10-20T04:13:46.144Z",
+  "id": "t9-steelhex",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"steelhex\" (template A, scale 1, shard 1).\nWorkbook size total: 4680 m² (293 foundations incl. support).\nLocal Mining: Iron Ore 2160/min; Copper Ore 960/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "name": "mfs",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-mfs-r5",
+      "recipe": "ModularFrame",
+      "machines": 20.991351563156
+    },
+    {
+      "id": "t9-mfs-r6",
+      "recipe": "IronRod",
+      "machines": 16.7930812505248
+    },
+    {
+      "id": "t9-mfs-r8",
+      "recipe": "Alternate_ReinforcedIronPlate_2",
+      "machines": 11.1953875003499
+    },
+    {
+      "id": "t9-mfs-r9",
+      "recipe": "Alternate_Wire_1",
+      "machines": 18.6589791672498
+    },
+    {
+      "id": "t9-mfs-r10",
+      "recipe": "IronPlate",
+      "machines": 10.495675781578
+    },
+    {
+      "id": "t9-mfs-r11",
+      "recipe": "IngotIron",
+      "machines": 26.6666666666667
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.609Z",
+  "updatedAt": "2026-10-20T04:13:46.103Z",
+  "id": "t9-mfs",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"mfs\" (template B, scale 11.1954).\nWorkbook size total: 9943.8298 m² (388 foundations).\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

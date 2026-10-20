@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "name": "u-unit",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-u-unit-r3",
+      "recipe": "Alternate_NuclearFuelRod_1",
+      "machines": 7.5
+    },
+    {
+      "id": "t9-u-unit-r4",
+      "recipe": "ElectromagneticControlRod",
+      "machines": 3.75
+    },
+    {
+      "id": "t9-u-unit-r5",
+      "recipe": "Alternate_UraniumCell_1",
+      "machines": 7.5
+    },
+    {
+      "id": "t9-u-unit-r8",
+      "recipe": "SulfuricAcid",
+      "machines": 3.6
+    },
+    {
+      "id": "t9-u-unit-r10",
+      "recipe": "Concrete",
+      "machines": 6
+    },
+    {
+      "id": "t9-u-unit-r11",
+      "recipe": "QuartzCrystal",
+      "machines": 3.6
+    },
+    {
+      "id": "t9-u-unit-r12",
+      "recipe": "IngotCaterium",
+      "machines": 11.502
+    },
+    {
+      "id": "t9-u-unit-r13",
+      "recipe": "Quickwire",
+      "machines": 14.3775
+    },
+    {
+      "id": "t9-u-unit-r15",
+      "recipe": "IngotCopper",
+      "machines": 12.85
+    },
+    {
+      "id": "t9-u-unit-r16",
+      "recipe": "Wire",
+      "machines": 15.7
+    },
+    {
+      "id": "t9-u-unit-r17",
+      "recipe": "Cable",
+      "machines": 2.1
+    },
+    {
+      "id": "t9-u-unit-r18",
+      "recipe": "CopperSheet",
+      "machines": 7.5
+    },
+    {
+      "id": "t9-u-unit-r19",
+      "recipe": "AILimiter",
+      "machines": 3
+    },
+    {
+      "id": "t9-u-unit-r20",
+      "recipe": "IngotIron",
+      "machines": 14.875
+    },
+    {
+      "id": "t9-u-unit-r21",
+      "recipe": "IronPlate",
+      "machines": 1.875
+    },
+    {
+      "id": "t9-u-unit-r23",
+      "recipe": "Alternate_ReinforcedIronPlate_2",
+      "machines": 2
+    },
+    {
+      "id": "t9-u-unit-r24",
+      "recipe": "CrystalOscillator",
+      "machines": 4.5
+    },
+    {
+      "id": "t9-u-unit-r26",
+      "recipe": "Alternate_SteelPipe_Iron",
+      "machines": 3.9
+    },
+    {
+      "id": "t9-u-unit-r27",
+      "recipe": "Alternate_Rotor",
+      "machines": 3
+    },
+    {
+      "id": "t9-u-unit-r28",
+      "recipe": "Stator",
+      "machines": 4.5
+    },
+    {
+      "id": "t9-u-unit-r30",
+      "recipe": "Silica",
+      "machines": 3
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.618Z",
+  "updatedAt": "2026-10-20T04:13:46.113Z",
+  "id": "t9-u-unit",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"u-unit\" (template B, scale 7.5).\nWorkbook size total: 16939.958 m² (662 foundations).\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

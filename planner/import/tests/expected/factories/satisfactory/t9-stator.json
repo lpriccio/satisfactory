@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "name": "stator",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-stator-r4",
+      "recipe": "IngotIron",
+      "machines": 16
+    },
+    {
+      "id": "t9-stator-r5",
+      "recipe": "Alternate_IngotSteel_1",
+      "machines": 4.8
+    },
+    {
+      "id": "t9-stator-r6",
+      "recipe": "Alternate_Wire_1",
+      "machines": 23.04
+    },
+    {
+      "id": "t9-stator-r7",
+      "recipe": "SteelPipe",
+      "machines": 9.6
+    },
+    {
+      "id": "t9-stator-r8",
+      "recipe": "Stator",
+      "machines": 12.8
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.587Z",
+  "updatedAt": "2026-10-20T04:13:46.077Z",
+  "id": "t9-stator",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"stator\" (template A, scale 16, shard 1).\nWorkbook size total: 5984 m² (374 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

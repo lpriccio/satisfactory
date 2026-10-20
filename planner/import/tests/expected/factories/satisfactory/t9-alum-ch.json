@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "name": "alum-ch",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-alum-ch-r3",
+      "recipe": "Alternate_SloppyAlumina",
+      "machines": 8.4,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-alum-ch-r4",
+      "recipe": "Alternate_ElectroAluminumScrap",
+      "machines": 11.2,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-alum-ch-r5",
+      "recipe": "PureAluminumIngot",
+      "machines": 56,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-alum-ch-r7",
+      "recipe": "Alternate_PureCopperIngot",
+      "machines": 80
+    },
+    {
+      "id": "t9-alum-ch-r10",
+      "recipe": "Alternate_AlcladCasing",
+      "machines": 6.4,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-alum-ch-r11",
+      "recipe": "AluminumSheet",
+      "machines": 16,
+      "clock": 2.5
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.622Z",
+  "updatedAt": "2026-10-20T04:13:46.118Z",
+  "id": "t9-alum-ch",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"alum-ch\" (template B, scale 1).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; a Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "name": "bigunit",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-bigunit-r4",
+      "recipe": "Alternate_NuclearFuelRod_1",
+      "machines": 19.2,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-bigunit-r6",
+      "recipe": "Alternate_UraniumCell_1",
+      "machines": 19.2,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-bigunit-r8",
+      "recipe": "Alternate_Quickwire",
+      "machines": 16,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-bigunit-r9",
+      "recipe": "Alternate_CopperAlloyIngot",
+      "machines": 9.6,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-bigunit-r10",
+      "recipe": "Silica",
+      "machines": 7.68,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-bigunit-r12",
+      "recipe": "CopperDust",
+      "machines": 1.2,
+      "clock": 2.5
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.574Z",
+  "updatedAt": "2026-10-20T04:13:46.065Z",
+  "id": "t9-bigunit",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"bigunit\" (template A, scale 48, shard 2.5).\nWorkbook size total: 18500 m² (1,156 foundations incl. support).\nDrones: Crystal Oscillator 28.8/min; Electromagnetic Control Rod 96/min; Rotor 96/min; Sulfur 1200/min; Raw Quartz 432/min; Caterium Ingot 300/min\nExports/Waste: Copper Ore 0/min",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "name": "bigelec",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-bigelec-r4",
+      "recipe": "Alternate_Computer_1",
+      "machines": 21.3333333333333,
+      "clock": 2.500000000000002
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.539Z",
+  "updatedAt": "2026-10-20T04:13:46.033Z",
+  "id": "t9-bigelec",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"bigelec\" (template A, scale 53.3333, shard 2.5).\nWorkbook size total: 7920 m² (495 foundations incl. support).\nImports: Circuit Board 1272/min; Crystal Oscillator 93/min; Quickwire 3600/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

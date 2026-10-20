@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "name": "adshole",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-adshole-r4",
+      "recipe": "SpaceElevatorPart_7",
+      "machines": 1
+    },
+    {
+      "id": "t9-adshole-r6",
+      "recipe": "SpaceElevatorPart_5",
+      "machines": 3,
+      "note": "Workbook rates differ from the game: Adaptive Control Unit: workbook 0.5/min, game 1/min; Automated Wiring: workbook -2.5/min, game -5/min; Circuit Board: workbook -2.5/min, game -5/min; Heavy Modular Frame: workbook -0.5/min, game -1/min; Computer: workbook -1/min, game -2/min"
+    },
+    {
+      "id": "t9-adshole-r8",
+      "recipe": "SpaceElevatorPart_3",
+      "machines": 3
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.691Z",
+  "updatedAt": "2026-10-20T04:13:46.189Z",
+  "id": "t9-adshole",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"adshole\" (template A, scale 1, shard 1).\nWorkbook size total: 1680 m² (105 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

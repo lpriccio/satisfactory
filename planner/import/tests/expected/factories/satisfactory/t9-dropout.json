@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "name": "dropout",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-dropout-r4",
+      "recipe": "FicsiteIngot_Iron",
+      "machines": 7.5
+    },
+    {
+      "id": "t9-dropout-r5",
+      "recipe": "IngotSAM",
+      "machines": 5
+    },
+    {
+      "id": "t9-dropout-r6",
+      "recipe": "Alternate_PureIronIngot",
+      "machines": 34.2857142857143
+    },
+    {
+      "id": "t9-dropout-r8",
+      "recipe": "FicsiteMesh",
+      "machines": 7.5
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.682Z",
+  "updatedAt": "2026-10-20T04:13:46.180Z",
+  "id": "t9-dropout",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"dropout\" (template A, scale 3.75, shard 1).\nWorkbook size total: 9958 m² (622 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nSlooping: Reanimated SAM 150/min; Ficsite Ingot 75/min; Ficsite Trigon 225/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

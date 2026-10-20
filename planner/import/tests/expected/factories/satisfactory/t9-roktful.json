@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "name": "roktful",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-roktful-r6",
+      "recipe": "Alternate_RocketFuel_Nitro",
+      "machines": 0.4,
+      "clock": 10
+    },
+    {
+      "id": "t9-roktful-r7",
+      "recipe": "Alternate_DilutedFuel",
+      "machines": 0.4,
+      "clock": 10
+    },
+    {
+      "id": "t9-roktful-r8",
+      "recipe": "Alternate_HeavyOilResidue",
+      "machines": 0.5,
+      "clock": 10
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.601Z",
+  "updatedAt": "2026-10-20T04:13:46.094Z",
+  "id": "t9-roktful",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"roktful\" (template A, scale 4, shard 2.5).\nWorkbook size total: 776 m² (49 foundations incl. support).\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

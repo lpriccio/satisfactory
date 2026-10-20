@@ -628,7 +628,7 @@ pub fn run(root: &Path, input: Option<PathBuf>) -> Result<()> {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::t9::tests::{differences, planner_dir, temp_root};
+    use crate::t9::tests::{differences, expected_dir, planner_dir, temp_root};
     use planner_core::solve::solve_factory;
 
     #[test]
@@ -641,7 +641,7 @@ mod tests {
         let root = temp_root("chains", &["satisfactory.json", "dsp.json"]);
         let done = migrate_all(&root, &chains, &default_tsv(&planner_dir())).unwrap();
         assert_eq!(done.len(), 5);
-        let committed = Store::new(planner_dir());
+        let committed = Store::new(expected_dir());
         let mut diffs = vec![];
         for (game, got, _) in &done {
             match committed.load_factory(*game, &got.id) {
@@ -653,7 +653,7 @@ mod tests {
 
         // Every migrated chain solves, and Alclad 1 still asks for 10 Alclad sheets.
         for (game, f, _) in &done {
-            let data = committed.load_game_data(*game).unwrap();
+            let data = Store::new(planner_dir()).load_game_data(*game).unwrap();
             assert_ne!(
                 solve_factory(&data, f, &GameSettings::default()).status,
                 PlanStatus::Error,

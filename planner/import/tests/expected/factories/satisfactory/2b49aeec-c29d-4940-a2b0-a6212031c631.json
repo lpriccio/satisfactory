@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "id": "2b49aeec-c29d-4940-a2b0-a6212031c631",
+  "game": "satisfactory",
+  "name": "Computer Caterium 2",
+  "notes": "Migration: couldn't map imported item \"Beacon\".",
+  "mode": "target",
+  "objective": "min-raw",
+  "targets": [
+    {
+      "item": "Computer",
+      "rate": 77
+    }
+  ],
+  "recipeChoice": {
+    "Computer": "Alternate_Computer_1",
+    "CircuitBoard": "Alternate_CircuitBoard_2",
+    "CopperIngot": "Alternate_PureCopperIngot",
+    "Wire": "Alternate_Wire_1",
+    "Water": "AluminumScrap",
+    "GoldIngot": "Alternate_PureCateriumIngot"
+  },
+  "lineSettings": {},
+  "lines": [],
+  "imports": {
+    "items": [
+      "FicsiteIngot",
+      "ModularFrame",
+      "Plastic",
+      "QuantumEnergy",
+      "Rubber",
+      "SingularityCell",
+      "TimeCrystal",
+      "TurboFuel"
+    ],
+    "edges": [],
+    "exclude": []
+  },
+  "spacing": 4,
+  "createdAt": "2026-01-12T01:33:10.947Z",
+  "updatedAt": "2026-01-12T01:33:10.947Z"
+}

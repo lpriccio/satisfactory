@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "name": "babylon2",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-babylon2-r3",
+      "recipe": "Alternate_IngotSteel_1",
+      "machines": 24
+    },
+    {
+      "id": "t9-babylon2-r4",
+      "recipe": "IngotIron",
+      "machines": 32
+    },
+    {
+      "id": "t9-babylon2-r5",
+      "recipe": "Alternate_CopperAlloyIngot",
+      "machines": 14.4
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.728Z",
+  "updatedAt": "2026-10-20T04:13:46.229Z",
+  "id": "t9-babylon2",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"babylon2\" (template B, scale 1).\nWorkbook size total: 12960 m² (203 foundations).\nBrennan & Ally: Iron Ore 1920/min; Copper Ore 720/min; Coal 960/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "id": "7053ec2f-d578-4e45-b57d-6860c24deb8d",
+  "game": "satisfactory",
+  "name": "Computer Basic",
+  "notes": "Migration: couldn't map imported item \"Beacon\".",
+  "mode": "target",
+  "objective": "min-raw",
+  "targets": [
+    {
+      "item": "Computer",
+      "rate": 100
+    }
+  ],
+  "recipeChoice": {
+    "CopperIngot": "Alternate_PureCopperIngot",
+    "Wire": "Alternate_Wire_1",
+    "Water": "AluminumScrap"
+  },
+  "lineSettings": {},
+  "lines": [],
+  "imports": {
+    "items": [
+      "FicsiteIngot",
+      "ModularFrame",
+      "Plastic",
+      "QuantumEnergy",
+      "SingularityCell",
+      "TimeCrystal",
+      "TurboFuel"
+    ],
+    "edges": [],
+    "exclude": []
+  },
+  "spacing": 4,
+  "createdAt": "2026-01-12T00:21:32.355Z",
+  "updatedAt": "2026-01-12T00:21:32.355Z"
+}

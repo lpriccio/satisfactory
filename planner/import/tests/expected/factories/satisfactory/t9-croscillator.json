@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "name": "croscillator",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-croscillator-r4",
+      "recipe": "CrystalOscillator",
+      "machines": 14.4,
+      "clock": 2.5
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.583Z",
+  "updatedAt": "2026-10-20T04:13:46.073Z",
+  "id": "t9-croscillator",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"croscillator\" (template A, scale 36, shard 2.5).\nWorkbook size total: 5400 m² (338 foundations incl. support).\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

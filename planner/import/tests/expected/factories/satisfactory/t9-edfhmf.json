@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "name": "edfhmf",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-edfhmf-r4",
+      "recipe": "Alternate_ModularFrameHeavy",
+      "machines": 8.86259651921522,
+      "clock": 2.4999999999999942
+    },
+    {
+      "id": "t9-edfhmf-r5",
+      "recipe": "Alternate_EncasedIndustrialBeam",
+      "machines": 20.7717105919107,
+      "clock": 2.499999999999998
+    },
+    {
+      "id": "t9-edfhmf-r6",
+      "recipe": "Alternate_WetConcrete",
+      "machines": 7.47781581308784,
+      "clock": 2.4999999999999996
+    },
+    {
+      "id": "t9-edfhmf-r7",
+      "recipe": "Alternate_SteelPipe_Iron",
+      "machines": 31.9053474691748,
+      "clock": 2.5000000000000004
+    },
+    {
+      "id": "t9-edfhmf-r8",
+      "recipe": "ModularFrame",
+      "machines": 33.2347369470571,
+      "clock": 2.4999999999999987
+    },
+    {
+      "id": "t9-edfhmf-r9",
+      "recipe": "Alternate_ReinforcedIronPlate_2",
+      "machines": 17.7251930384304,
+      "clock": 2.5000000000000053
+    },
+    {
+      "id": "t9-edfhmf-r10",
+      "recipe": "IronRod",
+      "machines": 26.5877895576457,
+      "clock": 2.4999999999999947
+    },
+    {
+      "id": "t9-edfhmf-r11",
+      "recipe": "Alternate_Wire_1",
+      "machines": 29.5419883973841,
+      "clock": 2.4999999999999982
+    },
+    {
+      "id": "t9-edfhmf-r12",
+      "recipe": "IronPlate",
+      "machines": 16.6173684735285,
+      "clock": 2.500000000000003
+    },
+    {
+      "id": "t9-edfhmf-r15",
+      "recipe": "Alternate_PureIronIngot",
+      "machines": 68.5715454408332,
+      "clock": 2.5
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.553Z",
+  "updatedAt": "2026-10-20T04:13:46.047Z",
+  "id": "t9-edfhmf",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"edfhmf\" (template A, scale 22.1565, shard 2.5).\nWorkbook size total: 38070 m² (2,379 foundations incl. support).\nDrones: Local Mining Limestone 2400/min; Iron Ore 6000/min; Water 5400/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}
