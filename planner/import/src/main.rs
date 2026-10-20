@@ -5,10 +5,12 @@
 //!   planner-import dsp [recipes.tsv]          ../recipes_dsp.tsv
 //!   planner-import t9 [workbook.ods|xlsx]     T9 build tabs -> manual factories
 //!   planner-import chains [saved_chains/]     old Streamlit saves -> factories
+//!   planner-import logistics [workbook]       T9 trains/drones/trucks + to-dos
 
 mod chains;
 mod dsp;
 mod factorio;
+mod logistics;
 mod output;
 mod satisfactory;
 mod t9;
@@ -38,6 +40,13 @@ enum Command {
     T9 { input: Option<PathBuf> },
     /// Old Streamlit saved chains as target-mode factories.
     Chains { input: Option<PathBuf> },
+    /// T9 workbook trains, drones and trucks sheets and the to-do list.
+    Logistics {
+        input: Option<PathBuf>,
+        /// Replace an existing logistics.json.
+        #[arg(long)]
+        force: bool,
+    },
 }
 
 fn main() -> anyhow::Result<()> {
@@ -51,5 +60,6 @@ fn main() -> anyhow::Result<()> {
         Command::Dsp { input } => dsp::run(&root, input),
         Command::T9 { input } => t9::run(&root, input),
         Command::Chains { input } => chains::run(&root, input),
+        Command::Logistics { input, force } => logistics::run(&root, input, force),
     }
 }

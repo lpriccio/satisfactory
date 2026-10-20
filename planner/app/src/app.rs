@@ -3,7 +3,9 @@
 //! frame, so every change goes through one place (undo, autosave, re-solve).
 
 use crate::editor::{Edit, Editor};
-use crate::pages::{factory::FactoryUi, home::HomeUi, settings::SettingsUi, world::WorldUi};
+use crate::pages::{
+    factory::FactoryUi, home::HomeUi, logistics::LogisticsUi, settings::SettingsUi, world::WorldUi,
+};
 use crate::widgets::{Palette, palette};
 use eframe::egui::{self, Color32, Key, KeyboardShortcut, Modifiers, RichText};
 use planner_core::factory::{new_factory, new_id, new_world, now_iso};
@@ -32,6 +34,9 @@ pub enum Route {
     Factory,
     World,
     Settings,
+    /// Trains, drones and trucks (Satisfactory only).
+    Logistics,
+    Todo,
 }
 
 pub enum Action {
@@ -41,6 +46,8 @@ pub enum Action {
     SetGame(GameId),
     Home,
     Settings,
+    Logistics,
+    Todo,
     OpenFactory(String),
     NewFactory(Mode),
     DuplicateFactory(String),
@@ -67,6 +74,7 @@ pub struct PlannerApp {
     factory_ui: FactoryUi,
     home: HomeUi,
     world: Option<WorldUi>,
+    pub(crate) logistics: Option<LogisticsUi>,
     settings_ui: SettingsUi,
     toast: Option<(String, Instant)>,
     error: Option<String>,
@@ -87,6 +95,7 @@ fn accent(game: GameId) -> Color32 {
 
 impl PlannerApp {
     pub fn new(cc: &eframe::CreationContext<'_>, store: Store) -> PlannerApp {
+        crate::fonts::install(&cc.egui_ctx);
         let game = cc
             .storage
             .and_then(|s| s.get_string("game"))
@@ -102,6 +111,7 @@ impl PlannerApp {
             factory_ui: FactoryUi::default(),
             home: HomeUi::default(),
             world: None,
+            logistics: None,
             settings_ui: SettingsUi::default(),
             toast: None,
             error: None,
@@ -123,6 +133,16 @@ impl PlannerApp {
         }
         if let Some(id) = l.factory {
             self.apply(Action::OpenFactory(id));
+        }
+        match l.page {
+            Some(crate::Page::Todo) => self.apply(Action::Todo),
+            Some(crate::Page::Transport(t)) => {
+                self.apply(Action::Logistics);
+                if let Some(lg) = &mut self.logistics {
+                    lg.tab = t;
+                }
+            }
+            None => {}
         }
         self
     }
@@ -155,6 +175,7 @@ impl PlannerApp {
         self.error = None;
         self.editor = None;
         self.world = None;
+        self.logistics = None;
         self.route = Route::Home;
         if self.session().is_some() {
             self.home.refresh(&self.store, game);
@@ -168,6 +189,9 @@ impl PlannerApp {
         }
         if let Some(w) = &mut self.world {
             next = next.or(w.autosave(&self.store, force));
+        }
+        if let Some(l) = &mut self.logistics {
+            next = next.or(l.autosave(&self.store, force));
         }
         next
     }
@@ -193,16 +217,16 @@ impl PlannerApp {
                     ed.apply(edit, merge);
                 }
             }
-            Action::Undo => {
-                if let Some(ed) = &mut self.editor {
-                    ed.undo();
-                }
-            }
-            Action::Redo => {
-                if let Some(ed) = &mut self.editor {
-                    ed.redo();
-                }
-            }
+            Action::Undo => match (&self.route, &mut self.editor, &mut self.logistics) {
+                (Route::Logistics | Route::Todo, _, Some(l)) => l.undo(),
+                (_, Some(ed), _) => ed.undo(),
+                _ => {}
+            },
+            Action::Redo => match (&self.route, &mut self.editor, &mut self.logistics) {
+                (Route::Logistics | Route::Todo, _, Some(l)) => l.redo(),
+                (_, Some(ed), _) => ed.redo(),
+                _ => {}
+            },
             Action::SetGame(g) => self.enter_game(g),
             Action::Home => {
                 self.flush(true);
@@ -214,6 +238,26 @@ impl PlannerApp {
             Action::Settings => {
                 self.flush(true);
                 self.route = Route::Settings;
+            }
+            Action::Logistics | Action::Todo => {
+                self.flush(true);
+                if self.logistics.is_none() {
+                    let Some(data) = self.session().map(|s| s.data.clone()) else {
+                        return;
+                    };
+                    match self.store.load_logistics(game) {
+                        Ok(doc) => self.logistics = Some(LogisticsUi::new(doc, data)),
+                        Err(e) => {
+                            self.toast(format!("Couldn't open logistics: {e:#}"));
+                            return;
+                        }
+                    }
+                }
+                self.route = if matches!(action, Action::Todo) {
+                    Route::Todo
+                } else {
+                    Route::Logistics
+                };
             }
             Action::SetView(v) => self.view = v,
             Action::OpenFactory(id) => match self.store.load_factory(game, &id) {
@@ -392,6 +436,22 @@ impl PlannerApp {
                     {
                         actions.push(Action::Settings);
                     }
+                    // Transport and the to-do list are Satisfactory things.
+                    if self.game == GameId::Satisfactory {
+                        if ui
+                            .selectable_label(self.route == Route::Todo, "To-do")
+                            .clicked()
+                        {
+                            actions.push(Action::Todo);
+                        }
+                        if ui
+                            .selectable_label(self.route == Route::Logistics, "Logistics")
+                            .on_hover_text("Trains, drones and trucks")
+                            .clicked()
+                        {
+                            actions.push(Action::Logistics);
+                        }
+                    }
                     if ui
                         .selectable_label(self.route == Route::Home, "Factories")
                         .clicked()
@@ -405,7 +465,11 @@ impl PlannerApp {
     }
 
     fn shortcuts(&mut self, ui: &egui::Ui, actions: &mut Vec<Action>) {
-        if self.editor.is_none() || ui.ctx().memory(|m| m.focused().is_some()) {
+        let undoable = match self.route {
+            Route::Logistics | Route::Todo => self.logistics.is_some(),
+            _ => self.editor.is_some(),
+        };
+        if !undoable || ui.ctx().memory(|m| m.focused().is_some()) {
             return;
         }
         let redo = ui.input_mut(|i| {
@@ -503,6 +567,16 @@ impl eframe::App for PlannerApp {
                             }
                         }
                         Route::Settings => self.settings_ui.show(ui, session, &mut actions),
+                        Route::Logistics => {
+                            if let Some(l) = &mut self.logistics {
+                                l.show_transport(ui, &pal);
+                            }
+                        }
+                        Route::Todo => {
+                            if let Some(l) = &mut self.logistics {
+                                l.show_todo(ui, &pal);
+                            }
+                        }
                     }
                 });
         });

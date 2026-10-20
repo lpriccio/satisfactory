@@ -10,6 +10,7 @@ parent folder and covers what the T9 workbook's per-build tabs do.
 cargo run --release -p planner-app                       # opens the window
 cargo run --release -p planner-app -- t9-pasta           # straight to a factory
 cargo run --release -p planner-app -- --game factorio --view balance <factory-id>
+cargo run --release -p planner-app -- --page drones     # or trains, trucks, todo
 ```
 
 The binary is `target/release/planner`. Saves go to `factories/` next to this
@@ -42,7 +43,14 @@ README; set `PLANNER_ROOT` to use another folder (it must hold `data/` and
 - **Objectives.** Fewest raw inputs (weighted by map scarcity), least power,
   or fewest machines. "Choose recipes for me" lets the solver pick among
   standard recipes and the alternates unlocked in Settings.
-- Undo/redo (Ctrl+Z / Ctrl+Shift+Z), autosave, Export/Copy JSON.
+- **Logistics (Satisfactory).** Trains, drones and trucks as stations with
+  ports. An input names the output it draws from, so each output shows what's
+  used and what's free (red when over-drawn); **Item totals** sums each
+  transport by item. Partner and note fields hold everything else in words.
+- **To-do (Satisfactory).** Tick off, reorder, and hide what's done.
+- Undo/redo (Ctrl+Z / Ctrl+Shift+Z), autosave, Export/Copy JSON. Table
+  columns can be dragged wider or narrower. Type is Computer Modern Unicode
+  (CMU Serif and Typewriter, built in; SIL OFL, `app/fonts/OFL.txt`).
 
 ## Data
 
@@ -61,7 +69,8 @@ Satisfactory building footprints aren't in the docs export; they're a table in
 
 `factories/<game>/<id>.json` — one factory per file, plain JSON, worth
 committing. Worlds are in `factories/<game>/worlds/`, settings in
-`factories/<game>/settings.json`. The format is the same one the TypeScript
+`factories/<game>/settings.json`, trains/drones/trucks and the to-do list in
+`factories/satisfactory/logistics.json`. The format is the same one the TypeScript
 version (branch `planner-typescript`) wrote.
 
 - `cargo run -p planner-import -- t9 [workbook]` turns each build tab of the
@@ -70,13 +79,17 @@ version (branch `planner-typescript`) wrote.
   for overrides.
 - `cargo run -p planner-import -- chains` converts the old Streamlit
   `../saved_chains/`.
+- `cargo run -p planner-import -- logistics [workbook]` reads the workbook's
+  trains, drones, trucks and `planner` (to-do) sheets into `logistics.json`.
+  Drone destinations become links; drain and net are recomputed from them.
+  It won't replace an existing file without `--force`.
 
 ## Code
 
 | Path | What |
 | --- | --- |
 | `core/` | UI-free engine: model, per-machine math, LP solver (good_lp + microlp), edits, worlds, JSON storage |
-| `import/` | `planner-import` CLI: game-data importers, T9 and saved-chain imports |
+| `import/` | `planner-import` CLI: game-data importers, T9, logistics and saved-chain imports |
 | `app/` | The egui app (`planner` binary) |
 
 ```bash

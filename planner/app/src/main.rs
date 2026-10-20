@@ -4,14 +4,17 @@
 //!   cargo run --release -p planner-app
 //!
 //!   planner [--game satisfactory|factorio|dsp] [--view flow|lines|balance|buildings] [factory-id]
+//!   planner --page trains|drones|trucks|todo
 //!
-//! opens straight to a factory (its id is the file name under factories/<game>/).
+//! opens straight to a factory (its id is the file name under factories/<game>/),
+//! or to a Satisfactory logistics page.
 //! PLANNER_ROOT points at the folder holding data/ and factories/ (default:
 //! the planner folder this was built from).
 
 mod app;
 mod editor;
 mod fmt;
+mod fonts;
 mod pages;
 #[cfg(test)]
 mod ui_tests;
@@ -33,6 +36,13 @@ pub struct Launch {
     pub game: Option<planner_core::GameId>,
     pub view: Option<app::View>,
     pub factory: Option<String>,
+    pub page: Option<Page>,
+}
+
+#[derive(Clone, Copy)]
+pub enum Page {
+    Transport(planner_core::logistics::Transport),
+    Todo,
 }
 
 fn parse_args() -> Result<Launch, String> {
@@ -54,8 +64,18 @@ fn parse_args() -> Result<Launch, String> {
                     other => return Err(format!("unknown view {other:?}")),
                 })
             }
+            "--page" => {
+                use planner_core::logistics::Transport;
+                launch.page = Some(match args.next().as_deref() {
+                    Some("trains") => Page::Transport(Transport::Train),
+                    Some("drones") => Page::Transport(Transport::Drone),
+                    Some("trucks") => Page::Transport(Transport::Truck),
+                    Some("todo") => Page::Todo,
+                    other => return Err(format!("unknown page {other:?}")),
+                })
+            }
             "-h" | "--help" => {
-                return Err("usage: planner [--game satisfactory|factorio|dsp] [--view flow|lines|balance|buildings] [factory-id]".into());
+                return Err("usage: planner [--game satisfactory|factorio|dsp] [--view flow|lines|balance|buildings] [factory-id]\n       planner --page trains|drones|trucks|todo".into());
             }
             id => launch.factory = Some(id.to_string()),
         }

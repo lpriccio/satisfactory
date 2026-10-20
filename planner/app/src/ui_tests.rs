@@ -30,6 +30,25 @@ fn scratch(name: &str) -> PathBuf {
     dir
 }
 
+/// A logistics file: one drone hub whose plastic Kidney draws on, and a to-do.
+fn with_logistics(root: &Path) {
+    use planner_core::logistics::*;
+    let mut l = new_logistics(GameId::Satisfactory);
+    let mut hub = new_station(Transport::Drone, "Coal Hole");
+    hub.ports[0].item = "Plastic".into();
+    hub.ports[0].rate = 600.0;
+    let mut kidney = new_station(Transport::Drone, "Kidney");
+    kidney.ports[0] = Port {
+        item: "Plastic".into(),
+        rate: 273.0,
+        from: Some(hub.ports[0].id.clone()),
+        ..new_port(Dir::In)
+    };
+    l.stations = vec![hub, kidney];
+    l.todos = vec![new_todo("Drain the swamp")];
+    Store::new(root).save_logistics(&l).unwrap();
+}
+
 fn harness(root: &Path) -> Harness<'static, PlannerApp> {
     let store = Store::new(root);
     Harness::builder()
@@ -209,10 +228,73 @@ fn other_games_load() {
 }
 
 #[test]
+fn logistics_shows_what_is_free() {
+    let root = scratch("logistics");
+    with_logistics(&root);
+    let mut h = harness(&root);
+    h.run();
+    h.get_by_label("Logistics").click();
+    h.run();
+    h.get_by_label("Drones").click();
+    h.run();
+    assert_eq!(h.state().route, Route::Logistics);
+    // 600 out, 273 used by Kidney: 327 free.
+    h.get_by_label("327");
+    h.get_by_label_contains("Kidney 273");
+    h.get_by_label("Item totals").click();
+    h.run();
+    h.get_by_label("+327");
+}
+
+#[test]
+fn todo_add_and_tick_saves() {
+    let root = scratch("todo");
+    with_logistics(&root);
+    let mut h = harness(&root);
+    h.run();
+    h.get_by_label("To-do").click();
+    h.run();
+    h.get_by_label("New task").click();
+    h.run();
+    h.get_by_label("New task").type_text("Find the somersloops");
+    h.run();
+    h.get_by_label("Add").click();
+    h.run();
+    h.get_by_label("Drain the swamp").click();
+    h.run();
+    std::thread::sleep(std::time::Duration::from_millis(450));
+    h.run();
+    let l = Store::new(&root)
+        .load_logistics(GameId::Satisfactory)
+        .unwrap();
+    assert_eq!(l.todos.len(), 2);
+    assert!(l.todos[0].done);
+    assert_eq!(l.todos[1].text, "Find the somersloops");
+    // Undo brings the tick back off.
+    h.get_by_label("Undo").click();
+    h.run();
+    let lg = h.state().logistics.as_ref().unwrap();
+    assert!(!lg.doc.todos[0].done);
+}
+
+#[test]
+fn logistics_is_satisfactory_only() {
+    let root = scratch("only");
+    let mut h = harness(&root);
+    h.run();
+    assert!(h.query_by_label("Logistics").is_some());
+    h.get_by_label("Factorio").click();
+    h.run();
+    assert!(h.query_by_label("Logistics").is_none());
+    assert!(h.query_by_label("To-do").is_none());
+}
+
+#[test]
 fn every_symbol_we_use_has_a_glyph() {
     let mut h = Harness::new_ui(|ui| {
         ui.label("x");
     });
+    crate::fonts::install(&h.ctx);
     h.run();
     let missing: String = "·×÷–—“”…−²"
         .chars()

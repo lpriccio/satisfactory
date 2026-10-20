@@ -3,13 +3,17 @@
 //!   factories/<game>/<id>.json           one factory per file
 //!   factories/<game>/worlds/<id>.json    one world per file
 //!   factories/<game>/settings.json       game settings
+//!   factories/<game>/logistics.json      trains, drones, trucks, to-dos
 //!   data/<game>.json                     generated game data
 
+use crate::logistics::{Logistics, new_logistics};
 use crate::model::{Factory, GameData, GameId, GameSettings, World};
 use anyhow::{Context, Result};
 use serde::{Serialize, de::DeserializeOwned};
 use std::fs;
 use std::path::{Path, PathBuf};
+
+const LOGISTICS: &str = "logistics.json";
 
 #[derive(Debug, Clone)]
 pub struct Summary {
@@ -134,6 +138,23 @@ impl Store {
     pub fn save_settings(&self, game: GameId, s: &GameSettings) -> Result<()> {
         write_json(&self.game_dir(game).join("settings.json"), s)
     }
+
+    pub fn logistics_path(&self, game: GameId) -> PathBuf {
+        self.game_dir(game).join(LOGISTICS)
+    }
+
+    /// The saved logistics, or an empty one if there's no file yet.
+    pub fn load_logistics(&self, game: GameId) -> Result<Logistics> {
+        let path = self.logistics_path(game);
+        if !path.exists() {
+            return Ok(new_logistics(game));
+        }
+        read_json(&path)
+    }
+
+    pub fn save_logistics(&self, l: &Logistics) -> Result<()> {
+        write_json(&self.logistics_path(l.game), l)
+    }
 }
 
 pub fn read_json<T: DeserializeOwned>(path: &Path) -> Result<T> {
@@ -171,7 +192,8 @@ fn list_json<T: DeserializeOwned>(dir: &Path) -> Vec<T> {
         .map(|e| e.path())
         .filter(|p| {
             p.extension().is_some_and(|x| x == "json")
-                && p.file_name().is_some_and(|n| n != "settings.json")
+                && p.file_name()
+                    .is_some_and(|n| n != "settings.json" && n != LOGISTICS)
         })
         .filter_map(|p| read_json(&p).ok())
         .collect()

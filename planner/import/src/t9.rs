@@ -47,7 +47,7 @@ pub const NON_BUILD: [&str; 9] = [
 ];
 
 /// Workbook item names that differ from the game's display names.
-const ITEM_ALIASES: &[(&str, &str)] = &[
+pub(crate) const ITEM_ALIASES: &[(&str, &str)] = &[
     ("Screw", "IronScrew"),
     ("RIP", "IronPlateReinforced"),
     ("MF", "ModularFrame"),
@@ -127,44 +127,44 @@ fn union_keys<'a>(a: &'a Vector, b: &'a Vector) -> Vec<&'a str> {
 static EMPTY: Data = Data::Empty;
 
 /// One sheet, addressed by absolute zero-based (row, column) from A1.
-struct Grid {
-    range: Range<Data>,
+pub(crate) struct Grid {
+    pub(crate) range: Range<Data>,
 }
 
 impl Grid {
-    fn at(&self, r: u32, c: u32) -> &Data {
+    pub(crate) fn at(&self, r: u32, c: u32) -> &Data {
         self.range.get_value((r, c)).unwrap_or(&EMPTY)
     }
-    fn num(&self, r: u32, c: u32) -> Option<f64> {
+    pub(crate) fn num(&self, r: u32, c: u32) -> Option<f64> {
         match self.at(r, c) {
             Data::Float(f) if f.is_finite() => Some(*f),
             Data::Int(i) => Some(*i as f64),
             _ => None,
         }
     }
-    fn str(&self, r: u32, c: u32) -> &str {
+    pub(crate) fn str(&self, r: u32, c: u32) -> &str {
         match self.at(r, c) {
             Data::String(s) => s.trim(),
             _ => "",
         }
     }
-    fn rows(&self) -> u32 {
+    pub(crate) fn rows(&self) -> u32 {
         self.range.end().map_or(0, |(r, _)| r + 1)
     }
 }
 
-const fn col(letter: u8) -> u32 {
+pub(crate) const fn col(letter: u8) -> u32 {
     (letter - b'A') as u32
 }
 
 // --- item and recipe mapping -----------------------------------------------
 
-struct Resolver {
+pub(crate) struct Resolver {
     by_name: HashMap<String, String>,
 }
 
 impl Resolver {
-    fn new(data: &GameData) -> Resolver {
+    pub(crate) fn new(data: &GameData) -> Resolver {
         let by_name = data
             .items
             .values()
@@ -172,7 +172,7 @@ impl Resolver {
             .collect();
         Resolver { by_name }
     }
-    fn resolve(&self, name: &str) -> Option<String> {
+    pub(crate) fn resolve(&self, name: &str) -> Option<String> {
         ITEM_ALIASES
             .iter()
             .find(|(alias, _)| *alias == name)

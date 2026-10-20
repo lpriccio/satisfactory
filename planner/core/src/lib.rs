@@ -4,6 +4,7 @@
 pub mod edits;
 pub mod factory;
 pub mod linemath;
+pub mod logistics;
 pub mod model;
 pub mod solve;
 pub mod store;

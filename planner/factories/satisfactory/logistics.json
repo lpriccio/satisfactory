@@ -1,0 +1,2165 @@
+{
+  "schema": 1,
+  "game": "satisfactory",
+  "stations": [
+    {
+      "id": "ah1r0fxskngn",
+      "kind": "train",
+      "name": "Purple Iron",
+      "trains": 2,
+      "ports": [
+        {
+          "id": "y8qsnfd6ho97",
+          "slot": "A",
+          "dir": "out",
+          "item": "OreIron",
+          "rate": 480.0,
+          "partner": "Babylon 4"
+        },
+        {
+          "id": "6hlz7z70ua52",
+          "slot": "B",
+          "dir": "out",
+          "item": "OreIron",
+          "rate": 480.0,
+          "partner": "Babylon 4"
+        },
+        {
+          "id": "j6p4extwlsaf",
+          "slot": "C",
+          "dir": "out",
+          "item": "OreIron",
+          "rate": 480.0,
+          "partner": "Babylon 4"
+        },
+        {
+          "id": "ifbq1z5migr4",
+          "slot": "D",
+          "dir": "out",
+          "item": "OreIron",
+          "rate": 480.0,
+          "partner": "Babylon 4"
+        }
+      ]
+    },
+    {
+      "id": "ecadczogk0r9",
+      "kind": "train",
+      "name": "Blue Crater 1",
+      "trains": 1,
+      "ports": [
+        {
+          "id": "t36zonh3l8gc",
+          "slot": "A",
+          "dir": "out",
+          "item": "OreCopper",
+          "rate": 480.0,
+          "partner": "Babylon 3"
+        },
+        {
+          "id": "kgj0xhhofgf1",
+          "slot": "B",
+          "dir": "out",
+          "item": "SAM",
+          "rate": 300.0,
+          "partner": "Babylon 3"
+        },
+        {
+          "id": "pahr5oex0vxm",
+          "slot": "C",
+          "dir": "out",
+          "item": "OreCopper",
+          "rate": 300.0,
+          "partner": "Babylon 3"
+        },
+        {
+          "id": "se1rg5ups6tv",
+          "slot": "D",
+          "dir": "out",
+          "item": "Stone",
+          "rate": 480.0,
+          "partner": "Babylon 3"
+        }
+      ]
+    },
+    {
+      "id": "y76y7i04b0gt",
+      "kind": "train",
+      "name": "Blue Crater 2",
+      "ports": [
+        {
+          "id": "4o751dq7x5zl",
+          "slot": "A",
+          "dir": "out",
+          "item": "Stone",
+          "rate": 480.0,
+          "partner": "DEAD"
+        },
+        {
+          "id": "r23tnr93op7g",
+          "slot": "B",
+          "dir": "out",
+          "item": "OreIron",
+          "rate": 480.0,
+          "partner": "DEAD"
+        },
+        {
+          "id": "r4jgnm1lprkw",
+          "slot": "C",
+          "dir": "out",
+          "item": "OreCopper",
+          "rate": 480.0,
+          "partner": "DEAD"
+        },
+        {
+          "id": "cq2x1pdkdcgv",
+          "slot": "D",
+          "dir": "out",
+          "item": "",
+          "rate": 0.0,
+          "partner": "DEAD"
+        }
+      ]
+    },
+    {
+      "id": "c0z87p4ukq9b",
+      "kind": "train",
+      "name": "Purple Forest 1",
+      "ports": [
+        {
+          "id": "c7hvn9xnnvou",
+          "slot": "A",
+          "dir": "out",
+          "item": "OreBauxite",
+          "rate": 480.0,
+          "partner": "Babylon 6"
+        },
+        {
+          "id": "tqioyjwk3bm9",
+          "slot": "B",
+          "dir": "out",
+          "item": "OreIron",
+          "rate": 480.0,
+          "partner": "Babylon 6"
+        },
+        {
+          "id": "pkqvayix80sz",
+          "slot": "C",
+          "dir": "out",
+          "item": "OreGold",
+          "rate": 480.0,
+          "partner": "Babylon 6"
+        },
+        {
+          "id": "48mloms78gwg",
+          "slot": "D",
+          "dir": "out",
+          "item": "Coal",
+          "rate": 480.0,
+          "partner": "Babylon 6"
+        }
+      ]
+    },
+    {
+      "id": "5fed95n7p9zf",
+      "kind": "train",
+      "name": "Purple Forest 2",
+      "trains": 2,
+      "ports": [
+        {
+          "id": "b9kj7mgir69e",
+          "slot": "A",
+          "dir": "out",
+          "item": "OreIron",
+          "rate": 480.0,
+          "partner": "Babylon 1"
+        },
+        {
+          "id": "g0raqd0bv7cq",
+          "slot": "B",
+          "dir": "out",
+          "item": "Coal",
+          "rate": 480.0,
+          "partner": "Babylon 1"
+        },
+        {
+          "id": "2pp0o6xvingw",
+          "slot": "C",
+          "dir": "out",
+          "item": "OreIron",
+          "rate": 480.0,
+          "partner": "Babylon 1"
+        },
+        {
+          "id": "5zlnb0nc6ant",
+          "slot": "D",
+          "dir": "out",
+          "item": "Stone",
+          "rate": 480.0,
+          "partner": "Babylon 1"
+        }
+      ]
+    },
+    {
+      "id": "tcuz9krxxt3l",
+      "kind": "train",
+      "name": "Crater Overlook 1",
+      "trains": 2,
+      "ports": [
+        {
+          "id": "u0c9q3x9q7ns",
+          "slot": "A",
+          "dir": "out",
+          "item": "OreIron",
+          "rate": 480.0,
+          "partner": "Babylon 5"
+        },
+        {
+          "id": "z9ji1ki319zj",
+          "slot": "B",
+          "dir": "out",
+          "item": "Stone",
+          "rate": 480.0,
+          "partner": "Babylon 5"
+        },
+        {
+          "id": "zycvlfpvnwj6",
+          "slot": "C",
+          "dir": "out",
+          "item": "OreCopper",
+          "rate": 480.0,
+          "partner": "Babylon 5"
+        },
+        {
+          "id": "uuopheej9xr0",
+          "slot": "D",
+          "dir": "out",
+          "item": "Stone",
+          "rate": 480.0,
+          "partner": "Babylon 5"
+        }
+      ]
+    },
+    {
+      "id": "o5c08gnlxlxz",
+      "kind": "train",
+      "name": "Crater Overlook 2",
+      "ports": [
+        {
+          "id": "tg9seoodqnqi",
+          "slot": "A",
+          "dir": "out",
+          "item": "SAM",
+          "rate": 480.0
+        },
+        {
+          "id": "ad0b310pq9mw",
+          "slot": "B",
+          "dir": "out",
+          "item": "SAM",
+          "rate": 300.0
+        },
+        {
+          "id": "2wb7axsnz14j",
+          "slot": "C",
+          "dir": "out",
+          "item": "OreCopper",
+          "rate": 480.0
+        },
+        {
+          "id": "a9mxbqudrkcf",
+          "slot": "D",
+          "dir": "out",
+          "item": "OreIron",
+          "rate": 480.0
+        }
+      ]
+    },
+    {
+      "id": "dhwci3fqz4c0",
+      "kind": "train",
+      "name": "Gold Coast 1",
+      "trains": 1,
+      "ports": [
+        {
+          "id": "kuwp1vve6n2j",
+          "slot": "A",
+          "dir": "out",
+          "item": "OreBauxite",
+          "rate": 300.0,
+          "partner": "Babylon 2"
+        },
+        {
+          "id": "ay4totlw666q",
+          "slot": "B",
+          "dir": "out",
+          "item": "OreGold",
+          "rate": 480.0,
+          "partner": "Dronepower"
+        },
+        {
+          "id": "ll072d2ym08r",
+          "slot": "C",
+          "dir": "out",
+          "item": "Stone",
+          "rate": 300.0,
+          "partner": "Babylon 2"
+        },
+        {
+          "id": "erfexbuocvwo",
+          "slot": "D",
+          "dir": "out",
+          "item": "Sulfur",
+          "rate": 480.0,
+          "partner": "Dronepower"
+        }
+      ]
+    },
+    {
+      "id": "3qvce6pfmi31",
+      "kind": "drone",
+      "name": "Babylon",
+      "ports": [
+        {
+          "id": "wsqdm6xari6j",
+          "dir": "out",
+          "item": "AluminumPlate",
+          "rate": 330.0
+        },
+        {
+          "id": "2orvq7gput8p",
+          "dir": "out",
+          "item": "AluminumCasing",
+          "rate": 225.0
+        },
+        {
+          "id": "s3x7f6nsaihw",
+          "slot": "A",
+          "dir": "out",
+          "item": "Coal",
+          "rate": 120.0
+        },
+        {
+          "id": "tqluste3vki5",
+          "slot": "A",
+          "dir": "out",
+          "item": "DarkMatter",
+          "rate": 60.0
+        },
+        {
+          "id": "ns8wi15sioyu",
+          "dir": "out",
+          "item": "ModularFrameHeavy",
+          "rate": 27.0
+        },
+        {
+          "id": "o8mgcmh2y30o",
+          "slot": "A",
+          "dir": "out",
+          "item": "SAMIngot",
+          "rate": 300.0
+        },
+        {
+          "id": "erl8enuhcozp",
+          "dir": "out",
+          "item": "Rotor",
+          "rate": 160.0,
+          "note": "mercer tax"
+        },
+        {
+          "id": "tt1tq3ilifwj",
+          "dir": "out",
+          "item": "Stator",
+          "rate": 160.0,
+          "partner": "(belted to ECR)",
+          "note": "wC"
+        },
+        {
+          "id": "dtn0gxwsvf0g",
+          "dir": "out",
+          "item": "Tanks",
+          "rate": 0.0
+        }
+      ]
+    },
+    {
+      "id": "qrrld19gl2t6",
+      "kind": "drone",
+      "name": "Builders Beach",
+      "ports": [
+        {
+          "id": "5luezk4uyj9n",
+          "slot": "A",
+          "dir": "out",
+          "item": "SAMIngot",
+          "rate": 300.0
+        },
+        {
+          "id": "co4rwh2kmwp3",
+          "slot": "A",
+          "dir": "out",
+          "item": "Stator",
+          "rate": 135.0
+        }
+      ]
+    },
+    {
+      "id": "xkdc3qlh11ov",
+      "kind": "drone",
+      "name": "Coal Hole",
+      "ports": [
+        {
+          "id": "9y2o5aiavznc",
+          "slot": "A",
+          "dir": "out",
+          "item": "AluminumPlate",
+          "rate": 600.0
+        },
+        {
+          "id": "d0i3ampdleyc",
+          "slot": "B",
+          "dir": "out",
+          "item": "AluminumPlate",
+          "rate": 600.0
+        },
+        {
+          "id": "h7djspgzwh25",
+          "slot": "A",
+          "dir": "out",
+          "item": "AluminumCasing",
+          "rate": 900.0
+        },
+        {
+          "id": "bucv89gg0s2f",
+          "slot": "B",
+          "dir": "out",
+          "item": "AluminumCasing",
+          "rate": 900.0
+        },
+        {
+          "id": "9n04bmrpd01s",
+          "slot": "A",
+          "dir": "out",
+          "item": "AluminumIngot",
+          "rate": 600.0,
+          "partner": "Personal Trigons <- Aluminum"
+        },
+        {
+          "id": "rl00rpvgwhck",
+          "slot": "A",
+          "dir": "out",
+          "item": "GoldIngot",
+          "rate": 440.0
+        },
+        {
+          "id": "tz8gmrqpzfvm",
+          "slot": "A",
+          "dir": "out",
+          "item": "PetroleumCoke",
+          "rate": 600.0
+        },
+        {
+          "id": "epxx9lphvkbz",
+          "slot": "B",
+          "dir": "out",
+          "item": "PetroleumCoke",
+          "rate": 600.0
+        },
+        {
+          "id": "ht4kwc1i4zqr",
+          "slot": "C",
+          "dir": "out",
+          "item": "PetroleumCoke",
+          "rate": 600.0
+        },
+        {
+          "id": "2yrcc31jtgdi",
+          "slot": "A",
+          "dir": "out",
+          "item": "Plastic",
+          "rate": 600.0,
+          "note": "nuclear"
+        },
+        {
+          "id": "2eom93yd953q",
+          "slot": "B",
+          "dir": "out",
+          "item": "Plastic",
+          "rate": 600.0
+        },
+        {
+          "id": "tejwbadcf4nz",
+          "slot": "C",
+          "dir": "out",
+          "item": "Plastic",
+          "rate": 600.0,
+          "partner": "Launch"
+        },
+        {
+          "id": "861l4f8nmgfe",
+          "slot": "D",
+          "dir": "out",
+          "item": "Plastic",
+          "rate": 600.0
+        },
+        {
+          "id": "v4i2xvam4iot",
+          "slot": "E",
+          "dir": "out",
+          "item": "Plastic",
+          "rate": 600.0
+        },
+        {
+          "id": "f3j7pn54dlie",
+          "slot": "F",
+          "dir": "out",
+          "item": "Plastic",
+          "rate": 600.0
+        },
+        {
+          "id": "kkabxsudk29x",
+          "slot": "G",
+          "dir": "out",
+          "item": "Plastic",
+          "rate": 600.0,
+          "note": "mercer tax"
+        },
+        {
+          "id": "zf06q54zg9mg",
+          "slot": "A",
+          "dir": "out",
+          "item": "HighSpeedWire",
+          "rate": 960.0,
+          "note": "nuclear"
+        },
+        {
+          "id": "jinico3a2q69",
+          "slot": "B",
+          "dir": "out",
+          "item": "HighSpeedWire",
+          "rate": 960.0,
+          "note": "nuclear"
+        },
+        {
+          "id": "lqbruv5sjf1e",
+          "slot": "A",
+          "dir": "out",
+          "item": "Rubber",
+          "rate": 600.0,
+          "partner": "Launch",
+          "note": "Overflows to B"
+        },
+        {
+          "id": "jekmdr6nhvyf",
+          "slot": "B",
+          "dir": "out",
+          "item": "Rubber",
+          "rate": 600.0,
+          "note": "Overflown by A"
+        },
+        {
+          "id": "2tp4p9pychxe",
+          "slot": "C",
+          "dir": "out",
+          "item": "Rubber",
+          "rate": 600.0
+        },
+        {
+          "id": "9zuob87xmh0s",
+          "slot": "D",
+          "dir": "out",
+          "item": "Rubber",
+          "rate": 600.0
+        },
+        {
+          "id": "4lm1wzhayviw",
+          "slot": "E",
+          "dir": "out",
+          "item": "Rubber",
+          "rate": 600.0
+        },
+        {
+          "id": "blh9vz409vmt",
+          "slot": "F",
+          "dir": "out",
+          "item": "Rubber",
+          "rate": 600.0
+        },
+        {
+          "id": "m9sejy7v5ur2",
+          "slot": "G",
+          "dir": "out",
+          "item": "Rubber",
+          "rate": 600.0
+        },
+        {
+          "id": "y7ytykgawxnk",
+          "slot": "H",
+          "dir": "out",
+          "item": "Rubber",
+          "rate": 600.0
+        },
+        {
+          "id": "wuyizk5zjsud",
+          "slot": "A",
+          "dir": "out",
+          "item": "Rubber*",
+          "rate": 600.0
+        },
+        {
+          "id": "ejk8rbkir89p",
+          "slot": "B",
+          "dir": "out",
+          "item": "Rubber*",
+          "rate": 600.0
+        },
+        {
+          "id": "35tv6ilje5w1",
+          "slot": "A",
+          "dir": "out",
+          "item": "SteelPlate",
+          "rate": 585.0
+        }
+      ]
+    },
+    {
+      "id": "aw2221qae5nk",
+      "kind": "drone",
+      "name": "ECR",
+      "ports": [
+        {
+          "id": "bkyo2hzzwnnp",
+          "dir": "in",
+          "item": "CircuitBoardHighSpeed",
+          "rate": 107.0,
+          "from": "726wsz57407y"
+        },
+        {
+          "id": "c1h71yoe4hei",
+          "dir": "out",
+          "item": "ElectromagneticControlRod",
+          "rate": 106.0
+        }
+      ]
+    },
+    {
+      "id": "swtna9eb533o",
+      "kind": "drone",
+      "name": "Kidney",
+      "ports": [
+        {
+          "id": "wlyn5tkbffdh",
+          "slot": "A",
+          "dir": "in",
+          "item": "AluminumPlate",
+          "rate": 325.0,
+          "from": "9y2o5aiavznc"
+        },
+        {
+          "id": "vvyr5bgcpfaj",
+          "slot": "B",
+          "dir": "in",
+          "item": "AluminumPlate",
+          "rate": 325.0,
+          "from": "d0i3ampdleyc"
+        },
+        {
+          "id": "s49tksqprjxw",
+          "dir": "in",
+          "item": "AluminumCasing",
+          "rate": 390.0,
+          "from": "h7djspgzwh25"
+        },
+        {
+          "id": "wh3rh8a3e6dv",
+          "dir": "in",
+          "item": "CopperSheet",
+          "rate": 390.0,
+          "from": "f32hru70llme"
+        },
+        {
+          "id": "e3vxnkzldlex",
+          "dir": "in",
+          "item": "Plastic",
+          "rate": 273.0,
+          "from": "2yrcc31jtgdi"
+        },
+        {
+          "id": "9l4mam4qudud",
+          "slot": "A",
+          "dir": "in",
+          "item": "HighSpeedWire",
+          "rate": 585.0,
+          "from": "zf06q54zg9mg",
+          "note": "nuclear"
+        },
+        {
+          "id": "m10hwwzjr3bh",
+          "slot": "B",
+          "dir": "in",
+          "item": "HighSpeedWire",
+          "rate": 585.0,
+          "from": "jinico3a2q69",
+          "note": "nuclear"
+        },
+        {
+          "id": "gzyga3bqxm5p",
+          "dir": "in",
+          "item": "Stator",
+          "rate": 117.0,
+          "from": "co4rwh2kmwp3"
+        },
+        {
+          "id": "fh38ovao5ipa",
+          "dir": "in",
+          "item": "SteelPlate",
+          "rate": 234.0,
+          "from": "35tv6ilje5w1"
+        },
+        {
+          "id": "8h8gr0i438ip",
+          "dir": "out",
+          "item": "PlutoniumFuelRod",
+          "rate": 13.0
+        }
+      ]
+    },
+    {
+      "id": "tdupv34a5lmo",
+      "kind": "drone",
+      "name": "Launch",
+      "ports": [
+        {
+          "id": "udfgdavg0mc2",
+          "dir": "out",
+          "item": "Cable",
+          "rate": 600.0
+        },
+        {
+          "id": "3ix9brdp9myd",
+          "slot": "A",
+          "dir": "out",
+          "item": "GoldIngot",
+          "rate": 600.0
+        },
+        {
+          "id": "jyk9f4exxl27",
+          "slot": "A",
+          "dir": "out",
+          "item": "Coal",
+          "rate": 390.0
+        },
+        {
+          "id": "stiiras81hyl",
+          "slot": "B",
+          "dir": "out",
+          "item": "Coal",
+          "rate": 390.0
+        },
+        {
+          "id": "y5ysibykvc39",
+          "slot": "A",
+          "dir": "out",
+          "item": "Cement",
+          "rate": 260.0
+        },
+        {
+          "id": "n8j0fs0v1om2",
+          "slot": "B",
+          "dir": "out",
+          "item": "Cement",
+          "rate": 520.0
+        },
+        {
+          "id": "zdnivdpenlz7",
+          "slot": "A",
+          "dir": "out",
+          "item": "CopperDust",
+          "rate": 400.0
+        },
+        {
+          "id": "d31kcpzaaetp",
+          "slot": "A",
+          "dir": "out",
+          "item": "FicsiteMesh",
+          "rate": 0.0
+        },
+        {
+          "id": "lw0ccrzem58b",
+          "slot": "A",
+          "dir": "out",
+          "item": "IronPlate",
+          "rate": 520.0
+        },
+        {
+          "id": "srb44n5lkqqx",
+          "slot": "A",
+          "dir": "out",
+          "item": "IronRod",
+          "rate": 780.0
+        },
+        {
+          "id": "vgb395sirubq",
+          "slot": "A",
+          "dir": "out",
+          "item": "RawQuartz",
+          "rate": 600.0
+        },
+        {
+          "id": "fjkyi6za2snz",
+          "slot": "B",
+          "dir": "out",
+          "item": "RawQuartz",
+          "rate": 600.0
+        },
+        {
+          "id": "yrrk84a0n1s5",
+          "dir": "out",
+          "item": "SAMIngot",
+          "rate": 150.0,
+          "partner": "Personal Fluctuators"
+        },
+        {
+          "id": "79n6xw3ulrso",
+          "slot": "A",
+          "dir": "out",
+          "item": "IronPlateReinforced",
+          "rate": 89.0
+        },
+        {
+          "id": "5g95vz78k7rz",
+          "dir": "out",
+          "item": "SteelPipe",
+          "rate": 600.0
+        },
+        {
+          "id": "mjzzb7w3i670",
+          "slot": "A",
+          "dir": "out",
+          "item": "Sulfur",
+          "rate": 600.0,
+          "partner": "ROKTFUL"
+        },
+        {
+          "id": "xpcrsa5opm1i",
+          "slot": "B",
+          "dir": "out",
+          "item": "Sulfur",
+          "rate": 300.0,
+          "partner": "ROKTFUL"
+        },
+        {
+          "id": "s5jvd9ckxgb0",
+          "slot": "D",
+          "dir": "out",
+          "item": "Sulfur",
+          "rate": 400.0
+        },
+        {
+          "id": "7hgu7ahjrosq",
+          "slot": "E",
+          "dir": "out",
+          "item": "Sulfur",
+          "rate": 400.0
+        },
+        {
+          "id": "3gg0we567q6k",
+          "slot": "F",
+          "dir": "out",
+          "item": "Sulfur",
+          "rate": 400.0
+        },
+        {
+          "id": "hga1ph1wne9y",
+          "slot": "C",
+          "dir": "out",
+          "item": "Sulfur",
+          "rate": 300.0
+        },
+        {
+          "id": "p6o1i5g84zja",
+          "slot": "A",
+          "dir": "out",
+          "item": "Wire",
+          "rate": 600.0
+        },
+        {
+          "id": "ijoje80dkx2n",
+          "slot": "B",
+          "dir": "out",
+          "item": "Wire",
+          "rate": 600.0
+        }
+      ]
+    },
+    {
+      "id": "mkyts7cvot16",
+      "kind": "drone",
+      "name": "Lost Cliff",
+      "ports": [
+        {
+          "id": "726wsz57407y",
+          "dir": "out",
+          "item": "CircuitBoardHighSpeed",
+          "rate": 120.0
+        },
+        {
+          "id": "asoz1ujypi75",
+          "dir": "in",
+          "item": "GoldIngot",
+          "rate": 480.0,
+          "from": "3ix9brdp9myd"
+        },
+        {
+          "id": "f32hru70llme",
+          "slot": "B",
+          "dir": "out",
+          "item": "CopperSheet",
+          "rate": 600.0
+        },
+        {
+          "id": "t9e0xlmd4uw3",
+          "slot": "C",
+          "dir": "out",
+          "item": "CopperSheet",
+          "rate": 600.0
+        },
+        {
+          "id": "e2waacudtc0u",
+          "slot": "D",
+          "dir": "out",
+          "item": "CopperSheet",
+          "rate": 600.0
+        },
+        {
+          "id": "vf3181tonlxq",
+          "slot": "E",
+          "dir": "out",
+          "item": "CopperSheet",
+          "rate": 600.0
+        }
+      ]
+    },
+    {
+      "id": "vm5u6emj2k4f",
+      "kind": "drone",
+      "name": "Big Unit",
+      "ports": [
+        {
+          "id": "rsftk1wcvoam",
+          "dir": "in",
+          "item": "CrystalOscillator",
+          "rate": 28.8,
+          "from": "vhrq7iwil038"
+        },
+        {
+          "id": "k1ad9x0vbyuk",
+          "dir": "in",
+          "item": "ElectromagneticControlRod",
+          "rate": 96.0,
+          "from": "c1h71yoe4hei"
+        },
+        {
+          "id": "ksv2beyctq8j",
+          "dir": "in",
+          "item": "Rotor",
+          "rate": 96.0,
+          "from": "erl8enuhcozp"
+        },
+        {
+          "id": "2vfk7h7697v6",
+          "slot": "A",
+          "dir": "in",
+          "item": "Sulfur",
+          "rate": 400.0,
+          "from": "s5jvd9ckxgb0"
+        },
+        {
+          "id": "obw0a6uh6ze8",
+          "slot": "B",
+          "dir": "in",
+          "item": "Sulfur",
+          "rate": 400.0,
+          "from": "7hgu7ahjrosq"
+        },
+        {
+          "id": "yzryl97cddpj",
+          "slot": "C",
+          "dir": "in",
+          "item": "Sulfur",
+          "rate": 400.0,
+          "from": "3gg0we567q6k"
+        },
+        {
+          "id": "u8buwkyb2rq3",
+          "dir": "in",
+          "item": "RawQuartz",
+          "rate": 432.0,
+          "from": "vgb395sirubq"
+        },
+        {
+          "id": "vbjwo3l5fv8x",
+          "dir": "in",
+          "item": "GoldIngot",
+          "rate": 300.0,
+          "from": "rl00rpvgwhck"
+        },
+        {
+          "id": "0z42oz0wcnpb",
+          "dir": "out",
+          "item": "NuclearFuelRod",
+          "rate": 28.0
+        }
+      ]
+    },
+    {
+      "id": "jay43ad6dhoh",
+      "kind": "drone",
+      "name": "ROKTFUL",
+      "ports": [
+        {
+          "id": "k4spioe2f494",
+          "dir": "out",
+          "item": "CompactedCoal",
+          "rate": 400.0
+        }
+      ]
+    },
+    {
+      "id": "7hmgk6e33r0b",
+      "kind": "drone",
+      "name": "Going Turbo",
+      "ports": [
+        {
+          "id": "7pw5cg0524rl",
+          "slot": "A",
+          "dir": "in",
+          "item": "CompactedCoal",
+          "rate": 400.0,
+          "from": "k4spioe2f494"
+        },
+        {
+          "id": "forzl8sxwmsa",
+          "slot": "B",
+          "dir": "in",
+          "item": "CompactedCoal",
+          "rate": 450.0,
+          "from": "vgwglc53xtnu"
+        },
+        {
+          "id": "qktsbwcbcwgn",
+          "slot": "C",
+          "dir": "in",
+          "item": "CompactedCoal",
+          "rate": 450.0,
+          "from": "brzgh7ju0g5r"
+        },
+        {
+          "id": "rkqe6qq4axv9",
+          "dir": "in",
+          "item": "Plastic",
+          "rate": 533.0,
+          "from": "2eom93yd953q"
+        },
+        {
+          "id": "zx1ne4xzyf8u",
+          "slot": "A",
+          "dir": "out",
+          "item": "TurboFuel",
+          "rate": 650.0
+        },
+        {
+          "id": "teite0pgnk29",
+          "slot": "B",
+          "dir": "out",
+          "item": "TurboFuel",
+          "rate": 650.0
+        }
+      ]
+    },
+    {
+      "id": "5w0208n81yc9",
+      "kind": "drone",
+      "name": "Rocky Desert",
+      "ports": [
+        {
+          "id": "vgwglc53xtnu",
+          "slot": "A",
+          "dir": "out",
+          "item": "CompactedCoal",
+          "rate": 450.0
+        },
+        {
+          "id": "x2zojjpxel6w",
+          "slot": "A",
+          "dir": "in",
+          "item": "SAMIngot",
+          "rate": 38.0,
+          "from": "o8mgcmh2y30o"
+        },
+        {
+          "id": "z7ox9mdha77z",
+          "slot": "A",
+          "dir": "in",
+          "item": "Rubber",
+          "rate": 653.0,
+          "from": "jekmdr6nhvyf"
+        },
+        {
+          "id": "vhrq7iwil038",
+          "slot": "A",
+          "dir": "out",
+          "item": "CrystalOscillator",
+          "rate": 93.0,
+          "note": "mercer tax"
+        },
+        {
+          "id": "tt3hnoy12n05",
+          "slot": "A",
+          "dir": "out",
+          "item": "HighSpeedWire",
+          "rate": 933.0
+        },
+        {
+          "id": "vv5yepkp1dro",
+          "slot": "B",
+          "dir": "out",
+          "item": "HighSpeedWire",
+          "rate": 933.0
+        },
+        {
+          "id": "cendc226nrtv",
+          "slot": "C",
+          "dir": "out",
+          "item": "HighSpeedWire",
+          "rate": 933.0,
+          "note": "mercer tax"
+        },
+        {
+          "id": "dsoj19x2no8t",
+          "slot": "A",
+          "dir": "out",
+          "item": "GoldIngot",
+          "rate": 93.0
+        },
+        {
+          "id": "1fw254ojyyjo",
+          "slot": "D",
+          "dir": "out",
+          "item": "HighSpeedWire",
+          "rate": 800.0,
+          "note": "overflow"
+        }
+      ]
+    },
+    {
+      "id": "ud0175i75bra",
+      "kind": "drone",
+      "name": "Grassy Field",
+      "ports": [
+        {
+          "id": "brzgh7ju0g5r",
+          "slot": "A",
+          "dir": "out",
+          "item": "CompactedCoal",
+          "rate": 450.0
+        },
+        {
+          "id": "io2a0j87bo60",
+          "slot": "A",
+          "dir": "in",
+          "item": "SAMIngot",
+          "rate": 38.0,
+          "from": "o8mgcmh2y30o"
+        }
+      ]
+    },
+    {
+      "id": "cjef60yctzzu",
+      "kind": "drone",
+      "name": "EDFHMF",
+      "ports": [
+        {
+          "id": "gg81ndk6ulf9",
+          "dir": "out",
+          "item": "ModularFrameHeavy",
+          "rate": 62.0,
+          "note": "mercer tax"
+        }
+      ]
+    },
+    {
+      "id": "8e8u17kv2k5x",
+      "kind": "drone",
+      "name": "Swamp",
+      "ports": [
+        {
+          "id": "591s02zllp2a",
+          "slot": "A",
+          "dir": "out",
+          "item": "CircuitBoard",
+          "rate": 636.0,
+          "note": "Overflows to B"
+        },
+        {
+          "id": "um4cz4lz0j1y",
+          "slot": "B",
+          "dir": "out",
+          "item": "CircuitBoard",
+          "rate": 636.0,
+          "note": "mercer tax"
+        }
+      ]
+    },
+    {
+      "id": "0hb1b7kx4qfg",
+      "kind": "drone",
+      "name": "High Bit",
+      "ports": [
+        {
+          "id": "fh7d0h39oyoc",
+          "slot": "A",
+          "dir": "in",
+          "item": "CircuitBoard",
+          "rate": 800.0,
+          "from": "um4cz4lz0j1y"
+        },
+        {
+          "id": "zqafkhud21s7",
+          "slot": "A",
+          "dir": "in",
+          "item": "Rubber",
+          "rate": 600.0,
+          "from": "9zuob87xmh0s"
+        },
+        {
+          "id": "uo0ulmsiks33",
+          "slot": "B",
+          "dir": "in",
+          "item": "Rubber",
+          "rate": 600.0,
+          "from": "4lm1wzhayviw"
+        },
+        {
+          "id": "ianjx8b7n3js",
+          "slot": "A",
+          "dir": "in",
+          "item": "HighSpeedWire",
+          "rate": 933.0,
+          "from": "tt3hnoy12n05"
+        },
+        {
+          "id": "xl7f2yk0dnit",
+          "slot": "B",
+          "dir": "in",
+          "item": "HighSpeedWire",
+          "rate": 933.0,
+          "from": "vv5yepkp1dro"
+        },
+        {
+          "id": "r0mcmkk02o0a",
+          "slot": "C",
+          "dir": "in",
+          "item": "HighSpeedWire",
+          "rate": 933.0,
+          "from": "cendc226nrtv"
+        },
+        {
+          "id": "691gltc35bkd",
+          "slot": "A",
+          "dir": "out",
+          "item": "Computer",
+          "rate": 200.0,
+          "note": "mercer tax"
+        }
+      ]
+    },
+    {
+      "id": "psnrjxtv3fw1",
+      "kind": "drone",
+      "name": "Eastlake",
+      "ports": [
+        {
+          "id": "qteg2ukamg5n",
+          "slot": "A",
+          "dir": "out",
+          "item": "QuartzCrystal",
+          "rate": 933.0
+        }
+      ]
+    },
+    {
+      "id": "9y9zxyrbd1cz",
+      "kind": "drone",
+      "name": "Sinks",
+      "ports": [
+        {
+          "id": "397hhge0zcx6",
+          "dir": "in",
+          "item": "AluminumPlate",
+          "rate": 275.0,
+          "from": "9y2o5aiavznc"
+        },
+        {
+          "id": "5ecg49f41kot",
+          "dir": "in",
+          "item": "CopperSheet",
+          "rate": 165.0,
+          "from": "f32hru70llme"
+        },
+        {
+          "id": "m7rqfcysics6",
+          "dir": "out",
+          "item": "AluminumPlateReinforced",
+          "rate": 55.0,
+          "note": "mercer tax"
+        }
+      ]
+    },
+    {
+      "id": "1dyhy1oyijqs",
+      "kind": "drone",
+      "name": "RCU1",
+      "ports": [
+        {
+          "id": "1b2i7x4wh9io",
+          "dir": "in",
+          "item": "Computer",
+          "rate": 20.0,
+          "from": "691gltc35bkd"
+        },
+        {
+          "id": "itht0xjpo4y6",
+          "dir": "in",
+          "item": "AluminumCasing",
+          "rate": 300.0,
+          "from": "h7djspgzwh25"
+        },
+        {
+          "id": "oi8ju42i7fhy",
+          "dir": "in",
+          "item": "CrystalOscillator",
+          "rate": 10.0,
+          "from": "vhrq7iwil038"
+        },
+        {
+          "id": "i8g6ehc8yv95",
+          "dir": "out",
+          "item": "ModularFrameLightweight",
+          "rate": 18.0,
+          "note": "mercer tax"
+        }
+      ]
+    },
+    {
+      "id": "d6wadv83yy01",
+      "kind": "drone",
+      "name": "HSC1",
+      "ports": [
+        {
+          "id": "ly6ym42wgbpu",
+          "slot": "A",
+          "dir": "in",
+          "item": "HighSpeedWire",
+          "rate": 800.0,
+          "from": "1fw254ojyyjo"
+        },
+        {
+          "id": "po5x3kbn0mdm",
+          "slot": "A",
+          "dir": "in",
+          "item": "CircuitBoard",
+          "rate": 15.0,
+          "from": "um4cz4lz0j1y"
+        },
+        {
+          "id": "kod9mcookiqb",
+          "slot": "A",
+          "dir": "in",
+          "item": "Cable",
+          "rate": 144.0,
+          "from": "udfgdavg0mc2"
+        },
+        {
+          "id": "oawh96zbifsd",
+          "slot": "A",
+          "dir": "out",
+          "item": "HighSpeedConnector",
+          "rate": 14.0
+        }
+      ]
+    },
+    {
+      "id": "ta5vcn8yhv5y",
+      "kind": "drone",
+      "name": "Tricities",
+      "ports": [
+        {
+          "id": "o4ihhtg3okax",
+          "slot": "A",
+          "dir": "in",
+          "item": "SAMIngot",
+          "rate": 300.0,
+          "from": "5luezk4uyj9n"
+        },
+        {
+          "id": "e0hs5eea4w61",
+          "slot": "A",
+          "dir": "in",
+          "item": "AluminumIngot",
+          "rate": 600.0,
+          "from": "9n04bmrpd01s"
+        },
+        {
+          "id": "gz9jp5erzdek",
+          "slot": "A",
+          "dir": "out",
+          "item": "FicsiteMesh",
+          "rate": 450.0,
+          "note": "mercer tax"
+        }
+      ]
+    },
+    {
+      "id": "h5n9xtgcsvfd",
+      "kind": "drone",
+      "name": "Armpit",
+      "ports": [
+        {
+          "id": "eapv5crdq0ly",
+          "slot": "A",
+          "dir": "out",
+          "item": "IronPlate",
+          "rate": 742.0,
+          "note": "mercer tax"
+        }
+      ]
+    },
+    {
+      "id": "cfokznheotxs",
+      "kind": "drone",
+      "name": "RDPasta",
+      "ports": [
+        {
+          "id": "uvukvdiisx4r",
+          "slot": "A",
+          "dir": "in",
+          "item": "ModularFrameLightweight",
+          "rate": 10.0,
+          "from": "i8g6ehc8yv95"
+        },
+        {
+          "id": "mfhqzozlnijw",
+          "slot": "A",
+          "dir": "in",
+          "item": "ModularFrameFused",
+          "rate": 5.0,
+          "partner": "Personal",
+          "note": "running @ 40%"
+        },
+        {
+          "id": "1yj919fe862x",
+          "slot": "A",
+          "dir": "out",
+          "item": "SpaceElevatorPart_9",
+          "rate": 5.0,
+          "note": "need more CP, FMF"
+        },
+        {
+          "id": "mo1p0u8um3fu",
+          "slot": "A",
+          "dir": "in",
+          "item": "CopperDust",
+          "rate": 1000.0,
+          "from": "zdnivdpenlz7"
+        }
+      ]
+    },
+    {
+      "id": "kkb1zn3ppscd",
+      "kind": "drone",
+      "name": "Schwarzschild",
+      "ports": [
+        {
+          "id": "75ga3ieyj1k0",
+          "slot": "A",
+          "dir": "in",
+          "item": "IronPlate",
+          "rate": 500.0,
+          "from": "eapv5crdq0ly"
+        },
+        {
+          "id": "lpyn3yakh8od",
+          "slot": "A",
+          "dir": "in",
+          "item": "Cement",
+          "rate": 1000.0,
+          "from": "n8j0fs0v1om2"
+        },
+        {
+          "id": "gnmasagim8xg",
+          "slot": "A",
+          "dir": "in",
+          "item": "DarkMatter",
+          "rate": 100.0,
+          "from": "tqluste3vki5"
+        },
+        {
+          "id": "28wlw670fr77",
+          "slot": "A",
+          "dir": "in",
+          "item": "SpaceElevatorPart_9",
+          "rate": 5.0,
+          "from": "1yj919fe862x"
+        },
+        {
+          "id": "i8hmkod0bn2p",
+          "slot": "A",
+          "dir": "out",
+          "item": "SingularityCell",
+          "rate": 50.0
+        }
+      ]
+    },
+    {
+      "id": "jdnqll6t99te",
+      "kind": "truck",
+      "name": "Quartz 1 (Purple Forest)",
+      "ports": [
+        {
+          "id": "60lu2j4vdlm7",
+          "dir": "out",
+          "item": "RawQuartz",
+          "rate": 300.0
+        }
+      ]
+    },
+    {
+      "id": "84g2ub1nb1ha",
+      "kind": "truck",
+      "name": "Purple Oil 600",
+      "ports": [
+        {
+          "id": "g5esv25p6r6p",
+          "dir": "out",
+          "item": "LiquidOil",
+          "rate": 600.0
+        }
+      ]
+    },
+    {
+      "id": "ozua2eu9fk15",
+      "kind": "truck",
+      "name": "Purple Limestone 480 A",
+      "ports": [
+        {
+          "id": "unsw33p3lafx",
+          "dir": "out",
+          "item": "Stone",
+          "rate": 480.0
+        }
+      ]
+    },
+    {
+      "id": "xrzjpeqrbx0j",
+      "kind": "truck",
+      "name": "Purple Limestone 480 B",
+      "ports": [
+        {
+          "id": "q21ympy8fw3a",
+          "dir": "out",
+          "item": "Stone",
+          "rate": 480.0
+        }
+      ]
+    },
+    {
+      "id": "2xr59usodxqw",
+      "kind": "truck",
+      "name": "Babylon HMF",
+      "ports": [
+        {
+          "id": "7a71drf6rdcc",
+          "dir": "out",
+          "item": "ModularFrameHeavy",
+          "rate": 27.0,
+          "partner": "ACU"
+        }
+      ]
+    },
+    {
+      "id": "msa52bq7pxzf",
+      "kind": "truck",
+      "name": "Pit Sam",
+      "ports": [
+        {
+          "id": "jhth1ljoxf1w",
+          "dir": "out",
+          "item": "SAM",
+          "rate": 300.0
+        }
+      ]
+    },
+    {
+      "id": "aypq5ls9v3p1",
+      "kind": "truck",
+      "name": "Pit Motors",
+      "ports": [
+        {
+          "id": "e6ex394x7wy0",
+          "dir": "out",
+          "item": "Motor",
+          "rate": 27.0,
+          "partner": "Modular Engines"
+        }
+      ]
+    },
+    {
+      "id": "7qivi5ccza79",
+      "kind": "truck",
+      "name": "Pit Oil",
+      "ports": [
+        {
+          "id": "b69qwnk6q9hq",
+          "dir": "out",
+          "item": "LiquidOil",
+          "rate": 600.0
+        }
+      ]
+    },
+    {
+      "id": "gu8hgv4t2d51",
+      "kind": "truck",
+      "name": "Pit Limestone",
+      "ports": [
+        {
+          "id": "s1c0xjphs1ix",
+          "dir": "out",
+          "item": "Stone",
+          "rate": 480.0
+        }
+      ]
+    },
+    {
+      "id": "tqp16d71git2",
+      "kind": "truck",
+      "name": "Grass SAM",
+      "ports": [
+        {
+          "id": "524k0hymhnkq",
+          "dir": "out",
+          "item": "SAM",
+          "rate": 300.0
+        }
+      ]
+    },
+    {
+      "id": "7suwma80quhw",
+      "kind": "truck",
+      "name": "Crude Oil 1",
+      "ports": [
+        {
+          "id": "v2yl7gf4ycro",
+          "dir": "out",
+          "item": "LiquidOil",
+          "rate": 600.0,
+          "partner": "Babylon Fluid Intake 1"
+        }
+      ]
+    },
+    {
+      "id": "img3ddp42ayk",
+      "kind": "truck",
+      "name": "Babylon Alclad Sheet",
+      "ports": [
+        {
+          "id": "cmmrqmge0qig",
+          "dir": "out",
+          "item": "AluminumPlate",
+          "rate": 330.0
+        }
+      ]
+    },
+    {
+      "id": "b3vs2vycn1y2",
+      "kind": "truck",
+      "name": "Babylon Aluminum Casing",
+      "ports": [
+        {
+          "id": "yiltw1iumbfc",
+          "dir": "out",
+          "item": "AluminumCasing",
+          "rate": 112.5
+        }
+      ]
+    },
+    {
+      "id": "ybd0b05pxp1e",
+      "kind": "truck",
+      "name": "Baby Croscillator",
+      "ports": [
+        {
+          "id": "j3m8jpxlvzwn",
+          "dir": "out",
+          "item": "CrystalOscillator",
+          "rate": 4.0,
+          "partner": "RCU <- Croscillator"
+        }
+      ]
+    },
+    {
+      "id": "miiixodgnlhl",
+      "kind": "truck",
+      "name": "RCU <- Croscillator",
+      "ports": [
+        {
+          "id": "mb64z3iipdoq",
+          "dir": "in",
+          "item": "CrystalOscillator",
+          "rate": 4.0,
+          "from": "j3m8jpxlvzwn"
+        }
+      ]
+    },
+    {
+      "id": "z9aukgm5z5p8",
+      "kind": "truck",
+      "name": "RCU <- Casing",
+      "ports": [
+        {
+          "id": "hjn2sy00tipv",
+          "dir": "in",
+          "item": "AluminumCasing",
+          "rate": 128.0,
+          "from": "yiltw1iumbfc"
+        }
+      ]
+    },
+    {
+      "id": "um6xcebohlp6",
+      "kind": "truck",
+      "name": "RCU",
+      "ports": [
+        {
+          "id": "xafz1wwgwv7q",
+          "dir": "out",
+          "item": "ModularFrameLightweight",
+          "rate": 8.0
+        }
+      ]
+    }
+  ],
+  "todos": [
+    {
+      "id": "bwsm6u3p2xey",
+      "text": "USE 1-4 TRAINS ONLY",
+      "done": false
+    },
+    {
+      "id": "uxv4izyoyz44",
+      "text": "basic aluminums",
+      "done": true
+    },
+    {
+      "id": "5kij5jr8oe0w",
+      "text": "supercomputers",
+      "done": true
+    },
+    {
+      "id": "scpi59853ztl",
+      "text": "RCUs",
+      "done": true
+    },
+    {
+      "id": "ubmrascg4zpv",
+      "text": "export mod engines/ACUs",
+      "done": true
+    },
+    {
+      "id": "7mspjdtarnhd",
+      "text": "Uranium Cell Plant",
+      "done": true
+    },
+    {
+      "id": "14rdfuefzjl4",
+      "text": "Drones!",
+      "done": true
+    },
+    {
+      "id": "0u2tf93o2ujc",
+      "text": "(Raditation) Filters",
+      "done": true
+    },
+    {
+      "id": "fs02qxfnlegy",
+      "text": "Armory",
+      "done": true
+    },
+    {
+      "id": "vfiovaecbka7",
+      "text": "tanks",
+      "done": true
+    },
+    {
+      "id": "gd6th3tff5p0",
+      "text": "nitrogen",
+      "done": true
+    },
+    {
+      "id": "snoi58cv5k3y",
+      "text": "fmfs",
+      "done": true
+    },
+    {
+      "id": "xtjz5yanmb82",
+      "text": "heat sinks",
+      "done": true
+    },
+    {
+      "id": "p59dsh1i8d9j",
+      "text": "cooling systems",
+      "done": true
+    },
+    {
+      "id": "lrs468hx3l4q",
+      "text": "turbo motors",
+      "done": true
+    },
+    {
+      "id": "nq8hyqju6wd9",
+      "text": "nuclear waste recycling",
+      "done": true
+    },
+    {
+      "id": "qphuqkpjjzkc",
+      "text": "nuclear power plant",
+      "done": true
+    },
+    {
+      "id": "fd558w6llym6",
+      "text": "moar uranium fuel",
+      "done": true
+    },
+    {
+      "id": "7lq7s6wa3ww8",
+      "text": "rokt ful",
+      "done": true
+    },
+    {
+      "id": "zms7eujzfi2b",
+      "text": "dronify hmfs, motors",
+      "done": true
+    },
+    {
+      "id": "frc3xkajqshu",
+      "text": "sam fluctuators",
+      "done": true
+    },
+    {
+      "id": "oln3coroyey8",
+      "text": "coal hole petrochems (3 pure + 3 1/2 equiv)",
+      "done": true
+    },
+    {
+      "id": "ps4bdifq0i28",
+      "text": "dronify computers, hsc, etc",
+      "done": true
+    },
+    {
+      "id": "vcffbtyliwbi",
+      "text": "pcc",
+      "done": true
+    },
+    {
+      "id": "6lp8648bs2v8",
+      "text": "teardown old elevator parts",
+      "done": true
+    },
+    {
+      "id": "mu284gqxud39",
+      "text": "coal hole quickwire (from powder)",
+      "done": true
+    },
+    {
+      "id": "fy3ntw2vcj8m",
+      "text": "coal plant decomission",
+      "done": true
+    },
+    {
+      "id": "oa9lkahiktyd",
+      "text": "slug hunt",
+      "done": true
+    },
+    {
+      "id": "c8wdll1tofk6",
+      "text": "vertical blueprints for machines",
+      "done": true
+    },
+    {
+      "id": "hxjiepg7wwp9",
+      "text": "blue crater turbofuel",
+      "done": true
+    },
+    {
+      "id": "sfbqqwacj9xy",
+      "text": "initial trigons",
+      "done": true
+    },
+    {
+      "id": "u38ekbj8ysyo",
+      "text": "big girl aluminum",
+      "done": true
+    },
+    {
+      "id": "8ugmghq3d0vc",
+      "text": "shards",
+      "done": true
+    },
+    {
+      "id": "ibb5wliakqu4",
+      "text": "singcells",
+      "done": true
+    },
+    {
+      "id": "zcxkri0qsqaa",
+      "text": "superposition",
+      "done": true
+    },
+    {
+      "id": "1tnk438jxa3n",
+      "text": "nqp",
+      "done": true
+    },
+    {
+      "id": "k92sdh9nrgn5",
+      "text": "roktful expansion",
+      "done": true
+    },
+    {
+      "id": "vfr3v0i9flqe",
+      "text": "coal hole aluminum expansion",
+      "done": true
+    },
+    {
+      "id": "mxt28tuonynd",
+      "text": "computer expansion",
+      "done": true
+    },
+    {
+      "id": "p65hs676q2ya",
+      "text": "hmf expansion",
+      "done": true
+    },
+    {
+      "id": "73bu4fawayvc",
+      "text": "big croscillators",
+      "done": true
+    },
+    {
+      "id": "yz0ie3g2cue1",
+      "text": "automate miners",
+      "done": true
+    },
+    {
+      "id": "7lxr8gncpce0",
+      "text": "expand quickwire depot",
+      "done": true
+    },
+    {
+      "id": "y27hu426tnxh",
+      "text": "expand steel beam depot",
+      "done": true
+    },
+    {
+      "id": "30xjecivbsac",
+      "text": "expand copper depot",
+      "done": true
+    },
+    {
+      "id": "uy93yzkip6fc",
+      "text": "rename 900A(1) droneport to 900B",
+      "done": true
+    },
+    {
+      "id": "f990lbd0vfwj",
+      "text": "upgrade lost cliff",
+      "done": true
+    },
+    {
+      "id": "8ixnpmjhna3b",
+      "text": "the hole palace",
+      "done": false
+    },
+    {
+      "id": "v0f26l26lgya",
+      "text": "prettify coal hole walls",
+      "done": false
+    },
+    {
+      "id": "adfknaho1v7y",
+      "text": "prettify kidney walls",
+      "done": true
+    },
+    {
+      "id": "ydz45v8znvnp",
+      "text": "switch drones to plutonium",
+      "done": true
+    },
+    {
+      "id": "pyxvaowztr7c",
+      "text": "un-uglify nitric acid bldg",
+      "done": true
+    },
+    {
+      "id": "n3at7b9va8fm",
+      "text": "expand cable depot",
+      "done": true
+    },
+    {
+      "id": "aqjjq2q4j5d6",
+      "text": "upgrade u-unit",
+      "done": true
+    },
+    {
+      "id": "rf7pijn74l80",
+      "text": "big girl electronics",
+      "done": true
+    },
+    {
+      "id": "hl9anlt2lf2s",
+      "text": "plan out elevator needs",
+      "done": true
+    },
+    {
+      "id": "utj8o7thrr79",
+      "text": "big fucking emergency battery",
+      "done": true
+    },
+    {
+      "id": "9xc3ukocrzju",
+      "text": "project hoose",
+      "done": false
+    },
+    {
+      "id": "8v6m1qqh2tf6",
+      "text": "expand rocky desert reanimated sam",
+      "done": true
+    },
+    {
+      "id": "qafjfi0ycon4",
+      "text": "remember:  limestone + iron ftw",
+      "done": false
+    },
+    {
+      "id": "4ni85pnmgzq8",
+      "text": "remember:  limestone + quartz ftw",
+      "done": false
+    },
+    {
+      "id": "44ocycpgpckb",
+      "text": "Drain.  The.  Swamp.",
+      "done": false
+    },
+    {
+      "id": "7umo0jsjvav8",
+      "text": "redevelop grass field",
+      "done": false
+    },
+    {
+      "id": "1q8ifb85q3rf",
+      "text": "redevelop babylon",
+      "done": false
+    },
+    {
+      "id": "t84mh4opmzow",
+      "text": "redevelop blue crater",
+      "done": false
+    },
+    {
+      "id": "txdnw4kfixwf",
+      "text": "quickie quartz crystals",
+      "done": true
+    },
+    {
+      "id": "z8zd71bfltk9",
+      "text": "quickie caterium ingots?",
+      "done": false
+    },
+    {
+      "id": "njgdt88chofs",
+      "text": "big girl hsc",
+      "done": true
+    },
+    {
+      "id": "qa2aifbq5dvk",
+      "text": "big girl rcu",
+      "done": true
+    },
+    {
+      "id": "dj8yak0z1knv",
+      "text": "big girl supahcomputah",
+      "done": false
+    },
+    {
+      "id": "dpi56nfvxtru",
+      "text": "more superoscillators",
+      "done": false
+    },
+    {
+      "id": "2i7mhuqdziux",
+      "text": "move bigunit sulfur source",
+      "done": true
+    },
+    {
+      "id": "etfuujj2xuom",
+      "text": "nobelisks!!!",
+      "done": true
+    },
+    {
+      "id": "6z4xsoea9mv5",
+      "text": "automated miners",
+      "done": true
+    },
+    {
+      "id": "0gxpajg1iha2",
+      "text": "stark black & white deco blueprints",
+      "done": false
+    },
+    {
+      "id": "1zphifpc1jdj",
+      "text": "more nqps",
+      "done": false
+    },
+    {
+      "id": "o3t93pp4qjod",
+      "text": "more pasta",
+      "done": false
+    },
+    {
+      "id": "o5fgvi1i7if7",
+      "text": "more supercells",
+      "done": false
+    },
+    {
+      "id": "taabctvoptkw",
+      "text": "more trigons",
+      "done": true
+    },
+    {
+      "id": "qoepdb28vopw",
+      "text": "mf on drones",
+      "done": false
+    },
+    {
+      "id": "fbxcsfhwj0ub",
+      "text": "iron plates for singcells",
+      "done": false
+    },
+    {
+      "id": "he3x5ujy46ve",
+      "text": "small nuclear pasta",
+      "done": false
+    }
+  ],
+  "updatedAt": "2026-10-20T12:56:54.329Z"
+}
