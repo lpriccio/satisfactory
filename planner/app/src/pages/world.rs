@@ -5,6 +5,7 @@ use crate::fmt;
 use crate::pages::home::HomeUi;
 use crate::widgets::{Opt, Palette, picker, tile};
 use eframe::egui::{self, DragValue, RichText, Ui};
+use egui_extras::{Column, TableBuilder};
 use planner_core::factory::now_iso;
 use planner_core::solve::{item_name, solve_factory};
 use planner_core::store::Store;
@@ -222,28 +223,45 @@ impl WorldUi {
             .filter(|(i, _)| i != POWER)
             .collect();
         pos.sort_by(|a, b| a.1.total_cmp(&b.1));
-        egui::Grid::new("net")
-            .num_columns(4)
+        TableBuilder::new(ui)
+            .id_salt("net-table")
             .striped(true)
-            .spacing([16.0, 4.0])
-            .show(ui, |ui| {
+            .resizable(true)
+            .vscroll(false)
+            .cell_layout(egui::Layout::left_to_right(egui::Align::Center))
+            .column(Column::initial(280.0).at_least(120.0).clip(true))
+            .column(Column::initial(100.0).at_least(50.0).clip(true))
+            .column(Column::initial(100.0).at_least(50.0).clip(true))
+            .column(Column::remainder().at_least(60.0))
+            .header(22.0, |mut header| {
                 for h in ["Item", "Net /min", "Out", "In"] {
-                    ui.label(RichText::new(h).small().strong().weak());
+                    header.col(|ui| {
+                        ui.label(RichText::new(h).small().strong().weak());
+                    });
                 }
-                ui.end_row();
-                for (item, net) in &pos {
+            })
+            .body(|body| {
+                body.rows(22.0, pos.len(), |mut row| {
+                    let (item, net) = &pos[row.index()];
                     let p = &totals.items[item];
-                    ui.label(item_name(&data, item));
+                    row.col(|ui| {
+                        ui.add(egui::Label::new(item_name(&data, item)).truncate());
+                    });
                     let c = if *net > 0.0 { pal.good } else { pal.bad };
-                    ui.label(RichText::new(fmt::signed(*net)).monospace().color(c));
-                    ui.label(RichText::new(fmt::num(p.target + p.surplus)).monospace());
-                    ui.label(
-                        RichText::new(fmt::num(p.imported))
-                            .monospace()
-                            .color(pal.import),
-                    );
-                    ui.end_row();
-                }
+                    row.col(|ui| {
+                        ui.label(RichText::new(fmt::signed(*net)).monospace().color(c));
+                    });
+                    row.col(|ui| {
+                        ui.label(RichText::new(fmt::num(p.target + p.surplus)).monospace());
+                    });
+                    row.col(|ui| {
+                        ui.label(
+                            RichText::new(fmt::num(p.imported))
+                                .monospace()
+                                .color(pal.import),
+                        );
+                    });
+                });
             });
         if pos.is_empty() {
             ui.label(RichText::new("Add factories to see the balance.").weak());

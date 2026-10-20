@@ -6,6 +6,7 @@ use crate::fmt;
 use crate::pages::factory::{FactoryUi, edit};
 use crate::widgets::{Palette, chip};
 use eframe::egui::{self, RichText, Ui};
+use egui_extras::{Column, TableBuilder};
 use planner_core::edits::{import_locked_reason, item_imported, toggle_item_import};
 use planner_core::linemath::whole_machines;
 use planner_core::solve::{item_name, recipe_name};
@@ -72,44 +73,58 @@ pub fn balance(
         if desc { o.reverse() } else { o }
     });
 
-    egui::Grid::new("balance")
-        .num_columns(8)
+    let mut table = TableBuilder::new(ui)
+        .id_salt("balance-table")
         .striped(true)
-        .spacing([16.0, 4.0])
-        .show(ui, |ui| {
+        .resizable(true)
+        .vscroll(false)
+        .cell_layout(egui::Layout::left_to_right(egui::Align::Center))
+        .column(Column::initial(280.0).at_least(120.0).clip(true));
+    for _ in 1..COLS.len() {
+        table = table.column(Column::initial(100.0).at_least(50.0).clip(true));
+    }
+    table
+        .column(Column::remainder().at_least(90.0))
+        .header(22.0, |mut header| {
             for (i, (name, tip)) in COLS.iter().enumerate() {
-                let arrow = if sort_col == i {
-                    if desc {
-                        " (high first)"
+                header.col(|ui| {
+                    let arrow = if sort_col == i {
+                        if desc {
+                            " (high first)"
+                        } else {
+                            " (low first)"
+                        }
                     } else {
-                        " (low first)"
-                    }
-                } else {
-                    ""
-                };
-                let r = ui.selectable_label(
-                    sort_col == i,
-                    RichText::new(format!("{name}{arrow}")).small().strong(),
-                );
-                let r = if tip.is_empty() {
-                    r
-                } else {
-                    r.on_hover_text(*tip)
-                };
-                if r.clicked() {
-                    st.balance_sort = if sort_col == i {
-                        (i, !desc)
-                    } else {
-                        (i, i != 0)
+                        ""
                     };
-                }
+                    let r = ui.selectable_label(
+                        sort_col == i,
+                        RichText::new(format!("{name}{arrow}")).small().strong(),
+                    );
+                    let r = if tip.is_empty() {
+                        r
+                    } else {
+                        r.on_hover_text(*tip)
+                    };
+                    if r.clicked() {
+                        st.balance_sort = if sort_col == i {
+                            (i, !desc)
+                        } else {
+                            (i, i != 0)
+                        };
+                    }
+                });
             }
-            ui.label(RichText::new("Import").small().strong());
-            ui.end_row();
-            for p in rows {
+            header.col(|ui| {
+                ui.label(RichText::new("Import").small().strong());
+            });
+        })
+        .body(|body| {
+            body.rows(24.0, rows.len(), |mut row| {
+                let p = rows[row.index()];
                 let net = p.produced - p.consumed;
-                ui.horizontal(|ui| {
-                    ui.label(item_name(data, &p.item));
+                row.col(|ui| {
+                    ui.add(egui::Label::new(item_name(data, &p.item)).truncate());
                     if p.unbalanced > 1e-6 {
                         ui.label(
                             RichText::new(format!("{} short", fmt::num(p.unbalanced)))
@@ -118,64 +133,54 @@ pub fn balance(
                         );
                     }
                 });
-                ui.label(RichText::new(fmt::num(p.produced)).monospace());
-                ui.label(RichText::new(fmt::num(p.consumed)).monospace());
+                let number = |row: &mut egui_extras::TableRow,
+                              text: String,
+                              color: Option<egui::Color32>| {
+                    row.col(|ui| {
+                        let mut t = RichText::new(text).monospace();
+                        if let Some(c) = color {
+                            t = t.color(c);
+                        }
+                        ui.label(t);
+                    });
+                };
+                let shown = |x: f64| if x > 1e-6 { fmt::num(x) } else { String::new() };
+                number(&mut row, fmt::num(p.produced), None);
+                number(&mut row, fmt::num(p.consumed), None);
                 let c = if net > 1e-6 {
-                    pal.good
+                    Some(pal.good)
                 } else if net < -1e-6 {
-                    pal.bad
+                    Some(pal.bad)
                 } else {
-                    ui.visuals().text_color()
+                    None
                 };
-                ui.label(RichText::new(fmt::signed(net)).monospace().color(c));
-                ui.label(
-                    RichText::new(if p.imported > 1e-6 {
-                        fmt::num(p.imported)
-                    } else {
-                        String::new()
-                    })
-                    .monospace()
-                    .color(pal.import),
-                );
-                ui.label(
-                    RichText::new(if p.target > 1e-6 {
-                        fmt::num(p.target)
-                    } else {
-                        String::new()
-                    })
-                    .monospace(),
-                );
-                ui.label(
-                    RichText::new(if p.surplus > 1e-6 {
-                        fmt::num(p.surplus)
-                    } else {
-                        String::new()
-                    })
-                    .monospace()
-                    .color(pal.warn),
-                );
-                let on = item_imported(data, &ed.factory, &p.item);
-                let locked = import_locked_reason(data, &ed.factory, &p.item);
-                let r = ui
-                    .add_enabled_ui(locked.is_none(), |ui| {
-                        chip(
-                            ui,
-                            if on { "imported" } else { "import" },
-                            on.then_some(pal.import),
-                            "",
-                        )
-                    })
-                    .inner;
-                let r = match &locked {
-                    Some(why) => r.on_disabled_hover_text(why),
-                    None => r,
-                };
-                if r.clicked() {
-                    let (d, item) = (ed.data.clone(), p.item.clone());
-                    edit(actions, None, move |f, _| toggle_item_import(&d, f, &item));
-                }
-                ui.end_row();
-            }
+                number(&mut row, fmt::signed(net), c);
+                number(&mut row, shown(p.imported), Some(pal.import));
+                number(&mut row, shown(p.target), None);
+                number(&mut row, shown(p.surplus), Some(pal.warn));
+                row.col(|ui| {
+                    let on = item_imported(data, &ed.factory, &p.item);
+                    let locked = import_locked_reason(data, &ed.factory, &p.item);
+                    let r = ui
+                        .add_enabled_ui(locked.is_none(), |ui| {
+                            chip(
+                                ui,
+                                if on { "imported" } else { "import" },
+                                on.then_some(pal.import),
+                                "",
+                            )
+                        })
+                        .inner;
+                    let r = match &locked {
+                        Some(why) => r.on_disabled_hover_text(why),
+                        None => r,
+                    };
+                    if r.clicked() {
+                        let (d, item) = (ed.data.clone(), p.item.clone());
+                        edit(actions, None, move |f, _| toggle_item_import(&d, f, &item));
+                    }
+                });
+            });
         });
 }
 
@@ -213,73 +218,96 @@ pub fn buildings(ui: &mut Ui, ed: &Editor) {
     if foundations {
         headers.push("Foundations".into());
     }
-    let row = |ui: &mut Ui,
-               name: RichText,
-               machines: f64,
-               whole: f64,
-               clock: Option<String>,
-               sloops: Option<String>,
-               power: f64,
-               floor: f64| {
-        ui.label(name);
-        ui.label(RichText::new(fmt::num(machines)).monospace());
-        ui.label(RichText::new(fmt::num(whole)).monospace());
-        if features.clock {
-            ui.label(RichText::new(clock.unwrap_or_default()).monospace());
-            ui.label(RichText::new(sloops.unwrap_or_default()).monospace());
+    struct Row {
+        name: RichText,
+        machines: f64,
+        whole: f64,
+        clock: Option<String>,
+        sloops: Option<String>,
+        power: f64,
+        floor: f64,
+    }
+    let mut table_rows = vec![];
+    for (b, lines) in &groups {
+        let name = data.buildings.get(*b).map_or(*b, |x| x.name.as_str());
+        table_rows.push(Row {
+            name: RichText::new(name).strong(),
+            machines: lines.iter().map(|l| l.machines).sum(),
+            whole: lines.iter().map(|l| whole_machines(l.machines)).sum(),
+            clock: None,
+            sloops: None,
+            power: lines.iter().map(|l| l.power_mw).sum(),
+            floor: lines.iter().map(|l| l.footprint).sum(),
+        });
+        let mut lines = lines.clone();
+        lines.sort_by(|a, b| b.machines.total_cmp(&a.machines));
+        for l in lines {
+            table_rows.push(Row {
+                name: RichText::new(format!("    {}", recipe_name(data, &l.recipe))),
+                machines: l.machines,
+                whole: whole_machines(l.machines),
+                clock: Some(fmt::pct(l.settings.clock)),
+                sloops: l.settings.sloops.map(|s| s.to_string()),
+                power: l.power_mw,
+                floor: l.footprint,
+            });
         }
-        if features.power {
-            ui.label(RichText::new(fmt::num(power)).monospace());
-        }
-        if features.footprint {
-            ui.label(RichText::new(fmt::num(floor)).monospace());
-        }
-        if foundations {
-            ui.label(RichText::new(fmt::num(floor * spacing / 64.0)).monospace());
-        }
-        ui.end_row();
-    };
-    egui::Grid::new("buildings")
-        .num_columns(headers.len())
+    }
+    table_rows.push(Row {
+        name: RichText::new("Total").strong(),
+        machines: plan.machines,
+        whole: plan.lines.iter().map(|l| whole_machines(l.machines)).sum(),
+        clock: None,
+        sloops: None,
+        power: plan.power_mw,
+        floor: plan.footprint,
+    });
+
+    let mut table = TableBuilder::new(ui)
+        .id_salt("buildings-table")
         .striped(true)
-        .spacing([16.0, 4.0])
-        .show(ui, |ui| {
+        .resizable(true)
+        .vscroll(false)
+        .cell_layout(egui::Layout::left_to_right(egui::Align::Center))
+        .column(Column::initial(300.0).at_least(120.0).clip(true));
+    for _ in 2..headers.len() {
+        table = table.column(Column::initial(90.0).at_least(50.0).clip(true));
+    }
+    table
+        .column(Column::remainder().at_least(60.0))
+        .header(22.0, |mut header| {
             for h in &headers {
-                ui.label(RichText::new(h).small().strong().weak());
+                header.col(|ui| {
+                    ui.label(RichText::new(h).small().strong().weak());
+                });
             }
-            ui.end_row();
-            for (b, lines) in &groups {
-                let name = data.buildings.get(*b).map_or(*b, |x| x.name.as_str());
-                let m: f64 = lines.iter().map(|l| l.machines).sum();
-                let w: f64 = lines.iter().map(|l| whole_machines(l.machines)).sum();
-                let p: f64 = lines.iter().map(|l| l.power_mw).sum();
-                let fl: f64 = lines.iter().map(|l| l.footprint).sum();
-                row(ui, RichText::new(name).strong(), m, w, None, None, p, fl);
-                let mut lines = lines.clone();
-                lines.sort_by(|a, b| b.machines.total_cmp(&a.machines));
-                for l in lines {
-                    row(
-                        ui,
-                        RichText::new(format!("    {}", recipe_name(data, &l.recipe))),
-                        l.machines,
-                        whole_machines(l.machines),
-                        Some(fmt::pct(l.settings.clock)),
-                        l.settings.sloops.map(|s| s.to_string()),
-                        l.power_mw,
-                        l.footprint,
-                    );
+        })
+        .body(|body| {
+            body.rows(22.0, table_rows.len(), |mut row| {
+                let r = &table_rows[row.index()];
+                row.col(|ui| {
+                    ui.add(egui::Label::new(r.name.clone()).truncate());
+                });
+                let mut number = |text: String| {
+                    row.col(|ui| {
+                        ui.label(RichText::new(text).monospace());
+                    });
+                };
+                number(fmt::num(r.machines));
+                number(fmt::num(r.whole));
+                if features.clock {
+                    number(r.clock.clone().unwrap_or_default());
+                    number(r.sloops.clone().unwrap_or_default());
                 }
-            }
-            let whole: f64 = plan.lines.iter().map(|l| whole_machines(l.machines)).sum();
-            row(
-                ui,
-                RichText::new("Total").strong(),
-                plan.machines,
-                whole,
-                None,
-                None,
-                plan.power_mw,
-                plan.footprint,
-            );
+                if features.power {
+                    number(fmt::num(r.power));
+                }
+                if features.footprint {
+                    number(fmt::num(r.floor));
+                }
+                if foundations {
+                    number(fmt::num(r.floor * spacing / 64.0));
+                }
+            });
         });
 }
