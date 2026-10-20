@@ -65,7 +65,10 @@ impl<'de, T: Deserialize<'de>> Deserialize<'de> for Ordered<T> {
             fn expecting(&self, f: &mut fmt::Formatter) -> fmt::Result {
                 f.write_str("a map")
             }
-            fn visit_map<A: MapAccess<'de>>(self, mut map: A) -> std::result::Result<Self::Value, A::Error> {
+            fn visit_map<A: MapAccess<'de>>(
+                self,
+                mut map: A,
+            ) -> std::result::Result<Self::Value, A::Error> {
                 let mut out = Vec::new();
                 while let Some((k, v)) = map.next_entry::<String, T>()? {
                     out.push((k, v));
@@ -73,7 +76,10 @@ impl<'de, T: Deserialize<'de>> Deserialize<'de> for Ordered<T> {
                 Ok(Ordered(out))
             }
             // Lua empty tables may come out as [].
-            fn visit_seq<A: SeqAccess<'de>>(self, mut seq: A) -> std::result::Result<Self::Value, A::Error> {
+            fn visit_seq<A: SeqAccess<'de>>(
+                self,
+                mut seq: A,
+            ) -> std::result::Result<Self::Value, A::Error> {
                 while seq.next_element::<serde::de::IgnoredAny>()?.is_some() {}
                 Ok(Ordered(Vec::new()))
             }
@@ -85,7 +91,10 @@ impl<'de, T: Deserialize<'de>> Deserialize<'de> for Ordered<T> {
 type Raw = Ordered<Ordered<Value>>;
 
 fn group<'a>(raw: &'a Raw, name: &str) -> &'a [(String, Value)] {
-    raw.0.iter().find(|(k, _)| k == name).map_or(&[], |(_, g)| g.0.as_slice())
+    raw.0
+        .iter()
+        .find(|(k, _)| k == name)
+        .map_or(&[], |(_, g)| g.0.as_slice())
 }
 
 // --- JS-style value helpers -------------------------------------------------
@@ -118,7 +127,10 @@ fn list(v: Option<&Value>) -> Vec<&Value> {
 }
 
 fn strings(v: Option<&Value>) -> Vec<String> {
-    list(v).into_iter().filter_map(|x| x.as_str().map(String::from)).collect()
+    list(v)
+        .into_iter()
+        .filter_map(|x| x.as_str().map(String::from))
+        .collect()
 }
 
 /// Math.round(x * 10^6) / 10^6.
@@ -187,7 +199,10 @@ impl Locale {
             if eq == 0 {
                 continue;
             }
-            self.0.entry(section.clone()).or_default().insert(t[..eq].to_string(), t[eq + 1..].to_string());
+            self.0
+                .entry(section.clone())
+                .or_default()
+                .insert(t[..eq].to_string(), t[eq + 1..].to_string());
         }
     }
 
@@ -248,7 +263,11 @@ impl Locale {
             let Some(v) = self.get(sec, id) else { continue };
             let resolved = self.resolve_refs(v, 0);
             // Parameterized strings ("__1__ dock") need runtime arguments we don't have.
-            return if has_placeholder(&resolved) { None } else { Some(resolved) };
+            return if has_placeholder(&resolved) {
+                None
+            } else {
+                Some(resolved)
+            };
         }
         None
     }
@@ -298,8 +317,12 @@ fn has_placeholder(s: &str) -> bool {
 }
 
 fn enabled_mods() -> Vec<String> {
-    let Ok(text) = fs::read_to_string(mods_dir().join("mod-list.json")) else { return vec![] };
-    let Ok(list) = serde_json::from_str::<Value>(&text) else { return vec![] };
+    let Ok(text) = fs::read_to_string(mods_dir().join("mod-list.json")) else {
+        return vec![];
+    };
+    let Ok(list) = serde_json::from_str::<Value>(&text) else {
+        return vec![];
+    };
     list["mods"]
         .as_array()
         .into_iter()
@@ -312,8 +335,14 @@ fn enabled_mods() -> Vec<String> {
 }
 
 fn compare_versions(a: &str, b: &str) -> std::cmp::Ordering {
-    let pa: Vec<f64> = a.split('.').map(|x| x.parse().unwrap_or(f64::NAN)).collect();
-    let pb: Vec<f64> = b.split('.').map(|x| x.parse().unwrap_or(f64::NAN)).collect();
+    let pa: Vec<f64> = a
+        .split('.')
+        .map(|x| x.parse().unwrap_or(f64::NAN))
+        .collect();
+    let pb: Vec<f64> = b
+        .split('.')
+        .map(|x| x.parse().unwrap_or(f64::NAN))
+        .collect();
     for i in 0..pa.len().max(pb.len()) {
         let d = pa.get(i).copied().unwrap_or(0.0) - pb.get(i).copied().unwrap_or(0.0);
         if d != 0.0 && !d.is_nan() {
@@ -325,8 +354,13 @@ fn compare_versions(a: &str, b: &str) -> std::cmp::Ordering {
 
 /// `<mod>_<version>.zip` -> version.
 fn zip_version<'a>(file: &'a str, module: &str) -> Option<&'a str> {
-    let v = file.strip_prefix(module)?.strip_prefix('_')?.strip_suffix(".zip")?;
-    let ok = !v.is_empty() && v.split('.').all(|p| !p.is_empty() && p.bytes().all(|c| c.is_ascii_digit()));
+    let v = file
+        .strip_prefix(module)?
+        .strip_prefix('_')?
+        .strip_suffix(".zip")?;
+    let ok = !v.is_empty()
+        && v.split('.')
+            .all(|p| !p.is_empty() && p.bytes().all(|c| c.is_ascii_digit()));
     ok.then_some(v)
 }
 
@@ -334,9 +368,13 @@ fn load_locale() -> Locale {
     let mut locale = Locale::default();
     for module in BUILTIN_MODS {
         let dir = Path::new(GAME_DATA).join(module).join("locale/en");
-        let Ok(entries) = fs::read_dir(&dir) else { continue };
-        let mut files: Vec<PathBuf> =
-            entries.filter_map(|e| e.ok().map(|e| e.path())).filter(|p| p.extension().is_some_and(|x| x == "cfg")).collect();
+        let Ok(entries) = fs::read_dir(&dir) else {
+            continue;
+        };
+        let mut files: Vec<PathBuf> = entries
+            .filter_map(|e| e.ok().map(|e| e.path()))
+            .filter(|p| p.extension().is_some_and(|x| x == "cfg"))
+            .collect();
         files.sort();
         for f in files {
             if let Ok(text) = fs::read_to_string(&f) {
@@ -344,25 +382,39 @@ fn load_locale() -> Locale {
             }
         }
     }
-    let Ok(entries) = fs::read_dir(mods_dir()) else { return locale };
+    let Ok(entries) = fs::read_dir(mods_dir()) else {
+        return locale;
+    };
     let zips: Vec<String> = entries
         .filter_map(|e| e.ok()?.file_name().into_string().ok())
         .filter(|f| f.ends_with(".zip"))
         .collect();
     for module in enabled_mods() {
-        let mut candidates: Vec<(&String, &str)> =
-            zips.iter().filter_map(|f| zip_version(f, &module).map(|v| (f, v))).collect();
+        let mut candidates: Vec<(&String, &str)> = zips
+            .iter()
+            .filter_map(|f| zip_version(f, &module).map(|v| (f, v)))
+            .collect();
         candidates.sort_by(|a, b| compare_versions(b.1, a.1));
-        let Some((file, _)) = candidates.first() else { continue };
+        let Some((file, _)) = candidates.first() else {
+            continue;
+        };
         // Equivalent of `unzip -p <zip> '*/locale/en/*.cfg'`: every matching
         // file, concatenated in archive order.
-        let Ok(reader) = fs::File::open(mods_dir().join(file)) else { continue };
-        let Ok(mut archive) = zip::ZipArchive::new(reader) else { continue };
+        let Ok(reader) = fs::File::open(mods_dir().join(file)) else {
+            continue;
+        };
+        let Ok(mut archive) = zip::ZipArchive::new(reader) else {
+            continue;
+        };
         let mut text = String::new();
         for i in 0..archive.len() {
-            let Ok(mut entry) = archive.by_index(i) else { continue };
+            let Ok(mut entry) = archive.by_index(i) else {
+                continue;
+            };
             let name = entry.name().to_string();
-            let matches = name.find("/locale/en/").is_some_and(|p| p >= 1) && name.ends_with(".cfg") && entry.is_file();
+            let matches = name.find("/locale/en/").is_some_and(|p| p >= 1)
+                && name.ends_with(".cfg")
+                && entry.is_file();
             if matches {
                 let mut buf = Vec::new();
                 if entry.read_to_end(&mut buf).is_ok() {
@@ -398,13 +450,18 @@ fn stack_list(entries: Option<&Value>, is_result: bool) -> StackList {
         } else if let (Some(lo), Some(hi)) = (num(e.get("amount_min")), num(e.get("amount_max"))) {
             (lo + hi) / 2.0
         } else {
-            return StackList { stacks: vec![], ignored, bad: Some(format!("no amount for {name}")) };
+            return StackList {
+                stacks: vec![],
+                ignored,
+                bad: Some(format!("no amount for {name}")),
+            };
         };
         if is_result {
             let p = num(e.get("probability")).unwrap_or(1.0);
             amount = amount * p + num(e.get("extra_count_fraction")).unwrap_or(0.0);
             if truthy(e.get("ignored_by_productivity")) {
-                *ignored.entry(name.clone()).or_insert(0.0) += num(e.get("ignored_by_productivity")).unwrap_or(0.0) * p;
+                *ignored.entry(name.clone()).or_insert(0.0) +=
+                    num(e.get("ignored_by_productivity")).unwrap_or(0.0) * p;
             }
         }
         match amounts.iter_mut().find(|(n, _)| *n == name) {
@@ -412,8 +469,19 @@ fn stack_list(entries: Option<&Value>, is_result: bool) -> StackList {
             None => amounts.push((name, amount)),
         }
     }
-    let stacks = amounts.into_iter().filter(|(_, a)| *a > 0.0).map(|(item, a)| Stack { item, amount: round6(a) }).collect();
-    StackList { stacks, ignored, bad: None }
+    let stacks = amounts
+        .into_iter()
+        .filter(|(_, a)| *a > 0.0)
+        .map(|(item, a)| Stack {
+            item,
+            amount: round6(a),
+        })
+        .collect();
+    StackList {
+        stacks,
+        ignored,
+        bad: None,
+    }
 }
 
 struct Skips(Vec<Skipped>);
@@ -421,23 +489,32 @@ struct Skips(Vec<Skipped>);
 impl Skips {
     fn add(&mut self, id: &str, reason: impl Into<String>) {
         if self.0.len() < MAX_SKIPPED {
-            self.0.push(Skipped { id: id.to_string(), reason: reason.into() });
+            self.0.push(Skipped {
+                id: id.to_string(),
+                reason: reason.into(),
+            });
         }
     }
 }
 
 /// Order machines fastest first; ties by name.
-fn by_speed(buildings: &BTreeMap<String, Building>) -> impl Fn(&String, &String) -> std::cmp::Ordering + '_ {
+fn by_speed(
+    buildings: &BTreeMap<String, Building>,
+) -> impl Fn(&String, &String) -> std::cmp::Ordering + '_ {
     move |a, b| {
         let sa = buildings[a].speed.unwrap_or(1.0);
         let sb = buildings[b].speed.unwrap_or(1.0);
-        sb.partial_cmp(&sa).unwrap_or(std::cmp::Ordering::Equal).then_with(|| a.cmp(b))
+        sb.partial_cmp(&sa)
+            .unwrap_or(std::cmp::Ordering::Equal)
+            .then_with(|| a.cmp(b))
     }
 }
 
 pub fn build(dump_path: &Path) -> Result<GameData> {
-    let file = fs::File::open(dump_path).with_context(|| format!("opening {}", dump_path.display()))?;
-    let raw: Raw = serde_json::from_reader(std::io::BufReader::new(file)).with_context(|| format!("parsing {}", dump_path.display()))?;
+    let file =
+        fs::File::open(dump_path).with_context(|| format!("opening {}", dump_path.display()))?;
+    let raw: Raw = serde_json::from_reader(std::io::BufReader::new(file))
+        .with_context(|| format!("parsing {}", dump_path.display()))?;
     let locale = load_locale();
     let mut skipped = Skips(vec![]);
 
@@ -457,12 +534,17 @@ pub fn build(dump_path: &Path) -> Result<GameData> {
                 let y2 = b.get(1)?.get(1)?.as_f64()?;
                 Some((x2 - x1).ceil() * (y2 - y1).ceil())
             });
-            let prod = num(p.get("effect_receiver").and_then(|e| e.get("base_effect")).and_then(|e| e.get("productivity")));
+            let prod = num(p
+                .get("effect_receiver")
+                .and_then(|e| e.get("base_effect"))
+                .and_then(|e| e.get("productivity")));
             buildings.insert(
                 name.clone(),
                 Building {
                     id: name.clone(),
-                    name: locale.lookup(&["entity-name"], name).unwrap_or_else(|| humanize(name)),
+                    name: locale
+                        .lookup(&["entity-name"], name)
+                        .unwrap_or_else(|| humanize(name)),
                     power_mw: round6(parse_energy_mw(string(p.get("energy_usage")))),
                     speed: Some(num(p.get("crafting_speed")).unwrap_or(1.0)),
                     categories: Some(strings(p.get("crafting_categories"))),
@@ -494,20 +576,29 @@ pub fn build(dump_path: &Path) -> Result<GameData> {
             }
         }
     }
-    let fluid_protos: HashMap<&str, &Value> = group(&raw, "fluid").iter().map(|(k, v)| (k.as_str(), v)).collect();
+    let fluid_protos: HashMap<&str, &Value> = group(&raw, "fluid")
+        .iter()
+        .map(|(k, v)| (k.as_str(), v))
+        .collect();
     let item_name = |id: &str| -> String {
         if fluid_protos.contains_key(id) {
-            return locale.lookup(&["fluid-name"], id).unwrap_or_else(|| humanize(id));
+            return locale
+                .lookup(&["fluid-name"], id)
+                .unwrap_or_else(|| humanize(id));
         }
         let p = item_protos.get(id);
         locale
             .lookup(&["item-name"], id)
             .or_else(|| {
-                let place = p.and_then(|p| p.get("place_result")).filter(|v| truthy(Some(v)))?;
+                let place = p
+                    .and_then(|p| p.get("place_result"))
+                    .filter(|v| truthy(Some(v)))?;
                 locale.lookup(&["entity-name"], place.as_str()?)
             })
             .or_else(|| {
-                let place = p.and_then(|p| p.get("place_as_equipment_result")).filter(|v| truthy(Some(v)))?;
+                let place = p
+                    .and_then(|p| p.get("place_as_equipment_result"))
+                    .filter(|v| truthy(Some(v)))?;
                 locale.lookup(&["equipment-name"], place.as_str()?)
             })
             .or_else(|| locale.lookup(&["entity-name", "equipment-name"], id))
@@ -555,7 +646,10 @@ pub fn build(dump_path: &Path) -> Result<GameData> {
             }
         }
         if able.is_empty() {
-            skipped.add(name, format!("no machine for category {}", categories.join(", ")));
+            skipped.add(
+                name,
+                format!("no machine for category {}", categories.join(", ")),
+            );
             continue;
         }
         able.sort_by(by_speed(&buildings));
@@ -633,7 +727,14 @@ pub fn build(dump_path: &Path) -> Result<GameData> {
 
     // Items
     let mut keep: BTreeSet<String> = produced.union(&used).cloned().collect();
-    keep.extend(raw_ids.iter().filter(|id| item_protos.contains_key(id.as_str()) || fluid_protos.contains_key(id.as_str())).cloned());
+    keep.extend(
+        raw_ids
+            .iter()
+            .filter(|id| {
+                item_protos.contains_key(id.as_str()) || fluid_protos.contains_key(id.as_str())
+            })
+            .cloned(),
+    );
     let mut items: BTreeMap<String, Item> = BTreeMap::new();
     for id in &keep {
         let fluid = fluid_protos.get(id.as_str()).copied();
@@ -641,7 +742,8 @@ pub fn build(dump_path: &Path) -> Result<GameData> {
             skipped.add(id, "referenced but no item or fluid prototype");
             continue;
         };
-        let mj = parse_energy_mj(string(proto.get("fuel_value"))).filter(|x| *x != 0.0 && !x.is_nan());
+        let mj =
+            parse_energy_mj(string(proto.get("fuel_value"))).filter(|x| *x != 0.0 && !x.is_nan());
         items.insert(
             id.clone(),
             Item {
@@ -667,23 +769,42 @@ pub fn build(dump_path: &Path) -> Result<GameData> {
         }
     }
     for (id, list) in &producers {
-        let Some(item) = items.get_mut(id) else { continue };
+        let Some(item) = items.get_mut(id) else {
+            continue;
+        };
         let pick = list
             .iter()
             .find(|r| *r == id)
-            .or_else(|| list.iter().find(|r| !is_barrel(r) && main_product.get(*r).and_then(|m| m.as_deref()) == Some(id.as_str())))
+            .or_else(|| {
+                list.iter().find(|r| {
+                    !is_barrel(r)
+                        && main_product.get(*r).and_then(|m| m.as_deref()) == Some(id.as_str())
+                })
+            })
             .or_else(|| list.iter().find(|r| !is_barrel(r)))
             .or(list.first());
         item.recipe = pick.cloned();
     }
 
-    let default_imports: Vec<String> = items.values().filter(|i| i.raw).map(|i| i.id.clone()).collect();
-    let version = if group(&raw, "utility-constants").is_empty() { "" } else { "Factorio 2.0 " };
+    let default_imports: Vec<String> = items
+        .values()
+        .filter(|i| i.raw)
+        .map(|i| i.id.clone())
+        .collect();
+    let version = if group(&raw, "utility-constants").is_empty() {
+        ""
+    } else {
+        "Factorio 2.0 "
+    };
 
     Ok(GameData {
         game: GameId::Factorio,
         name: "Factorio".into(),
-        source: format!("{} ({version}{})", dump_path.display(), enabled_mods().join(", ")),
+        source: format!(
+            "{} ({version}{})",
+            dump_path.display(),
+            enabled_mods().join(", ")
+        ),
         generated_at: planner_core::factory::now_iso(),
         items,
         buildings,
@@ -717,11 +838,19 @@ mod tests {
         assert_eq!(humanize("electronic-circuit"), "Electronic circuit");
         assert!(has_placeholder("__1__ dock"));
         assert!(!has_placeholder("Iron plate"));
-        assert_eq!(zip_version("Flare Stack_4.1.0.zip", "Flare Stack"), Some("4.1.0"));
+        assert_eq!(
+            zip_version("Flare Stack_4.1.0.zip", "Flare Stack"),
+            Some("4.1.0")
+        );
         assert_eq!(zip_version("Flare Stack_4.1.0.zip", "Flare"), None);
         let mut l = Locale::default();
-        l.parse_cfg("[item-name]\niron-plate=Iron plate\n[recipe-name]\nfoo=Melt __ITEM__iron-plate__\n");
-        assert_eq!(l.lookup(&["recipe-name"], "foo").as_deref(), Some("Melt Iron plate"));
+        l.parse_cfg(
+            "[item-name]\niron-plate=Iron plate\n[recipe-name]\nfoo=Melt __ITEM__iron-plate__\n",
+        );
+        assert_eq!(
+            l.lookup(&["recipe-name"], "foo").as_deref(),
+            Some("Melt Iron plate")
+        );
     }
 
     /// Compare JSON loosely: numbers within 1e-9 relative, `skipped` as a set,
@@ -780,9 +909,15 @@ mod tests {
         }
         let built = serde_json::to_value(build(&dump).unwrap()).unwrap();
         let committed_path = Path::new(env!("CARGO_MANIFEST_DIR")).join("../data/factorio.json");
-        let committed: Value = serde_json::from_str(&fs::read_to_string(committed_path).unwrap()).unwrap();
+        let committed: Value =
+            serde_json::from_str(&fs::read_to_string(committed_path).unwrap()).unwrap();
         let mut out = vec![];
         diff("", &built, &committed, &mut out);
-        assert!(out.is_empty(), "{} differences:\n{}", out.len(), out.join("\n"));
+        assert!(
+            out.is_empty(),
+            "{} differences:\n{}",
+            out.len(),
+            out.join("\n")
+        );
     }
 }

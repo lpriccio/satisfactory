@@ -8,9 +8,15 @@ use std::time::{SystemTime, UNIX_EPOCH};
 /// Short random-looking id, unique enough for files in one folder.
 pub fn new_id() -> String {
     static COUNTER: AtomicU64 = AtomicU64::new(0);
-    let nanos = SystemTime::now().duration_since(UNIX_EPOCH).map_or(0, |d| d.as_nanos() as u64);
+    let nanos = SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .map_or(0, |d| d.as_nanos() as u64);
     // SplitMix64 over time + counter + process id.
-    let mut x = nanos ^ COUNTER.fetch_add(1, Ordering::Relaxed).wrapping_mul(0x9E37_79B9_7F4A_7C15) ^ (std::process::id() as u64) << 32;
+    let mut x = nanos
+        ^ COUNTER
+            .fetch_add(1, Ordering::Relaxed)
+            .wrapping_mul(0x9E37_79B9_7F4A_7C15)
+        ^ (std::process::id() as u64) << 32;
     let mut out = String::with_capacity(12);
     for _ in 0..12 {
         x = x.wrapping_add(0x9E37_79B9_7F4A_7C15);
@@ -25,7 +31,9 @@ pub fn new_id() -> String {
 
 /// Current time as an ISO-8601 UTC string, e.g. 2026-10-19T21:30:00.000Z.
 pub fn now_iso() -> String {
-    let d = SystemTime::now().duration_since(UNIX_EPOCH).unwrap_or_default();
+    let d = SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .unwrap_or_default();
     iso_from_unix(d.as_secs() as i64, d.subsec_millis())
 }
 
@@ -75,7 +83,15 @@ pub fn new_factory(game: GameId, settings: &GameSettings, name: &str, mode: Mode
 
 pub fn new_world(game: GameId, name: &str) -> World {
     let now = now_iso();
-    World { schema: 1, id: new_id(), game, name: name.to_string(), entries: vec![], created_at: now.clone(), updated_at: now }
+    World {
+        schema: 1,
+        id: new_id(),
+        game,
+        name: name.to_string(),
+        entries: vec![],
+        created_at: now.clone(),
+        updated_at: now,
+    }
 }
 
 #[cfg(test)]

@@ -1,6 +1,6 @@
 //! What one machine makes, eats and draws per minute.
 
-use crate::model::{Building, GameData, GameId, LineSettings, Recipe, POWER};
+use crate::model::{Building, GameData, GameId, LineSettings, POWER, Recipe};
 use std::collections::BTreeMap;
 
 pub const MIN_CLOCK: f64 = 0.01;
@@ -29,7 +29,13 @@ pub fn line_building<'a>(
         .building
         .as_ref()
         .filter(|b| allowed(b))
-        .or_else(|| recipe.category.as_ref().and_then(|c| preferred.get(c)).filter(|b| allowed(b)))
+        .or_else(|| {
+            recipe
+                .category
+                .as_ref()
+                .and_then(|c| preferred.get(c))
+                .filter(|b| allowed(b))
+        })
         .or(recipe.buildings.first())?;
     data.buildings.get(id)
 }
@@ -59,9 +65,8 @@ pub fn machine_rates(
     let building = line_building(data, recipe, settings, preferred);
     let mut rates = BTreeMap::new();
     let mut add = |item: &str, r: f64| *rates.entry(item.to_string()).or_insert(0.0) += r;
-    let power_mw;
 
-    if data.features.clock {
+    let power_mw = if data.features.clock {
         // Satisfactory: output scales with clock and sloops; power with clock^exp × amp².
         let clock = clamp_clock(settings.clock);
         let amp = amplification(building, settings.sloops);
@@ -72,7 +77,7 @@ pub fn machine_rates(
         for s in &recipe.outputs {
             add(&s.item, s.amount * cycles * amp);
         }
-        power_mw = match recipe.generates_mw {
+        match recipe.generates_mw {
             Some(mw) => -mw * clock,
             None => {
                 let base = match recipe.power {
@@ -82,15 +87,17 @@ pub fn machine_rates(
                 let exp = building.and_then(|b| b.power_exponent).unwrap_or(1.0);
                 base * clock.powf(exp) * amp * amp
             }
-        };
+        }
     } else {
         // Factorio / DSP: crafting speed and productivity bonuses.
-        let speed = building.and_then(|b| b.speed).unwrap_or(1.0) * (1.0 + settings.speed_bonus.unwrap_or(0.0));
+        let speed = building.and_then(|b| b.speed).unwrap_or(1.0)
+            * (1.0 + settings.speed_bonus.unwrap_or(0.0));
         let cycles = 60.0 / recipe.time * speed;
         let prod_allowed = data.game != GameId::Factorio || recipe.allow_productivity;
         // Built-in productivity (foundry, EM plant) also needs allow_productivity.
         let prod = if prod_allowed {
-            1.0 + building.and_then(|b| b.base_productivity).unwrap_or(0.0) + settings.prod_bonus.unwrap_or(0.0)
+            1.0 + building.and_then(|b| b.base_productivity).unwrap_or(0.0)
+                + settings.prod_bonus.unwrap_or(0.0)
         } else {
             1.0
         };
@@ -107,11 +114,11 @@ pub fn machine_rates(
                 .min(s.amount);
             add(&s.item, ((s.amount - ignored) * prod + ignored) * cycles);
         }
-        power_mw = match recipe.generates_mw {
+        match recipe.generates_mw {
             Some(mw) => -mw * speed,
             None => building.map_or(0.0, |b| b.power_mw),
-        };
-    }
+        }
+    };
 
     if data.features.power && power_mw != 0.0 {
         add(POWER, -power_mw);

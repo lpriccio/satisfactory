@@ -3,7 +3,7 @@
 //! count = input) and go to data/dsp.json.
 
 use crate::output::write_game_data;
-use anyhow::{bail, Context, Result};
+use anyhow::{Context, Result, bail};
 use planner_core::factory::now_iso;
 use planner_core::model::*;
 use std::collections::{BTreeMap, HashMap};
@@ -14,7 +14,8 @@ const DEFAULT_TSV: &str = "/home/laura/playground/satisfactory/recipes_dsp.tsv";
 pub fn run(root: &Path, input: Option<PathBuf>) -> Result<()> {
     let path = input.unwrap_or_else(|| PathBuf::from(DEFAULT_TSV));
     let path = std::path::absolute(&path).unwrap_or(path);
-    let tsv = std::fs::read_to_string(&path).with_context(|| format!("reading {}", path.display()))?;
+    let tsv =
+        std::fs::read_to_string(&path).with_context(|| format!("reading {}", path.display()))?;
     let data = import(&tsv, &path.to_string_lossy())?;
     write_game_data(root, &data)?;
     let skipped = data.skipped.as_deref().unwrap_or_default();
@@ -44,9 +45,19 @@ fn js_number(s: &str) -> f64 {
 
 pub fn import(tsv: &str, source: &str) -> Result<GameData> {
     let mut lines = tsv.split('\n').map(|l| l.strip_suffix('\r').unwrap_or(l));
-    let header: Vec<&str> = lines.next().unwrap_or_default().split('\t').map(str::trim).collect();
+    let header: Vec<&str> = lines
+        .next()
+        .unwrap_or_default()
+        .split('\t')
+        .map(str::trim)
+        .collect();
     let col = |name: &str| header.iter().position(|h| *h == name);
-    let (Some(c_recipe), Some(c_item), Some(c_seconds), Some(c_count)) = (col("Recipe"), col("Item"), col("Seconds"), col("Item Count")) else {
+    let (Some(c_recipe), Some(c_item), Some(c_seconds), Some(c_count)) = (
+        col("Recipe"),
+        col("Item"),
+        col("Seconds"),
+        col("Item Count"),
+    ) else {
         bail!("unexpected header: {}", header.join(", "));
     };
 
@@ -62,7 +73,8 @@ pub fn import(tsv: &str, source: &str) -> Result<GameData> {
         }
         let row = format!("row {}", n + 2);
         let cell = |i: usize| cells.get(i).copied().unwrap_or("");
-        let (name, item, secs, count) = (cell(c_recipe), cell(c_item), cell(c_seconds), cell(c_count));
+        let (name, item, secs, count) =
+            (cell(c_recipe), cell(c_item), cell(c_seconds), cell(c_count));
         if name.is_empty() || item.is_empty() {
             skip(row, "missing recipe or item name".into());
             continue;
@@ -74,17 +86,35 @@ pub fn import(tsv: &str, source: &str) -> Result<GameData> {
             continue;
         }
         if !amount.is_finite() || amount == 0.0 {
-            skip(format!("{row} ({name}/{item})"), format!("bad or zero Item Count \"{count}\""));
+            skip(
+                format!("{row} ({name}/{item})"),
+                format!("bad or zero Item Count \"{count}\""),
+            );
             continue;
         }
         let r = recipes.entry(name.to_string()).or_insert_with(|| {
             order.push(name.to_string());
-            Recipe { id: name.into(), name: name.into(), time, buildings: vec!["producer".into()], ..Default::default() }
+            Recipe {
+                id: name.into(),
+                name: name.into(),
+                time,
+                buildings: vec!["producer".into()],
+                ..Default::default()
+            }
         });
         if r.time != time {
-            skip(format!("{row} ({name})"), format!("Seconds {time} differs from first row's {}; using {}", r.time, r.time));
+            skip(
+                format!("{row} ({name})"),
+                format!(
+                    "Seconds {time} differs from first row's {}; using {}",
+                    r.time, r.time
+                ),
+            );
         }
-        let stack = Stack { item: item.to_string(), amount: amount.abs() };
+        let stack = Stack {
+            item: item.to_string(),
+            amount: amount.abs(),
+        };
         if amount < 0.0 {
             r.inputs.push(stack);
         } else {
@@ -106,7 +136,11 @@ pub fn import(tsv: &str, source: &str) -> Result<GameData> {
     for id in &order {
         let r = &recipes[id];
         for s in r.inputs.iter().chain(&r.outputs) {
-            items.entry(s.item.clone()).or_insert_with(|| Item { id: s.item.clone(), name: s.item.clone(), ..Default::default() });
+            items.entry(s.item.clone()).or_insert_with(|| Item {
+                id: s.item.clone(),
+                name: s.item.clone(),
+                ..Default::default()
+            });
         }
         for (i, s) in r.outputs.iter().enumerate() {
             let list = produced.entry(s.item.clone()).or_default();
@@ -125,7 +159,11 @@ pub fn import(tsv: &str, source: &str) -> Result<GameData> {
                 default_imports.push(item.id.clone());
             }
             Some(makers) => {
-                item.recipe = Some(if makers.contains(&item.id) { item.id.clone() } else { makers[0].clone() });
+                item.recipe = Some(if makers.contains(&item.id) {
+                    item.id.clone()
+                } else {
+                    makers[0].clone()
+                });
             }
         }
     }
@@ -139,10 +177,20 @@ pub fn import(tsv: &str, source: &str) -> Result<GameData> {
         items,
         buildings: BTreeMap::from([(
             "producer".to_string(),
-            Building { id: "producer".into(), name: "Producer".into(), power_mw: 0.0, speed: Some(1.0), ..Default::default() },
+            Building {
+                id: "producer".into(),
+                name: "Producer".into(),
+                power_mw: 0.0,
+                speed: Some(1.0),
+                ..Default::default()
+            },
         )]),
         recipes: recipes.into_iter().collect(),
-        features: GameFeatures { productivity: true, speed_bonus: true, ..Default::default() },
+        features: GameFeatures {
+            productivity: true,
+            speed_bonus: true,
+            ..Default::default()
+        },
         default_imports,
         resource_weights: None,
         skipped: Some(skipped),
@@ -171,10 +219,22 @@ mod tests {
         let tsv = "Recipe\tItem\tPair\tSeconds\tItem Count\n\t\t\t\t\nCB\tIron\tx\t1\t-2\nCB\tCB\tx\t1\t2\nBad\tX\tx\t0\t1\nNone\tY\tx\t2\t-1\n";
         let d = import(tsv, "t").unwrap();
         assert_eq!(d.recipes.len(), 1);
-        assert_eq!(d.recipes["CB"].inputs, vec![Stack { item: "Iron".into(), amount: 2.0 }]);
+        assert_eq!(
+            d.recipes["CB"].inputs,
+            vec![Stack {
+                item: "Iron".into(),
+                amount: 2.0
+            }]
+        );
         assert_eq!(d.items["CB"].recipe.as_deref(), Some("CB"));
         assert!(d.items["Iron"].raw);
-        let reasons: Vec<&str> = d.skipped.as_ref().unwrap().iter().map(|s| s.reason.as_str()).collect();
+        let reasons: Vec<&str> = d
+            .skipped
+            .as_ref()
+            .unwrap()
+            .iter()
+            .map(|s| s.reason.as_str())
+            .collect();
         assert_eq!(reasons, vec!["bad Seconds \"0\"", "recipe has no outputs"]);
     }
 }

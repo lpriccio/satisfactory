@@ -32,7 +32,10 @@ fn recycled_plastic_rubber_loop() {
     let d = real("satisfactory");
     let mut f = factory(&d);
     f.targets = vec![target("Plastic", 60.0)];
-    f.recipe_choice = choice(&[("Plastic", "Alternate_Plastic_1"), ("Rubber", "Alternate_RecycledRubber")]);
+    f.recipe_choice = choice(&[
+        ("Plastic", "Alternate_Plastic_1"),
+        ("Rubber", "Alternate_RecycledRubber"),
+    ]);
     f.imports.items = strings(&["LiquidFuel"]);
     let p = solve(&d, &f);
     assert_close!(machines(&p, "Alternate_Plastic_1"), 4.0 / 3.0);
@@ -59,7 +62,12 @@ fn nuclear_plant_burns_rods_and_makes_waste() {
     f.targets = vec![target(POWER, 2500.0)];
     f.imports.exclude = strings(&[POWER]);
     f.imports.items = strings(&["NuclearFuelRod"]);
-    let generator = d.recipes.keys().find(|id| id.starts_with("Power_GeneratorNuclear_NuclearFuelRod")).unwrap().clone();
+    let generator = d
+        .recipes
+        .keys()
+        .find(|id| id.starts_with("Power_GeneratorNuclear_NuclearFuelRod"))
+        .unwrap()
+        .clone();
     f.recipe_choice = choice(&[(POWER, &generator)]);
     let p = solve(&d, &f);
     assert_eq!(p.status, PlanStatus::Ok);
@@ -71,7 +79,9 @@ fn nuclear_plant_burns_rods_and_makes_waste() {
 #[test]
 fn pasta_matches_the_workbook() {
     let d = real("satisfactory");
-    let f = Store::new(root()).load_factory(GameId::Satisfactory, "t9-pasta").unwrap();
+    let f = Store::new(root())
+        .load_factory(GameId::Satisfactory, "t9-pasta")
+        .unwrap();
     let p = solve(&d, &f);
     assert_close!(p.power_mw, 7440.0);
     assert_close!(p.machines, 95.0);
@@ -128,12 +138,24 @@ fn crude_oil_import_cannot_be_turned_off() {
 #[test]
 fn optimizer_stays_fast_with_everything_unlocked() {
     let d = real("satisfactory");
-    let unlocked = d.recipes.values().filter(|r| r.alternate).map(|r| r.id.clone()).collect();
+    let unlocked = d
+        .recipes
+        .values()
+        .filter(|r| r.alternate)
+        .map(|r| r.id.clone())
+        .collect();
     let mut f = factory(&d);
     f.targets = vec![target("SpaceElevatorPart_9", 1.0)];
     f.optimize = true;
     let t0 = Instant::now();
-    let p = solve_factory(&d, &f, &GameSettings { unlocked, ..Default::default() });
+    let p = solve_factory(
+        &d,
+        &f,
+        &GameSettings {
+            unlocked,
+            ..Default::default()
+        },
+    );
     let ms = t0.elapsed().as_millis();
     assert_eq!(p.status, PlanStatus::Ok);
     assert!(p.lines.len() > 5);
@@ -159,7 +181,14 @@ fn every_saved_factory_solves() {
         for s in store.list_factories(game) {
             let f = store.load_factory(game, &s.id).unwrap();
             let p = solve(&d, &f);
-            assert_ne!(p.status, PlanStatus::Error, "{} {}: {:?}", game.key(), f.name, p.message);
+            assert_ne!(
+                p.status,
+                PlanStatus::Error,
+                "{} {}: {:?}",
+                game.key(),
+                f.name,
+                p.message
+            );
         }
     }
 }

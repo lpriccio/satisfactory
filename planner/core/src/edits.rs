@@ -20,7 +20,10 @@ pub fn item_imported(data: &GameData, f: &Factory, item: &str) -> bool {
 /// would ask the factory to make something nothing can make from scratch.
 pub fn import_locked_reason(data: &GameData, f: &Factory, item: &str) -> Option<String> {
     if item_imported(data, f, item) && is_default_kind(data, item) && !can_produce(data, item) {
-        Some(format!("Nothing can make {} from scratch, so it has to be imported.", crate::solve::item_name(data, item)))
+        Some(format!(
+            "Nothing can make {} from scratch, so it has to be imported.",
+            crate::solve::item_name(data, item)
+        ))
     } else {
         None
     }
@@ -56,7 +59,14 @@ fn set_item_import(data: &GameData, g: &mut Factory, item: &str, on: bool) {
 /// Click: toggle this one occurrence. Shift-click (`all`): set every
 /// occurrence of the item to the clicked occurrence's new value. Raw items and
 /// power toggle as a whole, and never off when nothing could replace them.
-pub fn toggle_import(data: &GameData, f: &Factory, plan: &Plan, item: &str, line_id: &str, all: bool) -> Factory {
+pub fn toggle_import(
+    data: &GameData,
+    f: &Factory,
+    plan: &Plan,
+    item: &str,
+    line_id: &str,
+    all: bool,
+) -> Factory {
     if import_locked_reason(data, f, item).is_some() {
         return f.clone();
     }
@@ -115,7 +125,12 @@ fn rename_edges(g: &mut Factory, from: &str, to: &str) {
 }
 
 /// Change clock, sloops, building or bonuses on a line, auto or explicit.
-pub fn set_line_settings(f: &Factory, line_id: &str, recipe: &str, change: impl FnOnce(&mut LineSettings)) -> Factory {
+pub fn set_line_settings(
+    f: &Factory,
+    line_id: &str,
+    recipe: &str,
+    change: impl FnOnce(&mut LineSettings),
+) -> Factory {
     let mut g = f.clone();
     if is_auto(line_id) {
         let mut s = g.line_settings.remove(recipe).unwrap_or_default();
@@ -131,7 +146,12 @@ pub fn set_line_settings(f: &Factory, line_id: &str, recipe: &str, change: impl 
 
 pub fn add_line(f: &Factory, recipe: &str, machines: Option<f64>) -> Factory {
     let mut g = f.clone();
-    g.lines.push(Line { id: new_id(), recipe: recipe.to_string(), machines, ..Default::default() });
+    g.lines.push(Line {
+        id: new_id(),
+        recipe: recipe.to_string(),
+        machines,
+        ..Default::default()
+    });
     g
 }
 
@@ -152,7 +172,9 @@ pub fn remove_line(f: &Factory, line_id: &str) -> Factory {
 }
 
 pub fn move_line(f: &Factory, line_id: &str, delta: isize) -> Factory {
-    let Some(i) = f.lines.iter().position(|l| l.id == line_id) else { return f.clone() };
+    let Some(i) = f.lines.iter().position(|l| l.id == line_id) else {
+        return f.clone();
+    };
     let j = i as isize + delta;
     if j < 0 || j as usize >= f.lines.len() {
         return f.clone();
@@ -168,11 +190,19 @@ fn round6(n: f64) -> f64 {
 
 /// Target mode: pin an auto line at its current machine count.
 pub fn lock_line(f: &Factory, plan: &Plan, line_id: &str) -> Factory {
-    let Some(pl) = plan.line(line_id).filter(|_| is_auto(line_id)) else { return f.clone() };
+    let Some(pl) = plan.line(line_id).filter(|_| is_auto(line_id)) else {
+        return f.clone();
+    };
     let mut g = f.clone();
     let id = new_id();
     let settings = g.line_settings.get(&pl.recipe).cloned().unwrap_or_default();
-    g.lines.push(Line { id: id.clone(), recipe: pl.recipe.clone(), settings, machines: Some(round6(pl.machines)), note: None });
+    g.lines.push(Line {
+        id: id.clone(),
+        recipe: pl.recipe.clone(),
+        settings,
+        machines: Some(round6(pl.machines)),
+        note: None,
+    });
     rename_edges(&mut g, line_id, &id);
     g
 }
@@ -180,14 +210,17 @@ pub fn lock_line(f: &Factory, plan: &Plan, line_id: &str) -> Factory {
 /// Let the solver size a locked line again.
 pub fn unlock_line(f: &Factory, line_id: &str) -> Factory {
     let mut g = f.clone();
-    let Some(pos) = g.lines.iter().position(|l| l.id == line_id) else { return g };
+    let Some(pos) = g.lines.iter().position(|l| l.id == line_id) else {
+        return g;
+    };
     if g.mode == Mode::Manual {
         g.lines[pos].machines = None;
         return g;
     }
     let line = g.lines.remove(pos);
     if !line.settings.is_empty() {
-        g.line_settings.insert(line.recipe.clone(), line.settings.clone());
+        g.line_settings
+            .insert(line.recipe.clone(), line.settings.clone());
     }
     rename_edges(&mut g, line_id, &auto_line_id(&line.recipe));
     g
@@ -209,7 +242,13 @@ pub fn set_mode(f: &Factory, plan: &Plan, mode: Mode) -> Factory {
             }
             let id = new_id();
             let settings = f.line_settings.get(&pl.recipe).cloned().unwrap_or_default();
-            lines.push(Line { id: id.clone(), recipe: pl.recipe.clone(), settings, machines: Some(round6(pl.machines)), note: None });
+            lines.push(Line {
+                id: id.clone(),
+                recipe: pl.recipe.clone(),
+                settings,
+                machines: Some(round6(pl.machines)),
+                note: None,
+            });
             rename_edges(&mut g, &pl.id, &id);
         }
         g.lines = lines;
@@ -222,7 +261,12 @@ pub fn set_mode(f: &Factory, plan: &Plan, mode: Mode) -> Factory {
 /// each short item to the lines that consume it and on to what they make.
 /// Returns an identical factory when there is nothing to reset.
 pub fn regenerate(f: &Factory, plan: &Plan) -> Factory {
-    let short: Vec<String> = plan.items.values().filter(|p| p.unbalanced > 1e-6).map(|p| p.item.clone()).collect();
+    let short: Vec<String> = plan
+        .items
+        .values()
+        .filter(|p| p.unbalanced > 1e-6)
+        .map(|p| p.item.clone())
+        .collect();
     let mut seen: BTreeSet<String> = short.iter().cloned().collect();
     let mut queue: VecDeque<String> = short.into();
     while let Some(item) = queue.pop_front() {

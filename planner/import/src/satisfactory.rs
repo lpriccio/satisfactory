@@ -10,7 +10,8 @@ use std::cmp::Ordering;
 use std::collections::{BTreeMap, HashMap, HashSet};
 use std::path::{Path, PathBuf};
 
-const DEFAULT_DOCS: &str = "/mnt/pomni/SteamLibrary/steamapps/common/Satisfactory/CommunityResources/Docs/en-US.json";
+const DEFAULT_DOCS: &str =
+    "/mnt/pomni/SteamLibrary/steamapps/common/Satisfactory/CommunityResources/Docs/en-US.json";
 
 /// Floor area per machine in m² (width × length). The game's docs export has
 /// no building dimensions, so this table is maintained by hand.
@@ -64,7 +65,10 @@ const ITEM_CLASSES: &[&str] = &[
     "FGPowerShardDescriptor",
     "FGItemDescriptorPowerBoosterFuel",
 ];
-const MANUFACTURER_CLASSES: &[&str] = &["FGBuildableManufacturer", "FGBuildableManufacturerVariablePower"];
+const MANUFACTURER_CLASSES: &[&str] = &[
+    "FGBuildableManufacturer",
+    "FGBuildableManufacturerVariablePower",
+];
 const GENERATOR_CLASSES: &[&str] = &["FGBuildableGeneratorFuel", "FGBuildableGeneratorNuclear"];
 
 pub fn run(root: &Path, input: Option<PathBuf>) -> Result<()> {
@@ -72,7 +76,11 @@ pub fn run(root: &Path, input: Option<PathBuf>) -> Result<()> {
     let docs = read_docs(&path)?;
     let data = import(&docs, &path.to_string_lossy())?;
     write_game_data(root, &data)?;
-    let gens = data.recipes.values().filter(|r| r.generates_mw.is_some()).count();
+    let gens = data
+        .recipes
+        .values()
+        .filter(|r| r.generates_mw.is_some())
+        .count();
     let skipped = data.skipped.as_deref().unwrap_or_default();
     println!(
         "items {}, recipes {}, generator recipes {gens}, buildings {}, skipped {}",
@@ -90,7 +98,12 @@ pub fn run(root: &Path, input: Option<PathBuf>) -> Result<()> {
 /// The docs file is UTF-16LE with a byte-order mark.
 pub fn read_docs(path: &Path) -> Result<Value> {
     let bytes = std::fs::read(path).with_context(|| format!("reading {}", path.display()))?;
-    let units: Vec<u16> = bytes.as_chunks::<2>().0.iter().map(|c| u16::from_le_bytes(*c)).collect();
+    let units: Vec<u16> = bytes
+        .as_chunks::<2>()
+        .0
+        .iter()
+        .map(|c| u16::from_le_bytes(*c))
+        .collect();
     let text = String::from_utf16(&units).context("docs file is not UTF-16LE")?;
     let text = text.strip_prefix('\u{feff}').unwrap_or(&text);
     serde_json::from_str(text).context("parsing docs JSON")
@@ -150,10 +163,18 @@ fn parse_stacks(s: &str) -> Vec<(String, f64)> {
         let path = rest[..close].trim_end_matches('\'');
         let class = path.rsplit('.').next().unwrap_or(path);
         let after = rest[close + 1..].trim_start();
-        let Some(after) = after.strip_prefix(',') else { continue };
-        let Some(after) = after.trim_start().strip_prefix("Amount=") else { continue };
-        let digits: String = after.chars().take_while(|c| c.is_ascii_digit() || *c == '.').collect();
-        let valid_class = !class.is_empty() && class.chars().all(|c| c.is_ascii_alphanumeric() || c == '_');
+        let Some(after) = after.strip_prefix(',') else {
+            continue;
+        };
+        let Some(after) = after.trim_start().strip_prefix("Amount=") else {
+            continue;
+        };
+        let digits: String = after
+            .chars()
+            .take_while(|c| c.is_ascii_digit() || *c == '.')
+            .collect();
+        let valid_class =
+            !class.is_empty() && class.chars().all(|c| c.is_ascii_alphanumeric() || c == '_');
         if let (true, Ok(amount)) = (valid_class, digits.parse::<f64>()) {
             out.push((class.to_string(), amount));
         }
@@ -206,15 +227,30 @@ pub fn import(docs: &Value, source: &str) -> Result<GameData> {
     let mut by_class: Vec<(String, Vec<&Value>)> = vec![];
     for g in groups {
         let k = native_name(text(g, "NativeClass"));
-        let classes = g.get("Classes").and_then(Value::as_array).map(|v| v.iter().collect::<Vec<_>>()).unwrap_or_default();
+        let classes = g
+            .get("Classes")
+            .and_then(Value::as_array)
+            .map(|v| v.iter().collect::<Vec<_>>())
+            .unwrap_or_default();
         match by_class.iter_mut().find(|(n, _)| *n == k) {
             Some((_, list)) => list.extend(classes),
             None => by_class.push((k, classes)),
         }
     }
-    let of = |k: &str| -> Vec<&Value> { by_class.iter().find(|(n, _)| n == k).map(|(_, v)| v.clone()).unwrap_or_default() };
+    let of = |k: &str| -> Vec<&Value> {
+        by_class
+            .iter()
+            .find(|(n, _)| n == k)
+            .map(|(_, v)| v.clone())
+            .unwrap_or_default()
+    };
     let mut skipped: Vec<Skipped> = vec![];
-    let skip = |skipped: &mut Vec<Skipped>, id: &str, reason: String| skipped.push(Skipped { id: id.to_string(), reason });
+    let skip = |skipped: &mut Vec<Skipped>, id: &str, reason: String| {
+        skipped.push(Skipped {
+            id: id.to_string(),
+            reason,
+        })
+    };
     let footprint = |id: &str| FOOTPRINTS.iter().find(|(b, _)| *b == id).map(|(_, f)| *f);
     let positive = |n: f64| (n != 0.0).then_some(n);
 
@@ -235,7 +271,8 @@ pub fn import(docs: &Value, source: &str) -> Result<GameData> {
             if form != Form::Solid {
                 fluid.insert(id.clone());
             }
-            let energy = num(c.get("mEnergyValue")) * if form == Form::Solid { 1.0 } else { 1000.0 };
+            let energy =
+                num(c.get("mEnergyValue")) * if form == Form::Solid { 1.0 } else { 1000.0 };
             items.insert(
                 id.clone(),
                 Item {
@@ -283,8 +320,10 @@ pub fn import(docs: &Value, source: &str) -> Result<GameData> {
     for c in of("FGRecipe") {
         let class_name = text(c, "ClassName");
         let id = recipe_id(class_name);
-        let produced_in: Vec<String> =
-            parse_class_list(text(c, "mProducedIn")).into_iter().filter(|p| manufacturers.contains(p)).collect();
+        let produced_in: Vec<String> = parse_class_list(text(c, "mProducedIn"))
+            .into_iter()
+            .filter(|p| manufacturers.contains(p))
+            .collect();
         if produced_in.is_empty() {
             continue; // workbench, build gun, equipment workshop
         }
@@ -296,21 +335,31 @@ pub fn import(docs: &Value, source: &str) -> Result<GameData> {
                     skip(&mut skipped, &id, format!("unknown item {cls}"));
                     return None;
                 }
-                out.push(Stack { amount: amount(&iid, a), item: iid });
+                out.push(Stack {
+                    amount: amount(&iid, a),
+                    item: iid,
+                });
             }
             Some(out)
         };
         let inputs = to_stacks(text(c, "mIngredients"));
         let outputs = to_stacks(text(c, "mProduct"));
-        let (Some(inputs), Some(outputs)) = (inputs, outputs) else { continue };
+        let (Some(inputs), Some(outputs)) = (inputs, outputs) else {
+            continue;
+        };
         if outputs.is_empty() {
             skip(&mut skipped, &id, "no products".into());
             continue;
         }
-        let variable = produced_in.iter().any(|p| buildings[&building_id(p)].power_mw == 0.0);
+        let variable = produced_in
+            .iter()
+            .any(|p| buildings[&building_id(p)].power_mw == 0.0);
         let power = variable.then(|| {
             let min = num(c.get("mVariablePowerConsumptionConstant"));
-            PowerRange { min, max: min + num(c.get("mVariablePowerConsumptionFactor")) }
+            PowerRange {
+                min,
+                max: min + num(c.get("mVariablePowerConsumptionFactor")),
+            }
         });
         recipes.insert(
             id.clone(),
@@ -350,23 +399,45 @@ pub fn import(docs: &Value, source: &str) -> Result<GameData> {
                 skip(&mut skipped, &gid, "no footprint in hand table".into());
             }
             let ratio = num(g.get("mSupplementalToPowerRatio"));
-            for f in g.get("mFuel").and_then(Value::as_array).into_iter().flatten() {
+            for f in g
+                .get("mFuel")
+                .and_then(Value::as_array)
+                .into_iter()
+                .flatten()
+            {
                 let fuel = item_id(text(f, "mFuelClass"));
                 let rid = format!("Power_{gid}_{fuel}");
-                let Some(energy) = items.get(&fuel).and_then(|i| i.energy_mj).filter(|e| *e != 0.0) else {
-                    skip(&mut skipped, &rid, format!("fuel {fuel} has no energy value"));
+                let Some(energy) = items
+                    .get(&fuel)
+                    .and_then(|i| i.energy_mj)
+                    .filter(|e| *e != 0.0)
+                else {
+                    skip(
+                        &mut skipped,
+                        &rid,
+                        format!("fuel {fuel} has no energy value"),
+                    );
                     continue;
                 };
                 let per_min = mw * 60.0 / energy;
-                let mut inputs = vec![Stack { item: fuel.clone(), amount: per_min }];
+                let mut inputs = vec![Stack {
+                    item: fuel.clone(),
+                    amount: per_min,
+                }];
                 let supplemental = text(f, "mSupplementalResourceClass");
                 if !supplemental.is_empty() && ratio > 0.0 {
-                    inputs.push(Stack { item: item_id(supplemental), amount: mw * ratio * 60.0 / 1000.0 });
+                    inputs.push(Stack {
+                        item: item_id(supplemental),
+                        amount: mw * ratio * 60.0 / 1000.0,
+                    });
                 }
                 let mut outputs = vec![];
                 let byproduct = text(f, "mByproduct");
                 if !byproduct.is_empty() {
-                    outputs.push(Stack { item: item_id(byproduct), amount: per_min * num(f.get("mByproductAmount")) });
+                    outputs.push(Stack {
+                        item: item_id(byproduct),
+                        amount: per_min * num(f.get("mByproductAmount")),
+                    });
                 }
                 recipes.insert(
                     rid.clone(),
@@ -398,11 +469,24 @@ pub fn import(docs: &Value, source: &str) -> Result<GameData> {
         if item.raw {
             continue;
         }
-        let not_unpack: Vec<&Recipe> = rs.iter().copied().filter(|r| !r.name.starts_with("Unpackage")).collect();
-        let mut pool = if not_unpack.is_empty() { rs.clone() } else { not_unpack };
+        let not_unpack: Vec<&Recipe> = rs
+            .iter()
+            .copied()
+            .filter(|r| !r.name.starts_with("Unpackage"))
+            .collect();
+        let mut pool = if not_unpack.is_empty() {
+            rs.clone()
+        } else {
+            not_unpack
+        };
         pool.sort_by(|a, b| locale_cmp(&a.id, &b.id));
         let is_primary = |r: &&Recipe| r.outputs[0].item == *iid;
-        let primary: Vec<&Recipe> = pool.iter().copied().filter(|r| !r.alternate).filter(is_primary).collect();
+        let primary: Vec<&Recipe> = pool
+            .iter()
+            .copied()
+            .filter(|r| !r.alternate)
+            .filter(is_primary)
+            .collect();
         // A recipe that makes the item as its main product (even an alternate)
         // beats one that only yields it as a byproduct: Compacted Coal should
         // not default to building Rocket Fuel.
@@ -420,12 +504,24 @@ pub fn import(docs: &Value, source: &str) -> Result<GameData> {
         items.get_mut(&iid).unwrap().recipe = Some(rid);
     }
 
-    let mut default_imports: Vec<String> = items.values().filter(|i| i.raw).map(|i| i.id.clone()).collect();
+    let mut default_imports: Vec<String> = items
+        .values()
+        .filter(|i| i.raw)
+        .map(|i| i.id.clone())
+        .collect();
     default_imports.sort();
     let iron = WORLD_MAX.iter().find(|(k, _)| *k == "OreIron").unwrap().1;
     let resource_weights = default_imports
         .iter()
-        .map(|id| (id.clone(), WORLD_MAX.iter().find(|(k, _)| k == id).map_or(0.0, |(_, max)| iron / max)))
+        .map(|id| {
+            (
+                id.clone(),
+                WORLD_MAX
+                    .iter()
+                    .find(|(k, _)| k == id)
+                    .map_or(0.0, |(_, max)| iron / max),
+            )
+        })
         .collect();
 
     Ok(GameData {
@@ -462,16 +558,24 @@ pub(crate) mod tests {
         match (a, b) {
             (Value::Number(x), Value::Number(y)) => {
                 let (x, y) = (x.as_f64().unwrap(), y.as_f64().unwrap());
-                ((x - y).abs() > 1e-9 * x.abs().max(y.abs()).max(1e-300)).then(|| format!("{path}: {x} vs {y}"))
+                ((x - y).abs() > 1e-9 * x.abs().max(y.abs()).max(1e-300))
+                    .then(|| format!("{path}: {x} vs {y}"))
             }
             (Value::Array(x), Value::Array(y)) => {
                 if x.len() != y.len() {
                     return Some(format!("{path}: length {} vs {}", x.len(), y.len()));
                 }
-                x.iter().zip(y).enumerate().find_map(|(i, (p, q))| diff(p, q, &format!("{path}[{i}]")))
+                x.iter()
+                    .zip(y)
+                    .enumerate()
+                    .find_map(|(i, (p, q))| diff(p, q, &format!("{path}[{i}]")))
             }
             (Value::Object(x), Value::Object(y)) => {
-                let keys: std::collections::BTreeSet<&String> = x.keys().chain(y.keys()).filter(|k| *k != "generatedAt").collect();
+                let keys: std::collections::BTreeSet<&String> = x
+                    .keys()
+                    .chain(y.keys())
+                    .filter(|k| *k != "generatedAt")
+                    .collect();
                 keys.into_iter().find_map(|k| match (x.get(k), y.get(k)) {
                     (Some(p), Some(q)) => diff(p, q, &format!("{path}.{k}")),
                     (p, q) => Some(format!("{path}.{k}: {} vs {}", p.is_some(), q.is_some())),
@@ -483,11 +587,18 @@ pub(crate) mod tests {
 
     /// Regenerate into a temp root and compare with the committed data file.
     pub fn compare_with_committed(game: &str, data: &GameData) {
-        let tmp = std::env::temp_dir().join(format!("planner-import-test-{game}-{}", std::process::id()));
+        let tmp =
+            std::env::temp_dir().join(format!("planner-import-test-{game}-{}", std::process::id()));
         write_game_data(&tmp, data).unwrap();
-        let ours: Value = serde_json::from_str(&std::fs::read_to_string(tmp.join("data").join(format!("{game}.json"))).unwrap()).unwrap();
-        let committed_path = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../data").join(format!("{game}.json"));
-        let committed: Value = serde_json::from_str(&std::fs::read_to_string(committed_path).unwrap()).unwrap();
+        let ours: Value = serde_json::from_str(
+            &std::fs::read_to_string(tmp.join("data").join(format!("{game}.json"))).unwrap(),
+        )
+        .unwrap();
+        let committed_path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("../data")
+            .join(format!("{game}.json"));
+        let committed: Value =
+            serde_json::from_str(&std::fs::read_to_string(committed_path).unwrap()).unwrap();
         std::fs::remove_dir_all(&tmp).ok();
         if let Some(d) = diff(&ours, &committed, "") {
             panic!("{game}: regenerated data differs from committed: {d}");
@@ -508,13 +619,24 @@ pub(crate) mod tests {
     #[test]
     fn parses_stacks_and_class_lists() {
         let s = r#"((ItemClass="/Script/Engine.BlueprintGeneratedClass'/Game/X/Desc_OreIron.Desc_OreIron_C'",Amount=3),(ItemClass="/Game/Y/Desc_Water.Desc_Water_C",Amount=1500))"#;
-        assert_eq!(parse_stacks(s), vec![("Desc_OreIron_C".to_string(), 3.0), ("Desc_Water_C".to_string(), 1500.0)]);
         assert_eq!(
-            parse_class_list(r#"("/Game/A/Build_SmelterMk1.Build_SmelterMk1_C","/Game/B/BP_BuildGun.BP_BuildGun_C")"#),
+            parse_stacks(s),
+            vec![
+                ("Desc_OreIron_C".to_string(), 3.0),
+                ("Desc_Water_C".to_string(), 1500.0)
+            ]
+        );
+        assert_eq!(
+            parse_class_list(
+                r#"("/Game/A/Build_SmelterMk1.Build_SmelterMk1_C","/Game/B/BP_BuildGun.BP_BuildGun_C")"#
+            ),
             vec!["Build_SmelterMk1_C", "BP_BuildGun_C"]
         );
         assert_eq!(item_id("Desc_OreIron_C"), "OreIron");
-        assert_eq!(recipe_id("Recipe_Alternate_PureIronIngot_C"), "Alternate_PureIronIngot");
+        assert_eq!(
+            recipe_id("Recipe_Alternate_PureIronIngot_C"),
+            "Alternate_PureIronIngot"
+        );
         assert_eq!(num(Some(&Value::String("4.000000".into()))), 4.0);
         assert_eq!(num(Some(&Value::String(String::new()))), 0.0);
     }

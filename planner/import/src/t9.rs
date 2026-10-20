@@ -20,7 +20,7 @@
 //! none are imported.
 
 use anyhow::{Context, Result};
-use calamine::{open_workbook_auto, Data, Range, Reader};
+use calamine::{Data, Range, Reader, open_workbook_auto};
 use planner_core::factory::now_iso;
 use planner_core::model::*;
 use planner_core::store::Store;
@@ -34,7 +34,17 @@ const WORKBOOK_FALLBACK: &str = "/home/laura/playground/satisfactory/20260425 T9
 const MAP_FILE: &str = "t9-recipe-map.json";
 
 /// Sheets that are not build tabs.
-pub const NON_BUILD: [&str; 9] = ["planner", "sloops", "floor calc", "trucks", "trains", "drones", "recipes", "scratch", "wtg"];
+pub const NON_BUILD: [&str; 9] = [
+    "planner",
+    "sloops",
+    "floor calc",
+    "trucks",
+    "trains",
+    "drones",
+    "recipes",
+    "scratch",
+    "wtg",
+];
 
 /// Workbook item names that differ from the game's display names.
 const ITEM_ALIASES: &[(&str, &str)] = &[
@@ -60,7 +70,11 @@ const ITEM_ALIASES: &[(&str, &str)] = &[
 /// The workbook next to the planner folder, else its usual location.
 pub fn default_workbook(root: &Path) -> PathBuf {
     let beside = root.join("..").join(WORKBOOK_NAME);
-    if beside.exists() { beside } else { PathBuf::from(WORKBOOK_FALLBACK) }
+    if beside.exists() {
+        beside
+    } else {
+        PathBuf::from(WORKBOOK_FALLBACK)
+    }
 }
 
 // --- numbers ------------------------------------------------------------------
@@ -151,7 +165,11 @@ struct Resolver {
 
 impl Resolver {
     fn new(data: &GameData) -> Resolver {
-        let by_name = data.items.values().map(|i| (i.name.to_lowercase(), i.id.clone())).collect();
+        let by_name = data
+            .items
+            .values()
+            .map(|i| (i.name.to_lowercase(), i.id.clone()))
+            .collect();
         Resolver { by_name }
     }
     fn resolve(&self, name: &str) -> Option<String> {
@@ -179,7 +197,9 @@ fn read_workbook_recipes(g: &Grid) -> Vec<WorkbookRecipe> {
     for r in 1..g.rows() {
         let name = g.str(r, 1);
         let item = g.str(r, 2);
-        let (Some(amount), Some(runtime)) = (g.num(r, 3), g.num(r, 4)) else { continue };
+        let (Some(amount), Some(runtime)) = (g.num(r, 3), g.num(r, 4)) else {
+            continue;
+        };
         if name.is_empty() || item.is_empty() || runtime == 0.0 {
             continue;
         }
@@ -197,7 +217,11 @@ fn read_workbook_recipes(g: &Grid) -> Vec<WorkbookRecipe> {
         let i = match out.iter().position(|w| w.name == name) {
             Some(i) => i,
             None => {
-                out.push(WorkbookRecipe { name: name.to_string(), runtime, amounts: vec![] });
+                out.push(WorkbookRecipe {
+                    name: name.to_string(),
+                    runtime,
+                    amounts: vec![],
+                });
                 out.len() - 1
             }
         };
@@ -232,10 +256,13 @@ fn workbook_vector(w: &WorkbookRecipe, res: &Resolver) -> Option<Vector> {
 }
 
 fn same_vector(a: &Vector, b: &Vector, ignore: Option<&str>) -> bool {
-    union_keys(a, b).into_iter().filter(|k| Some(*k) != ignore).all(|k| {
-        let (x, y) = (vec_get(a, k), vec_get(b, k));
-        (x - y).abs() <= 1e-6 * 1f64.max(x.abs()).max(y.abs())
-    })
+    union_keys(a, b)
+        .into_iter()
+        .filter(|k| Some(*k) != ignore)
+        .all(|k| {
+            let (x, y) = (vec_get(a, k), vec_get(b, k));
+            (x - y).abs() <= 1e-6 * 1f64.max(x.abs()).max(y.abs())
+        })
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize)]
@@ -273,7 +300,10 @@ fn ordered<S: Serializer>(entries: &[(String, Generated)], s: S) -> Result<S::Ok
 
 impl RecipeMap {
     pub fn get(&self, name: &str) -> Option<&Generated> {
-        self.generated.iter().find(|(k, _)| k == name).map(|(_, g)| g)
+        self.generated
+            .iter()
+            .find(|(k, _)| k == name)
+            .map(|(_, g)| g)
     }
 }
 
@@ -285,41 +315,75 @@ fn strip_alternate(name: &str) -> String {
     }
 }
 
-fn build_recipe_map(data: &GameData, wb: &[WorkbookRecipe], manual: BTreeMap<String, String>) -> RecipeMap {
+fn build_recipe_map(
+    data: &GameData,
+    wb: &[WorkbookRecipe],
+    manual: BTreeMap<String, String>,
+) -> RecipeMap {
     let res = Resolver::new(data);
-    let games: Vec<(&Recipe, Vector)> = data.recipes.values().map(|r| (r, game_vector(r))).collect();
+    let games: Vec<(&Recipe, Vector)> =
+        data.recipes.values().map(|r| (r, game_vector(r))).collect();
     let mut generated = vec![];
     let mut unmatched = vec![];
 
     for w in wb {
         if let Some(id) = manual.get(&w.name) {
             if data.recipes.contains_key(id) {
-                generated.push((w.name.clone(), Generated { id: id.clone(), how: "manual", note: None }));
+                generated.push((
+                    w.name.clone(),
+                    Generated {
+                        id: id.clone(),
+                        how: "manual",
+                        note: None,
+                    },
+                ));
             } else {
-                unmatched.push(Unmatched { name: w.name.clone(), reason: format!("manual id {id} not in game data") });
+                unmatched.push(Unmatched {
+                    name: w.name.clone(),
+                    reason: format!("manual id {id} not in game data"),
+                });
             }
             continue;
         }
         let Some(vec) = workbook_vector(w, &res) else {
-            let missing: Vec<&str> = w.amounts.iter().filter(|(n, _)| res.resolve(n).is_none()).map(|(n, _)| n.as_str()).collect();
-            unmatched.push(Unmatched { name: w.name.clone(), reason: format!("unknown items: {}", missing.join(", ")) });
+            let missing: Vec<&str> = w
+                .amounts
+                .iter()
+                .filter(|(n, _)| res.resolve(n).is_none())
+                .map(|(n, _)| n.as_str())
+                .collect();
+            unmatched.push(Unmatched {
+                name: w.name.clone(),
+                reason: format!("unknown items: {}", missing.join(", ")),
+            });
             continue;
         };
         let wanted = w.name.to_lowercase();
-        let named: Vec<usize> = (0..games.len()).filter(|&i| strip_alternate(&games[i].0.name) == wanted).collect();
-        let same: Vec<usize> = (0..games.len()).filter(|&i| same_vector(&games[i].1, &vec, None)).collect();
+        let named: Vec<usize> = (0..games.len())
+            .filter(|&i| strip_alternate(&games[i].0.name) == wanted)
+            .collect();
+        let same: Vec<usize> = (0..games.len())
+            .filter(|&i| same_vector(&games[i].1, &vec, None))
+            .collect();
         let by_name_and_rates = same.iter().find(|i| named.contains(i));
         // The workbook leaves cooling water out of its generator rows.
         let generator: Vec<usize> = if vec_has(&vec, POWER) && same.is_empty() {
             (0..games.len())
-                .filter(|&i| games[i].0.generates_mw.is_some() && same_vector(&games[i].1, &vec, Some("Water")))
+                .filter(|&i| {
+                    games[i].0.generates_mw.is_some()
+                        && same_vector(&games[i].1, &vec, Some("Water"))
+                })
                 .collect()
         } else {
             vec![]
         };
 
         let entry = if let Some(&i) = by_name_and_rates {
-            Generated { id: games[i].0.id.clone(), how: "name", note: None }
+            Generated {
+                id: games[i].0.id.clone(),
+                how: "name",
+                note: None,
+            }
         } else if generator.len() == 1 {
             Generated {
                 id: games[generator[0]].0.id.clone(),
@@ -328,8 +392,16 @@ fn build_recipe_map(data: &GameData, wb: &[WorkbookRecipe], manual: BTreeMap<Str
             }
         } else if !same.is_empty() {
             // Prefer a standard recipe when several share the same flows.
-            let pick = same.iter().copied().find(|&i| !games[i].0.alternate).unwrap_or(same[0]);
-            let others: Vec<&str> = same.iter().filter(|&&i| i != pick).map(|&i| games[i].0.id.as_str()).collect();
+            let pick = same
+                .iter()
+                .copied()
+                .find(|&i| !games[i].0.alternate)
+                .unwrap_or(same[0]);
+            let others: Vec<&str> = same
+                .iter()
+                .filter(|&&i| i != pick)
+                .map(|&i| games[i].0.id.as_str())
+                .collect();
             Generated {
                 id: games[pick].0.id.clone(),
                 how: "ingredients",
@@ -337,19 +409,30 @@ fn build_recipe_map(data: &GameData, wb: &[WorkbookRecipe], manual: BTreeMap<Str
             }
         } else if named.len() == 1 {
             let (r, v) = &games[named[0]];
-            Generated { id: r.id.clone(), how: "name-rates-differ", note: Some(diff_note(&vec, v, data)) }
+            Generated {
+                id: r.id.clone(),
+                how: "name-rates-differ",
+                note: Some(diff_note(&vec, v, data)),
+            }
         } else {
             let reason = if named.is_empty() {
                 "no game recipe with these flows or name"
             } else {
                 "several game recipes share the name; rates differ"
             };
-            unmatched.push(Unmatched { name: w.name.clone(), reason: reason.into() });
+            unmatched.push(Unmatched {
+                name: w.name.clone(),
+                reason: reason.into(),
+            });
             continue;
         };
         generated.push((w.name.clone(), entry));
     }
-    RecipeMap { manual, generated, unmatched }
+    RecipeMap {
+        manual,
+        generated,
+        unmatched,
+    }
 }
 
 fn diff_note(wb: &Vector, game: &Vector, data: &GameData) -> String {
@@ -358,19 +441,31 @@ fn diff_note(wb: &Vector, game: &Vector, data: &GameData) -> String {
         let (a, b) = (vec_get(wb, k), vec_get(game, k));
         if (a - b).abs() > 1e-6 {
             let name = data.items.get(k).map_or(k, |i| i.name.as_str());
-            parts.push(format!("{name}: workbook {}/min, game {}/min", round(a), round(b)));
+            parts.push(format!(
+                "{name}: workbook {}/min, game {}/min",
+                round(a),
+                round(b)
+            ));
         }
     }
     parts.join("; ")
 }
 
 fn read_manual(path: &Path) -> BTreeMap<String, String> {
-    let Ok(text) = std::fs::read_to_string(path) else { return BTreeMap::new() };
-    let Ok(value) = serde_json::from_str::<serde_json::Value>(&text) else { return BTreeMap::new() };
+    let Ok(text) = std::fs::read_to_string(path) else {
+        return BTreeMap::new();
+    };
+    let Ok(value) = serde_json::from_str::<serde_json::Value>(&text) else {
+        return BTreeMap::new();
+    };
     value
         .get("manual")
         .and_then(|m| m.as_object())
-        .map(|m| m.iter().filter_map(|(k, v)| Some((k.clone(), v.as_str()?.to_string()))).collect())
+        .map(|m| {
+            m.iter()
+                .filter_map(|(k, v)| Some((k.clone(), v.as_str()?.to_string())))
+                .collect()
+        })
         .unwrap_or_default()
 }
 
@@ -414,11 +509,26 @@ fn non_empty(s: &str) -> Option<String> {
 }
 
 fn parse_tab(g: &Grid, name: &str) -> Result<ParsedTab, String> {
-    let header_row = (0..6).rev().find(|&r| g.str(r, col(b'G')) == "Recipe").ok_or("no \"Recipe\" header in column G")?;
+    let header_row = (0..6)
+        .rev()
+        .find(|&r| g.str(r, col(b'G')) == "Recipe")
+        .ok_or("no \"Recipe\" header in column G")?;
 
-    let template = if g.str(0, col(b'E')) == "Shard:" { 'A' } else { 'B' };
-    let shard = if template == 'A' { g.num(0, col(b'F')).unwrap_or(1.0) } else { 1.0 };
-    let scale = if g.str(0, col(b'G')) == "Scale:" { g.num(0, col(b'H')).unwrap_or(1.0) } else { 1.0 };
+    let template = if g.str(0, col(b'E')) == "Shard:" {
+        'A'
+    } else {
+        'B'
+    };
+    let shard = if template == 'A' {
+        g.num(0, col(b'F')).unwrap_or(1.0)
+    } else {
+        1.0
+    };
+    let scale = if g.str(0, col(b'G')) == "Scale:" {
+        g.num(0, col(b'H')).unwrap_or(1.0)
+    } else {
+        1.0
+    };
     let sharded_col_b = g.str(header_row, col(b'E')).to_uppercase() == "SHARDED";
 
     let mut rows = vec![];
@@ -427,7 +537,10 @@ fn parse_tab(g: &Grid, name: &str) -> Result<ParsedTab, String> {
 
     for r in header_row + 1..g.rows() {
         let recipe = g.str(r, col(b'G'));
-        if let Some(qty) = g.num(r, col(b'H')).filter(|q| !recipe.is_empty() && *q > 1e-9) {
+        if let Some(qty) = g
+            .num(r, col(b'H'))
+            .filter(|q| !recipe.is_empty() && *q > 1e-9)
+        {
             let sharded = if template == 'A' {
                 g.num(r, col(b'J'))
             } else if sharded_col_b {
@@ -435,7 +548,12 @@ fn parse_tab(g: &Grid, name: &str) -> Result<ParsedTab, String> {
             } else {
                 None
             };
-            rows.push(TabRow { row: r + 1, recipe: recipe.to_string(), qty, sharded });
+            rows.push(TabRow {
+                row: r + 1,
+                recipe: recipe.to_string(),
+                qty,
+                sharded,
+            });
         }
 
         let a = g.str(r, col(b'A'));
@@ -444,15 +562,28 @@ fn parse_tab(g: &Grid, name: &str) -> Result<ParsedTab, String> {
         if !a.is_empty() && b.is_empty() && c.is_none() {
             section = a.to_string();
         } else if !b.is_empty() && (c.is_some() || !a.is_empty()) {
-            side.push(SideNote { section: section.clone(), label: a.to_string(), item: b.to_string(), rate: c });
+            side.push(SideNote {
+                section: section.clone(),
+                label: a.to_string(),
+                item: b.to_string(),
+                rate: c,
+            });
         }
     }
 
-    let (size_col, text_col) = if template == 'A' { (col(b'K'), col(b'L')) } else { (col(b'J'), col(b'K')) };
+    let (size_col, text_col) = if template == 'A' {
+        (col(b'K'), col(b'L'))
+    } else {
+        (col(b'J'), col(b'K'))
+    };
     Ok(ParsedTab {
         name: name.to_string(),
         template,
-        title: if template == 'A' { non_empty(g.str(0, col(b'A'))) } else { None },
+        title: if template == 'A' {
+            non_empty(g.str(0, col(b'A')))
+        } else {
+            None
+        },
         shard,
         scale,
         rows,
@@ -474,27 +605,51 @@ pub fn slug(name: &str) -> String {
     out.trim_matches('-').to_string()
 }
 
-fn tab_to_factory(tab: &ParsedTab, map: &RecipeMap, data: &GameData, now: &str, created: Option<String>) -> (Factory, Vec<String>) {
+fn tab_to_factory(
+    tab: &ParsedTab,
+    map: &RecipeMap,
+    data: &GameData,
+    now: &str,
+    created: Option<String>,
+) -> (Factory, Vec<String>) {
     let id = format!("t9-{}", slug(&tab.name));
     let mut lines = vec![];
     let mut unmapped = vec![];
     for row in &tab.rows {
-        let Some(hit) = map.get(&row.recipe).filter(|h| data.recipes.contains_key(&h.id)) else {
-            unmapped.push(format!("{} ×{} (row {})", row.recipe, round(row.qty), row.row));
+        let Some(hit) = map
+            .get(&row.recipe)
+            .filter(|h| data.recipes.contains_key(&h.id))
+        else {
+            unmapped.push(format!(
+                "{} ×{} (row {})",
+                row.recipe,
+                round(row.qty),
+                row.row
+            ));
             continue;
         };
         // Express the line as real machines × clock; production stays qty × 100%.
         let (mut machines, mut clock) = (row.qty, None);
-        if let Some(s) = row.sharded.filter(|s| *s > 0.0 && (s - row.qty).abs() > 1e-9) {
+        if let Some(s) = row
+            .sharded
+            .filter(|s| *s > 0.0 && (s - row.qty).abs() > 1e-9)
+        {
             machines = s;
             clock = Some(row.qty / s);
         }
-        let note = (hit.how == "name-rates-differ")
-            .then(|| format!("Workbook rates differ from the game: {}", hit.note.as_deref().unwrap_or("")));
+        let note = (hit.how == "name-rates-differ").then(|| {
+            format!(
+                "Workbook rates differ from the game: {}",
+                hit.note.as_deref().unwrap_or("")
+            )
+        });
         lines.push(Line {
             id: format!("{id}-r{}", row.row),
             recipe: hit.id.clone(),
-            settings: LineSettings { clock, ..Default::default() },
+            settings: LineSettings {
+                clock,
+                ..Default::default()
+            },
             machines: Some(machines),
             note,
         });
@@ -504,7 +659,11 @@ fn tab_to_factory(tab: &ParsedTab, map: &RecipeMap, data: &GameData, now: &str, 
     if let Some(t) = &tab.title {
         notes.push(t.clone());
     }
-    let shard = if tab.template == 'A' { format!(", shard {}", round(tab.shard)) } else { String::new() };
+    let shard = if tab.template == 'A' {
+        format!(", shard {}", round(tab.shard))
+    } else {
+        String::new()
+    };
     notes.push(format!(
         "Imported from T9 workbook tab \"{}\" (template {}, scale {}{shard}).",
         tab.name,
@@ -512,13 +671,22 @@ fn tab_to_factory(tab: &ParsedTab, map: &RecipeMap, data: &GameData, now: &str, 
         round(tab.scale)
     ));
     if let Some(size) = tab.total_size {
-        let text = tab.foundations_text.as_ref().map_or(String::new(), |t| format!(" {t}"));
+        let text = tab
+            .foundations_text
+            .as_ref()
+            .map_or(String::new(), |t| format!(" {t}"));
         notes.push(format!("Workbook size total: {} m²{text}.", round(size)));
     }
     let mut by_section: Vec<(String, Vec<String>)> = vec![];
     for s in &tab.side {
-        let label = if s.label.is_empty() { String::new() } else { format!("{} ", s.label) };
-        let rate = s.rate.map_or(String::new(), |r| format!(" {}/min", round(r)));
+        let label = if s.label.is_empty() {
+            String::new()
+        } else {
+            format!("{} ", s.label)
+        };
+        let rate = s
+            .rate
+            .map_or(String::new(), |r| format!(" {}/min", round(r)));
         let text = format!("{label}{}{rate}", s.item);
         match by_section.iter_mut().find(|(k, _)| *k == s.section) {
             Some((_, list)) => list.push(text),
@@ -529,7 +697,10 @@ fn tab_to_factory(tab: &ParsedTab, map: &RecipeMap, data: &GameData, now: &str, 
         notes.push(format!("{section}: {}", list.join("; ")));
     }
     if !unmapped.is_empty() {
-        notes.push(format!("Unmapped workbook recipes (not imported): {}", unmapped.join("; ")));
+        notes.push(format!(
+            "Unmapped workbook recipes (not imported): {}",
+            unmapped.join("; ")
+        ));
     }
 
     let factory = Factory {
@@ -566,11 +737,20 @@ pub struct Report {
 pub fn import(root: &Path, workbook: &Path) -> Result<Report> {
     let store = Store::new(root);
     let data = store.load_game_data(GameId::Satisfactory)?;
-    let mut wb = open_workbook_auto(workbook).with_context(|| format!("opening {}", workbook.display()))?;
-    let recipes = Grid { range: wb.worksheet_range("recipes").context("the workbook has no `recipes` sheet")? };
+    let mut wb =
+        open_workbook_auto(workbook).with_context(|| format!("opening {}", workbook.display()))?;
+    let recipes = Grid {
+        range: wb
+            .worksheet_range("recipes")
+            .context("the workbook has no `recipes` sheet")?,
+    };
 
     let map_path = root.join("data").join(MAP_FILE);
-    let map = build_recipe_map(&data, &read_workbook_recipes(&recipes), read_manual(&map_path));
+    let map = build_recipe_map(
+        &data,
+        &read_workbook_recipes(&recipes),
+        read_manual(&map_path),
+    );
     planner_core::store::write_json(&map_path, &map)?;
 
     let now = now_iso();
@@ -580,7 +760,11 @@ pub fn import(root: &Path, workbook: &Path) -> Result<Report> {
         if NON_BUILD.contains(&name.as_str()) {
             continue;
         }
-        let grid = Grid { range: wb.worksheet_range(&name).with_context(|| format!("reading sheet {name}"))? };
+        let grid = Grid {
+            range: wb
+                .worksheet_range(&name)
+                .with_context(|| format!("reading sheet {name}"))?,
+        };
         let tab = match parse_tab(&grid, &name) {
             Ok(t) => t,
             Err(e) => {
@@ -593,12 +777,19 @@ pub fn import(root: &Path, workbook: &Path) -> Result<Report> {
             continue;
         }
         let id = format!("t9-{}", slug(&tab.name));
-        let created = store.load_factory(GameId::Satisfactory, &id).ok().map(|f| f.created_at);
+        let created = store
+            .load_factory(GameId::Satisfactory, &id)
+            .ok()
+            .map(|f| f.created_at);
         let (factory, unmapped) = tab_to_factory(&tab, &map, &data, &now, created);
         store.save_factory(&factory)?;
         imported.push((name, factory.id, factory.lines.len(), unmapped.len()));
     }
-    Ok(Report { map, imported, skipped })
+    Ok(Report {
+        map,
+        imported,
+        skipped,
+    })
 }
 
 pub fn run(root: &Path, input: Option<PathBuf>) -> Result<()> {
@@ -614,13 +805,21 @@ pub fn run(root: &Path, input: Option<PathBuf>) -> Result<()> {
     }
     let counts: Vec<String> = counts.iter().map(|(k, n)| format!("{k} {n}")).collect();
     println!("Workbook: {}", workbook.display());
-    println!("Recipe map: {}, unmatched {}", counts.join(", "), report.map.unmatched.len());
+    println!(
+        "Recipe map: {}, unmatched {}",
+        counts.join(", "),
+        report.map.unmatched.len()
+    );
     for u in &report.map.unmatched {
         println!("  unmatched: {} — {}", u.name, u.reason);
     }
     println!("Imported {} tabs:", report.imported.len());
     for (name, id, lines, unmapped) in &report.imported {
-        let extra = if *unmapped > 0 { format!(", {unmapped} unmapped") } else { String::new() };
+        let extra = if *unmapped > 0 {
+            format!(", {unmapped} unmapped")
+        } else {
+            String::new()
+        };
         println!("  {name} → {id} ({lines} lines{extra})");
     }
     if !report.skipped.is_empty() {
@@ -646,11 +845,16 @@ pub(crate) mod tests {
 
     /// A scratch planner root holding copies of the given data files.
     pub(crate) fn temp_root(tag: &str, data_files: &[&str]) -> PathBuf {
-        let root = std::env::temp_dir().join(format!("planner-import-{tag}-{}", std::process::id()));
+        let root =
+            std::env::temp_dir().join(format!("planner-import-{tag}-{}", std::process::id()));
         let _ = std::fs::remove_dir_all(&root);
         std::fs::create_dir_all(root.join("data")).unwrap();
         for f in data_files {
-            std::fs::copy(planner_dir().join("data").join(f), root.join("data").join(f)).unwrap();
+            std::fs::copy(
+                planner_dir().join("data").join(f),
+                root.join("data").join(f),
+            )
+            .unwrap();
         }
         root
     }
@@ -660,7 +864,11 @@ pub(crate) mod tests {
     }
 
     fn squash(s: &Option<String>) -> String {
-        s.as_deref().unwrap_or("").split_whitespace().collect::<Vec<_>>().join(" ")
+        s.as_deref()
+            .unwrap_or("")
+            .split_whitespace()
+            .collect::<Vec<_>>()
+            .join(" ")
     }
 
     /// Differences that matter between a regenerated factory and a committed one.
@@ -679,7 +887,11 @@ pub(crate) mod tests {
         check(
             "targets",
             got.targets.len() == want.targets.len()
-                && got.targets.iter().zip(&want.targets).all(|(a, b)| a.item == b.item && close(a.rate, b.rate)),
+                && got
+                    .targets
+                    .iter()
+                    .zip(&want.targets)
+                    .all(|(a, b)| a.item == b.item && close(a.rate, b.rate)),
         );
         check("recipe choices", got.recipe_choice == want.recipe_choice);
         check("line settings", got.line_settings == want.line_settings);
@@ -724,12 +936,18 @@ pub(crate) mod tests {
 
     #[test]
     fn t9_reproduces_committed_factories() {
-        let Some((root, report)) = imported() else { return };
+        let Some((root, report)) = imported() else {
+            return;
+        };
         let committed = Store::new(planner_dir());
         let fresh = Store::new(root);
         assert_eq!(report.imported.len(), 49, "skipped: {:?}", report.skipped);
         let mut diffs = vec![];
-        for s in committed.list_factories(GameId::Satisfactory).iter().filter(|s| s.id.starts_with("t9-")) {
+        for s in committed
+            .list_factories(GameId::Satisfactory)
+            .iter()
+            .filter(|s| s.id.starts_with("t9-"))
+        {
             let want = committed.load_factory(GameId::Satisfactory, &s.id).unwrap();
             match fresh.load_factory(GameId::Satisfactory, &s.id) {
                 Ok(got) => diffs.extend(differences(&got, &want)),
@@ -741,9 +959,13 @@ pub(crate) mod tests {
 
     #[test]
     fn t9_recipe_map_matches_committed() {
-        let Some((_, report)) = imported() else { return };
-        let committed: serde_json::Value =
-            serde_json::from_str(&std::fs::read_to_string(planner_dir().join("data").join(MAP_FILE)).unwrap()).unwrap();
+        let Some((_, report)) = imported() else {
+            return;
+        };
+        let committed: serde_json::Value = serde_json::from_str(
+            &std::fs::read_to_string(planner_dir().join("data").join(MAP_FILE)).unwrap(),
+        )
+        .unwrap();
         assert_eq!(serde_json::to_value(&report.map).unwrap(), committed);
     }
 
@@ -752,11 +974,17 @@ pub(crate) mod tests {
         let Some((root, _)) = imported() else { return };
         let store = Store::new(root);
         let data = store.load_game_data(GameId::Satisfactory).unwrap();
-        let pasta = store.load_factory(GameId::Satisfactory, "t9-pasta").unwrap();
+        let pasta = store
+            .load_factory(GameId::Satisfactory, "t9-pasta")
+            .unwrap();
         let plan = solve_factory(&data, &pasta, &GameSettings::default());
         assert!(close(plan.power_mw, 7440.0), "power {}", plan.power_mw);
         assert!(close(plan.machines, 95.0), "machines {}", plan.machines);
-        assert!(close(plan.foundations.unwrap(), 1335.0), "foundations {:?}", plan.foundations);
+        assert!(
+            close(plan.foundations.unwrap(), 1335.0),
+            "foundations {:?}",
+            plan.foundations
+        );
     }
 
     #[test]

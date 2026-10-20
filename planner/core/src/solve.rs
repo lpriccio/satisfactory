@@ -8,9 +8,9 @@
 //! Solved in two phases: first the smallest possible shortfall (items nothing
 //! can supply), then the best plan that keeps that shortfall.
 
-use crate::linemath::{line_building, machine_rates, whole_machines, MachineRates};
+use crate::linemath::{MachineRates, line_building, machine_rates, whole_machines};
 use crate::model::*;
-use good_lp::{microlp, variable, Expression, ProblemVariables, Solution, SolverModel, Variable};
+use good_lp::{Expression, ProblemVariables, Solution, SolverModel, Variable, microlp, variable};
 use std::collections::{BTreeMap, BTreeSet, VecDeque};
 
 const EPS: f64 = 1e-6;
@@ -36,7 +36,12 @@ pub fn producers(data: &GameData) -> &BTreeMap<String, Vec<String>> {
             }
         }
         if data.features.power {
-            let gens: Vec<String> = data.recipes.values().filter(|r| r.generates_mw.is_some()).map(|r| r.id.clone()).collect();
+            let gens: Vec<String> = data
+                .recipes
+                .values()
+                .filter(|r| r.generates_mw.is_some())
+                .map(|r| r.id.clone())
+                .collect();
             if !gens.is_empty() {
                 map.insert(POWER.to_string(), gens);
             }
@@ -50,24 +55,31 @@ fn has_producer(data: &GameData, item: &str) -> bool {
 }
 
 pub fn default_recipe(data: &GameData, item: &str) -> Option<String> {
-    if let Some(r) = data.items.get(item).and_then(|i| i.recipe.as_ref()) {
-        if data.recipes.contains_key(r) {
-            return Some(r.clone());
-        }
+    if let Some(r) = data.items.get(item).and_then(|i| i.recipe.as_ref())
+        && data.recipes.contains_key(r)
+    {
+        return Some(r.clone());
     }
     let list = producers(data).get(item)?;
-    list.iter().find(|id| !data.recipes[*id].alternate).or(list.first()).cloned()
+    list.iter()
+        .find(|id| !data.recipes[*id].alternate)
+        .or(list.first())
+        .cloned()
 }
 
 pub fn item_name(data: &GameData, item: &str) -> String {
     if item == POWER {
         return "Power (MW)".into();
     }
-    data.items.get(item).map_or_else(|| item.to_string(), |i| i.name.clone())
+    data.items
+        .get(item)
+        .map_or_else(|| item.to_string(), |i| i.name.clone())
 }
 
 pub fn recipe_name(data: &GameData, recipe: &str) -> String {
-    data.recipes.get(recipe).map_or_else(|| recipe.to_string(), |r| r.name.clone())
+    data.recipes
+        .get(recipe)
+        .map_or_else(|| recipe.to_string(), |r| r.name.clone())
 }
 
 pub fn auto_line_id(recipe: &str) -> String {
@@ -95,7 +107,12 @@ pub fn is_item_imported(data: &GameData, f: &Factory, item: &str) -> bool {
 
 // --- line set ---------------------------------------------------------------
 
-fn candidate_recipes(data: &GameData, f: &Factory, settings: &GameSettings, item: &str) -> Vec<String> {
+fn candidate_recipes(
+    data: &GameData,
+    f: &Factory,
+    settings: &GameSettings,
+    item: &str,
+) -> Vec<String> {
     let Some(all) = producers(data).get(item).filter(|v| !v.is_empty()) else {
         return vec![];
     };
@@ -103,12 +120,24 @@ fn candidate_recipes(data: &GameData, f: &Factory, settings: &GameSettings, item
         let pinned = f.recipe_choice.get(item);
         let open: Vec<String> = all
             .iter()
-            .filter(|id| !data.recipes[*id].alternate || settings.unlocked.contains(id) || Some(*id) == pinned)
+            .filter(|id| {
+                !data.recipes[*id].alternate
+                    || settings.unlocked.contains(id)
+                    || Some(*id) == pinned
+            })
             .cloned()
             .collect();
-        return if open.is_empty() { vec![all[0].clone()] } else { open };
+        return if open.is_empty() {
+            vec![all[0].clone()]
+        } else {
+            open
+        };
     }
-    if let Some(chosen) = f.recipe_choice.get(item).filter(|r| data.recipes.contains_key(*r)) {
+    if let Some(chosen) = f
+        .recipe_choice
+        .get(item)
+        .filter(|r| data.recipes.contains_key(*r))
+    {
         return vec![chosen.clone()];
     }
     default_recipe(data, item).into_iter().collect()
@@ -116,20 +145,38 @@ fn candidate_recipes(data: &GameData, f: &Factory, settings: &GameSettings, item
 
 /// Lines the solver may run: explicit lines plus, in target mode, one auto
 /// line per candidate recipe. Returns the lines and the ids of the auto ones.
-pub fn build_lines(data: &GameData, f: &Factory, settings: &GameSettings) -> (Vec<Line>, BTreeSet<String>) {
-    let mut lines: Vec<Line> = f.lines.iter().filter(|l| data.recipes.contains_key(&l.recipe)).cloned().collect();
+pub fn build_lines(
+    data: &GameData,
+    f: &Factory,
+    settings: &GameSettings,
+) -> (Vec<Line>, BTreeSet<String>) {
+    let mut lines: Vec<Line> = f
+        .lines
+        .iter()
+        .filter(|l| data.recipes.contains_key(&l.recipe))
+        .cloned()
+        .collect();
     let mut auto = BTreeSet::new();
     if f.mode != Mode::Target {
         return (lines, auto);
     }
     // A locked line is capacity you already have; the solver may still add an
     // auto line of the same recipe for demand beyond it.
-    let mut have: BTreeSet<String> = lines.iter().filter(|l| l.machines.is_none()).map(|l| l.recipe.clone()).collect();
+    let mut have: BTreeSet<String> = lines
+        .iter()
+        .filter(|l| l.machines.is_none())
+        .map(|l| l.recipe.clone())
+        .collect();
     let mut seen = BTreeSet::new();
     let mut queue: VecDeque<String> = f.targets.iter().map(|t| t.item.clone()).collect();
     let local_power = data.features.power && !is_item_imported(data, f, POWER);
     for l in &lines {
-        queue.extend(data.recipes[&l.recipe].inputs.iter().map(|s| s.item.clone()));
+        queue.extend(
+            data.recipes[&l.recipe]
+                .inputs
+                .iter()
+                .map(|s| s.item.clone()),
+        );
     }
     if local_power {
         queue.push_back(POWER.into());
@@ -146,7 +193,13 @@ pub fn build_lines(data: &GameData, f: &Factory, settings: &GameSettings) -> (Ve
             auto.insert(id.clone());
             let settings = f.line_settings.get(&rid).cloned().unwrap_or_default();
             queue.extend(data.recipes[&rid].inputs.iter().map(|s| s.item.clone()));
-            lines.push(Line { id, recipe: rid, settings, machines: None, note: None });
+            lines.push(Line {
+                id,
+                recipe: rid,
+                settings,
+                machines: None,
+                note: None,
+            });
         }
     }
     (lines, auto)
@@ -173,9 +226,17 @@ impl Lp {
         self.cols.len() - 1
     }
 
-    fn solve_phase(&self, costs: impl Fn(&Col) -> f64, cap: Option<f64>) -> anyhow::Result<Vec<f64>> {
+    fn solve_phase(
+        &self,
+        costs: impl Fn(&Col) -> f64,
+        cap: Option<f64>,
+    ) -> anyhow::Result<Vec<f64>> {
         let mut vars = ProblemVariables::new();
-        let xs: Vec<Variable> = self.cols.iter().map(|_| vars.add(variable().min(0.0))).collect();
+        let xs: Vec<Variable> = self
+            .cols
+            .iter()
+            .map(|_| vars.add(variable().min(0.0)))
+            .collect();
         let mut objective = Expression::from(0.0);
         for (c, x) in self.cols.iter().zip(&xs) {
             let w = costs(c);
@@ -214,9 +275,24 @@ struct Weights {
 
 fn weights(objective: Objective) -> Weights {
     match objective {
-        Objective::MinRaw => Weights { machine_base: 1e-3, machine_per_mw: 0.0, power_import: 1e-4, raw_scale: 1.0 },
-        Objective::MinPower => Weights { machine_base: 1e-3, machine_per_mw: 1e-3, power_import: 1.0, raw_scale: 1e-3 },
-        Objective::MinMachines => Weights { machine_base: 1.0, machine_per_mw: 0.0, power_import: 1e-4, raw_scale: 1e-3 },
+        Objective::MinRaw => Weights {
+            machine_base: 1e-3,
+            machine_per_mw: 0.0,
+            power_import: 1e-4,
+            raw_scale: 1.0,
+        },
+        Objective::MinPower => Weights {
+            machine_base: 1e-3,
+            machine_per_mw: 1e-3,
+            power_import: 1.0,
+            raw_scale: 1e-3,
+        },
+        Objective::MinMachines => Weights {
+            machine_base: 1.0,
+            machine_per_mw: 0.0,
+            power_import: 1e-4,
+            raw_scale: 1e-3,
+        },
     }
 }
 const SURPLUS_COST: f64 = 1e-5;
@@ -241,7 +317,10 @@ pub fn solve_factory(data: &GameData, f: &Factory, settings: &GameSettings) -> P
     }
     let (lines, auto) = build_lines(data, f, settings);
     let w = weights(f.objective);
-    let mut lp = Lp { cols: vec![], rows: vec![] };
+    let mut lp = Lp {
+        cols: vec![],
+        rows: vec![],
+    };
 
     let mut work: Vec<Work> = lines
         .into_iter()
@@ -249,12 +328,21 @@ pub fn solve_factory(data: &GameData, f: &Factory, settings: &GameSettings) -> P
             let recipe = &data.recipes[&line.recipe];
             let per = machine_rates(data, recipe, &line.settings, &settings.default_building);
             let locked = line.machines.filter(|m| m.is_finite()).map(|m| m.max(0.0));
-            Work { auto: auto.contains(&line.id), line, per, col: None, locked }
+            Work {
+                auto: auto.contains(&line.id),
+                line,
+                per,
+                col: None,
+                locked,
+            }
         })
         .collect();
     for wk in &mut work {
         if wk.locked.is_none() {
-            wk.col = Some(lp.col(w.machine_base + wk.per.power_mw.max(0.0) * w.machine_per_mw, 0.0));
+            wk.col = Some(lp.col(
+                w.machine_base + wk.per.power_mw.max(0.0) * w.machine_per_mw,
+                0.0,
+            ));
         }
     }
 
@@ -281,7 +369,13 @@ pub fn solve_factory(data: &GameData, f: &Factory, settings: &GameSettings) -> P
             // then the plan reports them short.
             || (!has_producer(data, item) && !f.imports.exclude.iter().any(|i| i == item))
     };
-    let raw_weight = |item: &str| data.resource_weights.as_ref().and_then(|m| m.get(item)).copied().unwrap_or(1.0);
+    let raw_weight = |item: &str| {
+        data.resource_weights
+            .as_ref()
+            .and_then(|m| m.get(item))
+            .copied()
+            .unwrap_or(1.0)
+    };
 
     struct ItemCols {
         import: Option<usize>,
@@ -293,9 +387,15 @@ pub fn solve_factory(data: &GameData, f: &Factory, settings: &GameSettings) -> P
         let mut terms = vec![];
         let mut rhs = target_of.get(item.as_str()).copied().unwrap_or(0.0);
         for wk in &work {
-            let Some(&rate) = wk.per.rates.get(item) else { continue };
+            let Some(&rate) = wk.per.rates.get(item) else {
+                continue;
+            };
             // An edge import cancels this line's own consumption of the item.
-            let net = if rate < 0.0 && edge_imports.contains(edge_key(item, &wk.line.id).as_str()) { 0.0 } else { rate };
+            let net = if rate < 0.0 && edge_imports.contains(edge_key(item, &wk.line.id).as_str()) {
+                0.0
+            } else {
+                rate
+            };
             match wk.col {
                 Some(j) => terms.push((j, net)),
                 None => rhs -= net * wk.locked.unwrap_or(0.0),
@@ -314,14 +414,31 @@ pub fn solve_factory(data: &GameData, f: &Factory, settings: &GameSettings) -> P
             // Raw items count as sources even when a recipe "makes" them:
             // crude oil's only recipe is unpackaging, which can't create oil.
             let source = is_default_kind(data, item) || !has_producer(data, item);
-            (None, Some(lp.col(0.0, if source { SHORT_SOURCE } else { SHORT_CRAFTABLE })))
+            (
+                None,
+                Some(lp.col(
+                    0.0,
+                    if source {
+                        SHORT_SOURCE
+                    } else {
+                        SHORT_CRAFTABLE
+                    },
+                )),
+            )
         };
         let surplus = lp.col(SURPLUS_COST, 0.0);
         terms.extend(import.map(|j| (j, 1.0)));
         terms.extend(short.map(|j| (j, 1.0)));
         terms.push((surplus, -1.0));
         lp.rows.push((terms, rhs));
-        cols.insert(item.clone(), ItemCols { import, short, surplus });
+        cols.insert(
+            item.clone(),
+            ItemCols {
+                import,
+                short,
+                surplus,
+            },
+        );
     }
 
     let any_short = cols.values().any(|c| c.short.is_some());
@@ -335,7 +452,13 @@ pub fn solve_factory(data: &GameData, f: &Factory, settings: &GameSettings) -> P
     })();
     let x = match solved {
         Ok(x) => x,
-        Err(e) => return Plan::empty(PlanStatus::Error, Some(format!("Solver error: {e}")), warnings),
+        Err(e) => {
+            return Plan::empty(
+                PlanStatus::Error,
+                Some(format!("Solver error: {e}")),
+                warnings,
+            );
+        }
     };
     let value = |j: usize| {
         let v = x[j];
@@ -363,7 +486,12 @@ pub fn solve_factory(data: &GameData, f: &Factory, settings: &GameSettings) -> P
             locked: wk.locked.is_some(),
             auto: wk.auto,
             settings: wk.line.settings.clone(),
-            rates: wk.per.rates.iter().map(|(k, r)| (k.clone(), r * machines)).collect(),
+            rates: wk
+                .per
+                .rates
+                .iter()
+                .map(|(k, r)| (k.clone(), r * machines))
+                .collect(),
             power_mw: wk.per.power_mw * machines,
             footprint: wk.per.footprint * whole_machines(machines),
         });
@@ -403,14 +531,33 @@ pub fn solve_factory(data: &GameData, f: &Factory, settings: &GameSettings) -> P
     let footprint: f64 = plan_lines.iter().map(|l| l.footprint).sum();
     let missing: Vec<&PlanItem> = plan_items.values().filter(|p| p.unbalanced > EPS).collect();
     let message = (!missing.is_empty()).then(|| {
-        let names: Vec<String> =
-            missing.iter().map(|p| format!("{} ({}/min short)", item_name(data, &p.item), round2(p.unbalanced))).collect();
-        let (them, are) = if missing.len() > 1 { ("them", "they aren't") } else { ("it", "it isn't") };
-        format!("Can't balance {}: nothing in this factory can supply {them}, and {are} imported.", names.join(", "))
+        let names: Vec<String> = missing
+            .iter()
+            .map(|p| {
+                format!(
+                    "{} ({}/min short)",
+                    item_name(data, &p.item),
+                    round2(p.unbalanced)
+                )
+            })
+            .collect();
+        let (them, are) = if missing.len() > 1 {
+            ("them", "they aren't")
+        } else {
+            ("it", "it isn't")
+        };
+        format!(
+            "Can't balance {}: nothing in this factory can supply {them}, and {are} imported.",
+            names.join(", ")
+        )
     });
 
     Plan {
-        status: if missing.is_empty() { PlanStatus::Ok } else { PlanStatus::Unbalanced },
+        status: if missing.is_empty() {
+            PlanStatus::Ok
+        } else {
+            PlanStatus::Unbalanced
+        },
         message,
         edges: allocate_edges(&plan_lines, &plan_items, &edge_imports),
         machines: plan_lines.iter().map(|l| l.machines).sum(),
@@ -433,7 +580,11 @@ fn round2(n: f64) -> String {
 /// Split each item's supply across its consumers in proportion: every consumer
 /// gets the same mix of producers and imports. Edge imports go straight from
 /// "import" to their consumer. Targets and surplus appear as consumers.
-pub fn allocate_edges(lines: &[PlanLine], items: &BTreeMap<String, PlanItem>, edge_imports: &BTreeSet<&str>) -> Vec<PlanEdge> {
+pub fn allocate_edges(
+    lines: &[PlanLine],
+    items: &BTreeMap<String, PlanItem>,
+    edge_imports: &BTreeSet<&str>,
+) -> Vec<PlanEdge> {
     let mut edges = vec![];
     for pi in items.values() {
         let item = &pi.item;
@@ -446,7 +597,12 @@ pub fn allocate_edges(lines: &[PlanLine], items: &BTreeMap<String, PlanItem>, ed
                 sources.push((l.id.clone(), r));
             } else if r < 0.0 {
                 if edge_imports.contains(edge_key(item, &l.id).as_str()) {
-                    edges.push(PlanEdge { item: item.clone(), from: "import".into(), to: l.id.clone(), rate: -r });
+                    edges.push(PlanEdge {
+                        item: item.clone(),
+                        from: "import".into(),
+                        to: l.id.clone(),
+                        rate: -r,
+                    });
                     edge_imported -= r;
                 } else {
                     sinks.push((l.id.clone(), -r));
@@ -471,7 +627,12 @@ pub fn allocate_edges(lines: &[PlanLine], items: &BTreeMap<String, PlanItem>, ed
             for (from, have) in &sources {
                 let rate = need * have / supply;
                 if rate > EPS {
-                    edges.push(PlanEdge { item: item.clone(), from: from.clone(), to: to.clone(), rate });
+                    edges.push(PlanEdge {
+                        item: item.clone(),
+                        from: from.clone(),
+                        to: to.clone(),
+                        rate,
+                    });
                 }
             }
         }
@@ -495,20 +656,39 @@ pub fn can_produce(data: &GameData, item: &str) -> bool {
             notes: None,
             mode: Mode::Target,
             objective: Objective::MinRaw,
-            targets: vec![Target { item: item.into(), rate: 1.0 }],
+            targets: vec![Target {
+                item: item.into(),
+                rate: 1.0,
+            }],
             recipe_choice: BTreeMap::new(),
             optimize: true,
             line_settings: BTreeMap::new(),
             lines: vec![],
-            imports: FactoryImports { items: vec![], edges: vec![], exclude: vec![item.into()] },
+            imports: FactoryImports {
+                items: vec![],
+                edges: vec![],
+                exclude: vec![item.into()],
+            },
             spacing: 4.0,
             created_at: String::new(),
             updated_at: String::new(),
         };
-        let unlocked = data.recipes.values().filter(|r| r.alternate).map(|r| r.id.clone()).collect();
-        let settings = GameSettings { unlocked, ..Default::default() };
+        let unlocked = data
+            .recipes
+            .values()
+            .filter(|r| r.alternate)
+            .map(|r| r.id.clone())
+            .collect();
+        let settings = GameSettings {
+            unlocked,
+            ..Default::default()
+        };
         solve_factory(data, &probe, &settings).status == PlanStatus::Ok
     };
-    data.cache.producible.lock().unwrap().insert(item.to_string(), ok);
+    data.cache
+        .producible
+        .lock()
+        .unwrap()
+        .insert(item.to_string(), ok);
     ok
 }

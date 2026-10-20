@@ -28,7 +28,10 @@ pub fn combine_plans(members: &[Member]) -> WorldTotals {
     for m in members {
         let k = m.multiplier;
         for p in m.plan.items.values() {
-            let acc = t.items.entry(p.item.clone()).or_insert_with(|| PlanItem { item: p.item.clone(), ..Default::default() });
+            let acc = t.items.entry(p.item.clone()).or_insert_with(|| PlanItem {
+                item: p.item.clone(),
+                ..Default::default()
+            });
             acc.produced += p.produced * k;
             acc.consumed += p.consumed * k;
             acc.imported += p.imported * k;
@@ -66,7 +69,11 @@ pub fn world_to_factory(world: &World, members: &[Member]) -> Factory {
             if pl.machines * m.multiplier < 1e-9 {
                 continue;
             }
-            let scale = if m.multiplier != 1.0 { format!(" ×{}", m.multiplier) } else { String::new() };
+            let scale = if m.multiplier != 1.0 {
+                format!(" ×{}", m.multiplier)
+            } else {
+                String::new()
+            };
             lines.push(Line {
                 id: new_id(),
                 recipe: pl.recipe.clone(),
@@ -77,7 +84,10 @@ pub fn world_to_factory(world: &World, members: &[Member]) -> Factory {
         }
     }
     let now = now_iso();
-    let names: Vec<String> = members.iter().map(|m| format!("{} ×{}", m.factory.name, m.multiplier)).collect();
+    let names: Vec<String> = members
+        .iter()
+        .map(|m| format!("{} ×{}", m.factory.name, m.multiplier))
+        .collect();
     Factory {
         schema: 1,
         id: new_id(),

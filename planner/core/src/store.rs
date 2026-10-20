@@ -7,7 +7,7 @@
 
 use crate::model::{Factory, GameData, GameId, GameSettings, World};
 use anyhow::{Context, Result};
-use serde::{de::DeserializeOwned, Serialize};
+use serde::{Serialize, de::DeserializeOwned};
 use std::fs;
 use std::path::{Path, PathBuf};
 
@@ -26,7 +26,11 @@ pub struct Store {
 
 /// Ids become file names, so keep them to a safe alphabet.
 pub fn valid_id(id: &str) -> bool {
-    !id.is_empty() && id.len() <= 80 && id.chars().all(|c| c.is_ascii_alphanumeric() || c == '-' || c == '_')
+    !id.is_empty()
+        && id.len() <= 80
+        && id
+            .chars()
+            .all(|c| c.is_ascii_alphanumeric() || c == '-' || c == '_')
 }
 
 impl Store {
@@ -54,12 +58,21 @@ impl Store {
 
     fn world_path(&self, game: GameId, id: &str) -> Result<PathBuf> {
         anyhow::ensure!(valid_id(id), "bad id {id:?}");
-        Ok(self.game_dir(game).join("worlds").join(format!("{id}.json")))
+        Ok(self
+            .game_dir(game)
+            .join("worlds")
+            .join(format!("{id}.json")))
     }
 
     pub fn load_game_data(&self, game: GameId) -> Result<GameData> {
         let path = self.data_path(game);
-        read_json(&path).with_context(|| format!("No game data at {} — run `planner-import {}`", path.display(), game.key()))
+        read_json(&path).with_context(|| {
+            format!(
+                "No game data at {} — run `planner-import {}`",
+                path.display(),
+                game.key()
+            )
+        })
     }
 
     pub fn list_factories(&self, game: GameId) -> Vec<Summary> {
@@ -67,7 +80,11 @@ impl Store {
             .into_iter()
             .map(|f| Summary {
                 detail: if f.targets.is_empty() {
-                    format!("{} line{}", f.lines.len(), if f.lines.len() == 1 { "" } else { "s" })
+                    format!(
+                        "{} line{}",
+                        f.lines.len(),
+                        if f.lines.len() == 1 { "" } else { "s" }
+                    )
                 } else {
                     String::new()
                 },
@@ -146,11 +163,16 @@ fn remove_file(path: &Path) -> Result<()> {
 
 /// Every parseable document in a folder; a hand-broken file doesn't hide the rest.
 fn list_json<T: DeserializeOwned>(dir: &Path) -> Vec<T> {
-    let Ok(entries) = fs::read_dir(dir) else { return vec![] };
+    let Ok(entries) = fs::read_dir(dir) else {
+        return vec![];
+    };
     entries
         .filter_map(|e| e.ok())
         .map(|e| e.path())
-        .filter(|p| p.extension().is_some_and(|x| x == "json") && p.file_name().is_some_and(|n| n != "settings.json"))
+        .filter(|p| {
+            p.extension().is_some_and(|x| x == "json")
+                && p.file_name().is_some_and(|n| n != "settings.json")
+        })
         .filter_map(|p| read_json(&p).ok())
         .collect()
 }

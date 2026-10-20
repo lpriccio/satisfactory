@@ -132,7 +132,11 @@ pub struct Recipe {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub power: Option<PowerRange>,
     /// Generator recipe: MW produced per machine at 100% clock.
-    #[serde(default, rename = "generatesMW", skip_serializing_if = "Option::is_none")]
+    #[serde(
+        default,
+        rename = "generatesMW",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub generates_mw: Option<f64>,
     /// Factorio: productivity bonuses may apply.
     #[serde(default, skip_serializing_if = "std::ops::Not::not")]
@@ -378,7 +382,11 @@ pub struct GameSettings {
 
 impl Default for GameSettings {
     fn default() -> Self {
-        GameSettings { unlocked: vec![], default_building: BTreeMap::new(), spacing: 4.0 }
+        GameSettings {
+            unlocked: vec![],
+            default_building: BTreeMap::new(),
+            spacing: 4.0,
+        }
     }
 }
 
@@ -475,7 +483,10 @@ impl Plan {
     }
 
     pub fn item(&self, id: &str) -> PlanItem {
-        self.items.get(id).cloned().unwrap_or_else(|| PlanItem { item: id.into(), ..Default::default() })
+        self.items.get(id).cloned().unwrap_or_else(|| PlanItem {
+            item: id.into(),
+            ..Default::default()
+        })
     }
 
     pub fn line(&self, id: &str) -> Option<&PlanLine> {

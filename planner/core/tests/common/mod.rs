@@ -14,12 +14,29 @@ pub fn close(a: f64, b: f64) -> bool {
 macro_rules! assert_close {
     ($a:expr, $b:expr) => {{
         let (a, b): (f64, f64) = ($a, $b);
-        assert!(common::close(a, b), "{} = {a}, expected {b}", stringify!($a));
+        assert!(
+            common::close(a, b),
+            "{} = {a}, expected {b}",
+            stringify!($a)
+        );
     }};
 }
 
-fn recipe(id: &str, time: f64, inputs: &[(&str, f64)], outputs: &[(&str, f64)], building: &str) -> Recipe {
-    let stacks = |s: &[(&str, f64)]| s.iter().map(|(i, a)| Stack { item: i.to_string(), amount: *a }).collect();
+fn recipe(
+    id: &str,
+    time: f64,
+    inputs: &[(&str, f64)],
+    outputs: &[(&str, f64)],
+    building: &str,
+) -> Recipe {
+    let stacks = |s: &[(&str, f64)]| {
+        s.iter()
+            .map(|(i, a)| Stack {
+                item: i.to_string(),
+                amount: *a,
+            })
+            .collect()
+    };
     Recipe {
         id: id.into(),
         name: id.into(),
@@ -45,31 +62,133 @@ fn building(id: &str, power: f64, slots: u32, footprint: f64) -> Building {
 
 /// A small Satisfactory-shaped data set with numbers from the game.
 pub fn mini() -> GameData {
-    let mut alt_plastic = recipe("Alternate_RecycledPlastic", 12.0, &[("Rubber", 6.0), ("LiquidFuel", 12.0)], &[("Plastic", 12.0)], "OilRefinery");
+    let mut alt_plastic = recipe(
+        "Alternate_RecycledPlastic",
+        12.0,
+        &[("Rubber", 6.0), ("LiquidFuel", 12.0)],
+        &[("Plastic", 12.0)],
+        "OilRefinery",
+    );
     alt_plastic.alternate = true;
-    let mut alt_rubber = recipe("Alternate_RecycledRubber", 12.0, &[("Plastic", 6.0), ("LiquidFuel", 12.0)], &[("Rubber", 12.0)], "OilRefinery");
+    let mut alt_rubber = recipe(
+        "Alternate_RecycledRubber",
+        12.0,
+        &[("Plastic", 6.0), ("LiquidFuel", 12.0)],
+        &[("Rubber", 12.0)],
+        "OilRefinery",
+    );
     alt_rubber.alternate = true;
-    let mut coal_gen = recipe("Power_GeneratorCoal_Coal", 60.0, &[("Coal", 15.0), ("Water", 45.0)], &[], "GeneratorCoal");
+    let mut coal_gen = recipe(
+        "Power_GeneratorCoal_Coal",
+        60.0,
+        &[("Coal", 15.0), ("Water", 45.0)],
+        &[],
+        "GeneratorCoal",
+    );
     coal_gen.generates_mw = Some(75.0);
     let recipes = vec![
-        recipe("IngotIron", 2.0, &[("OreIron", 1.0)], &[("IronIngot", 1.0)], "SmelterMk1"),
-        recipe("IronPlate", 6.0, &[("IronIngot", 3.0)], &[("IronPlate", 2.0)], "ConstructorMk1"),
-        recipe("IngotCopper", 2.0, &[("OreCopper", 1.0)], &[("CopperIngot", 1.0)], "SmelterMk1"),
-        recipe("AluminumSheet", 6.0, &[("AluminumIngot", 3.0), ("CopperIngot", 1.0)], &[("AluminumPlate", 3.0)], "AssemblerMk1"),
-        recipe("IngotAluminum", 4.0, &[("AluminumScrap", 6.0), ("Silica", 5.0)], &[("AluminumIngot", 4.0)], "FoundryMk1"),
-        recipe("AluminumScrap", 1.0, &[("AluminaSolution", 4.0), ("Coal", 2.0)], &[("AluminumScrap", 6.0), ("Water", 2.0)], "OilRefinery"),
-        recipe("AluminaSolution", 6.0, &[("OreBauxite", 12.0), ("Water", 18.0)], &[("AluminaSolution", 12.0), ("Silica", 5.0)], "OilRefinery"),
-        recipe("Silica", 8.0, &[("RawQuartz", 3.0)], &[("Silica", 5.0)], "ConstructorMk1"),
-        recipe("Plastic", 6.0, &[("LiquidOil", 3.0)], &[("Plastic", 2.0), ("HeavyOilResidue", 1.0)], "OilRefinery"),
-        recipe("Rubber", 6.0, &[("LiquidOil", 3.0)], &[("Rubber", 2.0), ("HeavyOilResidue", 2.0)], "OilRefinery"),
+        recipe(
+            "IngotIron",
+            2.0,
+            &[("OreIron", 1.0)],
+            &[("IronIngot", 1.0)],
+            "SmelterMk1",
+        ),
+        recipe(
+            "IronPlate",
+            6.0,
+            &[("IronIngot", 3.0)],
+            &[("IronPlate", 2.0)],
+            "ConstructorMk1",
+        ),
+        recipe(
+            "IngotCopper",
+            2.0,
+            &[("OreCopper", 1.0)],
+            &[("CopperIngot", 1.0)],
+            "SmelterMk1",
+        ),
+        recipe(
+            "AluminumSheet",
+            6.0,
+            &[("AluminumIngot", 3.0), ("CopperIngot", 1.0)],
+            &[("AluminumPlate", 3.0)],
+            "AssemblerMk1",
+        ),
+        recipe(
+            "IngotAluminum",
+            4.0,
+            &[("AluminumScrap", 6.0), ("Silica", 5.0)],
+            &[("AluminumIngot", 4.0)],
+            "FoundryMk1",
+        ),
+        recipe(
+            "AluminumScrap",
+            1.0,
+            &[("AluminaSolution", 4.0), ("Coal", 2.0)],
+            &[("AluminumScrap", 6.0), ("Water", 2.0)],
+            "OilRefinery",
+        ),
+        recipe(
+            "AluminaSolution",
+            6.0,
+            &[("OreBauxite", 12.0), ("Water", 18.0)],
+            &[("AluminaSolution", 12.0), ("Silica", 5.0)],
+            "OilRefinery",
+        ),
+        recipe(
+            "Silica",
+            8.0,
+            &[("RawQuartz", 3.0)],
+            &[("Silica", 5.0)],
+            "ConstructorMk1",
+        ),
+        recipe(
+            "Plastic",
+            6.0,
+            &[("LiquidOil", 3.0)],
+            &[("Plastic", 2.0), ("HeavyOilResidue", 1.0)],
+            "OilRefinery",
+        ),
+        recipe(
+            "Rubber",
+            6.0,
+            &[("LiquidOil", 3.0)],
+            &[("Rubber", 2.0), ("HeavyOilResidue", 2.0)],
+            "OilRefinery",
+        ),
         alt_plastic,
         alt_rubber,
         coal_gen,
     ];
-    let raw = ["OreIron", "OreCopper", "Coal", "Water", "OreBauxite", "RawQuartz", "LiquidOil"];
+    let raw = [
+        "OreIron",
+        "OreCopper",
+        "Coal",
+        "Water",
+        "OreBauxite",
+        "RawQuartz",
+        "LiquidOil",
+    ];
     let items = [
-        "OreIron", "IronIngot", "IronPlate", "OreCopper", "CopperIngot", "AluminumIngot", "AluminumPlate", "AluminumScrap",
-        "AluminaSolution", "Silica", "Coal", "Water", "OreBauxite", "RawQuartz", "Plastic", "Rubber", "LiquidFuel", "LiquidOil",
+        "OreIron",
+        "IronIngot",
+        "IronPlate",
+        "OreCopper",
+        "CopperIngot",
+        "AluminumIngot",
+        "AluminumPlate",
+        "AluminumScrap",
+        "AluminaSolution",
+        "Silica",
+        "Coal",
+        "Water",
+        "OreBauxite",
+        "RawQuartz",
+        "Plastic",
+        "Rubber",
+        "LiquidFuel",
+        "LiquidOil",
         "HeavyOilResidue",
     ];
     let buildings = [
@@ -87,7 +206,17 @@ pub fn mini() -> GameData {
         generated_at: "2026-10-19".into(),
         items: items
             .iter()
-            .map(|id| (id.to_string(), Item { id: id.to_string(), name: id.to_string(), raw: raw.contains(id), ..Default::default() }))
+            .map(|id| {
+                (
+                    id.to_string(),
+                    Item {
+                        id: id.to_string(),
+                        name: id.to_string(),
+                        raw: raw.contains(id),
+                        ..Default::default()
+                    },
+                )
+            })
             .collect(),
         buildings: buildings.into_iter().map(|b| (b.id.clone(), b)).collect(),
         recipes: recipes.into_iter().map(|r| (r.id.clone(), r)).collect(),
@@ -111,7 +240,10 @@ pub fn factory(data: &GameData) -> Factory {
 }
 
 pub fn target(item: &str, rate: f64) -> Target {
-    Target { item: item.into(), rate }
+    Target {
+        item: item.into(),
+        rate,
+    }
 }
 
 pub fn root() -> PathBuf {
@@ -123,7 +255,11 @@ pub fn real(game: &str) -> GameData {
 }
 
 pub fn machines(plan: &Plan, recipe: &str) -> f64 {
-    plan.lines.iter().filter(|l| l.recipe == recipe).map(|l| l.machines).sum()
+    plan.lines
+        .iter()
+        .filter(|l| l.recipe == recipe)
+        .map(|l| l.machines)
+        .sum()
 }
 
 pub fn imported(plan: &Plan, item: &str) -> f64 {
@@ -131,7 +267,10 @@ pub fn imported(plan: &Plan, item: &str) -> f64 {
 }
 
 pub fn choice(pairs: &[(&str, &str)]) -> BTreeMap<String, String> {
-    pairs.iter().map(|(a, b)| (a.to_string(), b.to_string())).collect()
+    pairs
+        .iter()
+        .map(|(a, b)| (a.to_string(), b.to_string()))
+        .collect()
 }
 
 pub fn strings(items: &[&str]) -> Vec<String> {

@@ -42,7 +42,9 @@ enum Command {
 
 fn main() -> anyhow::Result<()> {
     let cli = Cli::parse();
-    let root = cli.root.unwrap_or_else(|| PathBuf::from(env!("CARGO_MANIFEST_DIR")).join(".."));
+    let root = cli
+        .root
+        .unwrap_or_else(|| PathBuf::from(env!("CARGO_MANIFEST_DIR")).join(".."));
     match cli.command {
         Command::Satisfactory { input } => satisfactory::run(&root, input),
         Command::Factorio { input } => factorio::run(&root, input),
