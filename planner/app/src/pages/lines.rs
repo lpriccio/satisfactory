@@ -19,6 +19,9 @@ fn io_text(data: &GameData, line: &PlanLine, sign: f64) -> String {
         .join("\n")
 }
 
+/// Wide enough for the longest recipe names ("Alternate: Pure Copper Ingot").
+const RECIPE_COL: f32 = 280.0;
+
 /// One stack per line, never squeezed narrower than the longest entry.
 fn io_cell(ui: &mut Ui, text: String) {
     ui.vertical(|ui| {
@@ -70,18 +73,20 @@ pub fn show(ui: &mut Ui, ed: &Editor, pal: &Palette, actions: &mut Vec<Action>) 
             for (i, line) in rows.iter().enumerate() {
                 if line.auto {
                     ui.vertical(|ui| {
-                        ui.label(&data.recipes[&line.recipe].name);
+                        ui.set_min_width(RECIPE_COL);
+                        ui.add(egui::Label::new(&data.recipes[&line.recipe].name).extend());
                         ui.label(RichText::new("solver").small().weak());
                     });
                 } else {
                     ui.vertical(|ui| {
+                        ui.set_min_width(RECIPE_COL);
                         if let Some(rid) = picker(
                             ui,
                             ("line-recipe", &line.id),
                             &options,
                             &line.recipe,
                             "Recipe",
-                            240.0,
+                            RECIPE_COL,
                         ) {
                             let id = line.id.clone();
                             edit(actions, None, move |f, _| {
