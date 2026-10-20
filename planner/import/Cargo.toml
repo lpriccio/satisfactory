@@ -1,0 +1,18 @@
+[package]
+name = "planner-import"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "planner-import"
+path = "src/main.rs"
+
+[dependencies]
+planner-core = { path = "../core" }
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+clap = { version = "4.6.7", features = ["derive"] }
+calamine = "0.37.0"
+zip = { version = "2", default-features = false, features = ["deflate"] }

@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = ["core", "import", "app"]
+
+[workspace.package]
+edition = "2024"
+version = "0.2.0"
+license = "MIT"
+
+[workspace.dependencies]
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+anyhow = "1.0.104"
+
+[profile.dev.package."*"]
+opt-level = 2
