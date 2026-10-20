@@ -1,0 +1,117 @@
+{
+  "schema": 1,
+  "name": "factotum",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-factotum-r4",
+      "recipe": "Alternate_EncasedIndustrialBeam",
+      "machines": 31.0625
+    },
+    {
+      "id": "t9-factotum-r5",
+      "recipe": "Alternate_ModularFrameHeavy",
+      "machines": 6
+    },
+    {
+      "id": "t9-factotum-r6",
+      "recipe": "IronPlate",
+      "machines": 21
+    },
+    {
+      "id": "t9-factotum-r7",
+      "recipe": "IronRod",
+      "machines": 27.6
+    },
+    {
+      "id": "t9-factotum-r8",
+      "recipe": "ModularFrame",
+      "machines": 34.5
+    },
+    {
+      "id": "t9-factotum-r9",
+      "recipe": "Alternate_SteelPipe_Molded",
+      "machines": 12
+    },
+    {
+      "id": "t9-factotum-r10",
+      "recipe": "Motor",
+      "machines": 4
+    },
+    {
+      "id": "t9-factotum-r11",
+      "recipe": "IronPlateReinforced",
+      "machines": 25.5
+    },
+    {
+      "id": "t9-factotum-r12",
+      "recipe": "Alternate_IngotSteel_1",
+      "machines": 33
+    },
+    {
+      "id": "t9-factotum-r13",
+      "recipe": "Stator",
+      "machines": 12
+    },
+    {
+      "id": "t9-factotum-r14",
+      "recipe": "SteelBeam",
+      "machines": 10
+    },
+    {
+      "id": "t9-factotum-r15",
+      "recipe": "Alternate_SteelCastedPlate",
+      "machines": 20
+    },
+    {
+      "id": "t9-factotum-r16",
+      "recipe": "SteelPipe",
+      "machines": 60
+    },
+    {
+      "id": "t9-factotum-r17",
+      "recipe": "Alternate_SteelRod",
+      "machines": 10
+    },
+    {
+      "id": "t9-factotum-r18",
+      "recipe": "Alternate_Rotor",
+      "machines": 12
+    },
+    {
+      "id": "t9-factotum-r19",
+      "recipe": "Alternate_Screw_2",
+      "machines": 5.88461538461539
+    },
+    {
+      "id": "t9-factotum-r20",
+      "recipe": "Wire",
+      "machines": 28
+    },
+    {
+      "id": "t9-factotum-r22",
+      "recipe": "Wire",
+      "machines": 36
+    },
+    {
+      "id": "t9-factotum-r23",
+      "recipe": "Cable",
+      "machines": 10
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.707Z",
+  "updatedAt": "2026-10-20T04:13:46.207Z",
+  "id": "t9-factotum",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"factotum\" (template A, scale 1, shard 1).\nWorkbook size total: 42880 m² (2,680 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Concrete 1760/min; Coal 1320/min; Copper Ingot 960/min; Iron Ingot 2675/min; Exports/Waste Steel Ingot 1440/min",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

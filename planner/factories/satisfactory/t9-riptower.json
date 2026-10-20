@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "name": "riptower",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-riptower-r8",
+      "recipe": "Alternate_ReinforcedIronPlate_2",
+      "machines": 15.931914893617
+    },
+    {
+      "id": "t9-riptower-r9",
+      "recipe": "Alternate_Wire_1",
+      "machines": 26.5531914893617
+    },
+    {
+      "id": "t9-riptower-r10",
+      "recipe": "IronPlate",
+      "machines": 14.936170212766
+    },
+    {
+      "id": "t9-riptower-r11",
+      "recipe": "IngotIron",
+      "machines": 26
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.614Z",
+  "updatedAt": "2026-10-20T04:13:46.107Z",
+  "id": "t9-riptower",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"riptower\" (template B, scale 15.9319).\nWorkbook size total: 7112.9362 m² (278 foundations).\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

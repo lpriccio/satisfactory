@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "name": "manhattan fuel",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-manhattan-fuel-r4",
+      "recipe": "Power_GeneratorNuclear_NuclearFuelRod",
+      "machines": 86.4,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-manhattan-fuel-r5",
+      "recipe": "Alternate_NuclearFuelRod_1",
+      "machines": 28.8,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-manhattan-fuel-r6",
+      "recipe": "Alternate_UraniumCell_1",
+      "machines": 28.8,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-manhattan-fuel-r8",
+      "recipe": "ElectromagneticControlRod",
+      "machines": 14.4,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-manhattan-fuel-r9",
+      "recipe": "AILimiter",
+      "machines": 11.52,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-manhattan-fuel-r10",
+      "recipe": "Alternate_SteamedCopperSheet",
+      "machines": 12.8,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-manhattan-fuel-r12",
+      "recipe": "Alternate_Rotor",
+      "machines": 11.52,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-manhattan-fuel-r13",
+      "recipe": "Stator",
+      "machines": 17.28,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-manhattan-fuel-r15",
+      "recipe": "Alternate_Quickwire",
+      "machines": 36.8,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-manhattan-fuel-r17",
+      "recipe": "CrystalOscillator",
+      "machines": 17.28,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-manhattan-fuel-r19",
+      "recipe": "Alternate_FusedWire",
+      "machines": 14.72,
+      "clock": 2.4999999999999996
+    },
+    {
+      "id": "t9-manhattan-fuel-r21",
+      "recipe": "Alternate_ReinforcedIronPlate_2",
+      "machines": 7.68,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-manhattan-fuel-r22",
+      "recipe": "IronPlate",
+      "machines": 7.2,
+      "clock": 2.5
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.665Z",
+  "updatedAt": "2026-10-20T04:13:46.163Z",
+  "id": "t9-manhattan-fuel",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"manhattan fuel\" (template A, scale 216, shard 2.5).\nWorkbook size total: 182826 m² (11,427 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Dropout Quartz Crystal 777.6/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

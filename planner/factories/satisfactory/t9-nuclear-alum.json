@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "name": "nuclear alum",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-nuclear-alum-r4",
+      "recipe": "Alternate_SloppyAlumina",
+      "machines": 2.88,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-nuclear-alum-r5",
+      "recipe": "Alternate_ElectroAluminumScrap",
+      "machines": 3.84,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-nuclear-alum-r6",
+      "recipe": "PureAluminumIngot",
+      "machines": 19.2,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-nuclear-alum-r11",
+      "recipe": "Alternate_AlcladCasing",
+      "machines": 1.38666666666667,
+      "clock": 2.4999999999999964
+    },
+    {
+      "id": "t9-nuclear-alum-r12",
+      "recipe": "AluminumSheet",
+      "machines": 8.66666666666667,
+      "clock": 2.500000000000003
+    },
+    {
+      "id": "t9-nuclear-alum-r14",
+      "recipe": "Alternate_PureCopperIngot",
+      "machines": 48,
+      "clock": 2.5
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.653Z",
+  "updatedAt": "2026-10-20T04:13:46.148Z",
+  "id": "t9-nuclear-alum",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"nuclear alum\" (template A, scale 3, shard 2.5).\nWorkbook size total: 13730 m² (858 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

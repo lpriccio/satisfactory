@@ -1,0 +1,9077 @@
+{
+ "buildings": {
+  "AssemblerMk1": {
+   "footprint": 150,
+   "id": "AssemblerMk1",
+   "name": "Assembler",
+   "powerExponent": 1.321929,
+   "powerMW": 15,
+   "sloopSlots": 2
+  },
+  "Blender": {
+   "footprint": 288,
+   "id": "Blender",
+   "name": "Blender",
+   "powerExponent": 1.321929,
+   "powerMW": 75,
+   "sloopSlots": 4
+  },
+  "ConstructorMk1": {
+   "footprint": 80,
+   "id": "ConstructorMk1",
+   "name": "Constructor",
+   "powerExponent": 1.321929,
+   "powerMW": 4,
+   "sloopSlots": 1
+  },
+  "Converter": {
+   "footprint": 256,
+   "id": "Converter",
+   "name": "Converter",
+   "powerExponent": 1.321929,
+   "powerMW": 0,
+   "sloopSlots": 2
+  },
+  "FoundryMk1": {
+   "footprint": 90,
+   "id": "FoundryMk1",
+   "name": "Foundry",
+   "powerExponent": 1.321929,
+   "powerMW": 16,
+   "sloopSlots": 2
+  },
+  "GeneratorBiomass_Automated": {
+   "footprint": 64,
+   "id": "GeneratorBiomass_Automated",
+   "name": "Biomass Burner",
+   "powerExponent": 1.6,
+   "powerMW": 0
+  },
+  "GeneratorCoal": {
+   "footprint": 260,
+   "id": "GeneratorCoal",
+   "name": "Coal-Powered Generator",
+   "powerExponent": 1.6,
+   "powerMW": 0
+  },
+  "GeneratorFuel": {
+   "footprint": 400,
+   "id": "GeneratorFuel",
+   "name": "Fuel-Powered Generator",
+   "powerExponent": 1.6,
+   "powerMW": 0
+  },
+  "GeneratorNuclear": {
+   "footprint": 1548,
+   "id": "GeneratorNuclear",
+   "name": "Nuclear Power Plant",
+   "powerExponent": 1.6,
+   "powerMW": 0
+  },
+  "HadronCollider": {
+   "footprint": 912,
+   "id": "HadronCollider",
+   "name": "Particle Accelerator",
+   "powerExponent": 1.321929,
+   "powerMW": 0,
+   "sloopSlots": 4
+  },
+  "ManufacturerMk1": {
+   "footprint": 360,
+   "id": "ManufacturerMk1",
+   "name": "Manufacturer",
+   "powerExponent": 1.321929,
+   "powerMW": 55,
+   "sloopSlots": 4
+  },
+  "OilRefinery": {
+   "footprint": 200,
+   "id": "OilRefinery",
+   "name": "Refinery",
+   "powerExponent": 1.321929,
+   "powerMW": 30,
+   "sloopSlots": 2
+  },
+  "Packager": {
+   "footprint": 64,
+   "id": "Packager",
+   "name": "Packager",
+   "powerExponent": 1.321929,
+   "powerMW": 10
+  },
+  "QuantumEncoder": {
+   "footprint": 1200,
+   "id": "QuantumEncoder",
+   "name": "Quantum Encoder",
+   "powerExponent": 1.321929,
+   "powerMW": 0,
+   "sloopSlots": 4
+  },
+  "SmelterMk1": {
+   "footprint": 54,
+   "id": "SmelterMk1",
+   "name": "Smelter",
+   "powerExponent": 1.321929,
+   "powerMW": 4
+  }
+ },
+ "defaultImports": [
+  "Coal",
+  "LiquidOil",
+  "NitrogenGas",
+  "OreBauxite",
+  "OreCopper",
+  "OreGold",
+  "OreIron",
+  "OreUranium",
+  "RawQuartz",
+  "SAM",
+  "Stone",
+  "Sulfur",
+  "Water"
+ ],
+ "features": {
+  "areaUnit": "m²",
+  "clock": true,
+  "footprint": true,
+  "power": true,
+  "productivity": false,
+  "sloops": true,
+  "speedBonus": false
+ },
+ "game": "satisfactory",
+ "generatedAt": "2026-10-20T04:06:49.948Z",
+ "items": {
+  "AlienDNACapsule": {
+   "form": "solid",
+   "id": "AlienDNACapsule",
+   "name": "Alien DNA Capsule",
+   "recipe": "AlienDNACapsule"
+  },
+  "AlienPowerFuel": {
+   "form": "solid",
+   "id": "AlienPowerFuel",
+   "name": "Alien Power Matrix",
+   "recipe": "AlienPowerFuel"
+  },
+  "AlienProtein": {
+   "form": "solid",
+   "id": "AlienProtein",
+   "name": "Alien Protein",
+   "recipe": "Protein_Crab"
+  },
+  "AluminaSolution": {
+   "form": "liquid",
+   "id": "AluminaSolution",
+   "name": "Alumina Solution",
+   "recipe": "AluminaSolution"
+  },
+  "AluminumCasing": {
+   "form": "solid",
+   "id": "AluminumCasing",
+   "name": "Aluminum Casing",
+   "recipe": "AluminumCasing"
+  },
+  "AluminumIngot": {
+   "form": "solid",
+   "id": "AluminumIngot",
+   "name": "Aluminum Ingot",
+   "recipe": "IngotAluminum"
+  },
+  "AluminumPlate": {
+   "form": "solid",
+   "id": "AluminumPlate",
+   "name": "Alclad Aluminum Sheet",
+   "recipe": "AluminumSheet"
+  },
+  "AluminumPlateReinforced": {
+   "form": "solid",
+   "id": "AluminumPlateReinforced",
+   "name": "Heat Sink",
+   "recipe": "HeatSink"
+  },
+  "AluminumScrap": {
+   "form": "solid",
+   "id": "AluminumScrap",
+   "name": "Aluminum Scrap",
+   "recipe": "AluminumScrap"
+  },
+  "BP_EqDescZipLine": {
+   "form": "solid",
+   "id": "BP_EqDescZipLine",
+   "name": "Zipline"
+  },
+  "BP_EquipmentDescriptorCandyCane": {
+   "form": "solid",
+   "id": "BP_EquipmentDescriptorCandyCane",
+   "name": "Candy Cane Basher"
+  },
+  "BP_EquipmentDescriptorGasmask": {
+   "form": "solid",
+   "id": "BP_EquipmentDescriptorGasmask",
+   "name": "Gas Mask"
+  },
+  "BP_EquipmentDescriptorHazmatSuit": {
+   "form": "solid",
+   "id": "BP_EquipmentDescriptorHazmatSuit",
+   "name": "Hazmat Suit"
+  },
+  "BP_EquipmentDescriptorHoverPack": {
+   "form": "solid",
+   "id": "BP_EquipmentDescriptorHoverPack",
+   "name": "Hoverpack"
+  },
+  "BP_EquipmentDescriptorJetPack": {
+   "form": "solid",
+   "id": "BP_EquipmentDescriptorJetPack",
+   "name": "Jetpack"
+  },
+  "BP_EquipmentDescriptorJumpingStilts": {
+   "form": "solid",
+   "id": "BP_EquipmentDescriptorJumpingStilts",
+   "name": "Blade Runners"
+  },
+  "BP_EquipmentDescriptorNobeliskDetonator": {
+   "form": "solid",
+   "id": "BP_EquipmentDescriptorNobeliskDetonator",
+   "name": "Nobelisk Detonator"
+  },
+  "BP_EquipmentDescriptorObjectScanner": {
+   "form": "solid",
+   "id": "BP_EquipmentDescriptorObjectScanner",
+   "name": "Object Scanner"
+  },
+  "BP_EquipmentDescriptorRifle": {
+   "form": "solid",
+   "id": "BP_EquipmentDescriptorRifle",
+   "name": "Rifle"
+  },
+  "BP_EquipmentDescriptorShockShank": {
+   "form": "solid",
+   "id": "BP_EquipmentDescriptorShockShank",
+   "name": "Xeno-Zapper"
+  },
+  "BP_EquipmentDescriptorStunSpear": {
+   "form": "solid",
+   "id": "BP_EquipmentDescriptorStunSpear",
+   "name": "Xeno-Basher"
+  },
+  "BP_ItemDescriptorPortableMiner": {
+   "form": "solid",
+   "id": "BP_ItemDescriptorPortableMiner",
+   "name": "Portable Miner",
+   "recipe": "Alternate_AutomatedMiner"
+  },
+  "Battery": {
+   "energyMJ": 6000,
+   "form": "solid",
+   "id": "Battery",
+   "name": "Battery",
+   "recipe": "Battery"
+  },
+  "Berry": {
+   "form": "solid",
+   "id": "Berry",
+   "name": "Paleberry"
+  },
+  "Biofuel": {
+   "energyMJ": 450,
+   "form": "solid",
+   "id": "Biofuel",
+   "name": "Solid Biofuel",
+   "recipe": "Biofuel"
+  },
+  "Cable": {
+   "form": "solid",
+   "id": "Cable",
+   "name": "Cable",
+   "recipe": "Cable"
+  },
+  "CandyCane": {
+   "form": "solid",
+   "id": "CandyCane",
+   "name": "Candy Cane",
+   "recipe": "CandyCane"
+  },
+  "CartridgeChaos": {
+   "form": "solid",
+   "id": "CartridgeChaos",
+   "name": "Turbo Rifle Ammo",
+   "recipe": "CartridgeChaos"
+  },
+  "CartridgeSmartProjectile": {
+   "form": "solid",
+   "id": "CartridgeSmartProjectile",
+   "name": "Homing Rifle Ammo",
+   "recipe": "CartridgeSmart"
+  },
+  "CartridgeStandard": {
+   "form": "solid",
+   "id": "CartridgeStandard",
+   "name": "Rifle Ammo",
+   "recipe": "Cartridge"
+  },
+  "Cement": {
+   "form": "solid",
+   "id": "Cement",
+   "name": "Concrete",
+   "recipe": "Concrete"
+  },
+  "Chainsaw": {
+   "form": "solid",
+   "id": "Chainsaw",
+   "name": "Chainsaw"
+  },
+  "CircuitBoard": {
+   "form": "solid",
+   "id": "CircuitBoard",
+   "name": "Circuit Board",
+   "recipe": "CircuitBoard"
+  },
+  "CircuitBoardHighSpeed": {
+   "form": "solid",
+   "id": "CircuitBoardHighSpeed",
+   "name": "AI Limiter",
+   "recipe": "AILimiter"
+  },
+  "Coal": {
+   "energyMJ": 300,
+   "form": "solid",
+   "id": "Coal",
+   "name": "Coal",
+   "raw": true
+  },
+  "CompactedCoal": {
+   "energyMJ": 630,
+   "form": "solid",
+   "id": "CompactedCoal",
+   "name": "Compacted Coal",
+   "recipe": "Alternate_EnrichedCoal"
+  },
+  "Computer": {
+   "form": "solid",
+   "id": "Computer",
+   "name": "Computer",
+   "recipe": "Computer"
+  },
+  "ComputerSuper": {
+   "form": "solid",
+   "id": "ComputerSuper",
+   "name": "Supercomputer",
+   "recipe": "ComputerSuper"
+  },
+  "CoolingSystem": {
+   "form": "solid",
+   "id": "CoolingSystem",
+   "name": "Cooling System",
+   "recipe": "CoolingSystem"
+  },
+  "CopperDust": {
+   "form": "solid",
+   "id": "CopperDust",
+   "name": "Copper Powder",
+   "recipe": "CopperDust"
+  },
+  "CopperIngot": {
+   "form": "solid",
+   "id": "CopperIngot",
+   "name": "Copper Ingot",
+   "recipe": "IngotCopper"
+  },
+  "CopperSheet": {
+   "form": "solid",
+   "id": "CopperSheet",
+   "name": "Copper Sheet",
+   "recipe": "CopperSheet"
+  },
+  "Crystal": {
+   "form": "solid",
+   "id": "Crystal",
+   "name": "Blue Power Slug"
+  },
+  "CrystalOscillator": {
+   "form": "solid",
+   "id": "CrystalOscillator",
+   "name": "Crystal Oscillator",
+   "recipe": "CrystalOscillator"
+  },
+  "CrystalShard": {
+   "form": "solid",
+   "id": "CrystalShard",
+   "name": "Power Shard",
+   "recipe": "PowerCrystalShard_1"
+  },
+  "Crystal_mk2": {
+   "form": "solid",
+   "id": "Crystal_mk2",
+   "name": "Yellow Power Slug"
+  },
+  "Crystal_mk3": {
+   "form": "solid",
+   "id": "Crystal_mk3",
+   "name": "Purple Power Slug"
+  },
+  "DarkEnergy": {
+   "form": "gas",
+   "id": "DarkEnergy",
+   "name": "Dark Matter Residue",
+   "recipe": "DarkEnergy"
+  },
+  "DarkMatter": {
+   "form": "solid",
+   "id": "DarkMatter",
+   "name": "Dark Matter Crystal",
+   "recipe": "DarkMatter"
+  },
+  "Diamond": {
+   "form": "solid",
+   "id": "Diamond",
+   "name": "Diamonds",
+   "recipe": "Diamond"
+  },
+  "DissolvedSilica": {
+   "form": "liquid",
+   "id": "DissolvedSilica",
+   "name": "Dissolved Silica",
+   "recipe": "Alternate_Quartz_Purified"
+  },
+  "ElectromagneticControlRod": {
+   "form": "solid",
+   "id": "ElectromagneticControlRod",
+   "name": "Electromagnetic Control Rod",
+   "recipe": "ElectromagneticControlRod"
+  },
+  "Fabric": {
+   "form": "solid",
+   "id": "Fabric",
+   "name": "Fabric",
+   "recipe": "Fabric"
+  },
+  "FicsiteIngot": {
+   "form": "solid",
+   "id": "FicsiteIngot",
+   "name": "Ficsite Ingot",
+   "recipe": "FicsiteIngot_AL"
+  },
+  "FicsiteMesh": {
+   "form": "solid",
+   "id": "FicsiteMesh",
+   "name": "Ficsite Trigon",
+   "recipe": "FicsiteMesh"
+  },
+  "Ficsonium": {
+   "form": "solid",
+   "id": "Ficsonium",
+   "name": "Ficsonium",
+   "recipe": "Ficsonium"
+  },
+  "FicsoniumFuelRod": {
+   "energyMJ": 150000,
+   "form": "solid",
+   "id": "FicsoniumFuelRod",
+   "name": "Ficsonium Fuel Rod",
+   "recipe": "FicsoniumFuelRod"
+  },
+  "Filter": {
+   "form": "solid",
+   "id": "Filter",
+   "name": "Gas Filter",
+   "recipe": "FilterGasMask"
+  },
+  "Fireworks_Projectile_01": {
+   "form": "solid",
+   "id": "Fireworks_Projectile_01",
+   "name": "Sweet Fireworks",
+   "recipe": "Fireworks_01"
+  },
+  "Fireworks_Projectile_02": {
+   "form": "solid",
+   "id": "Fireworks_Projectile_02",
+   "name": "Fancy Fireworks",
+   "recipe": "Fireworks_02"
+  },
+  "Fireworks_Projectile_03": {
+   "form": "solid",
+   "id": "Fireworks_Projectile_03",
+   "name": "Sparkly Fireworks",
+   "recipe": "Fireworks_03"
+  },
+  "FluidCanister": {
+   "form": "solid",
+   "id": "FluidCanister",
+   "name": "Empty Canister",
+   "recipe": "FluidCanister"
+  },
+  "Fuel": {
+   "energyMJ": 750,
+   "form": "solid",
+   "id": "Fuel",
+   "name": "Packaged Fuel",
+   "recipe": "Fuel"
+  },
+  "GasTank": {
+   "form": "solid",
+   "id": "GasTank",
+   "name": "Empty Fluid Tank",
+   "recipe": "GasTank"
+  },
+  "GenericBiomass": {
+   "energyMJ": 180,
+   "form": "solid",
+   "id": "GenericBiomass",
+   "name": "Biomass",
+   "recipe": "Biomass_AlienProtein"
+  },
+  "Gift": {
+   "form": "solid",
+   "id": "Gift",
+   "name": "FICSMAS Gift"
+  },
+  "GoldIngot": {
+   "form": "solid",
+   "id": "GoldIngot",
+   "name": "Caterium Ingot",
+   "recipe": "IngotCaterium"
+  },
+  "GolfCart": {
+   "form": "solid",
+   "id": "GolfCart",
+   "name": "Factory Cart™"
+  },
+  "GolfCartGold": {
+   "form": "solid",
+   "id": "GolfCartGold",
+   "name": "Golden Factory Cart™"
+  },
+  "Gunpowder": {
+   "form": "solid",
+   "id": "Gunpowder",
+   "name": "Black Powder",
+   "recipe": "Gunpowder"
+  },
+  "GunpowderMK2": {
+   "form": "solid",
+   "id": "GunpowderMK2",
+   "name": "Smokeless Powder",
+   "recipe": "GunpowderMK2"
+  },
+  "HatcherParts": {
+   "form": "solid",
+   "id": "HatcherParts",
+   "name": "Hatcher Remains"
+  },
+  "HazmatFilter": {
+   "form": "solid",
+   "id": "HazmatFilter",
+   "name": "Iodine-Infused Filter",
+   "recipe": "FilterHazmat"
+  },
+  "HeavyOilResidue": {
+   "energyMJ": 400,
+   "form": "liquid",
+   "id": "HeavyOilResidue",
+   "name": "Heavy Oil Residue",
+   "recipe": "Alternate_HeavyOilResidue"
+  },
+  "HighSpeedConnector": {
+   "form": "solid",
+   "id": "HighSpeedConnector",
+   "name": "High-Speed Connector",
+   "recipe": "HighSpeedConnector"
+  },
+  "HighSpeedWire": {
+   "form": "solid",
+   "id": "HighSpeedWire",
+   "name": "Quickwire",
+   "recipe": "Quickwire"
+  },
+  "HogParts": {
+   "form": "solid",
+   "id": "HogParts",
+   "name": "Hog Remains"
+  },
+  "IonizedFuel": {
+   "energyMJ": 5000,
+   "form": "gas",
+   "id": "IonizedFuel",
+   "name": "Ionized Fuel",
+   "recipe": "IonizedFuel"
+  },
+  "IronIngot": {
+   "form": "solid",
+   "id": "IronIngot",
+   "name": "Iron Ingot",
+   "recipe": "IngotIron"
+  },
+  "IronPlate": {
+   "form": "solid",
+   "id": "IronPlate",
+   "name": "Iron Plate",
+   "recipe": "IronPlate"
+  },
+  "IronPlateReinforced": {
+   "form": "solid",
+   "id": "IronPlateReinforced",
+   "name": "Reinforced Iron Plate",
+   "recipe": "IronPlateReinforced"
+  },
+  "IronRod": {
+   "form": "solid",
+   "id": "IronRod",
+   "name": "Iron Rod",
+   "recipe": "IronRod"
+  },
+  "IronScrew": {
+   "form": "solid",
+   "id": "IronScrew",
+   "name": "Screws",
+   "recipe": "Screw"
+  },
+  "Leaves": {
+   "energyMJ": 15,
+   "form": "solid",
+   "id": "Leaves",
+   "name": "Leaves"
+  },
+  "LiquidBiofuel": {
+   "energyMJ": 750,
+   "form": "liquid",
+   "id": "LiquidBiofuel",
+   "name": "Liquid Biofuel",
+   "recipe": "LiquidBiofuel"
+  },
+  "LiquidFuel": {
+   "energyMJ": 750,
+   "form": "liquid",
+   "id": "LiquidFuel",
+   "name": "Fuel",
+   "recipe": "LiquidFuel"
+  },
+  "LiquidOil": {
+   "energyMJ": 320,
+   "form": "liquid",
+   "id": "LiquidOil",
+   "name": "Crude Oil",
+   "raw": true
+  },
+  "LiquidTurboFuel": {
+   "energyMJ": 2000,
+   "form": "liquid",
+   "id": "LiquidTurboFuel",
+   "name": "Turbofuel",
+   "recipe": "Alternate_TurboBlendFuel"
+  },
+  "Medkit": {
+   "form": "solid",
+   "id": "Medkit",
+   "name": "Medicinal Inhaler"
+  },
+  "ModularFrame": {
+   "form": "solid",
+   "id": "ModularFrame",
+   "name": "Modular Frame",
+   "recipe": "ModularFrame"
+  },
+  "ModularFrameFused": {
+   "form": "solid",
+   "id": "ModularFrameFused",
+   "name": "Fused Modular Frame",
+   "recipe": "FusedModularFrame"
+  },
+  "ModularFrameHeavy": {
+   "form": "solid",
+   "id": "ModularFrameHeavy",
+   "name": "Heavy Modular Frame",
+   "recipe": "ModularFrameHeavy"
+  },
+  "ModularFrameLightweight": {
+   "form": "solid",
+   "id": "ModularFrameLightweight",
+   "name": "Radio Control Unit",
+   "recipe": "RadioControlUnit"
+  },
+  "Motor": {
+   "form": "solid",
+   "id": "Motor",
+   "name": "Motor",
+   "recipe": "Motor"
+  },
+  "MotorLightweight": {
+   "form": "solid",
+   "id": "MotorLightweight",
+   "name": "Turbo Motor",
+   "recipe": "MotorTurbo"
+  },
+  "Mycelia": {
+   "energyMJ": 20,
+   "form": "solid",
+   "id": "Mycelia",
+   "name": "Mycelia"
+  },
+  "NitricAcid": {
+   "form": "liquid",
+   "id": "NitricAcid",
+   "name": "Nitric Acid",
+   "recipe": "NitricAcid"
+  },
+  "NitrogenGas": {
+   "form": "gas",
+   "id": "NitrogenGas",
+   "name": "Nitrogen Gas",
+   "raw": true
+  },
+  "NobeliskCluster": {
+   "form": "solid",
+   "id": "NobeliskCluster",
+   "name": "Cluster Nobelisk",
+   "recipe": "NobeliskCluster"
+  },
+  "NobeliskExplosive": {
+   "form": "solid",
+   "id": "NobeliskExplosive",
+   "name": "Nobelisk",
+   "recipe": "Nobelisk"
+  },
+  "NobeliskGas": {
+   "form": "solid",
+   "id": "NobeliskGas",
+   "name": "Gas Nobelisk",
+   "recipe": "NobeliskGas"
+  },
+  "NobeliskNuke": {
+   "form": "solid",
+   "id": "NobeliskNuke",
+   "name": "Nuke Nobelisk",
+   "recipe": "NobeliskNuke"
+  },
+  "NobeliskShockwave": {
+   "form": "solid",
+   "id": "NobeliskShockwave",
+   "name": "Pulse Nobelisk",
+   "recipe": "NobeliskShockwave"
+  },
+  "NonFissibleUranium": {
+   "form": "solid",
+   "id": "NonFissibleUranium",
+   "name": "Non-Fissile Uranium",
+   "recipe": "NonFissileUranium"
+  },
+  "NuclearFuelRod": {
+   "energyMJ": 750000,
+   "form": "solid",
+   "id": "NuclearFuelRod",
+   "name": "Uranium Fuel Rod",
+   "recipe": "NuclearFuelRod"
+  },
+  "NuclearWaste": {
+   "form": "solid",
+   "id": "NuclearWaste",
+   "name": "Uranium Waste"
+  },
+  "Nut": {
+   "form": "solid",
+   "id": "Nut",
+   "name": "Beryl Nut"
+  },
+  "OreBauxite": {
+   "form": "solid",
+   "id": "OreBauxite",
+   "name": "Bauxite",
+   "raw": true
+  },
+  "OreCopper": {
+   "form": "solid",
+   "id": "OreCopper",
+   "name": "Copper Ore",
+   "raw": true
+  },
+  "OreGold": {
+   "form": "solid",
+   "id": "OreGold",
+   "name": "Caterium Ore",
+   "raw": true
+  },
+  "OreIron": {
+   "form": "solid",
+   "id": "OreIron",
+   "name": "Iron Ore",
+   "raw": true
+  },
+  "OreUranium": {
+   "form": "solid",
+   "id": "OreUranium",
+   "name": "Uranium",
+   "raw": true
+  },
+  "PackagedAlumina": {
+   "form": "solid",
+   "id": "PackagedAlumina",
+   "name": "Packaged Alumina Solution",
+   "recipe": "PackagedAlumina"
+  },
+  "PackagedBiofuel": {
+   "energyMJ": 750,
+   "form": "solid",
+   "id": "PackagedBiofuel",
+   "name": "Packaged Liquid Biofuel",
+   "recipe": "PackagedBiofuel"
+  },
+  "PackagedIonizedFuel": {
+   "energyMJ": 10000,
+   "form": "solid",
+   "id": "PackagedIonizedFuel",
+   "name": "Packaged Ionized Fuel",
+   "recipe": "PackagedIonizedFuel"
+  },
+  "PackagedNitricAcid": {
+   "form": "solid",
+   "id": "PackagedNitricAcid",
+   "name": "Packaged Nitric Acid",
+   "recipe": "PackagedNitricAcid"
+  },
+  "PackagedNitrogenGas": {
+   "form": "solid",
+   "id": "PackagedNitrogenGas",
+   "name": "Packaged Nitrogen Gas",
+   "recipe": "PackagedNitrogen"
+  },
+  "PackagedOil": {
+   "energyMJ": 320,
+   "form": "solid",
+   "id": "PackagedOil",
+   "name": "Packaged Oil",
+   "recipe": "PackagedCrudeOil"
+  },
+  "PackagedOilResidue": {
+   "energyMJ": 400,
+   "form": "solid",
+   "id": "PackagedOilResidue",
+   "name": "Packaged Heavy Oil Residue",
+   "recipe": "PackagedOilResidue"
+  },
+  "PackagedRocketFuel": {
+   "energyMJ": 7200,
+   "form": "solid",
+   "id": "PackagedRocketFuel",
+   "name": "Packaged Rocket Fuel",
+   "recipe": "PackagedRocketFuel"
+  },
+  "PackagedSulfuricAcid": {
+   "form": "solid",
+   "id": "PackagedSulfuricAcid",
+   "name": "Packaged Sulfuric Acid",
+   "recipe": "PackagedSulfuricAcid"
+  },
+  "PackagedWater": {
+   "form": "solid",
+   "id": "PackagedWater",
+   "name": "Packaged Water",
+   "recipe": "PackagedWater"
+  },
+  "Parachute": {
+   "form": "solid",
+   "id": "Parachute",
+   "name": "Parachute"
+  },
+  "PetroleumCoke": {
+   "energyMJ": 180,
+   "form": "solid",
+   "id": "PetroleumCoke",
+   "name": "Petroleum Coke",
+   "recipe": "PetroleumCoke"
+  },
+  "Plastic": {
+   "form": "solid",
+   "id": "Plastic",
+   "name": "Plastic",
+   "recipe": "Plastic"
+  },
+  "PlutoniumCell": {
+   "form": "solid",
+   "id": "PlutoniumCell",
+   "name": "Encased Plutonium Cell",
+   "recipe": "PlutoniumCell"
+  },
+  "PlutoniumFuelRod": {
+   "energyMJ": 1500000,
+   "form": "solid",
+   "id": "PlutoniumFuelRod",
+   "name": "Plutonium Fuel Rod",
+   "recipe": "PlutoniumFuelRod"
+  },
+  "PlutoniumPellet": {
+   "form": "solid",
+   "id": "PlutoniumPellet",
+   "name": "Plutonium Pellet",
+   "recipe": "Plutonium"
+  },
+  "PlutoniumWaste": {
+   "form": "solid",
+   "id": "PlutoniumWaste",
+   "name": "Plutonium Waste"
+  },
+  "PolymerResin": {
+   "form": "solid",
+   "id": "PolymerResin",
+   "name": "Polymer Resin",
+   "recipe": "Alternate_PolymerResin"
+  },
+  "PressureConversionCube": {
+   "form": "solid",
+   "id": "PressureConversionCube",
+   "name": "Pressure Conversion Cube",
+   "recipe": "PressureConversionCube"
+  },
+  "QuantumEnergy": {
+   "form": "gas",
+   "id": "QuantumEnergy",
+   "name": "Excited Photonic Matter",
+   "recipe": "QuantumEnergy"
+  },
+  "QuantumOscillator": {
+   "form": "solid",
+   "id": "QuantumOscillator",
+   "name": "Superposition Oscillator",
+   "recipe": "SuperpositionOscillator"
+  },
+  "QuartzCrystal": {
+   "form": "solid",
+   "id": "QuartzCrystal",
+   "name": "Quartz Crystal",
+   "recipe": "QuartzCrystal"
+  },
+  "RawQuartz": {
+   "form": "solid",
+   "id": "RawQuartz",
+   "name": "Raw Quartz",
+   "raw": true
+  },
+  "RebarGunProjectile": {
+   "form": "solid",
+   "id": "RebarGunProjectile",
+   "name": "Rebar Gun"
+  },
+  "Rebar_Explosive": {
+   "form": "solid",
+   "id": "Rebar_Explosive",
+   "name": "Explosive Rebar",
+   "recipe": "Rebar_Explosive"
+  },
+  "Rebar_Spreadshot": {
+   "form": "solid",
+   "id": "Rebar_Spreadshot",
+   "name": "Shatter Rebar",
+   "recipe": "Rebar_Spreadshot"
+  },
+  "Rebar_Stunshot": {
+   "form": "solid",
+   "id": "Rebar_Stunshot",
+   "name": "Stun Rebar",
+   "recipe": "Rebar_Stunshot"
+  },
+  "RocketFuel": {
+   "energyMJ": 3600,
+   "form": "gas",
+   "id": "RocketFuel",
+   "name": "Rocket Fuel",
+   "recipe": "RocketFuel"
+  },
+  "Rotor": {
+   "form": "solid",
+   "id": "Rotor",
+   "name": "Rotor",
+   "recipe": "Rotor"
+  },
+  "Rubber": {
+   "form": "solid",
+   "id": "Rubber",
+   "name": "Rubber",
+   "recipe": "Rubber"
+  },
+  "SAM": {
+   "form": "solid",
+   "id": "SAM",
+   "name": "SAM",
+   "raw": true
+  },
+  "SAMFluctuator": {
+   "form": "solid",
+   "id": "SAMFluctuator",
+   "name": "SAM Fluctuator",
+   "recipe": "SAMFluctuator"
+  },
+  "SAMIngot": {
+   "form": "solid",
+   "id": "SAMIngot",
+   "name": "Reanimated SAM",
+   "recipe": "IngotSAM"
+  },
+  "Shroom": {
+   "form": "solid",
+   "id": "Shroom",
+   "name": "Bacon Agaric"
+  },
+  "Silica": {
+   "form": "solid",
+   "id": "Silica",
+   "name": "Silica",
+   "recipe": "Silica"
+  },
+  "SingularityCell": {
+   "form": "solid",
+   "id": "SingularityCell",
+   "name": "Singularity Cell",
+   "recipe": "SingularityCell"
+  },
+  "Snow": {
+   "form": "solid",
+   "id": "Snow",
+   "name": "FICSMAS Actual Snow",
+   "recipe": "Snow"
+  },
+  "SnowballProjectile": {
+   "form": "solid",
+   "id": "SnowballProjectile",
+   "name": "Snowball",
+   "recipe": "Snowball"
+  },
+  "SpaceElevatorPart_1": {
+   "form": "solid",
+   "id": "SpaceElevatorPart_1",
+   "name": "Smart Plating",
+   "recipe": "SpaceElevatorPart_1"
+  },
+  "SpaceElevatorPart_10": {
+   "form": "solid",
+   "id": "SpaceElevatorPart_10",
+   "name": "Biochemical Sculptor",
+   "recipe": "SpaceElevatorPart_10"
+  },
+  "SpaceElevatorPart_11": {
+   "form": "solid",
+   "id": "SpaceElevatorPart_11",
+   "name": "Ballistic Warp Drive",
+   "recipe": "SpaceElevatorPart_11"
+  },
+  "SpaceElevatorPart_12": {
+   "form": "solid",
+   "id": "SpaceElevatorPart_12",
+   "name": "AI Expansion Server",
+   "recipe": "SpaceElevatorPart_12"
+  },
+  "SpaceElevatorPart_2": {
+   "form": "solid",
+   "id": "SpaceElevatorPart_2",
+   "name": "Versatile Framework",
+   "recipe": "SpaceElevatorPart_2"
+  },
+  "SpaceElevatorPart_3": {
+   "form": "solid",
+   "id": "SpaceElevatorPart_3",
+   "name": "Automated Wiring",
+   "recipe": "SpaceElevatorPart_3"
+  },
+  "SpaceElevatorPart_4": {
+   "form": "solid",
+   "id": "SpaceElevatorPart_4",
+   "name": "Modular Engine",
+   "recipe": "SpaceElevatorPart_4"
+  },
+  "SpaceElevatorPart_5": {
+   "form": "solid",
+   "id": "SpaceElevatorPart_5",
+   "name": "Adaptive Control Unit",
+   "recipe": "SpaceElevatorPart_5"
+  },
+  "SpaceElevatorPart_6": {
+   "form": "solid",
+   "id": "SpaceElevatorPart_6",
+   "name": "Magnetic Field Generator",
+   "recipe": "SpaceElevatorPart_6"
+  },
+  "SpaceElevatorPart_7": {
+   "form": "solid",
+   "id": "SpaceElevatorPart_7",
+   "name": "Assembly Director System",
+   "recipe": "SpaceElevatorPart_7"
+  },
+  "SpaceElevatorPart_8": {
+   "form": "solid",
+   "id": "SpaceElevatorPart_8",
+   "name": "Thermal Propulsion Rocket",
+   "recipe": "SpaceElevatorPart_8"
+  },
+  "SpaceElevatorPart_9": {
+   "form": "solid",
+   "id": "SpaceElevatorPart_9",
+   "name": "Nuclear Pasta",
+   "recipe": "SpaceElevatorPart_9"
+  },
+  "SpikedRebar": {
+   "form": "solid",
+   "id": "SpikedRebar",
+   "name": "Iron Rebar",
+   "recipe": "SpikedRebar"
+  },
+  "SpitterParts": {
+   "form": "solid",
+   "id": "SpitterParts",
+   "name": "Spitter Remains"
+  },
+  "Stator": {
+   "form": "solid",
+   "id": "Stator",
+   "name": "Stator",
+   "recipe": "Stator"
+  },
+  "SteelIngot": {
+   "form": "solid",
+   "id": "SteelIngot",
+   "name": "Steel Ingot",
+   "recipe": "IngotSteel"
+  },
+  "SteelPipe": {
+   "form": "solid",
+   "id": "SteelPipe",
+   "name": "Steel Pipe",
+   "recipe": "SteelPipe"
+  },
+  "SteelPlate": {
+   "form": "solid",
+   "id": "SteelPlate",
+   "name": "Steel Beam",
+   "recipe": "SteelBeam"
+  },
+  "SteelPlateReinforced": {
+   "form": "solid",
+   "id": "SteelPlateReinforced",
+   "name": "Encased Industrial Beam",
+   "recipe": "EncasedIndustrialBeam"
+  },
+  "StingerParts": {
+   "form": "solid",
+   "id": "StingerParts",
+   "name": "Stinger Remains"
+  },
+  "Stone": {
+   "form": "solid",
+   "id": "Stone",
+   "name": "Limestone",
+   "raw": true
+  },
+  "Sulfur": {
+   "form": "solid",
+   "id": "Sulfur",
+   "name": "Sulfur",
+   "raw": true
+  },
+  "SulfuricAcid": {
+   "form": "liquid",
+   "id": "SulfuricAcid",
+   "name": "Sulfuric Acid",
+   "recipe": "SulfuricAcid"
+  },
+  "TemporalProcessor": {
+   "form": "solid",
+   "id": "TemporalProcessor",
+   "name": "Neural-Quantum Processor",
+   "recipe": "TemporalProcessor"
+  },
+  "TimeCrystal": {
+   "form": "solid",
+   "id": "TimeCrystal",
+   "name": "Time Crystal",
+   "recipe": "TimeCrystal"
+  },
+  "TurboFuel": {
+   "energyMJ": 2000,
+   "form": "solid",
+   "id": "TurboFuel",
+   "name": "Packaged Turbofuel",
+   "recipe": "PackagedTurboFuel"
+  },
+  "UraniumCell": {
+   "form": "solid",
+   "id": "UraniumCell",
+   "name": "Encased Uranium Cell",
+   "recipe": "UraniumCell"
+  },
+  "WAT1": {
+   "form": "solid",
+   "id": "WAT1",
+   "name": "Somersloop"
+  },
+  "WAT2": {
+   "form": "solid",
+   "id": "WAT2",
+   "name": "Mercer Sphere"
+  },
+  "Water": {
+   "form": "liquid",
+   "id": "Water",
+   "name": "Water",
+   "raw": true
+  },
+  "Wire": {
+   "form": "solid",
+   "id": "Wire",
+   "name": "Wire",
+   "recipe": "Wire"
+  },
+  "Wood": {
+   "energyMJ": 100,
+   "form": "solid",
+   "id": "Wood",
+   "name": "Wood"
+  },
+  "XmasBall1": {
+   "form": "solid",
+   "id": "XmasBall1",
+   "name": "Red FICSMAS Ornament",
+   "recipe": "XmasBall1"
+  },
+  "XmasBall2": {
+   "form": "solid",
+   "id": "XmasBall2",
+   "name": "Blue FICSMAS Ornament",
+   "recipe": "XmasBall2"
+  },
+  "XmasBall3": {
+   "form": "solid",
+   "id": "XmasBall3",
+   "name": "Copper FICSMAS Ornament",
+   "recipe": "XmasBall3"
+  },
+  "XmasBall4": {
+   "form": "solid",
+   "id": "XmasBall4",
+   "name": "Iron FICSMAS Ornament",
+   "recipe": "XmasBall4"
+  },
+  "XmasBallCluster": {
+   "form": "solid",
+   "id": "XmasBallCluster",
+   "name": "FICSMAS Ornament Bundle",
+   "recipe": "XmasBallCluster"
+  },
+  "XmasBow": {
+   "form": "solid",
+   "id": "XmasBow",
+   "name": "FICSMAS Bow",
+   "recipe": "XmasBow"
+  },
+  "XmasBranch": {
+   "form": "solid",
+   "id": "XmasBranch",
+   "name": "FICSMAS Tree Branch",
+   "recipe": "XmasBranch"
+  },
+  "XmasDataCartridge1": {
+   "form": "solid",
+   "id": "XmasDataCartridge1",
+   "name": "FICSMAS Data Cartridge Day 1"
+  },
+  "XmasDataCartridge2": {
+   "form": "solid",
+   "id": "XmasDataCartridge2",
+   "name": "FICSMAS Data Cartridge Day 4"
+  },
+  "XmasDataCartridge3": {
+   "form": "solid",
+   "id": "XmasDataCartridge3",
+   "name": "FICSMAS Data Cartridge Day 8"
+  },
+  "XmasDataCartridge4": {
+   "form": "solid",
+   "id": "XmasDataCartridge4",
+   "name": "FICSMAS Data Cartridge Day 14"
+  },
+  "XmasStar": {
+   "form": "solid",
+   "id": "XmasStar",
+   "name": "FICSMAS Wonder Star",
+   "recipe": "XmasStar"
+  },
+  "XmasWreath": {
+   "form": "solid",
+   "id": "XmasWreath",
+   "name": "FICSMAS Wreath",
+   "recipe": "XmasWreath"
+  }
+ },
+ "name": "Satisfactory",
+ "recipes": {
+  "AILimiter": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "AILimiter",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "CopperSheet"
+    },
+    {
+     "amount": 20,
+     "item": "HighSpeedWire"
+    }
+   ],
+   "name": "AI Limiter",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "CircuitBoardHighSpeed"
+    }
+   ],
+   "time": 12
+  },
+  "AlienDNACapsule": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "AlienDNACapsule",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "AlienProtein"
+    }
+   ],
+   "name": "Alien DNA Capsule",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "AlienDNACapsule"
+    }
+   ],
+   "time": 6
+  },
+  "AlienPowerFuel": {
+   "buildings": [
+    "QuantumEncoder"
+   ],
+   "id": "AlienPowerFuel",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "SAMFluctuator"
+    },
+    {
+     "amount": 3,
+     "item": "CrystalShard"
+    },
+    {
+     "amount": 3,
+     "item": "QuantumOscillator"
+    },
+    {
+     "amount": 24,
+     "item": "QuantumEnergy"
+    }
+   ],
+   "name": "Alien Power Matrix",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "AlienPowerFuel"
+    },
+    {
+     "amount": 24,
+     "item": "DarkEnergy"
+    }
+   ],
+   "power": {
+    "max": 2000,
+    "min": 0
+   },
+   "time": 24
+  },
+  "Alternate_AILimiter_Plastic": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_AILimiter_Plastic",
+   "inputs": [
+    {
+     "amount": 30,
+     "item": "HighSpeedWire"
+    },
+    {
+     "amount": 7,
+     "item": "Plastic"
+    }
+   ],
+   "name": "Alternate: Plastic AI Limiter",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "CircuitBoardHighSpeed"
+    }
+   ],
+   "time": 15
+  },
+  "Alternate_AdheredIronPlate": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_AdheredIronPlate",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "IronPlate"
+    },
+    {
+     "amount": 1,
+     "item": "Rubber"
+    }
+   ],
+   "name": "Alternate: Adhered Iron Plate",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "IronPlateReinforced"
+    }
+   ],
+   "time": 16
+  },
+  "Alternate_AlcladCasing": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_AlcladCasing",
+   "inputs": [
+    {
+     "amount": 20,
+     "item": "AluminumIngot"
+    },
+    {
+     "amount": 10,
+     "item": "CopperIngot"
+    }
+   ],
+   "name": "Alternate: Alclad Casing",
+   "outputs": [
+    {
+     "amount": 15,
+     "item": "AluminumCasing"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_AluminumRod": {
+   "alternate": true,
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Alternate_AluminumRod",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "AluminumIngot"
+    }
+   ],
+   "name": "Alternate: Aluminum Rod",
+   "outputs": [
+    {
+     "amount": 7,
+     "item": "IronRod"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_AutomatedMiner": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_AutomatedMiner",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "SteelPipe"
+    },
+    {
+     "amount": 4,
+     "item": "IronPlate"
+    }
+   ],
+   "name": "Alternate: Automated Miner",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "BP_ItemDescriptorPortableMiner"
+    }
+   ],
+   "time": 60
+  },
+  "Alternate_BoltedFrame": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_BoltedFrame",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "IronPlateReinforced"
+    },
+    {
+     "amount": 56,
+     "item": "IronScrew"
+    }
+   ],
+   "name": "Alternate: Bolted Frame",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "ModularFrame"
+    }
+   ],
+   "time": 24
+  },
+  "Alternate_Cable_1": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_Cable_1",
+   "inputs": [
+    {
+     "amount": 9,
+     "item": "Wire"
+    },
+    {
+     "amount": 6,
+     "item": "Rubber"
+    }
+   ],
+   "name": "Alternate: Insulated Cable",
+   "outputs": [
+    {
+     "amount": 20,
+     "item": "Cable"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_Cable_2": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_Cable_2",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "HighSpeedWire"
+    },
+    {
+     "amount": 2,
+     "item": "Rubber"
+    }
+   ],
+   "name": "Alternate: Quickwire Cable",
+   "outputs": [
+    {
+     "amount": 11,
+     "item": "Cable"
+    }
+   ],
+   "time": 24
+  },
+  "Alternate_CateriumIngot_Leached": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_CateriumIngot_Leached",
+   "inputs": [
+    {
+     "amount": 9,
+     "item": "OreGold"
+    },
+    {
+     "amount": 5,
+     "item": "SulfuricAcid"
+    }
+   ],
+   "name": "Alternate: Leached Caterium Ingot",
+   "outputs": [
+    {
+     "amount": 6,
+     "item": "GoldIngot"
+    }
+   ],
+   "time": 10
+  },
+  "Alternate_CateriumIngot_Tempered": {
+   "alternate": true,
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "Alternate_CateriumIngot_Tempered",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "OreGold"
+    },
+    {
+     "amount": 2,
+     "item": "PetroleumCoke"
+    }
+   ],
+   "name": "Alternate: Tempered Caterium Ingot",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "GoldIngot"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_CircuitBoard_1": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_CircuitBoard_1",
+   "inputs": [
+    {
+     "amount": 11,
+     "item": "CopperSheet"
+    },
+    {
+     "amount": 11,
+     "item": "Silica"
+    }
+   ],
+   "name": "Alternate: Silicon Circuit Board",
+   "outputs": [
+    {
+     "amount": 5,
+     "item": "CircuitBoard"
+    }
+   ],
+   "time": 24
+  },
+  "Alternate_CircuitBoard_2": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_CircuitBoard_2",
+   "inputs": [
+    {
+     "amount": 10,
+     "item": "Plastic"
+    },
+    {
+     "amount": 30,
+     "item": "HighSpeedWire"
+    }
+   ],
+   "name": "Alternate: Caterium Circuit Board",
+   "outputs": [
+    {
+     "amount": 7,
+     "item": "CircuitBoard"
+    }
+   ],
+   "time": 48
+  },
+  "Alternate_ClassicBattery": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_ClassicBattery",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "Sulfur"
+    },
+    {
+     "amount": 7,
+     "item": "AluminumPlate"
+    },
+    {
+     "amount": 8,
+     "item": "Plastic"
+    },
+    {
+     "amount": 12,
+     "item": "Wire"
+    }
+   ],
+   "name": "Alternate: Classic Battery",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "Battery"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_Coal_1": {
+   "alternate": true,
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Alternate_Coal_1",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Wood"
+    }
+   ],
+   "name": "Alternate: Charcoal",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "Coal"
+    }
+   ],
+   "time": 4
+  },
+  "Alternate_Coal_2": {
+   "alternate": true,
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Alternate_Coal_2",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "GenericBiomass"
+    }
+   ],
+   "name": "Alternate: Biocoal",
+   "outputs": [
+    {
+     "amount": 6,
+     "item": "Coal"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_CoatedCable": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_CoatedCable",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "Wire"
+    },
+    {
+     "amount": 2,
+     "item": "HeavyOilResidue"
+    }
+   ],
+   "name": "Alternate: Coated Cable",
+   "outputs": [
+    {
+     "amount": 9,
+     "item": "Cable"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_CoatedIronCanister": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_CoatedIronCanister",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "IronPlate"
+    },
+    {
+     "amount": 1,
+     "item": "CopperSheet"
+    }
+   ],
+   "name": "Alternate: Coated Iron Canister",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "FluidCanister"
+    }
+   ],
+   "time": 4
+  },
+  "Alternate_CoatedIronPlate": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_CoatedIronPlate",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "IronIngot"
+    },
+    {
+     "amount": 1,
+     "item": "Plastic"
+    }
+   ],
+   "name": "Alternate: Coated Iron Plate",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "IronPlate"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_CokeSteelIngot": {
+   "alternate": true,
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "Alternate_CokeSteelIngot",
+   "inputs": [
+    {
+     "amount": 15,
+     "item": "OreIron"
+    },
+    {
+     "amount": 15,
+     "item": "PetroleumCoke"
+    }
+   ],
+   "name": "Alternate: Coke Steel Ingot",
+   "outputs": [
+    {
+     "amount": 20,
+     "item": "SteelIngot"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_Computer_1": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_Computer_1",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "CircuitBoard"
+    },
+    {
+     "amount": 14,
+     "item": "HighSpeedWire"
+    },
+    {
+     "amount": 6,
+     "item": "Rubber"
+    }
+   ],
+   "name": "Alternate: Caterium Computer",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Computer"
+    }
+   ],
+   "time": 16
+  },
+  "Alternate_Computer_2": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_Computer_2",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "CircuitBoard"
+    },
+    {
+     "amount": 1,
+     "item": "CrystalOscillator"
+    }
+   ],
+   "name": "Alternate: Crystal Computer",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Computer"
+    }
+   ],
+   "time": 36
+  },
+  "Alternate_Concrete": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_Concrete",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Silica"
+    },
+    {
+     "amount": 12,
+     "item": "Stone"
+    }
+   ],
+   "name": "Alternate: Fine Concrete",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "Cement"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_CoolingDevice": {
+   "alternate": true,
+   "buildings": [
+    "Blender"
+   ],
+   "id": "Alternate_CoolingDevice",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "AluminumPlateReinforced"
+    },
+    {
+     "amount": 1,
+     "item": "Motor"
+    },
+    {
+     "amount": 24,
+     "item": "NitrogenGas"
+    }
+   ],
+   "name": "Alternate: Cooling Device",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "CoolingSystem"
+    }
+   ],
+   "time": 24
+  },
+  "Alternate_CopperAlloyIngot": {
+   "alternate": true,
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "Alternate_CopperAlloyIngot",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "OreCopper"
+    },
+    {
+     "amount": 5,
+     "item": "OreIron"
+    }
+   ],
+   "name": "Alternate: Copper Alloy Ingot",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "CopperIngot"
+    }
+   ],
+   "time": 6
+  },
+  "Alternate_CopperIngot_Leached": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_CopperIngot_Leached",
+   "inputs": [
+    {
+     "amount": 9,
+     "item": "OreCopper"
+    },
+    {
+     "amount": 5,
+     "item": "SulfuricAcid"
+    }
+   ],
+   "name": "Alternate: Leached Copper Ingot",
+   "outputs": [
+    {
+     "amount": 22,
+     "item": "CopperIngot"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_CopperIngot_Tempered": {
+   "alternate": true,
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "Alternate_CopperIngot_Tempered",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "OreCopper"
+    },
+    {
+     "amount": 8,
+     "item": "PetroleumCoke"
+    }
+   ],
+   "name": "Alternate: Tempered Copper Ingot",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "CopperIngot"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_CopperRotor": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_CopperRotor",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "CopperSheet"
+    },
+    {
+     "amount": 52,
+     "item": "IronScrew"
+    }
+   ],
+   "name": "Alternate: Copper Rotor",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "Rotor"
+    }
+   ],
+   "time": 16
+  },
+  "Alternate_CrystalOscillator": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_CrystalOscillator",
+   "inputs": [
+    {
+     "amount": 10,
+     "item": "QuartzCrystal"
+    },
+    {
+     "amount": 7,
+     "item": "Rubber"
+    },
+    {
+     "amount": 1,
+     "item": "CircuitBoardHighSpeed"
+    }
+   ],
+   "name": "Alternate: Insulated Crystal Oscillator",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "CrystalOscillator"
+    }
+   ],
+   "time": 32
+  },
+  "Alternate_DarkMatter_Crystallization": {
+   "alternate": true,
+   "buildings": [
+    "HadronCollider"
+   ],
+   "id": "Alternate_DarkMatter_Crystallization",
+   "inputs": [
+    {
+     "amount": 10,
+     "item": "DarkEnergy"
+    }
+   ],
+   "name": "Alternate: Dark Matter Crystallization",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "DarkMatter"
+    }
+   ],
+   "power": {
+    "max": 1500,
+    "min": 500
+   },
+   "time": 3
+  },
+  "Alternate_DarkMatter_Trap": {
+   "alternate": true,
+   "buildings": [
+    "HadronCollider"
+   ],
+   "id": "Alternate_DarkMatter_Trap",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "TimeCrystal"
+    },
+    {
+     "amount": 5,
+     "item": "DarkEnergy"
+    }
+   ],
+   "name": "Alternate: Dark Matter Trap",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "DarkMatter"
+    }
+   ],
+   "power": {
+    "max": 1500,
+    "min": 500
+   },
+   "time": 2
+  },
+  "Alternate_Diamond_Cloudy": {
+   "alternate": true,
+   "buildings": [
+    "HadronCollider"
+   ],
+   "id": "Alternate_Diamond_Cloudy",
+   "inputs": [
+    {
+     "amount": 12,
+     "item": "Coal"
+    },
+    {
+     "amount": 24,
+     "item": "Stone"
+    }
+   ],
+   "name": "Alternate: Cloudy Diamonds",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Diamond"
+    }
+   ],
+   "power": {
+    "max": 750,
+    "min": 250
+   },
+   "time": 3
+  },
+  "Alternate_Diamond_OilBased": {
+   "alternate": true,
+   "buildings": [
+    "HadronCollider"
+   ],
+   "id": "Alternate_Diamond_OilBased",
+   "inputs": [
+    {
+     "amount": 10,
+     "item": "LiquidOil"
+    }
+   ],
+   "name": "Alternate: Oil-Based Diamonds",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Diamond"
+    }
+   ],
+   "power": {
+    "max": 750,
+    "min": 250
+   },
+   "time": 3
+  },
+  "Alternate_Diamond_Petroleum": {
+   "alternate": true,
+   "buildings": [
+    "HadronCollider"
+   ],
+   "id": "Alternate_Diamond_Petroleum",
+   "inputs": [
+    {
+     "amount": 24,
+     "item": "PetroleumCoke"
+    }
+   ],
+   "name": "Alternate: Petroleum Diamonds",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Diamond"
+    }
+   ],
+   "power": {
+    "max": 750,
+    "min": 250
+   },
+   "time": 2
+  },
+  "Alternate_Diamond_Pink": {
+   "alternate": true,
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Alternate_Diamond_Pink",
+   "inputs": [
+    {
+     "amount": 8,
+     "item": "Coal"
+    },
+    {
+     "amount": 3,
+     "item": "QuartzCrystal"
+    }
+   ],
+   "name": "Alternate: Pink Diamonds",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Diamond"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 4
+  },
+  "Alternate_Diamond_Turbo": {
+   "alternate": true,
+   "buildings": [
+    "HadronCollider"
+   ],
+   "id": "Alternate_Diamond_Turbo",
+   "inputs": [
+    {
+     "amount": 30,
+     "item": "Coal"
+    },
+    {
+     "amount": 2,
+     "item": "TurboFuel"
+    }
+   ],
+   "name": "Alternate: Turbo Diamonds",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "Diamond"
+    }
+   ],
+   "power": {
+    "max": 750,
+    "min": 250
+   },
+   "time": 3
+  },
+  "Alternate_DilutedFuel": {
+   "alternate": true,
+   "buildings": [
+    "Blender"
+   ],
+   "id": "Alternate_DilutedFuel",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "HeavyOilResidue"
+    },
+    {
+     "amount": 10,
+     "item": "Water"
+    }
+   ],
+   "name": "Alternate: Diluted Fuel",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "LiquidFuel"
+    }
+   ],
+   "time": 6
+  },
+  "Alternate_DilutedPackagedFuel": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_DilutedPackagedFuel",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "HeavyOilResidue"
+    },
+    {
+     "amount": 2,
+     "item": "PackagedWater"
+    }
+   ],
+   "name": "Alternate: Diluted Packaged Fuel",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Fuel"
+    }
+   ],
+   "time": 2
+  },
+  "Alternate_ElectricMotor": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_ElectricMotor",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "ElectromagneticControlRod"
+    },
+    {
+     "amount": 2,
+     "item": "Rotor"
+    }
+   ],
+   "name": "Alternate: Electric Motor",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Motor"
+    }
+   ],
+   "time": 16
+  },
+  "Alternate_ElectroAluminumScrap": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_ElectroAluminumScrap",
+   "inputs": [
+    {
+     "amount": 12,
+     "item": "AluminaSolution"
+    },
+    {
+     "amount": 4,
+     "item": "PetroleumCoke"
+    }
+   ],
+   "name": "Alternate: Electrode Aluminum Scrap",
+   "outputs": [
+    {
+     "amount": 20,
+     "item": "AluminumScrap"
+    },
+    {
+     "amount": 7,
+     "item": "Water"
+    }
+   ],
+   "time": 4
+  },
+  "Alternate_ElectrodeCircuitBoard": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_ElectrodeCircuitBoard",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "Rubber"
+    },
+    {
+     "amount": 8,
+     "item": "PetroleumCoke"
+    }
+   ],
+   "name": "Alternate: Electrode Circuit Board",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "CircuitBoard"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_ElectromagneticControlRod_1": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_ElectromagneticControlRod_1",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Stator"
+    },
+    {
+     "amount": 1,
+     "item": "HighSpeedConnector"
+    }
+   ],
+   "name": "Alternate: Electromagnetic Connection Rod",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "ElectromagneticControlRod"
+    }
+   ],
+   "time": 15
+  },
+  "Alternate_EncasedIndustrialBeam": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_EncasedIndustrialBeam",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "SteelPipe"
+    },
+    {
+     "amount": 5,
+     "item": "Cement"
+    }
+   ],
+   "name": "Alternate: Encased Industrial Pipe",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SteelPlateReinforced"
+    }
+   ],
+   "time": 15
+  },
+  "Alternate_EnrichedCoal": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_EnrichedCoal",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "Coal"
+    },
+    {
+     "amount": 5,
+     "item": "Sulfur"
+    }
+   ],
+   "name": "Alternate: Compacted Coal",
+   "outputs": [
+    {
+     "amount": 5,
+     "item": "CompactedCoal"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_FertileUranium": {
+   "alternate": true,
+   "buildings": [
+    "Blender"
+   ],
+   "id": "Alternate_FertileUranium",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "OreUranium"
+    },
+    {
+     "amount": 5,
+     "item": "NuclearWaste"
+    },
+    {
+     "amount": 3,
+     "item": "NitricAcid"
+    },
+    {
+     "amount": 5,
+     "item": "SulfuricAcid"
+    }
+   ],
+   "name": "Alternate: Fertile Uranium",
+   "outputs": [
+    {
+     "amount": 20,
+     "item": "NonFissibleUranium"
+    },
+    {
+     "amount": 8,
+     "item": "Water"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_FlexibleFramework": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_FlexibleFramework",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "ModularFrame"
+    },
+    {
+     "amount": 6,
+     "item": "SteelPlate"
+    },
+    {
+     "amount": 8,
+     "item": "Rubber"
+    }
+   ],
+   "name": "Alternate: Flexible Framework",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "SpaceElevatorPart_2"
+    }
+   ],
+   "time": 16
+  },
+  "Alternate_FusedWire": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_FusedWire",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "CopperIngot"
+    },
+    {
+     "amount": 1,
+     "item": "GoldIngot"
+    }
+   ],
+   "name": "Alternate: Fused Wire",
+   "outputs": [
+    {
+     "amount": 30,
+     "item": "Wire"
+    }
+   ],
+   "time": 20
+  },
+  "Alternate_Gunpowder_1": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_Gunpowder_1",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Sulfur"
+    },
+    {
+     "amount": 2,
+     "item": "CompactedCoal"
+    }
+   ],
+   "name": "Alternate: Fine Black Powder",
+   "outputs": [
+    {
+     "amount": 6,
+     "item": "Gunpowder"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_HeatFusedFrame": {
+   "alternate": true,
+   "buildings": [
+    "Blender"
+   ],
+   "id": "Alternate_HeatFusedFrame",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "ModularFrameHeavy"
+    },
+    {
+     "amount": 50,
+     "item": "AluminumIngot"
+    },
+    {
+     "amount": 8,
+     "item": "NitricAcid"
+    },
+    {
+     "amount": 10,
+     "item": "LiquidFuel"
+    }
+   ],
+   "name": "Alternate: Heat-Fused Frame",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "ModularFrameFused"
+    }
+   ],
+   "time": 20
+  },
+  "Alternate_HeatSink_1": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_HeatSink_1",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "AluminumCasing"
+    },
+    {
+     "amount": 3,
+     "item": "Rubber"
+    }
+   ],
+   "name": "Alternate: Heat Exchanger",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "AluminumPlateReinforced"
+    }
+   ],
+   "time": 6
+  },
+  "Alternate_HeavyFlexibleFrame": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_HeavyFlexibleFrame",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "ModularFrame"
+    },
+    {
+     "amount": 3,
+     "item": "SteelPlateReinforced"
+    },
+    {
+     "amount": 20,
+     "item": "Rubber"
+    },
+    {
+     "amount": 104,
+     "item": "IronScrew"
+    }
+   ],
+   "name": "Alternate: Heavy Flexible Frame",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "ModularFrameHeavy"
+    }
+   ],
+   "time": 16
+  },
+  "Alternate_HeavyOilResidue": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_HeavyOilResidue",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "LiquidOil"
+    }
+   ],
+   "name": "Alternate: Heavy Oil Residue",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "HeavyOilResidue"
+    },
+    {
+     "amount": 2,
+     "item": "PolymerResin"
+    }
+   ],
+   "time": 6
+  },
+  "Alternate_HighSpeedConnector": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_HighSpeedConnector",
+   "inputs": [
+    {
+     "amount": 60,
+     "item": "HighSpeedWire"
+    },
+    {
+     "amount": 25,
+     "item": "Silica"
+    },
+    {
+     "amount": 2,
+     "item": "CircuitBoard"
+    }
+   ],
+   "name": "Alternate: Silicon High-Speed Connector",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "HighSpeedConnector"
+    }
+   ],
+   "time": 40
+  },
+  "Alternate_HighSpeedWiring": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_HighSpeedWiring",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Stator"
+    },
+    {
+     "amount": 40,
+     "item": "Wire"
+    },
+    {
+     "amount": 1,
+     "item": "HighSpeedConnector"
+    }
+   ],
+   "name": "Alternate: Automated Speed Wiring",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "SpaceElevatorPart_3"
+    }
+   ],
+   "time": 32
+  },
+  "Alternate_IngotIron": {
+   "alternate": true,
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "Alternate_IngotIron",
+   "inputs": [
+    {
+     "amount": 8,
+     "item": "OreIron"
+    },
+    {
+     "amount": 2,
+     "item": "OreCopper"
+    }
+   ],
+   "name": "Alternate: Iron Alloy Ingot",
+   "outputs": [
+    {
+     "amount": 15,
+     "item": "IronIngot"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_IngotSteel_1": {
+   "alternate": true,
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "Alternate_IngotSteel_1",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "IronIngot"
+    },
+    {
+     "amount": 2,
+     "item": "Coal"
+    }
+   ],
+   "name": "Alternate: Solid Steel Ingot",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "SteelIngot"
+    }
+   ],
+   "time": 3
+  },
+  "Alternate_IngotSteel_2": {
+   "alternate": true,
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "Alternate_IngotSteel_2",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "OreIron"
+    },
+    {
+     "amount": 1,
+     "item": "CompactedCoal"
+    }
+   ],
+   "name": "Alternate: Compacted Steel Ingot",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "SteelIngot"
+    }
+   ],
+   "time": 24
+  },
+  "Alternate_InstantPlutoniumCell": {
+   "alternate": true,
+   "buildings": [
+    "HadronCollider"
+   ],
+   "id": "Alternate_InstantPlutoniumCell",
+   "inputs": [
+    {
+     "amount": 150,
+     "item": "NonFissibleUranium"
+    },
+    {
+     "amount": 20,
+     "item": "AluminumCasing"
+    }
+   ],
+   "name": "Alternate: Instant Plutonium Cell",
+   "outputs": [
+    {
+     "amount": 20,
+     "item": "PlutoniumCell"
+    }
+   ],
+   "power": {
+    "max": 750,
+    "min": 250
+   },
+   "time": 120
+  },
+  "Alternate_InstantScrap": {
+   "alternate": true,
+   "buildings": [
+    "Blender"
+   ],
+   "id": "Alternate_InstantScrap",
+   "inputs": [
+    {
+     "amount": 15,
+     "item": "OreBauxite"
+    },
+    {
+     "amount": 10,
+     "item": "Coal"
+    },
+    {
+     "amount": 5,
+     "item": "SulfuricAcid"
+    },
+    {
+     "amount": 6,
+     "item": "Water"
+    }
+   ],
+   "name": "Alternate: Instant Scrap",
+   "outputs": [
+    {
+     "amount": 30,
+     "item": "AluminumScrap"
+    },
+    {
+     "amount": 5,
+     "item": "Water"
+    }
+   ],
+   "time": 6
+  },
+  "Alternate_IonizedFuel_Dark": {
+   "alternate": true,
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Alternate_IonizedFuel_Dark",
+   "inputs": [
+    {
+     "amount": 12,
+     "item": "PackagedRocketFuel"
+    },
+    {
+     "amount": 4,
+     "item": "DarkMatter"
+    }
+   ],
+   "name": "Alternate: Dark-Ion Fuel",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "IonizedFuel"
+    },
+    {
+     "amount": 2,
+     "item": "CompactedCoal"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 3
+  },
+  "Alternate_IronIngot_Basic": {
+   "alternate": true,
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "Alternate_IronIngot_Basic",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "OreIron"
+    },
+    {
+     "amount": 8,
+     "item": "Stone"
+    }
+   ],
+   "name": "Alternate: Basic Iron Ingot",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "IronIngot"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_IronIngot_Leached": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_IronIngot_Leached",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "OreIron"
+    },
+    {
+     "amount": 1,
+     "item": "SulfuricAcid"
+    }
+   ],
+   "name": "Alternate: Leached Iron Ingot",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "IronIngot"
+    }
+   ],
+   "time": 6
+  },
+  "Alternate_ModularFrame": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_ModularFrame",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "IronPlateReinforced"
+    },
+    {
+     "amount": 10,
+     "item": "SteelPipe"
+    }
+   ],
+   "name": "Alternate: Steeled Frame",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "ModularFrame"
+    }
+   ],
+   "time": 60
+  },
+  "Alternate_ModularFrameHeavy": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_ModularFrameHeavy",
+   "inputs": [
+    {
+     "amount": 8,
+     "item": "ModularFrame"
+    },
+    {
+     "amount": 10,
+     "item": "SteelPlateReinforced"
+    },
+    {
+     "amount": 36,
+     "item": "SteelPipe"
+    },
+    {
+     "amount": 22,
+     "item": "Cement"
+    }
+   ],
+   "name": "Alternate: Heavy Encased Frame",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "ModularFrameHeavy"
+    }
+   ],
+   "time": 64
+  },
+  "Alternate_Motor_1": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_Motor_1",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Rotor"
+    },
+    {
+     "amount": 3,
+     "item": "Stator"
+    },
+    {
+     "amount": 1,
+     "item": "CrystalOscillator"
+    }
+   ],
+   "name": "Alternate: Rigor Motor",
+   "outputs": [
+    {
+     "amount": 6,
+     "item": "Motor"
+    }
+   ],
+   "time": 48
+  },
+  "Alternate_NuclearFuelRod_1": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_NuclearFuelRod_1",
+   "inputs": [
+    {
+     "amount": 100,
+     "item": "UraniumCell"
+    },
+    {
+     "amount": 10,
+     "item": "ElectromagneticControlRod"
+    },
+    {
+     "amount": 3,
+     "item": "CrystalOscillator"
+    },
+    {
+     "amount": 10,
+     "item": "Rotor"
+    }
+   ],
+   "name": "Alternate: Uranium Fuel Unit",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "NuclearFuelRod"
+    }
+   ],
+   "time": 300
+  },
+  "Alternate_OCSupercomputer": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_OCSupercomputer",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "ModularFrameLightweight"
+    },
+    {
+     "amount": 2,
+     "item": "CoolingSystem"
+    }
+   ],
+   "name": "Alternate: OC Supercomputer",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "ComputerSuper"
+    }
+   ],
+   "time": 20
+  },
+  "Alternate_PlasticSmartPlating": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_PlasticSmartPlating",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "IronPlateReinforced"
+    },
+    {
+     "amount": 1,
+     "item": "Rotor"
+    },
+    {
+     "amount": 3,
+     "item": "Plastic"
+    }
+   ],
+   "name": "Alternate: Plastic Smart Plating",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "SpaceElevatorPart_1"
+    }
+   ],
+   "time": 24
+  },
+  "Alternate_Plastic_1": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_Plastic_1",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "Rubber"
+    },
+    {
+     "amount": 6,
+     "item": "LiquidFuel"
+    }
+   ],
+   "name": "Alternate: Recycled Plastic",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "Plastic"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_PlutoniumFuelUnit": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_PlutoniumFuelUnit",
+   "inputs": [
+    {
+     "amount": 20,
+     "item": "PlutoniumCell"
+    },
+    {
+     "amount": 1,
+     "item": "PressureConversionCube"
+    }
+   ],
+   "name": "Alternate: Plutonium Fuel Unit",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "PlutoniumFuelRod"
+    }
+   ],
+   "time": 120
+  },
+  "Alternate_PolyesterFabric": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_PolyesterFabric",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "PolymerResin"
+    },
+    {
+     "amount": 1,
+     "item": "Water"
+    }
+   ],
+   "name": "Alternate: Polyester Fabric",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Fabric"
+    }
+   ],
+   "time": 2
+  },
+  "Alternate_PolymerResin": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_PolymerResin",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "LiquidOil"
+    }
+   ],
+   "name": "Alternate: Polymer Resin",
+   "outputs": [
+    {
+     "amount": 13,
+     "item": "PolymerResin"
+    },
+    {
+     "amount": 2,
+     "item": "HeavyOilResidue"
+    }
+   ],
+   "time": 6
+  },
+  "Alternate_PureCateriumIngot": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_PureCateriumIngot",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "OreGold"
+    },
+    {
+     "amount": 2,
+     "item": "Water"
+    }
+   ],
+   "name": "Alternate: Pure Caterium Ingot",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "GoldIngot"
+    }
+   ],
+   "time": 5
+  },
+  "Alternate_PureCopperIngot": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_PureCopperIngot",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "OreCopper"
+    },
+    {
+     "amount": 4,
+     "item": "Water"
+    }
+   ],
+   "name": "Alternate: Pure Copper Ingot",
+   "outputs": [
+    {
+     "amount": 15,
+     "item": "CopperIngot"
+    }
+   ],
+   "time": 24
+  },
+  "Alternate_PureIronIngot": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_PureIronIngot",
+   "inputs": [
+    {
+     "amount": 7,
+     "item": "OreIron"
+    },
+    {
+     "amount": 4,
+     "item": "Water"
+    }
+   ],
+   "name": "Alternate: Pure Iron Ingot",
+   "outputs": [
+    {
+     "amount": 13,
+     "item": "IronIngot"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_PureQuartzCrystal": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_PureQuartzCrystal",
+   "inputs": [
+    {
+     "amount": 9,
+     "item": "RawQuartz"
+    },
+    {
+     "amount": 5,
+     "item": "Water"
+    }
+   ],
+   "name": "Alternate: Pure Quartz Crystal",
+   "outputs": [
+    {
+     "amount": 7,
+     "item": "QuartzCrystal"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_Quartz_Fused": {
+   "alternate": true,
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "Alternate_Quartz_Fused",
+   "inputs": [
+    {
+     "amount": 25,
+     "item": "RawQuartz"
+    },
+    {
+     "amount": 12,
+     "item": "Coal"
+    }
+   ],
+   "name": "Alternate: Fused Quartz Crystal",
+   "outputs": [
+    {
+     "amount": 18,
+     "item": "QuartzCrystal"
+    }
+   ],
+   "time": 20
+  },
+  "Alternate_Quartz_Purified": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_Quartz_Purified",
+   "inputs": [
+    {
+     "amount": 24,
+     "item": "RawQuartz"
+    },
+    {
+     "amount": 2,
+     "item": "NitricAcid"
+    }
+   ],
+   "name": "Alternate: Quartz Purification",
+   "outputs": [
+    {
+     "amount": 15,
+     "item": "QuartzCrystal"
+    },
+    {
+     "amount": 12,
+     "item": "DissolvedSilica"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_Quickwire": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_Quickwire",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "GoldIngot"
+    },
+    {
+     "amount": 5,
+     "item": "CopperIngot"
+    }
+   ],
+   "name": "Alternate: Fused Quickwire",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "HighSpeedWire"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_RadioControlSystem": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_RadioControlSystem",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "CrystalOscillator"
+    },
+    {
+     "amount": 10,
+     "item": "CircuitBoard"
+    },
+    {
+     "amount": 60,
+     "item": "AluminumCasing"
+    },
+    {
+     "amount": 30,
+     "item": "Rubber"
+    }
+   ],
+   "name": "Alternate: Radio Control System",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "ModularFrameLightweight"
+    }
+   ],
+   "time": 40
+  },
+  "Alternate_RadioControlUnit_1": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_RadioControlUnit_1",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "AluminumPlateReinforced"
+    },
+    {
+     "amount": 2,
+     "item": "HighSpeedConnector"
+    },
+    {
+     "amount": 12,
+     "item": "QuartzCrystal"
+    }
+   ],
+   "name": "Alternate: Radio Connection Unit",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "ModularFrameLightweight"
+    }
+   ],
+   "time": 16
+  },
+  "Alternate_RecycledRubber": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_RecycledRubber",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "Plastic"
+    },
+    {
+     "amount": 6,
+     "item": "LiquidFuel"
+    }
+   ],
+   "name": "Alternate: Recycled Rubber",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "Rubber"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_ReinforcedIronPlate_1": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_ReinforcedIronPlate_1",
+   "inputs": [
+    {
+     "amount": 18,
+     "item": "IronPlate"
+    },
+    {
+     "amount": 50,
+     "item": "IronScrew"
+    }
+   ],
+   "name": "Alternate: Bolted Iron Plate",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "IronPlateReinforced"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_ReinforcedIronPlate_2": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_ReinforcedIronPlate_2",
+   "inputs": [
+    {
+     "amount": 10,
+     "item": "IronPlate"
+    },
+    {
+     "amount": 20,
+     "item": "Wire"
+    }
+   ],
+   "name": "Alternate: Stitched Iron Plate",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "IronPlateReinforced"
+    }
+   ],
+   "time": 32
+  },
+  "Alternate_RocketFuel_Nitro": {
+   "alternate": true,
+   "buildings": [
+    "Blender"
+   ],
+   "id": "Alternate_RocketFuel_Nitro",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "LiquidFuel"
+    },
+    {
+     "amount": 3,
+     "item": "NitrogenGas"
+    },
+    {
+     "amount": 4,
+     "item": "Sulfur"
+    },
+    {
+     "amount": 2,
+     "item": "Coal"
+    }
+   ],
+   "name": "Alternate: Nitro Rocket Fuel",
+   "outputs": [
+    {
+     "amount": 6,
+     "item": "RocketFuel"
+    },
+    {
+     "amount": 1,
+     "item": "CompactedCoal"
+    }
+   ],
+   "time": 2.4
+  },
+  "Alternate_Rotor": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_Rotor",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "SteelPipe"
+    },
+    {
+     "amount": 6,
+     "item": "Wire"
+    }
+   ],
+   "name": "Alternate: Steel Rotor",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Rotor"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_RubberConcrete": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_RubberConcrete",
+   "inputs": [
+    {
+     "amount": 10,
+     "item": "Stone"
+    },
+    {
+     "amount": 2,
+     "item": "Rubber"
+    }
+   ],
+   "name": "Alternate: Rubber Concrete",
+   "outputs": [
+    {
+     "amount": 9,
+     "item": "Cement"
+    }
+   ],
+   "time": 6
+  },
+  "Alternate_Screw": {
+   "alternate": true,
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Alternate_Screw",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "IronIngot"
+    }
+   ],
+   "name": "Alternate: Cast Screws",
+   "outputs": [
+    {
+     "amount": 20,
+     "item": "IronScrew"
+    }
+   ],
+   "time": 24
+  },
+  "Alternate_Screw_2": {
+   "alternate": true,
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Alternate_Screw_2",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SteelPlate"
+    }
+   ],
+   "name": "Alternate: Steel Screws",
+   "outputs": [
+    {
+     "amount": 52,
+     "item": "IronScrew"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_Silica": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_Silica",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "RawQuartz"
+    },
+    {
+     "amount": 5,
+     "item": "Stone"
+    }
+   ],
+   "name": "Alternate: Cheap Silica",
+   "outputs": [
+    {
+     "amount": 7,
+     "item": "Silica"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_Silica_Distilled": {
+   "alternate": true,
+   "buildings": [
+    "Blender"
+   ],
+   "id": "Alternate_Silica_Distilled",
+   "inputs": [
+    {
+     "amount": 12,
+     "item": "DissolvedSilica"
+    },
+    {
+     "amount": 5,
+     "item": "Stone"
+    },
+    {
+     "amount": 10,
+     "item": "Water"
+    }
+   ],
+   "name": "Alternate: Distilled Silica",
+   "outputs": [
+    {
+     "amount": 27,
+     "item": "Silica"
+    },
+    {
+     "amount": 8,
+     "item": "Water"
+    }
+   ],
+   "time": 6
+  },
+  "Alternate_SloppyAlumina": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_SloppyAlumina",
+   "inputs": [
+    {
+     "amount": 10,
+     "item": "OreBauxite"
+    },
+    {
+     "amount": 10,
+     "item": "Water"
+    }
+   ],
+   "name": "Alternate: Sloppy Alumina",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "AluminaSolution"
+    }
+   ],
+   "time": 3
+  },
+  "Alternate_Stator": {
+   "alternate": true,
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Alternate_Stator",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "SteelPipe"
+    },
+    {
+     "amount": 15,
+     "item": "HighSpeedWire"
+    }
+   ],
+   "name": "Alternate: Quickwire Stator",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Stator"
+    }
+   ],
+   "time": 15
+  },
+  "Alternate_SteamedCopperSheet": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_SteamedCopperSheet",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "CopperIngot"
+    },
+    {
+     "amount": 3,
+     "item": "Water"
+    }
+   ],
+   "name": "Alternate: Steamed Copper Sheet",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "CopperSheet"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_SteelBeam_Aluminum": {
+   "alternate": true,
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Alternate_SteelBeam_Aluminum",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "AluminumIngot"
+    }
+   ],
+   "name": "Alternate: Aluminum Beam",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "SteelPlate"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_SteelBeam_Molded": {
+   "alternate": true,
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "Alternate_SteelBeam_Molded",
+   "inputs": [
+    {
+     "amount": 24,
+     "item": "SteelIngot"
+    },
+    {
+     "amount": 16,
+     "item": "Cement"
+    }
+   ],
+   "name": "Alternate: Molded Beam",
+   "outputs": [
+    {
+     "amount": 9,
+     "item": "SteelPlate"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_SteelCanister": {
+   "alternate": true,
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Alternate_SteelCanister",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "SteelIngot"
+    }
+   ],
+   "name": "Alternate: Steel Canister",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "FluidCanister"
+    }
+   ],
+   "time": 6
+  },
+  "Alternate_SteelCastedPlate": {
+   "alternate": true,
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "Alternate_SteelCastedPlate",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "IronIngot"
+    },
+    {
+     "amount": 1,
+     "item": "SteelIngot"
+    }
+   ],
+   "name": "Alternate: Steel Cast Plate",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "IronPlate"
+    }
+   ],
+   "time": 4
+  },
+  "Alternate_SteelPipe_Iron": {
+   "alternate": true,
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Alternate_SteelPipe_Iron",
+   "inputs": [
+    {
+     "amount": 20,
+     "item": "IronIngot"
+    }
+   ],
+   "name": "Alternate: Iron Pipe",
+   "outputs": [
+    {
+     "amount": 5,
+     "item": "SteelPipe"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_SteelPipe_Molded": {
+   "alternate": true,
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "Alternate_SteelPipe_Molded",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "SteelIngot"
+    },
+    {
+     "amount": 3,
+     "item": "Cement"
+    }
+   ],
+   "name": "Alternate: Molded Steel Pipe",
+   "outputs": [
+    {
+     "amount": 5,
+     "item": "SteelPipe"
+    }
+   ],
+   "time": 6
+  },
+  "Alternate_SteelRod": {
+   "alternate": true,
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Alternate_SteelRod",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SteelIngot"
+    }
+   ],
+   "name": "Alternate: Steel Rod",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "IronRod"
+    }
+   ],
+   "time": 5
+  },
+  "Alternate_SuperStateComputer": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_SuperStateComputer",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Computer"
+    },
+    {
+     "amount": 1,
+     "item": "ElectromagneticControlRod"
+    },
+    {
+     "amount": 10,
+     "item": "Battery"
+    },
+    {
+     "amount": 25,
+     "item": "Wire"
+    }
+   ],
+   "name": "Alternate: Super-State Computer",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "ComputerSuper"
+    }
+   ],
+   "time": 25
+  },
+  "Alternate_TurboBlendFuel": {
+   "alternate": true,
+   "buildings": [
+    "Blender"
+   ],
+   "id": "Alternate_TurboBlendFuel",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "LiquidFuel"
+    },
+    {
+     "amount": 4,
+     "item": "HeavyOilResidue"
+    },
+    {
+     "amount": 3,
+     "item": "Sulfur"
+    },
+    {
+     "amount": 3,
+     "item": "PetroleumCoke"
+    }
+   ],
+   "name": "Alternate: Turbo Blend Fuel",
+   "outputs": [
+    {
+     "amount": 6,
+     "item": "LiquidTurboFuel"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_TurboHeavyFuel": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_TurboHeavyFuel",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "HeavyOilResidue"
+    },
+    {
+     "amount": 4,
+     "item": "CompactedCoal"
+    }
+   ],
+   "name": "Alternate: Turbo Heavy Fuel",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "LiquidTurboFuel"
+    }
+   ],
+   "time": 8
+  },
+  "Alternate_TurboMotor_1": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_TurboMotor_1",
+   "inputs": [
+    {
+     "amount": 7,
+     "item": "Motor"
+    },
+    {
+     "amount": 9,
+     "item": "ModularFrameLightweight"
+    },
+    {
+     "amount": 5,
+     "item": "ElectromagneticControlRod"
+    },
+    {
+     "amount": 7,
+     "item": "Rotor"
+    }
+   ],
+   "name": "Alternate: Turbo Electric Motor",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "MotorLightweight"
+    }
+   ],
+   "time": 64
+  },
+  "Alternate_TurboPressureMotor": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_TurboPressureMotor",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "Motor"
+    },
+    {
+     "amount": 1,
+     "item": "PressureConversionCube"
+    },
+    {
+     "amount": 24,
+     "item": "PackagedNitrogenGas"
+    },
+    {
+     "amount": 8,
+     "item": "Stator"
+    }
+   ],
+   "name": "Alternate: Turbo Pressure Motor",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "MotorLightweight"
+    }
+   ],
+   "time": 32
+  },
+  "Alternate_Turbofuel": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_Turbofuel",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "LiquidFuel"
+    },
+    {
+     "amount": 4,
+     "item": "CompactedCoal"
+    }
+   ],
+   "name": "Turbofuel",
+   "outputs": [
+    {
+     "amount": 5,
+     "item": "LiquidTurboFuel"
+    }
+   ],
+   "time": 16
+  },
+  "Alternate_UraniumCell_1": {
+   "alternate": true,
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Alternate_UraniumCell_1",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "OreUranium"
+    },
+    {
+     "amount": 3,
+     "item": "Silica"
+    },
+    {
+     "amount": 5,
+     "item": "Sulfur"
+    },
+    {
+     "amount": 15,
+     "item": "HighSpeedWire"
+    }
+   ],
+   "name": "Alternate: Infused Uranium Cell",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "UraniumCell"
+    }
+   ],
+   "time": 12
+  },
+  "Alternate_WetConcrete": {
+   "alternate": true,
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Alternate_WetConcrete",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "Stone"
+    },
+    {
+     "amount": 5,
+     "item": "Water"
+    }
+   ],
+   "name": "Alternate: Wet Concrete",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "Cement"
+    }
+   ],
+   "time": 3
+  },
+  "Alternate_Wire_1": {
+   "alternate": true,
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Alternate_Wire_1",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "IronIngot"
+    }
+   ],
+   "name": "Alternate: Iron Wire",
+   "outputs": [
+    {
+     "amount": 9,
+     "item": "Wire"
+    }
+   ],
+   "time": 24
+  },
+  "Alternate_Wire_2": {
+   "alternate": true,
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Alternate_Wire_2",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "GoldIngot"
+    }
+   ],
+   "name": "Alternate: Caterium Wire",
+   "outputs": [
+    {
+     "amount": 8,
+     "item": "Wire"
+    }
+   ],
+   "time": 4
+  },
+  "AluminaSolution": {
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "AluminaSolution",
+   "inputs": [
+    {
+     "amount": 12,
+     "item": "OreBauxite"
+    },
+    {
+     "amount": 18,
+     "item": "Water"
+    }
+   ],
+   "name": "Alumina Solution",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "AluminaSolution"
+    },
+    {
+     "amount": 5,
+     "item": "Silica"
+    }
+   ],
+   "time": 6
+  },
+  "AluminumCasing": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "AluminumCasing",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "AluminumIngot"
+    }
+   ],
+   "name": "Aluminum Casing",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "AluminumCasing"
+    }
+   ],
+   "time": 2
+  },
+  "AluminumScrap": {
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "AluminumScrap",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "AluminaSolution"
+    },
+    {
+     "amount": 2,
+     "item": "Coal"
+    }
+   ],
+   "name": "Aluminum Scrap",
+   "outputs": [
+    {
+     "amount": 6,
+     "item": "AluminumScrap"
+    },
+    {
+     "amount": 2,
+     "item": "Water"
+    }
+   ],
+   "time": 1
+  },
+  "AluminumSheet": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "AluminumSheet",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "AluminumIngot"
+    },
+    {
+     "amount": 1,
+     "item": "CopperIngot"
+    }
+   ],
+   "name": "Alclad Aluminum Sheet",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "AluminumPlate"
+    }
+   ],
+   "time": 6
+  },
+  "Battery": {
+   "buildings": [
+    "Blender"
+   ],
+   "id": "Battery",
+   "inputs": [
+    {
+     "amount": 2.5,
+     "item": "SulfuricAcid"
+    },
+    {
+     "amount": 2,
+     "item": "AluminaSolution"
+    },
+    {
+     "amount": 1,
+     "item": "AluminumCasing"
+    }
+   ],
+   "name": "Battery",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Battery"
+    },
+    {
+     "amount": 1.5,
+     "item": "Water"
+    }
+   ],
+   "time": 3
+  },
+  "Bauxite_Caterium": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Bauxite_Caterium",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 15,
+     "item": "OreGold"
+    }
+   ],
+   "name": "Bauxite (Caterium)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "OreBauxite"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "Bauxite_Copper": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Bauxite_Copper",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 18,
+     "item": "OreCopper"
+    }
+   ],
+   "name": "Bauxite (Copper)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "OreBauxite"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "Biofuel": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Biofuel",
+   "inputs": [
+    {
+     "amount": 8,
+     "item": "GenericBiomass"
+    }
+   ],
+   "name": "Solid Biofuel",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "Biofuel"
+    }
+   ],
+   "time": 4
+  },
+  "Biomass_AlienProtein": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Biomass_AlienProtein",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "AlienProtein"
+    }
+   ],
+   "name": "Biomass (Alien Protein)",
+   "outputs": [
+    {
+     "amount": 100,
+     "item": "GenericBiomass"
+    }
+   ],
+   "time": 4
+  },
+  "Biomass_Leaves": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Biomass_Leaves",
+   "inputs": [
+    {
+     "amount": 10,
+     "item": "Leaves"
+    }
+   ],
+   "name": "Biomass (Leaves)",
+   "outputs": [
+    {
+     "amount": 5,
+     "item": "GenericBiomass"
+    }
+   ],
+   "time": 5
+  },
+  "Biomass_Mycelia": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Biomass_Mycelia",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Mycelia"
+    }
+   ],
+   "name": "Biomass (Mycelia)",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "GenericBiomass"
+    }
+   ],
+   "time": 4
+  },
+  "Biomass_Wood": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Biomass_Wood",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "Wood"
+    }
+   ],
+   "name": "Biomass (Wood)",
+   "outputs": [
+    {
+     "amount": 20,
+     "item": "GenericBiomass"
+    }
+   ],
+   "time": 4
+  },
+  "Cable": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Cable",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Wire"
+    }
+   ],
+   "name": "Cable",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Cable"
+    }
+   ],
+   "time": 2
+  },
+  "CandyCane": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "CandyCane",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Gift"
+    }
+   ],
+   "name": "Candy Cane",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "CandyCane"
+    }
+   ],
+   "time": 12
+  },
+  "Cartridge": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Cartridge",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "CopperSheet"
+    },
+    {
+     "amount": 2,
+     "item": "GunpowderMK2"
+    }
+   ],
+   "name": "Rifle Ammo",
+   "outputs": [
+    {
+     "amount": 15,
+     "item": "CartridgeStandard"
+    }
+   ],
+   "time": 12
+  },
+  "CartridgeChaos": {
+   "buildings": [
+    "Blender"
+   ],
+   "id": "CartridgeChaos",
+   "inputs": [
+    {
+     "amount": 25,
+     "item": "CartridgeStandard"
+    },
+    {
+     "amount": 3,
+     "item": "AluminumCasing"
+    },
+    {
+     "amount": 3,
+     "item": "LiquidTurboFuel"
+    }
+   ],
+   "name": "Turbo Rifle Ammo",
+   "outputs": [
+    {
+     "amount": 50,
+     "item": "CartridgeChaos"
+    }
+   ],
+   "time": 12
+  },
+  "CartridgeChaos_Packaged": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "CartridgeChaos_Packaged",
+   "inputs": [
+    {
+     "amount": 25,
+     "item": "CartridgeStandard"
+    },
+    {
+     "amount": 3,
+     "item": "AluminumCasing"
+    },
+    {
+     "amount": 3,
+     "item": "TurboFuel"
+    }
+   ],
+   "name": "Turbo Rifle Ammo",
+   "outputs": [
+    {
+     "amount": 50,
+     "item": "CartridgeChaos"
+    }
+   ],
+   "time": 12
+  },
+  "CartridgeSmart": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "CartridgeSmart",
+   "inputs": [
+    {
+     "amount": 20,
+     "item": "CartridgeStandard"
+    },
+    {
+     "amount": 1,
+     "item": "HighSpeedConnector"
+    }
+   ],
+   "name": "Homing Rifle Ammo",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "CartridgeSmartProjectile"
+    }
+   ],
+   "time": 24
+  },
+  "Caterium_Copper": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Caterium_Copper",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 15,
+     "item": "OreCopper"
+    }
+   ],
+   "name": "Caterium Ore (Copper)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "OreGold"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "Caterium_Quartz": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Caterium_Quartz",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 12,
+     "item": "RawQuartz"
+    }
+   ],
+   "name": "Caterium Ore (Quartz)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "OreGold"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "CircuitBoard": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "CircuitBoard",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "CopperSheet"
+    },
+    {
+     "amount": 4,
+     "item": "Plastic"
+    }
+   ],
+   "name": "Circuit Board",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "CircuitBoard"
+    }
+   ],
+   "time": 8
+  },
+  "Coal_Iron": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Coal_Iron",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 18,
+     "item": "OreIron"
+    }
+   ],
+   "name": "Coal (Iron)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "Coal"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "Coal_Limestone": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Coal_Limestone",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 36,
+     "item": "Stone"
+    }
+   ],
+   "name": "Coal (Limestone)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "Coal"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "Computer": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Computer",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "CircuitBoard"
+    },
+    {
+     "amount": 8,
+     "item": "Cable"
+    },
+    {
+     "amount": 16,
+     "item": "Plastic"
+    }
+   ],
+   "name": "Computer",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Computer"
+    }
+   ],
+   "time": 24
+  },
+  "ComputerSuper": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "ComputerSuper",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "Computer"
+    },
+    {
+     "amount": 2,
+     "item": "CircuitBoardHighSpeed"
+    },
+    {
+     "amount": 3,
+     "item": "HighSpeedConnector"
+    },
+    {
+     "amount": 28,
+     "item": "Plastic"
+    }
+   ],
+   "name": "Supercomputer",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "ComputerSuper"
+    }
+   ],
+   "time": 32
+  },
+  "Concrete": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Concrete",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Stone"
+    }
+   ],
+   "name": "Concrete",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Cement"
+    }
+   ],
+   "time": 4
+  },
+  "CoolingSystem": {
+   "buildings": [
+    "Blender"
+   ],
+   "id": "CoolingSystem",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "AluminumPlateReinforced"
+    },
+    {
+     "amount": 2,
+     "item": "Rubber"
+    },
+    {
+     "amount": 5,
+     "item": "Water"
+    },
+    {
+     "amount": 25,
+     "item": "NitrogenGas"
+    }
+   ],
+   "name": "Cooling System",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "CoolingSystem"
+    }
+   ],
+   "time": 10
+  },
+  "CopperDust": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "CopperDust",
+   "inputs": [
+    {
+     "amount": 30,
+     "item": "CopperIngot"
+    }
+   ],
+   "name": "Copper Powder",
+   "outputs": [
+    {
+     "amount": 5,
+     "item": "CopperDust"
+    }
+   ],
+   "time": 6
+  },
+  "CopperSheet": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "CopperSheet",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "CopperIngot"
+    }
+   ],
+   "name": "Copper Sheet",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "CopperSheet"
+    }
+   ],
+   "time": 6
+  },
+  "Copper_Quartz": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Copper_Quartz",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 10,
+     "item": "RawQuartz"
+    }
+   ],
+   "name": "Copper Ore (Quartz)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "OreCopper"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "Copper_Sulfur": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Copper_Sulfur",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 12,
+     "item": "Sulfur"
+    }
+   ],
+   "name": "Copper Ore (Sulfur)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "OreCopper"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "CrystalOscillator": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "CrystalOscillator",
+   "inputs": [
+    {
+     "amount": 36,
+     "item": "QuartzCrystal"
+    },
+    {
+     "amount": 28,
+     "item": "Cable"
+    },
+    {
+     "amount": 5,
+     "item": "IronPlateReinforced"
+    }
+   ],
+   "name": "Crystal Oscillator",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "CrystalOscillator"
+    }
+   ],
+   "time": 120
+  },
+  "DarkEnergy": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "DarkEnergy",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "SAMIngot"
+    }
+   ],
+   "name": "Dark Matter Residue",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "DarkEnergy"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "DarkMatter": {
+   "buildings": [
+    "HadronCollider"
+   ],
+   "id": "DarkMatter",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Diamond"
+    },
+    {
+     "amount": 5,
+     "item": "DarkEnergy"
+    }
+   ],
+   "name": "Dark Matter Crystal",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "DarkMatter"
+    }
+   ],
+   "power": {
+    "max": 1500,
+    "min": 500
+   },
+   "time": 2
+  },
+  "Diamond": {
+   "buildings": [
+    "HadronCollider"
+   ],
+   "id": "Diamond",
+   "inputs": [
+    {
+     "amount": 20,
+     "item": "Coal"
+    }
+   ],
+   "name": "Diamonds",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Diamond"
+    }
+   ],
+   "power": {
+    "max": 750,
+    "min": 250
+   },
+   "time": 2
+  },
+  "ElectromagneticControlRod": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "ElectromagneticControlRod",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Stator"
+    },
+    {
+     "amount": 2,
+     "item": "CircuitBoardHighSpeed"
+    }
+   ],
+   "name": "Electromagnetic Control Rod",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "ElectromagneticControlRod"
+    }
+   ],
+   "time": 30
+  },
+  "EncasedIndustrialBeam": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "EncasedIndustrialBeam",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "SteelPlate"
+    },
+    {
+     "amount": 6,
+     "item": "Cement"
+    }
+   ],
+   "name": "Encased Industrial Beam",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SteelPlateReinforced"
+    }
+   ],
+   "time": 10
+  },
+  "Fabric": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Fabric",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Mycelia"
+    },
+    {
+     "amount": 5,
+     "item": "GenericBiomass"
+    }
+   ],
+   "name": "Fabric",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Fabric"
+    }
+   ],
+   "time": 4
+  },
+  "FicsiteIngot_AL": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "FicsiteIngot_AL",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 4,
+     "item": "AluminumIngot"
+    }
+   ],
+   "name": "Ficsite Ingot (Aluminum)",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "FicsiteIngot"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 2
+  },
+  "FicsiteIngot_CAT": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "FicsiteIngot_CAT",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 4,
+     "item": "GoldIngot"
+    }
+   ],
+   "name": "Ficsite Ingot (Caterium)",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "FicsiteIngot"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 4
+  },
+  "FicsiteIngot_Iron": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "FicsiteIngot_Iron",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 24,
+     "item": "IronIngot"
+    }
+   ],
+   "name": "Ficsite Ingot (Iron)",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "FicsiteIngot"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "FicsiteMesh": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "FicsiteMesh",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "FicsiteIngot"
+    }
+   ],
+   "name": "Ficsite Trigon",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "FicsiteMesh"
+    }
+   ],
+   "time": 6
+  },
+  "Ficsonium": {
+   "buildings": [
+    "HadronCollider"
+   ],
+   "id": "Ficsonium",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "PlutoniumWaste"
+    },
+    {
+     "amount": 1,
+     "item": "SingularityCell"
+    },
+    {
+     "amount": 20,
+     "item": "DarkEnergy"
+    }
+   ],
+   "name": "Ficsonium",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Ficsonium"
+    }
+   ],
+   "power": {
+    "max": 1500,
+    "min": 500
+   },
+   "time": 6
+  },
+  "FicsoniumFuelRod": {
+   "buildings": [
+    "QuantumEncoder"
+   ],
+   "id": "FicsoniumFuelRod",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Ficsonium"
+    },
+    {
+     "amount": 2,
+     "item": "ElectromagneticControlRod"
+    },
+    {
+     "amount": 40,
+     "item": "FicsiteMesh"
+    },
+    {
+     "amount": 20,
+     "item": "QuantumEnergy"
+    }
+   ],
+   "name": "Ficsonium Fuel Rod",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "FicsoniumFuelRod"
+    },
+    {
+     "amount": 20,
+     "item": "DarkEnergy"
+    }
+   ],
+   "power": {
+    "max": 2000,
+    "min": 0
+   },
+   "time": 24
+  },
+  "FilterGasMask": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "FilterGasMask",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Fabric"
+    },
+    {
+     "amount": 4,
+     "item": "Coal"
+    },
+    {
+     "amount": 2,
+     "item": "IronPlate"
+    }
+   ],
+   "name": "Gas Filter",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Filter"
+    }
+   ],
+   "time": 8
+  },
+  "FilterHazmat": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "FilterHazmat",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Filter"
+    },
+    {
+     "amount": 8,
+     "item": "HighSpeedWire"
+    },
+    {
+     "amount": 1,
+     "item": "AluminumCasing"
+    }
+   ],
+   "name": "Iodine-Infused Filter",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "HazmatFilter"
+    }
+   ],
+   "time": 16
+  },
+  "Fireworks_01": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Fireworks_01",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "XmasBranch"
+    },
+    {
+     "amount": 3,
+     "item": "CandyCane"
+    }
+   ],
+   "name": "Sweet Fireworks",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Fireworks_Projectile_01"
+    }
+   ],
+   "time": 24
+  },
+  "Fireworks_02": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Fireworks_02",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "XmasBranch"
+    },
+    {
+     "amount": 3,
+     "item": "XmasBow"
+    }
+   ],
+   "name": "Fancy Fireworks",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Fireworks_Projectile_02"
+    }
+   ],
+   "time": 24
+  },
+  "Fireworks_03": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Fireworks_03",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "XmasBranch"
+    },
+    {
+     "amount": 2,
+     "item": "Snow"
+    }
+   ],
+   "name": "Sparkly Fireworks",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Fireworks_Projectile_03"
+    }
+   ],
+   "time": 24
+  },
+  "FluidCanister": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "FluidCanister",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Plastic"
+    }
+   ],
+   "name": "Empty Canister",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "FluidCanister"
+    }
+   ],
+   "time": 4
+  },
+  "Fuel": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "Fuel",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "LiquidFuel"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "name": "Packaged Fuel",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Fuel"
+    }
+   ],
+   "time": 3
+  },
+  "FusedModularFrame": {
+   "buildings": [
+    "Blender"
+   ],
+   "id": "FusedModularFrame",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "ModularFrameHeavy"
+    },
+    {
+     "amount": 50,
+     "item": "AluminumCasing"
+    },
+    {
+     "amount": 25,
+     "item": "NitrogenGas"
+    }
+   ],
+   "name": "Fused Modular Frame",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "ModularFrameFused"
+    }
+   ],
+   "time": 40
+  },
+  "GasTank": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "GasTank",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "AluminumIngot"
+    }
+   ],
+   "name": "Empty Fluid Tank",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "GasTank"
+    }
+   ],
+   "time": 1
+  },
+  "Gunpowder": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Gunpowder",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Coal"
+    },
+    {
+     "amount": 1,
+     "item": "Sulfur"
+    }
+   ],
+   "name": "Black Powder",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Gunpowder"
+    }
+   ],
+   "time": 4
+  },
+  "GunpowderMK2": {
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "GunpowderMK2",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Gunpowder"
+    },
+    {
+     "amount": 1,
+     "item": "HeavyOilResidue"
+    }
+   ],
+   "name": "Smokeless Powder",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "GunpowderMK2"
+    }
+   ],
+   "time": 6
+  },
+  "HeatSink": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "HeatSink",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "AluminumPlate"
+    },
+    {
+     "amount": 3,
+     "item": "CopperSheet"
+    }
+   ],
+   "name": "Heat Sink",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "AluminumPlateReinforced"
+    }
+   ],
+   "time": 8
+  },
+  "HighSpeedConnector": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "HighSpeedConnector",
+   "inputs": [
+    {
+     "amount": 56,
+     "item": "HighSpeedWire"
+    },
+    {
+     "amount": 10,
+     "item": "Cable"
+    },
+    {
+     "amount": 1,
+     "item": "CircuitBoard"
+    }
+   ],
+   "name": "High-Speed Connector",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "HighSpeedConnector"
+    }
+   ],
+   "time": 16
+  },
+  "IngotAluminum": {
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "IngotAluminum",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "AluminumScrap"
+    },
+    {
+     "amount": 5,
+     "item": "Silica"
+    }
+   ],
+   "name": "Aluminum Ingot",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "AluminumIngot"
+    }
+   ],
+   "time": 4
+  },
+  "IngotCaterium": {
+   "buildings": [
+    "SmelterMk1"
+   ],
+   "id": "IngotCaterium",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "OreGold"
+    }
+   ],
+   "name": "Caterium Ingot",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "GoldIngot"
+    }
+   ],
+   "time": 4
+  },
+  "IngotCopper": {
+   "buildings": [
+    "SmelterMk1"
+   ],
+   "id": "IngotCopper",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "OreCopper"
+    }
+   ],
+   "name": "Copper Ingot",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "CopperIngot"
+    }
+   ],
+   "time": 2
+  },
+  "IngotIron": {
+   "buildings": [
+    "SmelterMk1"
+   ],
+   "id": "IngotIron",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "OreIron"
+    }
+   ],
+   "name": "Iron Ingot",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "IronIngot"
+    }
+   ],
+   "time": 2
+  },
+  "IngotSAM": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "IngotSAM",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "SAM"
+    }
+   ],
+   "name": "Reanimated SAM",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    }
+   ],
+   "time": 2
+  },
+  "IngotSteel": {
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "IngotSteel",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "OreIron"
+    },
+    {
+     "amount": 3,
+     "item": "Coal"
+    }
+   ],
+   "name": "Steel Ingot",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "SteelIngot"
+    }
+   ],
+   "time": 4
+  },
+  "IonizedFuel": {
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "IonizedFuel",
+   "inputs": [
+    {
+     "amount": 16,
+     "item": "RocketFuel"
+    },
+    {
+     "amount": 1,
+     "item": "CrystalShard"
+    }
+   ],
+   "name": "Ionized Fuel",
+   "outputs": [
+    {
+     "amount": 16,
+     "item": "IonizedFuel"
+    },
+    {
+     "amount": 2,
+     "item": "CompactedCoal"
+    }
+   ],
+   "time": 24
+  },
+  "IronPlate": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "IronPlate",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "IronIngot"
+    }
+   ],
+   "name": "Iron Plate",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "IronPlate"
+    }
+   ],
+   "time": 6
+  },
+  "IronPlateReinforced": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "IronPlateReinforced",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "IronPlate"
+    },
+    {
+     "amount": 12,
+     "item": "IronScrew"
+    }
+   ],
+   "name": "Reinforced Iron Plate",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "IronPlateReinforced"
+    }
+   ],
+   "time": 12
+  },
+  "IronRod": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "IronRod",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "IronIngot"
+    }
+   ],
+   "name": "Iron Rod",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "IronRod"
+    }
+   ],
+   "time": 4
+  },
+  "Iron_Limestone": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Iron_Limestone",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 24,
+     "item": "Stone"
+    }
+   ],
+   "name": "Iron Ore (Limestone)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "OreIron"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "Limestone_Sulfur": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Limestone_Sulfur",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 2,
+     "item": "Sulfur"
+    }
+   ],
+   "name": "Limestone (Sulfur)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "Stone"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "LiquidBiofuel": {
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "LiquidBiofuel",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "Biofuel"
+    },
+    {
+     "amount": 3,
+     "item": "Water"
+    }
+   ],
+   "name": "Liquid Biofuel",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "LiquidBiofuel"
+    }
+   ],
+   "time": 4
+  },
+  "LiquidFuel": {
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "LiquidFuel",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "LiquidOil"
+    }
+   ],
+   "name": "Fuel",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "LiquidFuel"
+    },
+    {
+     "amount": 3,
+     "item": "PolymerResin"
+    }
+   ],
+   "time": 6
+  },
+  "ModularFrame": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "ModularFrame",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "IronPlateReinforced"
+    },
+    {
+     "amount": 12,
+     "item": "IronRod"
+    }
+   ],
+   "name": "Modular Frame",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "ModularFrame"
+    }
+   ],
+   "time": 60
+  },
+  "ModularFrameHeavy": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "ModularFrameHeavy",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "ModularFrame"
+    },
+    {
+     "amount": 20,
+     "item": "SteelPipe"
+    },
+    {
+     "amount": 5,
+     "item": "SteelPlateReinforced"
+    },
+    {
+     "amount": 120,
+     "item": "IronScrew"
+    }
+   ],
+   "name": "Heavy Modular Frame",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "ModularFrameHeavy"
+    }
+   ],
+   "time": 30
+  },
+  "Motor": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Motor",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Rotor"
+    },
+    {
+     "amount": 2,
+     "item": "Stator"
+    }
+   ],
+   "name": "Motor",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Motor"
+    }
+   ],
+   "time": 12
+  },
+  "MotorTurbo": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "MotorTurbo",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "CoolingSystem"
+    },
+    {
+     "amount": 2,
+     "item": "ModularFrameLightweight"
+    },
+    {
+     "amount": 4,
+     "item": "Motor"
+    },
+    {
+     "amount": 24,
+     "item": "Rubber"
+    }
+   ],
+   "name": "Turbo Motor",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "MotorLightweight"
+    }
+   ],
+   "time": 32
+  },
+  "NitricAcid": {
+   "buildings": [
+    "Blender"
+   ],
+   "id": "NitricAcid",
+   "inputs": [
+    {
+     "amount": 12,
+     "item": "NitrogenGas"
+    },
+    {
+     "amount": 3,
+     "item": "Water"
+    },
+    {
+     "amount": 1,
+     "item": "IronPlate"
+    }
+   ],
+   "name": "Nitric Acid",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "NitricAcid"
+    }
+   ],
+   "time": 6
+  },
+  "Nitrogen_Bauxite": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Nitrogen_Bauxite",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 10,
+     "item": "OreBauxite"
+    }
+   ],
+   "name": "Nitrogen Gas (Bauxite)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "NitrogenGas"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "Nitrogen_Caterium": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Nitrogen_Caterium",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 12,
+     "item": "OreGold"
+    }
+   ],
+   "name": "Nitrogen Gas (Caterium)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "NitrogenGas"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "Nobelisk": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Nobelisk",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Gunpowder"
+    },
+    {
+     "amount": 2,
+     "item": "SteelPipe"
+    }
+   ],
+   "name": "Nobelisk",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "NobeliskExplosive"
+    }
+   ],
+   "time": 6
+  },
+  "NobeliskCluster": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "NobeliskCluster",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "NobeliskExplosive"
+    },
+    {
+     "amount": 4,
+     "item": "GunpowderMK2"
+    }
+   ],
+   "name": "Cluster Nobelisk",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "NobeliskCluster"
+    }
+   ],
+   "time": 24
+  },
+  "NobeliskGas": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "NobeliskGas",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "NobeliskExplosive"
+    },
+    {
+     "amount": 10,
+     "item": "GenericBiomass"
+    }
+   ],
+   "name": "Gas Nobelisk",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "NobeliskGas"
+    }
+   ],
+   "time": 12
+  },
+  "NobeliskNuke": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "NobeliskNuke",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "NobeliskExplosive"
+    },
+    {
+     "amount": 20,
+     "item": "UraniumCell"
+    },
+    {
+     "amount": 10,
+     "item": "GunpowderMK2"
+    },
+    {
+     "amount": 6,
+     "item": "CircuitBoardHighSpeed"
+    }
+   ],
+   "name": "Nuke Nobelisk",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "NobeliskNuke"
+    }
+   ],
+   "time": 120
+  },
+  "NobeliskShockwave": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "NobeliskShockwave",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "NobeliskExplosive"
+    },
+    {
+     "amount": 1,
+     "item": "CrystalOscillator"
+    }
+   ],
+   "name": "Pulse Nobelisk",
+   "outputs": [
+    {
+     "amount": 5,
+     "item": "NobeliskShockwave"
+    }
+   ],
+   "time": 60
+  },
+  "NonFissileUranium": {
+   "buildings": [
+    "Blender"
+   ],
+   "id": "NonFissileUranium",
+   "inputs": [
+    {
+     "amount": 15,
+     "item": "NuclearWaste"
+    },
+    {
+     "amount": 10,
+     "item": "Silica"
+    },
+    {
+     "amount": 6,
+     "item": "NitricAcid"
+    },
+    {
+     "amount": 6,
+     "item": "SulfuricAcid"
+    }
+   ],
+   "name": "Non-Fissile Uranium",
+   "outputs": [
+    {
+     "amount": 20,
+     "item": "NonFissibleUranium"
+    },
+    {
+     "amount": 6,
+     "item": "Water"
+    }
+   ],
+   "time": 24
+  },
+  "NuclearFuelRod": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "NuclearFuelRod",
+   "inputs": [
+    {
+     "amount": 50,
+     "item": "UraniumCell"
+    },
+    {
+     "amount": 3,
+     "item": "SteelPlateReinforced"
+    },
+    {
+     "amount": 5,
+     "item": "ElectromagneticControlRod"
+    }
+   ],
+   "name": "Uranium Fuel Rod",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "NuclearFuelRod"
+    }
+   ],
+   "time": 150
+  },
+  "PackagedAlumina": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "PackagedAlumina",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "AluminaSolution"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "name": "Packaged Alumina Solution",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "PackagedAlumina"
+    }
+   ],
+   "time": 1
+  },
+  "PackagedBiofuel": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "PackagedBiofuel",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "LiquidBiofuel"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "name": "Packaged Liquid Biofuel",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "PackagedBiofuel"
+    }
+   ],
+   "time": 3
+  },
+  "PackagedCrudeOil": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "PackagedCrudeOil",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "LiquidOil"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "name": "Packaged Oil",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "PackagedOil"
+    }
+   ],
+   "time": 4
+  },
+  "PackagedIonizedFuel": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "PackagedIonizedFuel",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "IonizedFuel"
+    },
+    {
+     "amount": 2,
+     "item": "GasTank"
+    }
+   ],
+   "name": "Packaged Ionized Fuel",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "PackagedIonizedFuel"
+    }
+   ],
+   "time": 3
+  },
+  "PackagedNitricAcid": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "PackagedNitricAcid",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "NitricAcid"
+    },
+    {
+     "amount": 1,
+     "item": "GasTank"
+    }
+   ],
+   "name": "Packaged Nitric Acid",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "PackagedNitricAcid"
+    }
+   ],
+   "time": 2
+  },
+  "PackagedNitrogen": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "PackagedNitrogen",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "NitrogenGas"
+    },
+    {
+     "amount": 1,
+     "item": "GasTank"
+    }
+   ],
+   "name": "Packaged Nitrogen Gas",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "PackagedNitrogenGas"
+    }
+   ],
+   "time": 1
+  },
+  "PackagedOilResidue": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "PackagedOilResidue",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "HeavyOilResidue"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "name": "Packaged Heavy Oil Residue",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "PackagedOilResidue"
+    }
+   ],
+   "time": 4
+  },
+  "PackagedRocketFuel": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "PackagedRocketFuel",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "RocketFuel"
+    },
+    {
+     "amount": 1,
+     "item": "GasTank"
+    }
+   ],
+   "name": "Packaged Rocket Fuel",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "PackagedRocketFuel"
+    }
+   ],
+   "time": 1
+  },
+  "PackagedSulfuricAcid": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "PackagedSulfuricAcid",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "SulfuricAcid"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "name": "Packaged Sulfuric Acid",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "PackagedSulfuricAcid"
+    }
+   ],
+   "time": 3
+  },
+  "PackagedTurboFuel": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "PackagedTurboFuel",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "LiquidTurboFuel"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "name": "Packaged Turbofuel",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "TurboFuel"
+    }
+   ],
+   "time": 6
+  },
+  "PackagedWater": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "PackagedWater",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Water"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "name": "Packaged Water",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "PackagedWater"
+    }
+   ],
+   "time": 2
+  },
+  "PetroleumCoke": {
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "PetroleumCoke",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "HeavyOilResidue"
+    }
+   ],
+   "name": "Petroleum Coke",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "PetroleumCoke"
+    }
+   ],
+   "time": 6
+  },
+  "Plastic": {
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Plastic",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "LiquidOil"
+    }
+   ],
+   "name": "Plastic",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Plastic"
+    },
+    {
+     "amount": 1,
+     "item": "HeavyOilResidue"
+    }
+   ],
+   "time": 6
+  },
+  "Plutonium": {
+   "buildings": [
+    "HadronCollider"
+   ],
+   "id": "Plutonium",
+   "inputs": [
+    {
+     "amount": 100,
+     "item": "NonFissibleUranium"
+    },
+    {
+     "amount": 25,
+     "item": "NuclearWaste"
+    }
+   ],
+   "name": "Plutonium Pellet",
+   "outputs": [
+    {
+     "amount": 30,
+     "item": "PlutoniumPellet"
+    }
+   ],
+   "power": {
+    "max": 750,
+    "min": 250
+   },
+   "time": 60
+  },
+  "PlutoniumCell": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "PlutoniumCell",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "PlutoniumPellet"
+    },
+    {
+     "amount": 4,
+     "item": "Cement"
+    }
+   ],
+   "name": "Encased Plutonium Cell",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "PlutoniumCell"
+    }
+   ],
+   "time": 12
+  },
+  "PlutoniumFuelRod": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "PlutoniumFuelRod",
+   "inputs": [
+    {
+     "amount": 30,
+     "item": "PlutoniumCell"
+    },
+    {
+     "amount": 18,
+     "item": "SteelPlate"
+    },
+    {
+     "amount": 6,
+     "item": "ElectromagneticControlRod"
+    },
+    {
+     "amount": 10,
+     "item": "AluminumPlateReinforced"
+    }
+   ],
+   "name": "Plutonium Fuel Rod",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "PlutoniumFuelRod"
+    }
+   ],
+   "time": 240
+  },
+  "PowerCrystalShard_1": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "PowerCrystalShard_1",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Crystal"
+    }
+   ],
+   "name": "Power Shard (1)",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "CrystalShard"
+    }
+   ],
+   "time": 8
+  },
+  "PowerCrystalShard_2": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "PowerCrystalShard_2",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Crystal_mk2"
+    }
+   ],
+   "name": "Power Shard (2)",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "CrystalShard"
+    }
+   ],
+   "time": 12
+  },
+  "PowerCrystalShard_3": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "PowerCrystalShard_3",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Crystal_mk3"
+    }
+   ],
+   "name": "Power Shard (5)",
+   "outputs": [
+    {
+     "amount": 5,
+     "item": "CrystalShard"
+    }
+   ],
+   "time": 24
+  },
+  "Power_GeneratorBiomass_Automated_Biofuel": {
+   "buildings": [
+    "GeneratorBiomass_Automated"
+   ],
+   "generatesMW": 30,
+   "id": "Power_GeneratorBiomass_Automated_Biofuel",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "Biofuel"
+    }
+   ],
+   "name": "Solid Biofuel in Biomass Burner",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorBiomass_Automated_GenericBiomass": {
+   "buildings": [
+    "GeneratorBiomass_Automated"
+   ],
+   "generatesMW": 30,
+   "id": "Power_GeneratorBiomass_Automated_GenericBiomass",
+   "inputs": [
+    {
+     "amount": 10,
+     "item": "GenericBiomass"
+    }
+   ],
+   "name": "Biomass in Biomass Burner",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorBiomass_Automated_Leaves": {
+   "buildings": [
+    "GeneratorBiomass_Automated"
+   ],
+   "generatesMW": 30,
+   "id": "Power_GeneratorBiomass_Automated_Leaves",
+   "inputs": [
+    {
+     "amount": 120,
+     "item": "Leaves"
+    }
+   ],
+   "name": "Leaves in Biomass Burner",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorBiomass_Automated_Mycelia": {
+   "buildings": [
+    "GeneratorBiomass_Automated"
+   ],
+   "generatesMW": 30,
+   "id": "Power_GeneratorBiomass_Automated_Mycelia",
+   "inputs": [
+    {
+     "amount": 90,
+     "item": "Mycelia"
+    }
+   ],
+   "name": "Mycelia in Biomass Burner",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorBiomass_Automated_PackagedBiofuel": {
+   "buildings": [
+    "GeneratorBiomass_Automated"
+   ],
+   "generatesMW": 30,
+   "id": "Power_GeneratorBiomass_Automated_PackagedBiofuel",
+   "inputs": [
+    {
+     "amount": 2.4,
+     "item": "PackagedBiofuel"
+    }
+   ],
+   "name": "Packaged Liquid Biofuel in Biomass Burner",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorBiomass_Automated_Wood": {
+   "buildings": [
+    "GeneratorBiomass_Automated"
+   ],
+   "generatesMW": 30,
+   "id": "Power_GeneratorBiomass_Automated_Wood",
+   "inputs": [
+    {
+     "amount": 18,
+     "item": "Wood"
+    }
+   ],
+   "name": "Wood in Biomass Burner",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorCoal_Coal": {
+   "buildings": [
+    "GeneratorCoal"
+   ],
+   "generatesMW": 75,
+   "id": "Power_GeneratorCoal_Coal",
+   "inputs": [
+    {
+     "amount": 15,
+     "item": "Coal"
+    },
+    {
+     "amount": 45,
+     "item": "Water"
+    }
+   ],
+   "name": "Coal in Coal-Powered Generator",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorCoal_CompactedCoal": {
+   "buildings": [
+    "GeneratorCoal"
+   ],
+   "generatesMW": 75,
+   "id": "Power_GeneratorCoal_CompactedCoal",
+   "inputs": [
+    {
+     "amount": 7.142857142857143,
+     "item": "CompactedCoal"
+    },
+    {
+     "amount": 45,
+     "item": "Water"
+    }
+   ],
+   "name": "Compacted Coal in Coal-Powered Generator",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorCoal_PetroleumCoke": {
+   "buildings": [
+    "GeneratorCoal"
+   ],
+   "generatesMW": 75,
+   "id": "Power_GeneratorCoal_PetroleumCoke",
+   "inputs": [
+    {
+     "amount": 25,
+     "item": "PetroleumCoke"
+    },
+    {
+     "amount": 45,
+     "item": "Water"
+    }
+   ],
+   "name": "Petroleum Coke in Coal-Powered Generator",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorFuel_IonizedFuel": {
+   "buildings": [
+    "GeneratorFuel"
+   ],
+   "generatesMW": 250,
+   "id": "Power_GeneratorFuel_IonizedFuel",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "IonizedFuel"
+    }
+   ],
+   "name": "Ionized Fuel in Fuel-Powered Generator",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorFuel_LiquidBiofuel": {
+   "buildings": [
+    "GeneratorFuel"
+   ],
+   "generatesMW": 250,
+   "id": "Power_GeneratorFuel_LiquidBiofuel",
+   "inputs": [
+    {
+     "amount": 20,
+     "item": "LiquidBiofuel"
+    }
+   ],
+   "name": "Liquid Biofuel in Fuel-Powered Generator",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorFuel_LiquidFuel": {
+   "buildings": [
+    "GeneratorFuel"
+   ],
+   "generatesMW": 250,
+   "id": "Power_GeneratorFuel_LiquidFuel",
+   "inputs": [
+    {
+     "amount": 20,
+     "item": "LiquidFuel"
+    }
+   ],
+   "name": "Fuel in Fuel-Powered Generator",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorFuel_LiquidTurboFuel": {
+   "buildings": [
+    "GeneratorFuel"
+   ],
+   "generatesMW": 250,
+   "id": "Power_GeneratorFuel_LiquidTurboFuel",
+   "inputs": [
+    {
+     "amount": 7.5,
+     "item": "LiquidTurboFuel"
+    }
+   ],
+   "name": "Turbofuel in Fuel-Powered Generator",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorFuel_RocketFuel": {
+   "buildings": [
+    "GeneratorFuel"
+   ],
+   "generatesMW": 250,
+   "id": "Power_GeneratorFuel_RocketFuel",
+   "inputs": [
+    {
+     "amount": 4.166666666666667,
+     "item": "RocketFuel"
+    }
+   ],
+   "name": "Rocket Fuel in Fuel-Powered Generator",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorNuclear_FicsoniumFuelRod": {
+   "buildings": [
+    "GeneratorNuclear"
+   ],
+   "generatesMW": 2500,
+   "id": "Power_GeneratorNuclear_FicsoniumFuelRod",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "FicsoniumFuelRod"
+    },
+    {
+     "amount": 240,
+     "item": "Water"
+    }
+   ],
+   "name": "Ficsonium Fuel Rod in Nuclear Power Plant",
+   "outputs": [],
+   "time": 60
+  },
+  "Power_GeneratorNuclear_NuclearFuelRod": {
+   "buildings": [
+    "GeneratorNuclear"
+   ],
+   "generatesMW": 2500,
+   "id": "Power_GeneratorNuclear_NuclearFuelRod",
+   "inputs": [
+    {
+     "amount": 0.2,
+     "item": "NuclearFuelRod"
+    },
+    {
+     "amount": 240,
+     "item": "Water"
+    }
+   ],
+   "name": "Uranium Fuel Rod in Nuclear Power Plant",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "NuclearWaste"
+    }
+   ],
+   "time": 60
+  },
+  "Power_GeneratorNuclear_PlutoniumFuelRod": {
+   "buildings": [
+    "GeneratorNuclear"
+   ],
+   "generatesMW": 2500,
+   "id": "Power_GeneratorNuclear_PlutoniumFuelRod",
+   "inputs": [
+    {
+     "amount": 0.1,
+     "item": "PlutoniumFuelRod"
+    },
+    {
+     "amount": 240,
+     "item": "Water"
+    }
+   ],
+   "name": "Plutonium Fuel Rod in Nuclear Power Plant",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "PlutoniumWaste"
+    }
+   ],
+   "time": 60
+  },
+  "PressureConversionCube": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "PressureConversionCube",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "ModularFrameFused"
+    },
+    {
+     "amount": 2,
+     "item": "ModularFrameLightweight"
+    }
+   ],
+   "name": "Pressure Conversion Cube",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "PressureConversionCube"
+    }
+   ],
+   "time": 60
+  },
+  "Protein_Crab": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Protein_Crab",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "HatcherParts"
+    }
+   ],
+   "name": "Hatcher Protein",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "AlienProtein"
+    }
+   ],
+   "time": 3
+  },
+  "Protein_Hog": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Protein_Hog",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "HogParts"
+    }
+   ],
+   "name": "Hog Protein",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "AlienProtein"
+    }
+   ],
+   "time": 3
+  },
+  "Protein_Spitter": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Protein_Spitter",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SpitterParts"
+    }
+   ],
+   "name": "Spitter Protein",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "AlienProtein"
+    }
+   ],
+   "time": 3
+  },
+  "Protein_Stinger": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Protein_Stinger",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "StingerParts"
+    }
+   ],
+   "name": "Stinger Protein",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "AlienProtein"
+    }
+   ],
+   "time": 3
+  },
+  "PureAluminumIngot": {
+   "buildings": [
+    "SmelterMk1"
+   ],
+   "id": "PureAluminumIngot",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "AluminumScrap"
+    }
+   ],
+   "name": "Alternate: Pure Aluminum Ingot",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "AluminumIngot"
+    }
+   ],
+   "time": 2
+  },
+  "QuantumEnergy": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "QuantumEnergy",
+   "inputs": [],
+   "name": "Excited Photonic Matter",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "QuantumEnergy"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 3
+  },
+  "QuartzCrystal": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "QuartzCrystal",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "RawQuartz"
+    }
+   ],
+   "name": "Quartz Crystal",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "QuartzCrystal"
+    }
+   ],
+   "time": 8
+  },
+  "Quartz_Bauxite": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Quartz_Bauxite",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 10,
+     "item": "OreBauxite"
+    }
+   ],
+   "name": "Raw Quartz (Bauxite)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "RawQuartz"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "Quartz_Coal": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Quartz_Coal",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 24,
+     "item": "Coal"
+    }
+   ],
+   "name": "Raw Quartz (Coal)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "RawQuartz"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "Quickwire": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Quickwire",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "GoldIngot"
+    }
+   ],
+   "name": "Quickwire",
+   "outputs": [
+    {
+     "amount": 5,
+     "item": "HighSpeedWire"
+    }
+   ],
+   "time": 5
+  },
+  "RadioControlUnit": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "RadioControlUnit",
+   "inputs": [
+    {
+     "amount": 32,
+     "item": "AluminumCasing"
+    },
+    {
+     "amount": 1,
+     "item": "CrystalOscillator"
+    },
+    {
+     "amount": 2,
+     "item": "Computer"
+    }
+   ],
+   "name": "Radio Control Unit",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "ModularFrameLightweight"
+    }
+   ],
+   "time": 48
+  },
+  "Rebar_Explosive": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "Rebar_Explosive",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "SpikedRebar"
+    },
+    {
+     "amount": 2,
+     "item": "GunpowderMK2"
+    },
+    {
+     "amount": 2,
+     "item": "SteelPipe"
+    }
+   ],
+   "name": "Explosive Rebar",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Rebar_Explosive"
+    }
+   ],
+   "time": 12
+  },
+  "Rebar_Spreadshot": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Rebar_Spreadshot",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "SpikedRebar"
+    },
+    {
+     "amount": 3,
+     "item": "QuartzCrystal"
+    }
+   ],
+   "name": "Shatter Rebar",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Rebar_Spreadshot"
+    }
+   ],
+   "time": 12
+  },
+  "Rebar_Stunshot": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Rebar_Stunshot",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SpikedRebar"
+    },
+    {
+     "amount": 5,
+     "item": "HighSpeedWire"
+    }
+   ],
+   "name": "Stun Rebar",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Rebar_Stunshot"
+    }
+   ],
+   "time": 6
+  },
+  "ResidualFuel": {
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "ResidualFuel",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "HeavyOilResidue"
+    }
+   ],
+   "name": "Residual Fuel",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "LiquidFuel"
+    }
+   ],
+   "time": 6
+  },
+  "ResidualPlastic": {
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "ResidualPlastic",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "PolymerResin"
+    },
+    {
+     "amount": 2,
+     "item": "Water"
+    }
+   ],
+   "name": "Residual Plastic",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Plastic"
+    }
+   ],
+   "time": 6
+  },
+  "ResidualRubber": {
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "ResidualRubber",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "PolymerResin"
+    },
+    {
+     "amount": 4,
+     "item": "Water"
+    }
+   ],
+   "name": "Residual Rubber",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Rubber"
+    }
+   ],
+   "time": 6
+  },
+  "RocketFuel": {
+   "buildings": [
+    "Blender"
+   ],
+   "id": "RocketFuel",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "LiquidTurboFuel"
+    },
+    {
+     "amount": 1,
+     "item": "NitricAcid"
+    }
+   ],
+   "name": "Rocket Fuel",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "RocketFuel"
+    },
+    {
+     "amount": 1,
+     "item": "CompactedCoal"
+    }
+   ],
+   "time": 6
+  },
+  "Rotor": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Rotor",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "IronRod"
+    },
+    {
+     "amount": 25,
+     "item": "IronScrew"
+    }
+   ],
+   "name": "Rotor",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Rotor"
+    }
+   ],
+   "time": 15
+  },
+  "Rubber": {
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "Rubber",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "LiquidOil"
+    }
+   ],
+   "name": "Rubber",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Rubber"
+    },
+    {
+     "amount": 2,
+     "item": "HeavyOilResidue"
+    }
+   ],
+   "time": 6
+  },
+  "SAMFluctuator": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "SAMFluctuator",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 5,
+     "item": "Wire"
+    },
+    {
+     "amount": 3,
+     "item": "SteelPipe"
+    }
+   ],
+   "name": "SAM Fluctuator",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SAMFluctuator"
+    }
+   ],
+   "time": 6
+  },
+  "Screw": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Screw",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "IronRod"
+    }
+   ],
+   "name": "Screws",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "IronScrew"
+    }
+   ],
+   "time": 6
+  },
+  "Silica": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Silica",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "RawQuartz"
+    }
+   ],
+   "name": "Silica",
+   "outputs": [
+    {
+     "amount": 5,
+     "item": "Silica"
+    }
+   ],
+   "time": 8
+  },
+  "SingularityCell": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "SingularityCell",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SpaceElevatorPart_9"
+    },
+    {
+     "amount": 20,
+     "item": "DarkMatter"
+    },
+    {
+     "amount": 100,
+     "item": "IronPlate"
+    },
+    {
+     "amount": 200,
+     "item": "Cement"
+    }
+   ],
+   "name": "Singularity Cell",
+   "outputs": [
+    {
+     "amount": 10,
+     "item": "SingularityCell"
+    }
+   ],
+   "time": 60
+  },
+  "Snow": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Snow",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "Gift"
+    }
+   ],
+   "name": "FICSMAS Actual Snow",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Snow"
+    }
+   ],
+   "time": 12
+  },
+  "Snowball": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Snowball",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Snow"
+    }
+   ],
+   "name": "Snowball",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SnowballProjectile"
+    }
+   ],
+   "time": 12
+  },
+  "SpaceElevatorPart_1": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "SpaceElevatorPart_1",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "IronPlateReinforced"
+    },
+    {
+     "amount": 1,
+     "item": "Rotor"
+    }
+   ],
+   "name": "Smart Plating",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SpaceElevatorPart_1"
+    }
+   ],
+   "time": 30
+  },
+  "SpaceElevatorPart_10": {
+   "buildings": [
+    "Blender"
+   ],
+   "id": "SpaceElevatorPart_10",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SpaceElevatorPart_7"
+    },
+    {
+     "amount": 80,
+     "item": "FicsiteMesh"
+    },
+    {
+     "amount": 20,
+     "item": "Water"
+    }
+   ],
+   "name": "Biochemical Sculptor",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "SpaceElevatorPart_10"
+    }
+   ],
+   "time": 120
+  },
+  "SpaceElevatorPart_11": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "SpaceElevatorPart_11",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SpaceElevatorPart_8"
+    },
+    {
+     "amount": 5,
+     "item": "SingularityCell"
+    },
+    {
+     "amount": 2,
+     "item": "QuantumOscillator"
+    },
+    {
+     "amount": 40,
+     "item": "DarkMatter"
+    }
+   ],
+   "name": "Ballistic Warp Drive",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SpaceElevatorPart_11"
+    }
+   ],
+   "time": 60
+  },
+  "SpaceElevatorPart_12": {
+   "buildings": [
+    "QuantumEncoder"
+   ],
+   "id": "SpaceElevatorPart_12",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SpaceElevatorPart_6"
+    },
+    {
+     "amount": 1,
+     "item": "TemporalProcessor"
+    },
+    {
+     "amount": 1,
+     "item": "QuantumOscillator"
+    },
+    {
+     "amount": 25,
+     "item": "QuantumEnergy"
+    }
+   ],
+   "name": "AI Expansion Server",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SpaceElevatorPart_12"
+    },
+    {
+     "amount": 25,
+     "item": "DarkEnergy"
+    }
+   ],
+   "power": {
+    "max": 2000,
+    "min": 0
+   },
+   "time": 15
+  },
+  "SpaceElevatorPart_2": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "SpaceElevatorPart_2",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "ModularFrame"
+    },
+    {
+     "amount": 12,
+     "item": "SteelPlate"
+    }
+   ],
+   "name": "Versatile Framework",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "SpaceElevatorPart_2"
+    }
+   ],
+   "time": 24
+  },
+  "SpaceElevatorPart_3": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "SpaceElevatorPart_3",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Stator"
+    },
+    {
+     "amount": 20,
+     "item": "Cable"
+    }
+   ],
+   "name": "Automated Wiring",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SpaceElevatorPart_3"
+    }
+   ],
+   "time": 24
+  },
+  "SpaceElevatorPart_4": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "SpaceElevatorPart_4",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Motor"
+    },
+    {
+     "amount": 15,
+     "item": "Rubber"
+    },
+    {
+     "amount": 2,
+     "item": "SpaceElevatorPart_1"
+    }
+   ],
+   "name": "Modular Engine",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SpaceElevatorPart_4"
+    }
+   ],
+   "time": 60
+  },
+  "SpaceElevatorPart_5": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "SpaceElevatorPart_5",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "SpaceElevatorPart_3"
+    },
+    {
+     "amount": 5,
+     "item": "CircuitBoard"
+    },
+    {
+     "amount": 1,
+     "item": "ModularFrameHeavy"
+    },
+    {
+     "amount": 2,
+     "item": "Computer"
+    }
+   ],
+   "name": "Adaptive Control Unit",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SpaceElevatorPart_5"
+    }
+   ],
+   "time": 60
+  },
+  "SpaceElevatorPart_6": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "SpaceElevatorPart_6",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "SpaceElevatorPart_2"
+    },
+    {
+     "amount": 2,
+     "item": "ElectromagneticControlRod"
+    }
+   ],
+   "name": "Magnetic Field Generator",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "SpaceElevatorPart_6"
+    }
+   ],
+   "time": 120
+  },
+  "SpaceElevatorPart_7": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "SpaceElevatorPart_7",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "SpaceElevatorPart_5"
+    },
+    {
+     "amount": 1,
+     "item": "ComputerSuper"
+    }
+   ],
+   "name": "Assembly Director System",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SpaceElevatorPart_7"
+    }
+   ],
+   "time": 80
+  },
+  "SpaceElevatorPart_8": {
+   "buildings": [
+    "ManufacturerMk1"
+   ],
+   "id": "SpaceElevatorPart_8",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "SpaceElevatorPart_4"
+    },
+    {
+     "amount": 2,
+     "item": "MotorLightweight"
+    },
+    {
+     "amount": 6,
+     "item": "CoolingSystem"
+    },
+    {
+     "amount": 2,
+     "item": "ModularFrameFused"
+    }
+   ],
+   "name": "Thermal Propulsion Rocket",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "SpaceElevatorPart_8"
+    }
+   ],
+   "time": 120
+  },
+  "SpaceElevatorPart_9": {
+   "buildings": [
+    "HadronCollider"
+   ],
+   "id": "SpaceElevatorPart_9",
+   "inputs": [
+    {
+     "amount": 200,
+     "item": "CopperDust"
+    },
+    {
+     "amount": 1,
+     "item": "PressureConversionCube"
+    }
+   ],
+   "name": "Nuclear Pasta",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SpaceElevatorPart_9"
+    }
+   ],
+   "power": {
+    "max": 1500,
+    "min": 500
+   },
+   "time": 120
+  },
+  "SpikedRebar": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "SpikedRebar",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "IronRod"
+    }
+   ],
+   "name": "Iron Rebar",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SpikedRebar"
+    }
+   ],
+   "time": 4
+  },
+  "Stator": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "Stator",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "SteelPipe"
+    },
+    {
+     "amount": 8,
+     "item": "Wire"
+    }
+   ],
+   "name": "Stator",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Stator"
+    }
+   ],
+   "time": 12
+  },
+  "SteelBeam": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "SteelBeam",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "SteelIngot"
+    }
+   ],
+   "name": "Steel Beam",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SteelPlate"
+    }
+   ],
+   "time": 4
+  },
+  "SteelPipe": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "SteelPipe",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "SteelIngot"
+    }
+   ],
+   "name": "Steel Pipe",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "SteelPipe"
+    }
+   ],
+   "time": 6
+  },
+  "Sulfur_Coal": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Sulfur_Coal",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 20,
+     "item": "Coal"
+    }
+   ],
+   "name": "Sulfur (Coal)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "Sulfur"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "Sulfur_Iron": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Sulfur_Iron",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 30,
+     "item": "OreIron"
+    }
+   ],
+   "name": "Sulfur (Iron)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "Sulfur"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "SulfuricAcid": {
+   "buildings": [
+    "OilRefinery"
+   ],
+   "id": "SulfuricAcid",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "Sulfur"
+    },
+    {
+     "amount": 5,
+     "item": "Water"
+    }
+   ],
+   "name": "Sulfuric Acid",
+   "outputs": [
+    {
+     "amount": 5,
+     "item": "SulfuricAcid"
+    }
+   ],
+   "time": 6
+  },
+  "SuperpositionOscillator": {
+   "buildings": [
+    "QuantumEncoder"
+   ],
+   "id": "SuperpositionOscillator",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "DarkMatter"
+    },
+    {
+     "amount": 1,
+     "item": "CrystalOscillator"
+    },
+    {
+     "amount": 9,
+     "item": "AluminumPlate"
+    },
+    {
+     "amount": 25,
+     "item": "QuantumEnergy"
+    }
+   ],
+   "name": "Superposition Oscillator",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "QuantumOscillator"
+    },
+    {
+     "amount": 25,
+     "item": "DarkEnergy"
+    }
+   ],
+   "power": {
+    "max": 2000,
+    "min": 0
+   },
+   "time": 12
+  },
+  "SyntheticPowerShard": {
+   "buildings": [
+    "QuantumEncoder"
+   ],
+   "id": "SyntheticPowerShard",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "TimeCrystal"
+    },
+    {
+     "amount": 2,
+     "item": "DarkMatter"
+    },
+    {
+     "amount": 12,
+     "item": "QuartzCrystal"
+    },
+    {
+     "amount": 12,
+     "item": "QuantumEnergy"
+    }
+   ],
+   "name": "Synthetic Power Shard",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "CrystalShard"
+    },
+    {
+     "amount": 12,
+     "item": "DarkEnergy"
+    }
+   ],
+   "power": {
+    "max": 2000,
+    "min": 0
+   },
+   "time": 12
+  },
+  "TemporalProcessor": {
+   "buildings": [
+    "QuantumEncoder"
+   ],
+   "id": "TemporalProcessor",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "TimeCrystal"
+    },
+    {
+     "amount": 1,
+     "item": "ComputerSuper"
+    },
+    {
+     "amount": 15,
+     "item": "FicsiteMesh"
+    },
+    {
+     "amount": 25,
+     "item": "QuantumEnergy"
+    }
+   ],
+   "name": "Neural-Quantum Processor",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "TemporalProcessor"
+    },
+    {
+     "amount": 25,
+     "item": "DarkEnergy"
+    }
+   ],
+   "power": {
+    "max": 2000,
+    "min": 0
+   },
+   "time": 20
+  },
+  "TimeCrystal": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "TimeCrystal",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Diamond"
+    }
+   ],
+   "name": "Time Crystal",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "TimeCrystal"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 10
+  },
+  "UnpackageAlumina": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "UnpackageAlumina",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "PackagedAlumina"
+    }
+   ],
+   "name": "Unpackage Alumina Solution",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "AluminaSolution"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "time": 1
+  },
+  "UnpackageBioFuel": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "UnpackageBioFuel",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "PackagedBiofuel"
+    }
+   ],
+   "name": "Unpackage Liquid Biofuel",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "LiquidBiofuel"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "time": 2
+  },
+  "UnpackageFuel": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "UnpackageFuel",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Fuel"
+    }
+   ],
+   "name": "Unpackage Fuel",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "LiquidFuel"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "time": 2
+  },
+  "UnpackageIonizedFuel": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "UnpackageIonizedFuel",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "PackagedIonizedFuel"
+    }
+   ],
+   "name": "Unpackage Ionized Fuel",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "IonizedFuel"
+    },
+    {
+     "amount": 2,
+     "item": "GasTank"
+    }
+   ],
+   "time": 3
+  },
+  "UnpackageNitricAcid": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "UnpackageNitricAcid",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "PackagedNitricAcid"
+    }
+   ],
+   "name": "Unpackage Nitric Acid",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "NitricAcid"
+    },
+    {
+     "amount": 1,
+     "item": "GasTank"
+    }
+   ],
+   "time": 3
+  },
+  "UnpackageNitrogen": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "UnpackageNitrogen",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "PackagedNitrogenGas"
+    }
+   ],
+   "name": "Unpackage Nitrogen Gas",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "NitrogenGas"
+    },
+    {
+     "amount": 1,
+     "item": "GasTank"
+    }
+   ],
+   "time": 1
+  },
+  "UnpackageOil": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "UnpackageOil",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "PackagedOil"
+    }
+   ],
+   "name": "Unpackage Oil",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "LiquidOil"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "time": 2
+  },
+  "UnpackageOilResidue": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "UnpackageOilResidue",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "PackagedOilResidue"
+    }
+   ],
+   "name": "Unpackage Heavy Oil Residue",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "HeavyOilResidue"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "time": 6
+  },
+  "UnpackageRocketFuel": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "UnpackageRocketFuel",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "PackagedRocketFuel"
+    }
+   ],
+   "name": "Unpackage Rocket Fuel",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "RocketFuel"
+    },
+    {
+     "amount": 1,
+     "item": "GasTank"
+    }
+   ],
+   "time": 1
+  },
+  "UnpackageSulfuricAcid": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "UnpackageSulfuricAcid",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "PackagedSulfuricAcid"
+    }
+   ],
+   "name": "Unpackage Sulfuric Acid",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "SulfuricAcid"
+    },
+    {
+     "amount": 1,
+     "item": "FluidCanister"
+    }
+   ],
+   "time": 1
+  },
+  "UnpackageTurboFuel": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "UnpackageTurboFuel",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "TurboFuel"
+    }
+   ],
+   "name": "Unpackage Turbofuel",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "LiquidTurboFuel"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "time": 6
+  },
+  "UnpackageWater": {
+   "buildings": [
+    "Packager"
+   ],
+   "id": "UnpackageWater",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "PackagedWater"
+    }
+   ],
+   "name": "Unpackage Water",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Water"
+    },
+    {
+     "amount": 2,
+     "item": "FluidCanister"
+    }
+   ],
+   "time": 1
+  },
+  "UraniumCell": {
+   "buildings": [
+    "Blender"
+   ],
+   "id": "UraniumCell",
+   "inputs": [
+    {
+     "amount": 10,
+     "item": "OreUranium"
+    },
+    {
+     "amount": 3,
+     "item": "Cement"
+    },
+    {
+     "amount": 8,
+     "item": "SulfuricAcid"
+    }
+   ],
+   "name": "Encased Uranium Cell",
+   "outputs": [
+    {
+     "amount": 5,
+     "item": "UraniumCell"
+    },
+    {
+     "amount": 2,
+     "item": "SulfuricAcid"
+    }
+   ],
+   "time": 12
+  },
+  "Uranium_Bauxite": {
+   "buildings": [
+    "Converter"
+   ],
+   "id": "Uranium_Bauxite",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "SAMIngot"
+    },
+    {
+     "amount": 48,
+     "item": "OreBauxite"
+    }
+   ],
+   "name": "Uranium Ore (Bauxite)",
+   "outputs": [
+    {
+     "amount": 12,
+     "item": "OreUranium"
+    }
+   ],
+   "power": {
+    "max": 400,
+    "min": 100
+   },
+   "time": 6
+  },
+  "Wire": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "Wire",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "CopperIngot"
+    }
+   ],
+   "name": "Wire",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Wire"
+    }
+   ],
+   "time": 4
+  },
+  "XmasBall1": {
+   "buildings": [
+    "SmelterMk1"
+   ],
+   "id": "XmasBall1",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Gift"
+    }
+   ],
+   "name": "Red FICSMAS Ornament",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "XmasBall1"
+    }
+   ],
+   "time": 12
+  },
+  "XmasBall2": {
+   "buildings": [
+    "SmelterMk1"
+   ],
+   "id": "XmasBall2",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Gift"
+    }
+   ],
+   "name": "Blue FICSMAS Ornament",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "XmasBall2"
+    }
+   ],
+   "time": 12
+  },
+  "XmasBall3": {
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "XmasBall3",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "XmasBall1"
+    },
+    {
+     "amount": 2,
+     "item": "CopperIngot"
+    }
+   ],
+   "name": "Copper FICSMAS Ornament",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "XmasBall3"
+    }
+   ],
+   "time": 12
+  },
+  "XmasBall4": {
+   "buildings": [
+    "FoundryMk1"
+   ],
+   "id": "XmasBall4",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "XmasBall2"
+    },
+    {
+     "amount": 3,
+     "item": "IronIngot"
+    }
+   ],
+   "name": "Iron FICSMAS Ornament",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "XmasBall4"
+    }
+   ],
+   "time": 12
+  },
+  "XmasBallCluster": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "XmasBallCluster",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "XmasBall3"
+    },
+    {
+     "amount": 1,
+     "item": "XmasBall4"
+    }
+   ],
+   "name": "FICSMAS Ornament Bundle",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "XmasBallCluster"
+    }
+   ],
+   "time": 12
+  },
+  "XmasBow": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "XmasBow",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Gift"
+    }
+   ],
+   "name": "FICSMAS Bow",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "XmasBow"
+    }
+   ],
+   "time": 12
+  },
+  "XmasBranch": {
+   "buildings": [
+    "ConstructorMk1"
+   ],
+   "id": "XmasBranch",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Gift"
+    }
+   ],
+   "name": "FICSMAS Tree Branch",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "XmasBranch"
+    }
+   ],
+   "time": 6
+  },
+  "XmasStar": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "XmasStar",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "XmasWreath"
+    },
+    {
+     "amount": 20,
+     "item": "CandyCane"
+    }
+   ],
+   "name": "FICSMAS Wonder Star",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "XmasStar"
+    }
+   ],
+   "time": 60
+  },
+  "XmasWreath": {
+   "buildings": [
+    "AssemblerMk1"
+   ],
+   "id": "XmasWreath",
+   "inputs": [
+    {
+     "amount": 15,
+     "item": "XmasBranch"
+    },
+    {
+     "amount": 6,
+     "item": "XmasBallCluster"
+    }
+   ],
+   "name": "FICSMAS Wreath",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "XmasWreath"
+    }
+   ],
+   "time": 60
+  }
+ },
+ "resourceWeights": {
+  "Coal": 2.1773049645390072,
+  "LiquidOil": 7.309523809523809,
+  "NitrogenGas": 7.675,
+  "OreBauxite": 7.487804878048781,
+  "OreCopper": 2.4959349593495936,
+  "OreGold": 6.14,
+  "OreIron": 1,
+  "OreUranium": 43.857142857142854,
+  "RawQuartz": 6.822222222222222,
+  "SAM": 9.029411764705882,
+  "Stone": 1.329004329004329,
+  "Sulfur": 8.527777777777779,
+  "Water": 0
+ },
+ "skipped": [],
+ "source": "/mnt/pomni/SteamLibrary/steamapps/common/Satisfactory/CommunityResources/Docs/en-US.json"
+}

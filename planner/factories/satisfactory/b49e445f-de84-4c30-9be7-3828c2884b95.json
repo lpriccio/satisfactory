@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "id": "b49e445f-de84-4c30-9be7-3828c2884b95",
+  "game": "satisfactory",
+  "name": "AI Expansion Server 1",
+  "notes": "Migration: couldn't map imported item \"Beacon\".",
+  "mode": "target",
+  "objective": "min-raw",
+  "targets": [
+    {
+      "item": "SpaceElevatorPart_12",
+      "rate": 10
+    }
+  ],
+  "recipeChoice": {
+    "Water": "AluminumScrap",
+    "DarkEnergy": "SyntheticPowerShard"
+  },
+  "lineSettings": {},
+  "lines": [],
+  "imports": {
+    "items": [
+      "FicsiteIngot",
+      "ModularFrame",
+      "QuantumEnergy",
+      "SingularityCell",
+      "TimeCrystal",
+      "TurboFuel"
+    ],
+    "edges": [],
+    "exclude": []
+  },
+  "spacing": 4,
+  "createdAt": "2026-01-11T23:49:28.721Z",
+  "updatedAt": "2026-01-11T23:49:28.721Z"
+}

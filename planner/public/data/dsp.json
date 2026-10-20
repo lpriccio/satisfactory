@@ -1,0 +1,2435 @@
+{
+ "buildings": {
+  "producer": {
+   "id": "producer",
+   "name": "Producer",
+   "powerMW": 0,
+   "speed": 1
+  }
+ },
+ "defaultImports": [
+  "Charged Accumulator",
+  "Coal",
+  "Crystal Explosive Unit",
+  "Deut",
+  "Deut Rod",
+  "Fire Ice",
+  "H2SO4",
+  "Kimberlite",
+  "Organic Crystal",
+  "Refoil",
+  "Spiniform",
+  "Stalagmite",
+  "Stone",
+  "Strange Matter",
+  "TI Alloy",
+  "Unipolar",
+  "Water"
+ ],
+ "features": {
+  "clock": false,
+  "footprint": false,
+  "power": false,
+  "productivity": true,
+  "sloops": false,
+  "speedBonus": true
+ },
+ "game": "dsp",
+ "generatedAt": "2026-10-20T04:10:31.965Z",
+ "items": {
+  "Accumulator": {
+   "id": "Accumulator",
+   "name": "Accumulator",
+   "recipe": "Accumulator"
+  },
+  "Belt1": {
+   "id": "Belt1",
+   "name": "Belt1",
+   "recipe": "Belt1"
+  },
+  "Belt2": {
+   "id": "Belt2",
+   "name": "Belt2",
+   "recipe": "Belt2"
+  },
+  "Belt3": {
+   "id": "Belt3",
+   "name": "Belt3",
+   "recipe": "Belt3"
+  },
+  "Blue Engine": {
+   "id": "Blue Engine",
+   "name": "Blue Engine",
+   "recipe": "Blue Engine"
+  },
+  "Blue Science": {
+   "id": "Blue Science",
+   "name": "Blue Science",
+   "recipe": "Blue Science"
+  },
+  "Broadband": {
+   "id": "Broadband",
+   "name": "Broadband",
+   "recipe": "Broadband"
+  },
+  "CB": {
+   "id": "CB",
+   "name": "CB",
+   "recipe": "CB"
+  },
+  "Casimir": {
+   "id": "Casimir",
+   "name": "Casimir",
+   "recipe": "Casimir"
+  },
+  "Charged Accumulator": {
+   "id": "Charged Accumulator",
+   "name": "Charged Accumulator",
+   "raw": true
+  },
+  "Coal": {
+   "id": "Coal",
+   "name": "Coal",
+   "raw": true
+  },
+  "Combiner": {
+   "id": "Combiner",
+   "name": "Combiner",
+   "recipe": "Combiner"
+  },
+  "Combustible Unit": {
+   "id": "Combustible Unit",
+   "name": "Combustible Unit",
+   "recipe": "Combustible Unit"
+  },
+  "Component": {
+   "id": "Component",
+   "name": "Component",
+   "recipe": "Component"
+  },
+  "Copper": {
+   "id": "Copper",
+   "name": "Copper",
+   "recipe": "Copper"
+  },
+  "Crystal Explosive": {
+   "id": "Crystal Explosive",
+   "name": "Crystal Explosive",
+   "recipe": "Crystal Explosive"
+  },
+  "Crystal Explosive Unit": {
+   "id": "Crystal Explosive Unit",
+   "name": "Crystal Explosive Unit",
+   "raw": true
+  },
+  "Deut": {
+   "id": "Deut",
+   "name": "Deut",
+   "raw": true
+  },
+  "Deut Rod": {
+   "id": "Deut Rod",
+   "name": "Deut Rod",
+   "raw": true
+  },
+  "Diamond": {
+   "id": "Diamond",
+   "name": "Diamond",
+   "recipe": "Diamond"
+  },
+  "Drone": {
+   "id": "Drone",
+   "name": "Drone",
+   "recipe": "Drone"
+  },
+  "Energy Exchanger": {
+   "id": "Energy Exchanger",
+   "name": "Energy Exchanger",
+   "recipe": "Energy Exchanger"
+  },
+  "Engine": {
+   "id": "Engine",
+   "name": "Engine",
+   "recipe": "Engine"
+  },
+  "Explosive Unit": {
+   "id": "Explosive Unit",
+   "name": "Explosive Unit",
+   "recipe": "Explosive Unit"
+  },
+  "Fancy Thruster": {
+   "id": "Fancy Thruster",
+   "name": "Fancy Thruster",
+   "recipe": "Fancy Thruster"
+  },
+  "Fidget Spinner": {
+   "id": "Fidget Spinner",
+   "name": "Fidget Spinner",
+   "recipe": "Fidget Spinner"
+  },
+  "Fire Ice": {
+   "id": "Fire Ice",
+   "name": "Fire Ice",
+   "raw": true
+  },
+  "Frame": {
+   "id": "Frame",
+   "name": "Frame",
+   "recipe": "Frame"
+  },
+  "Gear": {
+   "id": "Gear",
+   "name": "Gear",
+   "recipe": "Gear"
+  },
+  "Glass": {
+   "id": "Glass",
+   "name": "Glass",
+   "recipe": "Glass"
+  },
+  "Glens": {
+   "id": "Glens",
+   "name": "Glens",
+   "recipe": "Glens"
+  },
+  "Graphene": {
+   "id": "Graphene",
+   "name": "Graphene",
+   "recipe": "Graphene"
+  },
+  "Graphite": {
+   "id": "Graphite",
+   "name": "Graphite",
+   "recipe": "Graphite"
+  },
+  "Green Engine": {
+   "id": "Green Engine",
+   "name": "Green Engine",
+   "recipe": "Green Engine"
+  },
+  "Green Missile": {
+   "id": "Green Missile",
+   "name": "Green Missile",
+   "recipe": "Green Missile"
+  },
+  "Green Science": {
+   "id": "Green Science",
+   "name": "Green Science",
+   "recipe": "Green Science"
+  },
+  "H2SO4": {
+   "id": "H2SO4",
+   "name": "H2SO4",
+   "raw": true
+  },
+  "Hydrogen": {
+   "id": "Hydrogen",
+   "name": "Hydrogen",
+   "recipe": "Graphene"
+  },
+  "Interstellar Tower": {
+   "id": "Interstellar Tower",
+   "name": "Interstellar Tower",
+   "recipe": "Interstellar Tower"
+  },
+  "Iron": {
+   "id": "Iron",
+   "name": "Iron",
+   "recipe": "Iron"
+  },
+  "Kimberlite": {
+   "id": "Kimberlite",
+   "name": "Kimberlite",
+   "raw": true
+  },
+  "Logistics Distributor": {
+   "id": "Logistics Distributor",
+   "name": "Logistics Distributor",
+   "recipe": "Logistics Distributor"
+  },
+  "Magnet": {
+   "id": "Magnet",
+   "name": "Magnet",
+   "recipe": "Magnet"
+  },
+  "Micro": {
+   "id": "Micro",
+   "name": "Micro",
+   "recipe": "Micro"
+  },
+  "Nanotube": {
+   "id": "Nanotube",
+   "name": "Nanotube",
+   "recipe": "Good Tube"
+  },
+  "Organic Crystal": {
+   "id": "Organic Crystal",
+   "name": "Organic Crystal",
+   "raw": true
+  },
+  "Oribtal Collector": {
+   "id": "Oribtal Collector",
+   "name": "Oribtal Collector",
+   "recipe": "Oribtal Collector"
+  },
+  "PC": {
+   "id": "PC",
+   "name": "PC",
+   "recipe": "PC"
+  },
+  "Plane Filter": {
+   "id": "Plane Filter",
+   "name": "Plane Filter",
+   "recipe": "Plane Filter"
+  },
+  "Planetary Tower": {
+   "id": "Planetary Tower",
+   "name": "Planetary Tower",
+   "recipe": "Planetary Tower"
+  },
+  "Plasma Exciter": {
+   "id": "Plasma Exciter",
+   "name": "Plasma Exciter",
+   "recipe": "Plasma Exciter"
+  },
+  "Plastic": {
+   "id": "Plastic",
+   "name": "Plastic",
+   "recipe": "Plastic"
+  },
+  "Prism": {
+   "id": "Prism",
+   "name": "Prism",
+   "recipe": "Prism"
+  },
+  "Pro1": {
+   "id": "Pro1",
+   "name": "Pro1",
+   "recipe": "Pro1"
+  },
+  "Pro2": {
+   "id": "Pro2",
+   "name": "Pro2",
+   "recipe": "Pro2"
+  },
+  "Pro3": {
+   "id": "Pro3",
+   "name": "Pro3",
+   "recipe": "Pro3"
+  },
+  "Processor": {
+   "id": "Processor",
+   "name": "Processor",
+   "recipe": "Processor"
+  },
+  "Purple Science": {
+   "id": "Purple Science",
+   "name": "Purple Science",
+   "recipe": "Purple Science"
+  },
+  "Qchip": {
+   "id": "Qchip",
+   "name": "Qchip",
+   "recipe": "Qchip"
+  },
+  "Red Missile": {
+   "id": "Red Missile",
+   "name": "Red Missile",
+   "recipe": "Red Missile"
+  },
+  "Red Science": {
+   "id": "Red Science",
+   "name": "Red Science",
+   "recipe": "Red Science"
+  },
+  "Refoil": {
+   "id": "Refoil",
+   "name": "Refoil",
+   "raw": true
+  },
+  "Rocket": {
+   "id": "Rocket",
+   "name": "Rocket",
+   "recipe": "Rocket"
+  },
+  "Sail": {
+   "id": "Sail",
+   "name": "Sail",
+   "recipe": "Sail"
+  },
+  "Shell": {
+   "id": "Shell",
+   "name": "Shell",
+   "recipe": "Shell"
+  },
+  "Si Crystal": {
+   "id": "Si Crystal",
+   "name": "Si Crystal",
+   "recipe": "Si Crystal"
+  },
+  "Silicon": {
+   "id": "Silicon",
+   "name": "Silicon",
+   "recipe": "Silicon"
+  },
+  "Solar Panel": {
+   "id": "Solar Panel",
+   "name": "Solar Panel",
+   "recipe": "Solar Panel"
+  },
+  "Sort1": {
+   "id": "Sort1",
+   "name": "Sort1",
+   "recipe": "Sort1"
+  },
+  "Sort2": {
+   "id": "Sort2",
+   "name": "Sort2",
+   "recipe": "Sort2"
+  },
+  "Sort3": {
+   "id": "Sort3",
+   "name": "Sort3",
+   "recipe": "Sort3"
+  },
+  "Sort4": {
+   "id": "Sort4",
+   "name": "Sort4",
+   "recipe": "Sort4"
+  },
+  "Spicy Donut": {
+   "id": "Spicy Donut",
+   "name": "Spicy Donut",
+   "recipe": "Spicy Donut"
+  },
+  "Spiniform": {
+   "id": "Spiniform",
+   "name": "Spiniform",
+   "raw": true
+  },
+  "Stalagmite": {
+   "id": "Stalagmite",
+   "name": "Stalagmite",
+   "raw": true
+  },
+  "Steel": {
+   "id": "Steel",
+   "name": "Steel",
+   "recipe": "Steel"
+  },
+  "Stone": {
+   "id": "Stone",
+   "name": "Stone",
+   "raw": true
+  },
+  "Strange": {
+   "id": "Strange",
+   "name": "Strange",
+   "recipe": "Strange"
+  },
+  "Strange Matter": {
+   "id": "Strange Matter",
+   "name": "Strange Matter",
+   "raw": true
+  },
+  "TI Alloy": {
+   "id": "TI Alloy",
+   "name": "TI Alloy",
+   "raw": true
+  },
+  "Thruster": {
+   "id": "Thruster",
+   "name": "Thruster",
+   "recipe": "Thruster"
+  },
+  "Ti Alloy": {
+   "id": "Ti Alloy",
+   "name": "Ti Alloy",
+   "recipe": "Ti Alloy"
+  },
+  "Ti Crystal": {
+   "id": "Ti Crystal",
+   "name": "Ti Crystal",
+   "recipe": "Ti Crystal"
+  },
+  "Ti Glass": {
+   "id": "Ti Glass",
+   "name": "Ti Glass",
+   "recipe": "Ti Glass"
+  },
+  "Titanium": {
+   "id": "Titanium",
+   "name": "Titanium",
+   "recipe": "Titanium"
+  },
+  "Tubes": {
+   "id": "Tubes",
+   "name": "Tubes",
+   "recipe": "Tubes"
+  },
+  "Unipolar": {
+   "id": "Unipolar",
+   "name": "Unipolar",
+   "raw": true
+  },
+  "Vessel": {
+   "id": "Vessel",
+   "name": "Vessel",
+   "recipe": "Vessel"
+  },
+  "Water": {
+   "id": "Water",
+   "name": "Water",
+   "raw": true
+  },
+  "White Engine": {
+   "id": "White Engine",
+   "name": "White Engine",
+   "recipe": "White Engine"
+  },
+  "Yellow Missile": {
+   "id": "Yellow Missile",
+   "name": "Yellow Missile",
+   "recipe": "Yellow Missile"
+  },
+  "Yellow Science": {
+   "id": "Yellow Science",
+   "name": "Yellow Science",
+   "recipe": "Yellow Science"
+  },
+  "Yellow Shell": {
+   "id": "Yellow Shell",
+   "name": "Yellow Shell",
+   "recipe": "Yellow Shell"
+  }
+ },
+ "name": "Dyson Sphere Program",
+ "recipes": {
+  "Accumulator": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Accumulator",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "Iron"
+    },
+    {
+     "amount": 1,
+     "item": "Blue Engine"
+    },
+    {
+     "amount": 3,
+     "item": "Si Crystal"
+    }
+   ],
+   "name": "Accumulator",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Accumulator"
+    }
+   ],
+   "time": 3
+  },
+  "Belt1": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Belt1",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Gear"
+    },
+    {
+     "amount": 2,
+     "item": "Iron"
+    }
+   ],
+   "name": "Belt1",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "Belt1"
+    }
+   ],
+   "time": 1
+  },
+  "Belt2": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Belt2",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Belt1"
+    },
+    {
+     "amount": 1,
+     "item": "Green Engine"
+    }
+   ],
+   "name": "Belt2",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "Belt2"
+    }
+   ],
+   "time": 1
+  },
+  "Belt3": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Belt3",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Belt2"
+    },
+    {
+     "amount": 1,
+     "item": "Blue Engine"
+    },
+    {
+     "amount": 1,
+     "item": "Graphene"
+    }
+   ],
+   "name": "Belt3",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "Belt3"
+    }
+   ],
+   "time": 1
+  },
+  "Blue Engine": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Blue Engine",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Green Engine"
+    },
+    {
+     "amount": 3,
+     "item": "Magnet"
+    },
+    {
+     "amount": 1,
+     "item": "Graphite"
+    }
+   ],
+   "name": "Blue Engine",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Blue Engine"
+    }
+   ],
+   "time": 3
+  },
+  "Blue Science": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Blue Science",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "CB"
+    },
+    {
+     "amount": 1,
+     "item": "Spicy Donut"
+    }
+   ],
+   "name": "Blue Science",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Blue Science"
+    }
+   ],
+   "time": 3
+  },
+  "Broadband": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Broadband",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Plastic"
+    },
+    {
+     "amount": 2,
+     "item": "Si Crystal"
+    },
+    {
+     "amount": 2,
+     "item": "Tubes"
+    }
+   ],
+   "name": "Broadband",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Broadband"
+    }
+   ],
+   "time": 8
+  },
+  "CB": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "CB",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Iron"
+    },
+    {
+     "amount": 1,
+     "item": "Copper"
+    }
+   ],
+   "name": "CB",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "CB"
+    }
+   ],
+   "time": 1
+  },
+  "Casimir": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Casimir",
+   "inputs": [
+    {
+     "amount": 12,
+     "item": "Hydrogen"
+    },
+    {
+     "amount": 2,
+     "item": "Graphene"
+    },
+    {
+     "amount": 1,
+     "item": "Ti Crystal"
+    }
+   ],
+   "name": "Casimir",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Casimir"
+    }
+   ],
+   "time": 4
+  },
+  "Combiner": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Combiner",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Prism"
+    },
+    {
+     "amount": 1,
+     "item": "CB"
+    }
+   ],
+   "name": "Combiner",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Combiner"
+    }
+   ],
+   "time": 3
+  },
+  "Combustible Unit": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Combustible Unit",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Coal"
+    }
+   ],
+   "name": "Combustible Unit",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Combustible Unit"
+    }
+   ],
+   "time": 3
+  },
+  "Component": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Component",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Sail"
+    },
+    {
+     "amount": 3,
+     "item": "Frame"
+    },
+    {
+     "amount": 3,
+     "item": "Processor"
+    }
+   ],
+   "name": "Component",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Component"
+    }
+   ],
+   "time": 8
+  },
+  "Copper": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Copper",
+   "inputs": [],
+   "name": "Copper",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Copper"
+    }
+   ],
+   "time": 1
+  },
+  "Crystal Explosive": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Crystal Explosive",
+   "inputs": [
+    {
+     "amount": 8,
+     "item": "Explosive Unit"
+    },
+    {
+     "amount": 1,
+     "item": "Casimir"
+    },
+    {
+     "amount": 8,
+     "item": "Si Crystal"
+    }
+   ],
+   "name": "Crystal Explosive",
+   "outputs": [
+    {
+     "amount": 8,
+     "item": "Crystal Explosive"
+    }
+   ],
+   "time": 24
+  },
+  "Diamond": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Diamond",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Graphite"
+    }
+   ],
+   "name": "Diamond",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Diamond"
+    }
+   ],
+   "time": 2
+  },
+  "Diamond+": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Diamond+",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Kimberlite"
+    }
+   ],
+   "name": "Diamond+",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Diamond"
+    }
+   ],
+   "time": 1.5
+  },
+  "Drone": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Drone",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "Iron"
+    },
+    {
+     "amount": 2,
+     "item": "Processor"
+    },
+    {
+     "amount": 2,
+     "item": "Thruster"
+    }
+   ],
+   "name": "Drone",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Drone"
+    }
+   ],
+   "time": 4
+  },
+  "Energy Exchanger": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Energy Exchanger",
+   "inputs": [
+    {
+     "amount": 40,
+     "item": "Ti Alloy"
+    },
+    {
+     "amount": 40,
+     "item": "Steel"
+    },
+    {
+     "amount": 40,
+     "item": "Processor"
+    },
+    {
+     "amount": 8,
+     "item": "PC"
+    }
+   ],
+   "name": "Energy Exchanger",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Energy Exchanger"
+    }
+   ],
+   "time": 15
+  },
+  "Engine": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Engine",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Iron"
+    },
+    {
+     "amount": 1,
+     "item": "Spicy Donut"
+    },
+    {
+     "amount": 1,
+     "item": "Gear"
+    }
+   ],
+   "name": "Engine",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Engine"
+    }
+   ],
+   "time": 2
+  },
+  "Explosive Unit": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Explosive Unit",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Combustible Unit"
+    },
+    {
+     "amount": 2,
+     "item": "Plastic"
+    },
+    {
+     "amount": 1,
+     "item": "H2SO4"
+    }
+   ],
+   "name": "Explosive Unit",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Explosive Unit"
+    }
+   ],
+   "time": 6
+  },
+  "Fancy Thruster": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Fancy Thruster",
+   "inputs": [
+    {
+     "amount": 5,
+     "item": "Ti Alloy"
+    },
+    {
+     "amount": 5,
+     "item": "Green Engine"
+    }
+   ],
+   "name": "Fancy Thruster",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Fancy Thruster"
+    }
+   ],
+   "time": 6
+  },
+  "Fidget Spinner": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Fidget Spinner",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Iron"
+    },
+    {
+     "amount": 1,
+     "item": "Processor"
+    },
+    {
+     "amount": 1,
+     "item": "White Engine"
+    }
+   ],
+   "name": "Fidget Spinner",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Fidget Spinner"
+    }
+   ],
+   "time": 2
+  },
+  "Frame": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Frame",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Silicon"
+    },
+    {
+     "amount": 1,
+     "item": "Ti Alloy"
+    },
+    {
+     "amount": 4,
+     "item": "Tubes"
+    }
+   ],
+   "name": "Frame",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Frame"
+    }
+   ],
+   "time": 6
+  },
+  "Gear": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Gear",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Iron"
+    }
+   ],
+   "name": "Gear",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Gear"
+    }
+   ],
+   "time": 1
+  },
+  "Glass": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Glass",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Stone"
+    }
+   ],
+   "name": "Glass",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Glass"
+    }
+   ],
+   "time": 2
+  },
+  "Glens": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Glens",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "Diamond"
+    },
+    {
+     "amount": 1,
+     "item": "Strange"
+    }
+   ],
+   "name": "Glens",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Glens"
+    }
+   ],
+   "time": 6
+  },
+  "Good Tube": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Good Tube",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "Spiniform"
+    }
+   ],
+   "name": "Good Tube",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Nanotube"
+    }
+   ],
+   "time": 4
+  },
+  "Graphene": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Graphene",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Fire Ice"
+    }
+   ],
+   "name": "Graphene",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Graphene"
+    },
+    {
+     "amount": 1,
+     "item": "Hydrogen"
+    }
+   ],
+   "time": 2
+  },
+  "Graphite": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Graphite",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Coal"
+    }
+   ],
+   "name": "Graphite",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Graphite"
+    }
+   ],
+   "time": 2
+  },
+  "Green Engine": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Green Engine",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Engine"
+    },
+    {
+     "amount": 2,
+     "item": "Spicy Donut"
+    }
+   ],
+   "name": "Green Engine",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Green Engine"
+    }
+   ],
+   "time": 2
+  },
+  "Green Missile": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Green Missile",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Yellow Missile"
+    },
+    {
+     "amount": 6,
+     "item": "Crystal Explosive Unit"
+    },
+    {
+     "amount": 3,
+     "item": "Strange Matter"
+    }
+   ],
+   "name": "Green Missile",
+   "outputs": [
+    {
+     "amount": 3,
+     "item": "Green Missile"
+    }
+   ],
+   "time": 6
+  },
+  "Green Science": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Green Science",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Glens"
+    },
+    {
+     "amount": 1,
+     "item": "Qchip"
+    }
+   ],
+   "name": "Green Science",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Green Science"
+    }
+   ],
+   "time": 24
+  },
+  "Interstellar Tower": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Interstellar Tower",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Planetary Tower"
+    },
+    {
+     "amount": 40,
+     "item": "TI Alloy"
+    },
+    {
+     "amount": 20,
+     "item": "PC"
+    }
+   ],
+   "name": "Interstellar Tower",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Interstellar Tower"
+    }
+   ],
+   "time": 30
+  },
+  "Iron": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Iron",
+   "inputs": [],
+   "name": "Iron",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Iron"
+    }
+   ],
+   "time": 1
+  },
+  "Logistics Distributor": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Logistics Distributor",
+   "inputs": [
+    {
+     "amount": 8,
+     "item": "Iron"
+    },
+    {
+     "amount": 4,
+     "item": "Plasma Exciter"
+    },
+    {
+     "amount": 3,
+     "item": "Processor"
+    }
+   ],
+   "name": "Logistics Distributor",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Logistics Distributor"
+    }
+   ],
+   "time": 8
+  },
+  "Magnet": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Magnet",
+   "inputs": [],
+   "name": "Magnet",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Magnet"
+    }
+   ],
+   "time": 1.5
+  },
+  "Micro": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Micro",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Silicon"
+    },
+    {
+     "amount": 1,
+     "item": "Copper"
+    }
+   ],
+   "name": "Micro",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Micro"
+    }
+   ],
+   "time": 2
+  },
+  "Oribtal Collector": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Oribtal Collector",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Interstellar Tower"
+    },
+    {
+     "amount": 50,
+     "item": "Blue Engine"
+    },
+    {
+     "amount": 20,
+     "item": "Fancy Thruster"
+    },
+    {
+     "amount": 20,
+     "item": "Charged Accumulator"
+    }
+   ],
+   "name": "Oribtal Collector",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Oribtal Collector"
+    }
+   ],
+   "time": 30
+  },
+  "PC": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "PC",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Graphene"
+    },
+    {
+     "amount": 2,
+     "item": "Green Engine"
+    },
+    {
+     "amount": 2,
+     "item": "Copper"
+    }
+   ],
+   "name": "PC",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "PC"
+    }
+   ],
+   "time": 8
+  },
+  "PC+": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "PC+",
+   "inputs": [
+    {
+     "amount": 10,
+     "item": "Unipolar"
+    },
+    {
+     "amount": 2,
+     "item": "Copper"
+    }
+   ],
+   "name": "PC+",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "PC"
+    }
+   ],
+   "time": 4
+  },
+  "Plane Filter": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Plane Filter",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Ti Glass"
+    },
+    {
+     "amount": 1,
+     "item": "Casimir"
+    }
+   ],
+   "name": "Plane Filter",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Plane Filter"
+    }
+   ],
+   "time": 12
+  },
+  "Planetary Tower": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Planetary Tower",
+   "inputs": [
+    {
+     "amount": 40,
+     "item": "Steel"
+    },
+    {
+     "amount": 40,
+     "item": "Titanium"
+    },
+    {
+     "amount": 40,
+     "item": "Processor"
+    },
+    {
+     "amount": 20,
+     "item": "PC"
+    }
+   ],
+   "name": "Planetary Tower",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Planetary Tower"
+    }
+   ],
+   "time": 20
+  },
+  "Plasma Exciter": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Plasma Exciter",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "Prism"
+    },
+    {
+     "amount": 2,
+     "item": "Spicy Donut"
+    }
+   ],
+   "name": "Plasma Exciter",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Plasma Exciter"
+    }
+   ],
+   "time": 2
+  },
+  "Plastic": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Plastic",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Refoil"
+    },
+    {
+     "amount": 1,
+     "item": "Graphite"
+    }
+   ],
+   "name": "Plastic",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Plastic"
+    }
+   ],
+   "time": 3
+  },
+  "Prism": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Prism",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Glass"
+    }
+   ],
+   "name": "Prism",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Prism"
+    }
+   ],
+   "time": 2
+  },
+  "Pro1": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Pro1",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Coal"
+    }
+   ],
+   "name": "Pro1",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Pro1"
+    }
+   ],
+   "time": 0.5
+  },
+  "Pro2": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Pro2",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Pro1"
+    },
+    {
+     "amount": 1,
+     "item": "Diamond"
+    }
+   ],
+   "name": "Pro2",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Pro2"
+    }
+   ],
+   "time": 1
+  },
+  "Pro3": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Pro3",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Pro2"
+    },
+    {
+     "amount": 1,
+     "item": "Nanotube"
+    }
+   ],
+   "name": "Pro3",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Pro3"
+    }
+   ],
+   "time": 2
+  },
+  "Processor": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Processor",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "CB"
+    },
+    {
+     "amount": 2,
+     "item": "Micro"
+    }
+   ],
+   "name": "Processor",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Processor"
+    }
+   ],
+   "time": 3
+  },
+  "Purple Science": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Purple Science",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Broadband"
+    },
+    {
+     "amount": 2,
+     "item": "Processor"
+    }
+   ],
+   "name": "Purple Science",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Purple Science"
+    }
+   ],
+   "time": 10
+  },
+  "Qchip": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Qchip",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Plane Filter"
+    },
+    {
+     "amount": 2,
+     "item": "Processor"
+    }
+   ],
+   "name": "Qchip",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Qchip"
+    }
+   ],
+   "time": 6
+  },
+  "Red Missile": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Red Missile",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "CB"
+    },
+    {
+     "amount": 6,
+     "item": "Copper"
+    },
+    {
+     "amount": 1,
+     "item": "White Engine"
+    },
+    {
+     "amount": 2,
+     "item": "Combustible Unit"
+    }
+   ],
+   "name": "Red Missile",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Red Missile"
+    }
+   ],
+   "time": 2
+  },
+  "Red Science": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Red Science",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Graphite"
+    },
+    {
+     "amount": 2,
+     "item": "Hydrogen"
+    }
+   ],
+   "name": "Red Science",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Red Science"
+    }
+   ],
+   "time": 6
+  },
+  "Rocket": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Rocket",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Component"
+    },
+    {
+     "amount": 2,
+     "item": "Qchip"
+    },
+    {
+     "amount": 4,
+     "item": "Deut Rod"
+    }
+   ],
+   "name": "Rocket",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Rocket"
+    }
+   ],
+   "time": 6
+  },
+  "Sail": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Sail",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Graphene"
+    },
+    {
+     "amount": 1,
+     "item": "Combiner"
+    }
+   ],
+   "name": "Sail",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Sail"
+    }
+   ],
+   "time": 4
+  },
+  "Shell": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Shell",
+   "inputs": [
+    {
+     "amount": 9,
+     "item": "Copper"
+    },
+    {
+     "amount": 2,
+     "item": "Combustible Unit"
+    }
+   ],
+   "name": "Shell",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Shell"
+    }
+   ],
+   "time": 1.5
+  },
+  "Si Crystal": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Si Crystal",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Silicon"
+    }
+   ],
+   "name": "Si Crystal",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Si Crystal"
+    }
+   ],
+   "time": 2
+  },
+  "Silicon": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Silicon",
+   "inputs": [],
+   "name": "Silicon",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Silicon"
+    }
+   ],
+   "time": 2
+  },
+  "Solar Panel": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Solar Panel",
+   "inputs": [
+    {
+     "amount": 10,
+     "item": "Silicon"
+    },
+    {
+     "amount": 10,
+     "item": "Copper"
+    },
+    {
+     "amount": 5,
+     "item": "CB"
+    }
+   ],
+   "name": "Solar Panel",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Solar Panel"
+    }
+   ],
+   "time": 6
+  },
+  "Sort1": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Sort1",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Iron"
+    },
+    {
+     "amount": 1,
+     "item": "CB"
+    }
+   ],
+   "name": "Sort1",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Sort1"
+    }
+   ],
+   "time": 1
+  },
+  "Sort2": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Sort2",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Sort1"
+    },
+    {
+     "amount": 1,
+     "item": "Engine"
+    }
+   ],
+   "name": "Sort2",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Sort2"
+    }
+   ],
+   "time": 1
+  },
+  "Sort3": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Sort3",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Sort2"
+    },
+    {
+     "amount": 1,
+     "item": "Green Engine"
+    }
+   ],
+   "name": "Sort3",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Sort3"
+    }
+   ],
+   "time": 1
+  },
+  "Sort4": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Sort4",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Sort3"
+    },
+    {
+     "amount": 1,
+     "item": "Blue Engine"
+    },
+    {
+     "amount": 1,
+     "item": "Processor"
+    }
+   ],
+   "name": "Sort4",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Sort4"
+    }
+   ],
+   "time": 1
+  },
+  "Spicy Donut": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Spicy Donut",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Magnet"
+    },
+    {
+     "amount": 1,
+     "item": "Copper"
+    }
+   ],
+   "name": "Spicy Donut",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Spicy Donut"
+    }
+   ],
+   "time": 1
+  },
+  "Steel": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Steel",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Iron"
+    }
+   ],
+   "name": "Steel",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Steel"
+    }
+   ],
+   "time": 3
+  },
+  "Strange": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Strange",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "PC"
+    },
+    {
+     "amount": 10,
+     "item": "Deut"
+    },
+    {
+     "amount": 2,
+     "item": "Iron"
+    }
+   ],
+   "name": "Strange",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Strange"
+    }
+   ],
+   "time": 8
+  },
+  "Thruster": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Thruster",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Steel"
+    },
+    {
+     "amount": 3,
+     "item": "Copper"
+    }
+   ],
+   "name": "Thruster",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Thruster"
+    }
+   ],
+   "time": 4
+  },
+  "Ti Alloy": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Ti Alloy",
+   "inputs": [
+    {
+     "amount": 4,
+     "item": "Titanium"
+    },
+    {
+     "amount": 4,
+     "item": "Steel"
+    },
+    {
+     "amount": 8,
+     "item": "H2SO4"
+    }
+   ],
+   "name": "Ti Alloy",
+   "outputs": [
+    {
+     "amount": 4,
+     "item": "Ti Alloy"
+    }
+   ],
+   "time": 12
+  },
+  "Ti Crystal": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Ti Crystal",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Titanium"
+    },
+    {
+     "amount": 1,
+     "item": "Organic Crystal"
+    }
+   ],
+   "name": "Ti Crystal",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Ti Crystal"
+    }
+   ],
+   "time": 4
+  },
+  "Ti Glass": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Ti Glass",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Titanium"
+    },
+    {
+     "amount": 2,
+     "item": "Water"
+    },
+    {
+     "amount": 2,
+     "item": "Glass"
+    }
+   ],
+   "name": "Ti Glass",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Ti Glass"
+    }
+   ],
+   "time": 5
+  },
+  "Titanium": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Titanium",
+   "inputs": [],
+   "name": "Titanium",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Titanium"
+    }
+   ],
+   "time": 2
+  },
+  "Tubes": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Tubes",
+   "inputs": [
+    {
+     "amount": 3,
+     "item": "Graphene"
+    },
+    {
+     "amount": 1,
+     "item": "Titanium"
+    }
+   ],
+   "name": "Tubes",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Tubes"
+    }
+   ],
+   "time": 4
+  },
+  "Tubes+": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Tubes+",
+   "inputs": [
+    {
+     "amount": 6,
+     "item": "Stalagmite"
+    }
+   ],
+   "name": "Tubes+",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Tubes"
+    }
+   ],
+   "time": 4
+  },
+  "Vessel": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Vessel",
+   "inputs": [
+    {
+     "amount": 10,
+     "item": "Ti Alloy"
+    },
+    {
+     "amount": 10,
+     "item": "Processor"
+    },
+    {
+     "amount": 2,
+     "item": "Fancy Thruster"
+    }
+   ],
+   "name": "Vessel",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Vessel"
+    }
+   ],
+   "time": 6
+  },
+  "White Engine": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "White Engine",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Spicy Donut"
+    },
+    {
+     "amount": 2,
+     "item": "Copper"
+    }
+   ],
+   "name": "White Engine",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "White Engine"
+    }
+   ],
+   "time": 3
+  },
+  "Yellow Missile": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Yellow Missile",
+   "inputs": [
+    {
+     "amount": 2,
+     "item": "Red Missile"
+    },
+    {
+     "amount": 4,
+     "item": "Processor"
+    },
+    {
+     "amount": 4,
+     "item": "Explosive Unit"
+    },
+    {
+     "amount": 2,
+     "item": "Thruster"
+    }
+   ],
+   "name": "Yellow Missile",
+   "outputs": [
+    {
+     "amount": 2,
+     "item": "Yellow Missile"
+    }
+   ],
+   "time": 4
+  },
+  "Yellow Science": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Yellow Science",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Diamond"
+    },
+    {
+     "amount": 1,
+     "item": "Ti Crystal"
+    }
+   ],
+   "name": "Yellow Science",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Yellow Science"
+    }
+   ],
+   "time": 8
+  },
+  "Yellow Shell": {
+   "buildings": [
+    "producer"
+   ],
+   "id": "Yellow Shell",
+   "inputs": [
+    {
+     "amount": 1,
+     "item": "Shell"
+    },
+    {
+     "amount": 6,
+     "item": "Titanium"
+    },
+    {
+     "amount": 2,
+     "item": "Explosive Unit"
+    }
+   ],
+   "name": "Yellow Shell",
+   "outputs": [
+    {
+     "amount": 1,
+     "item": "Yellow Shell"
+    }
+   ],
+   "time": 3
+  }
+ },
+ "skipped": [
+  {
+   "id": "Deut Rod",
+   "reason": "recipe has no outputs"
+  },
+  {
+   "id": "Corvette",
+   "reason": "recipe has no outputs"
+  }
+ ],
+ "source": "/home/laura/playground/satisfactory/recipes_dsp.tsv"
+}

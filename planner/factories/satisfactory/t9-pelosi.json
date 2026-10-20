@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "name": "pelosi",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-pelosi-r16",
+      "recipe": "Alternate_HeavyOilResidue",
+      "machines": 5
+    },
+    {
+      "id": "t9-pelosi-r17",
+      "recipe": "Alternate_DilutedFuel",
+      "machines": 4
+    },
+    {
+      "id": "t9-pelosi-r21",
+      "recipe": "Alternate_Plastic_1",
+      "machines": 8.88888888888889
+    },
+    {
+      "id": "t9-pelosi-r22",
+      "recipe": "Alternate_RecycledRubber",
+      "machines": 4.44444444444445
+    },
+    {
+      "id": "t9-pelosi-r24",
+      "recipe": "ResidualPlastic",
+      "machines": 1.66666666666667
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.735Z",
+  "updatedAt": "2026-10-20T04:13:46.237Z",
+  "id": "t9-pelosi",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"pelosi\" (template B, scale 1).\nWorkbook size total: 12880 m² (201 foundations).\nLocal Mining: Total Local Crude Oil 15/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "name": "steelhmf",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-steelhmf-r3",
+      "recipe": "Alternate_ModularFrameHeavy",
+      "machines": 10
+    },
+    {
+      "id": "t9-steelhmf-r4",
+      "recipe": "Alternate_EncasedIndustrialBeam",
+      "machines": 23.4375
+    },
+    {
+      "id": "t9-steelhmf-r5",
+      "recipe": "Concrete",
+      "machines": 45
+    },
+    {
+      "id": "t9-steelhmf-r6",
+      "recipe": "SteelPipe",
+      "machines": 45
+    },
+    {
+      "id": "t9-steelhmf-r7",
+      "recipe": "ModularFrame",
+      "machines": 37.5
+    },
+    {
+      "id": "t9-steelhmf-r8",
+      "recipe": "Alternate_ReinforcedIronPlate_2",
+      "machines": 20
+    },
+    {
+      "id": "t9-steelhmf-r9",
+      "recipe": "IronRod",
+      "machines": 30
+    },
+    {
+      "id": "t9-steelhmf-r10",
+      "recipe": "Alternate_Wire_1",
+      "machines": 33.3333333333333
+    },
+    {
+      "id": "t9-steelhmf-r11",
+      "recipe": "IronPlate",
+      "machines": 18.75
+    },
+    {
+      "id": "t9-steelhmf-r13",
+      "recipe": "Alternate_IngotSteel_1",
+      "machines": 22.5
+    },
+    {
+      "id": "t9-steelhmf-r14",
+      "recipe": "IngotIron",
+      "machines": 77.639
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.559Z",
+  "updatedAt": "2026-10-20T04:13:46.051Z",
+  "id": "t9-steelhmf",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"steelhmf\" (template B, scale 10).\nWorkbook size total: 35724.7977 m² (1,395 foundations).\nLocal Mining: DEFICIT Limestone 105/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "name": "nuclear oil",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-nuclear-oil-r5",
+      "recipe": "Alternate_RecycledRubber",
+      "machines": 3.62666666666667,
+      "clock": 2.4999999999999987
+    },
+    {
+      "id": "t9-nuclear-oil-r6",
+      "recipe": "Alternate_Plastic_1",
+      "machines": 7.25333333333333,
+      "clock": 2.4999999999999964
+    },
+    {
+      "id": "t9-nuclear-oil-r7",
+      "recipe": "Alternate_DilutedFuel",
+      "machines": 3.264,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-nuclear-oil-r8",
+      "recipe": "PetroleumCoke",
+      "machines": 1.92,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-nuclear-oil-r9",
+      "recipe": "Alternate_HeavyOilResidue",
+      "machines": 6,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-nuclear-oil-r11",
+      "recipe": "ResidualPlastic",
+      "machines": 2,
+      "clock": 2.5
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.657Z",
+  "updatedAt": "2026-10-20T04:13:46.153Z",
+  "id": "t9-nuclear-oil",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"nuclear oil\" (template A, scale 1, shard 2.5).\nWorkbook size total: 5552 m² (347 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

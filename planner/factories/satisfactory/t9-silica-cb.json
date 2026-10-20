@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "name": "silica cb",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-silica-cb-r4",
+      "recipe": "Alternate_CircuitBoard_1",
+      "machines": 40.7262854233837,
+      "clock": 2.499999999999994
+    },
+    {
+      "id": "t9-silica-cb-r5",
+      "recipe": "Alternate_Silica",
+      "machines": 21.3328161741534,
+      "clock": 2.499999999999995
+    },
+    {
+      "id": "t9-silica-cb-r6",
+      "recipe": "Alternate_SteamedCopperSheet",
+      "machines": 49.7765710730245,
+      "clock": 2.499999999999995
+    },
+    {
+      "id": "t9-silica-cb-r7",
+      "recipe": "Alternate_PureCopperIngot",
+      "machines": 29.8659426438147,
+      "clock": 2.4999999999999982
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.549Z",
+  "updatedAt": "2026-10-20T04:13:46.042Z",
+  "id": "t9-silica-cb",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"silica cb\" (template A, scale 101.8157, shard 2.5).\nWorkbook size total: 25450 m² (1,591 foundations incl. support).\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

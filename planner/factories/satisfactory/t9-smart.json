@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "name": "smart",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-smart-r3",
+      "recipe": "SpaceElevatorPart_1",
+      "machines": 0.645161290322581
+    },
+    {
+      "id": "t9-smart-r4",
+      "recipe": "Rotor",
+      "machines": 0.32258064516129
+    },
+    {
+      "id": "t9-smart-r5",
+      "recipe": "IronPlateReinforced",
+      "machines": 0.258064516129032
+    },
+    {
+      "id": "t9-smart-r6",
+      "recipe": "Alternate_Screw",
+      "machines": 0.954838709677419
+    },
+    {
+      "id": "t9-smart-r7",
+      "recipe": "IronPlate",
+      "machines": 0.387096774193548
+    },
+    {
+      "id": "t9-smart-r8",
+      "recipe": "IronRod",
+      "machines": 0.43010752688172
+    },
+    {
+      "id": "t9-smart-r9",
+      "recipe": "IngotIron",
+      "machines": 1
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.644Z",
+  "updatedAt": "2026-10-20T04:13:46.139Z",
+  "id": "t9-smart",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"smart\" (template B, scale 0.6452).\nWorkbook size total: 0 m² (0 foundations).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

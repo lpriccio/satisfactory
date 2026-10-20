@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "name": "babyfluctuator",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-babyfluctuator-r3",
+      "recipe": "SAMFluctuator",
+      "machines": 1
+    },
+    {
+      "id": "t9-babyfluctuator-r4",
+      "recipe": "IngotSAM",
+      "machines": 2
+    },
+    {
+      "id": "t9-babyfluctuator-r5",
+      "recipe": "Alternate_SteelPipe_Iron",
+      "machines": 1.2
+    },
+    {
+      "id": "t9-babyfluctuator-r6",
+      "recipe": "Alternate_Wire_1",
+      "machines": 2.22222222222222
+    },
+    {
+      "id": "t9-babyfluctuator-r7",
+      "recipe": "IngotIron",
+      "machines": 5
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.739Z",
+  "updatedAt": "2026-10-20T04:13:46.241Z",
+  "id": "t9-babyfluctuator",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"babyfluctuator\" (template B, scale 1).\nWorkbook size total: 2529.4444 m² (40 foundations).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

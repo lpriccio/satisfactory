@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "name": "petros-ch",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-petros-ch-r4",
+      "recipe": "Alternate_HeavyOilResidue",
+      "machines": 140
+    },
+    {
+      "id": "t9-petros-ch-r5",
+      "recipe": "Alternate_DilutedFuel",
+      "machines": 96
+    },
+    {
+      "id": "t9-petros-ch-r6",
+      "recipe": "ResidualRubber",
+      "machines": 70
+    },
+    {
+      "id": "t9-petros-ch-r8",
+      "recipe": "PetroleumCoke",
+      "machines": 15
+    },
+    {
+      "id": "t9-petros-ch-r10",
+      "recipe": "Alternate_Plastic_1",
+      "machines": 160
+    },
+    {
+      "id": "t9-petros-ch-r11",
+      "recipe": "Alternate_RecycledRubber",
+      "machines": 160
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.626Z",
+  "updatedAt": "2026-10-20T04:13:46.122Z",
+  "id": "t9-petros-ch",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"petros-ch\" (template A, scale 1, shard 1).\nWorkbook size total: 136648 m² (8,541 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "name": "game changer",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-game-changer-r4",
+      "recipe": "SyntheticPowerShard",
+      "machines": 12
+    },
+    {
+      "id": "t9-game-changer-r5",
+      "recipe": "Alternate_DarkMatter_Trap",
+      "machines": 2
+    },
+    {
+      "id": "t9-game-changer-r7",
+      "recipe": "Alternate_DarkMatter_Crystallization",
+      "machines": 2.1
+    },
+    {
+      "id": "t9-game-changer-r9",
+      "recipe": "Alternate_PureQuartzCrystal",
+      "machines": 53.3333333333333
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.670Z",
+  "updatedAt": "2026-10-20T04:13:46.167Z",
+  "id": "t9-game-changer",
+  "game": "satisfactory",
+  "notes": "On Dropout Power\nImported from T9 workbook tab \"game changer\" (template A, scale 12, shard 1).\nWorkbook size total: 29760 m² (1,860 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

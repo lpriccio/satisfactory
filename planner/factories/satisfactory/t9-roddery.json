@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "name": "roddery",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-roddery-r4",
+      "recipe": "ElectromagneticControlRod",
+      "machines": 30
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.715Z",
+  "updatedAt": "2026-10-20T04:13:46.216Z",
+  "id": "t9-roddery",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"roddery\" (template A, scale 1, shard 1).\nWorkbook size total: 4500 m² (281 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

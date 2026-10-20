@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "name": "babymotor",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-babymotor-r3",
+      "recipe": "Motor",
+      "machines": 4.28571428571429
+    },
+    {
+      "id": "t9-babymotor-r4",
+      "recipe": "Stator",
+      "machines": 8.57142857142857
+    },
+    {
+      "id": "t9-babymotor-r5",
+      "recipe": "Alternate_Rotor",
+      "machines": 8.57142857142857
+    },
+    {
+      "id": "t9-babymotor-r6",
+      "recipe": "Wire",
+      "machines": 20
+    },
+    {
+      "id": "t9-babymotor-r7",
+      "recipe": "SteelPipe",
+      "machines": 10.7142857142857
+    },
+    {
+      "id": "t9-babymotor-r8",
+      "recipe": "Alternate_IngotSteel_1",
+      "machines": 5.35714285714286
+    },
+    {
+      "id": "t9-babymotor-r9",
+      "recipe": "IngotIron",
+      "machines": 7.14285714285714
+    },
+    {
+      "id": "t9-babymotor-r10",
+      "recipe": "IngotCopper",
+      "machines": 10
+    },
+    {
+      "id": "t9-babymotor-r12",
+      "recipe": "IngotIron",
+      "machines": 2.85714285714286
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.748Z",
+  "updatedAt": "2026-10-20T04:13:46.249Z",
+  "id": "t9-babymotor",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"babymotor\" (template B, scale 4.2857).\nWorkbook size total: 18083.9286 m² (283 foundations).\nLocal Mining: Miner A Iron Ore 480/min; Miner A Coal 270/min; Miner A Copper Ore 300/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

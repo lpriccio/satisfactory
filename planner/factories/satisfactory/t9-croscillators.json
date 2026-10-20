@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "name": "croscillators",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-croscillators-r4",
+      "recipe": "CrystalOscillator",
+      "machines": 25.5
+    },
+    {
+      "id": "t9-croscillators-r5",
+      "recipe": "Alternate_ReinforcedIronPlate_2",
+      "machines": 11.3333333333333
+    },
+    {
+      "id": "t9-croscillators-r6",
+      "recipe": "Cable",
+      "machines": 11.9
+    },
+    {
+      "id": "t9-croscillators-r8",
+      "recipe": "IronPlate",
+      "machines": 10.625
+    },
+    {
+      "id": "t9-croscillators-r9",
+      "recipe": "Alternate_Wire_1",
+      "machines": 51
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.720Z",
+  "updatedAt": "2026-10-20T04:13:46.221Z",
+  "id": "t9-croscillators",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"croscillators\" (template A, scale 25.5, shard 1).\nWorkbook size total: 17080 m² (1,068 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Iron Ingot 960/min; Copper Ingot 480/min; Quartz Crystal 630/min; HOR 300/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "name": "New factory",
+  "mode": "target",
+  "objective": "min-raw",
+  "targets": [
+    {
+      "item": "CircuitBoardHighSpeed",
+      "rate": 24
+    }
+  ],
+  "recipeChoice": {
+    "CircuitBoardHighSpeed": "Alternate_AILimiter_Plastic"
+  },
+  "lineSettings": {},
+  "lines": [],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:26:10.354Z",
+  "updatedAt": "2026-10-20T04:28:39.392Z",
+  "id": "m6p4v9ppktgy",
+  "game": "satisfactory",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": [
+      "LiquidOil"
+    ]
+  },
+  "optimize": false
+}

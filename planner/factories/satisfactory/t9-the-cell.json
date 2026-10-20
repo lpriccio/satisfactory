@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "name": "the cell",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-the-cell-r4",
+      "recipe": "Alternate_ClassicBattery",
+      "machines": 7.78333333333333
+    },
+    {
+      "id": "t9-the-cell-r5",
+      "recipe": "Wire",
+      "machines": 23.35
+    },
+    {
+      "id": "t9-the-cell-r8",
+      "recipe": "RadioControlUnit",
+      "machines": 6,
+      "note": "Workbook rates differ from the game: Computer: workbook -1.25/min, game -2.5/min"
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.711Z",
+  "updatedAt": "2026-10-20T04:13:46.212Z",
+  "id": "t9-the-cell",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"the cell\" (template A, scale 1, shard 1).\nWorkbook size total: 6960 m² (435 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

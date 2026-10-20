@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "name": "babyhmf",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-babyhmf-r3",
+      "recipe": "Alternate_ModularFrameHeavy",
+      "machines": 6
+    },
+    {
+      "id": "t9-babyhmf-r4",
+      "recipe": "Alternate_EncasedIndustrialBeam",
+      "machines": 14.0625
+    },
+    {
+      "id": "t9-babyhmf-r5",
+      "recipe": "Concrete",
+      "machines": 27
+    },
+    {
+      "id": "t9-babyhmf-r6",
+      "recipe": "Alternate_SteelPipe_Iron",
+      "machines": 21.6
+    },
+    {
+      "id": "t9-babyhmf-r7",
+      "recipe": "ModularFrame",
+      "machines": 22.5
+    },
+    {
+      "id": "t9-babyhmf-r8",
+      "recipe": "Alternate_ReinforcedIronPlate_2",
+      "machines": 12
+    },
+    {
+      "id": "t9-babyhmf-r9",
+      "recipe": "IronRod",
+      "machines": 18
+    },
+    {
+      "id": "t9-babyhmf-r10",
+      "recipe": "Alternate_Wire_1",
+      "machines": 20
+    },
+    {
+      "id": "t9-babyhmf-r11",
+      "recipe": "IronPlate",
+      "machines": 11.25
+    },
+    {
+      "id": "t9-babyhmf-r12",
+      "recipe": "IngotIron",
+      "machines": 100.5834
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.743Z",
+  "updatedAt": "2026-10-20T04:13:46.245Z",
+  "id": "t9-babyhmf",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"babyhmf\" (template B, scale 6).\nWorkbook size total: 56759.6965 m² (887 foundations).\nLocal Mining: Miner A Limestone\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

@@ -1,0 +1,241 @@
+:root {
+  --bg: #0f141b;
+  --panel: #161d27;
+  --panel-2: #1c2531;
+  --line: #2a3544;
+  --line-strong: #3a495c;
+  --text: #dbe3ec;
+  --muted: #8796a8;
+  --accent: #f2a33a;
+  --accent-ink: #1a1206;
+  --good: #5cc28a;
+  --warn: #e7b84b;
+  --bad: #ef6b6b;
+  --import: #6cb4ee;
+  --radius: 6px;
+  --mono: ui-monospace, 'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, sans-serif;
+  color-scheme: dark;
+}
+
+:root[data-game='factorio'] {
+  --accent: #e8a33d;
+  --bg: #15120f;
+  --panel: #1e1a16;
+  --panel-2: #26211b;
+  --line: #3a3229;
+  --line-strong: #4d4236;
+}
+
+:root[data-game='dsp'] {
+  --accent: #4fc3e8;
+  --accent-ink: #06161c;
+  --bg: #0d1218;
+  --panel: #131b24;
+  --panel-2: #18222d;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    --bg: #f4f6f8;
+    --panel: #ffffff;
+    --panel-2: #eef1f5;
+    --line: #d7dde5;
+    --line-strong: #b9c3cf;
+    --text: #18202a;
+    --muted: #5d6b7c;
+    --accent: #c46f0a;
+    --accent-ink: #ffffff;
+    --good: #23824f;
+    --warn: #9a6b00;
+    --bad: #c23b3b;
+    --import: #1f6fae;
+    color-scheme: light;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.45 var(--sans);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 600;
+}
+h2 {
+  font-size: 16px;
+}
+h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+input,
+select,
+textarea {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 4px 8px;
+  min-width: 0;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+input[type='number'] {
+  font-family: var(--mono);
+  text-align: right;
+}
+
+button {
+  background: var(--panel-2);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 4px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+button:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+button.primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+button.ghost {
+  background: none;
+  border-color: transparent;
+}
+button.ghost:hover:not(:disabled) {
+  border-color: var(--line-strong);
+}
+button.danger:hover:not(:disabled) {
+  border-color: var(--bad);
+  color: var(--bad);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: middle;
+}
+th {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+}
+td.n,
+th.n {
+  text-align: right;
+  font-family: var(--mono);
+  white-space: nowrap;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.muted {
+  color: var(--muted);
+}
+.mono {
+  font-family: var(--mono);
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.grow {
+  flex: 1;
+}
+.scroll-x {
+  overflow-x: auto;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 7px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  font-size: 12px;
+  line-height: 20px;
+  white-space: nowrap;
+  background: none;
+  cursor: pointer;
+}
+.chip.import {
+  border-color: var(--import);
+  color: var(--import);
+}
+.chip.target {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.chip.surplus {
+  border-color: var(--warn);
+  color: var(--warn);
+}
+
+.good {
+  color: var(--good);
+}
+.warn {
+  color: var(--warn);
+}
+.bad {
+  color: var(--bad);
+}
+.imp {
+  color: var(--import);
+}

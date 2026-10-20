@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "id": "a0ca37fe-2588-4157-aa80-522e6507a148",
+  "game": "satisfactory",
+  "name": "Alclad 1",
+  "notes": "Migration: couldn't map imported item \"Beacon\".",
+  "mode": "target",
+  "objective": "min-raw",
+  "targets": [
+    {
+      "item": "AluminumPlate",
+      "rate": 10
+    }
+  ],
+  "recipeChoice": {
+    "Water": "AluminumScrap"
+  },
+  "lineSettings": {},
+  "lines": [],
+  "imports": {
+    "items": [
+      "AluminumIngot",
+      "FicsiteIngot",
+      "ModularFrame",
+      "QuantumEnergy",
+      "SingularityCell",
+      "TimeCrystal",
+      "TurboFuel"
+    ],
+    "edges": [],
+    "exclude": []
+  },
+  "spacing": 4,
+  "createdAt": "2026-01-11T23:52:31.392Z",
+  "updatedAt": "2026-01-11T23:52:31.392Z"
+}

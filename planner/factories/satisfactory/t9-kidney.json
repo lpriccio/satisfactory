@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "name": "kidney",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-kidney-r4",
+      "recipe": "PlutoniumFuelRod",
+      "machines": 20.8,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-kidney-r5",
+      "recipe": "Alternate_InstantPlutoniumCell",
+      "machines": 15.6,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-kidney-r6",
+      "recipe": "NonFissileUranium",
+      "machines": 23.4,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-kidney-r7",
+      "recipe": "SulfuricAcid",
+      "machines": 7.02,
+      "clock": 2.5000000000000004
+    },
+    {
+      "id": "t9-kidney-r8",
+      "recipe": "NitricAcid",
+      "machines": 11.7,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-kidney-r13",
+      "recipe": "HeatSink",
+      "machines": 6.93333333333333,
+      "clock": 2.4999999999999964
+    },
+    {
+      "id": "t9-kidney-r14",
+      "recipe": "ElectromagneticControlRod",
+      "machines": 7.8,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-kidney-r18",
+      "recipe": "Alternate_AILimiter_Plastic",
+      "machines": 3.9,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-kidney-r23",
+      "recipe": "Silica",
+      "machines": 15.6,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-kidney-r26",
+      "recipe": "IngotIron",
+      "machines": 5.8504,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-kidney-r27",
+      "recipe": "IronPlate",
+      "machines": 5.8504,
+      "clock": 2.5
+    },
+    {
+      "id": "t9-kidney-r29",
+      "recipe": "Alternate_WetConcrete",
+      "machines": 3.51,
+      "clock": 2.5000000000000004
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.578Z",
+  "updatedAt": "2026-10-20T04:13:46.069Z",
+  "id": "t9-kidney",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"kidney\" (template A, scale 52, shard 2.5).\nWorkbook size total: 39854 m² (2,491 foundations incl. support).\nImports: BB Drone Stator 117/min; CH Drone Alclad Sheet 650/min; CH Drone Aluminum Casing 390/min; CH Drone Quickwire 1170/min; Launch Drone Steel Beam 234/min; CH Drone Plastic 273/min; Beach Drone Copper Sheet 390/min\nLocal Mining: Nitrogen 3510/min; Water 1267.5/min; Raw Quartz 877.5/min; Sulfur 877.5/min; Iron Ore 439/min\nSunk: Uranium Waste 2193.75/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

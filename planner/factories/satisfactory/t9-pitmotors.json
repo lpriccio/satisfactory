@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "name": "pitmotors",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-pitmotors-r3",
+      "recipe": "Motor",
+      "machines": 5.39325842696629
+    },
+    {
+      "id": "t9-pitmotors-r4",
+      "recipe": "Stator",
+      "machines": 10.7865168539326
+    },
+    {
+      "id": "t9-pitmotors-r5",
+      "recipe": "Alternate_Rotor",
+      "machines": 10.7865168539326
+    },
+    {
+      "id": "t9-pitmotors-r6",
+      "recipe": "Wire",
+      "machines": 25.1685393258427
+    },
+    {
+      "id": "t9-pitmotors-r7",
+      "recipe": "Alternate_SteelPipe_Iron",
+      "machines": 10.7865168539326
+    },
+    {
+      "id": "t9-pitmotors-r10",
+      "recipe": "IngotCopper",
+      "machines": 12.5842696629213
+    },
+    {
+      "id": "t9-pitmotors-r11",
+      "recipe": "Alternate_IngotIron",
+      "machines": 10.247191011236
+    },
+    {
+      "id": "t9-pitmotors-r12",
+      "recipe": "IngotIron",
+      "machines": 10.3370786516854
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.631Z",
+  "updatedAt": "2026-10-20T04:13:46.127Z",
+  "id": "t9-pitmotors",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"pitmotors\" (template B, scale 5.3933).\nWorkbook size total: 22703.3708 m² (355 foundations).\nLocal Mining: Miner A Iron Ore 480/min; Miner A Iron Ore 240/min; Miner A Copper Ore 480/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

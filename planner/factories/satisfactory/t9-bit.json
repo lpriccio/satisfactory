@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "name": "bit",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-bit-r3",
+      "recipe": "Computer",
+      "machines": 4.79999600000333
+    },
+    {
+      "id": "t9-bit-r4",
+      "recipe": "CircuitBoard",
+      "machines": 7.99999333333889
+    },
+    {
+      "id": "t9-bit-r5",
+      "recipe": "Cable",
+      "machines": 4.79999600000333
+    },
+    {
+      "id": "t9-bit-r6",
+      "recipe": "CopperSheet",
+      "machines": 16.7999860000117
+    },
+    {
+      "id": "t9-bit-r7",
+      "recipe": "Wire",
+      "machines": 9.59999200000667
+    },
+    {
+      "id": "t9-bit-r9",
+      "recipe": "Quickwire",
+      "machines": 12
+    },
+    {
+      "id": "t9-bit-r10",
+      "recipe": "AILimiter",
+      "machines": 1.59999866666778
+    },
+    {
+      "id": "t9-bit-r11",
+      "recipe": "HighSpeedConnector",
+      "machines": 1.28
+    },
+    {
+      "id": "t9-bit-r13",
+      "recipe": "ComputerSuper",
+      "machines": 0.2
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.731Z",
+  "updatedAt": "2026-10-20T04:13:46.233Z",
+  "id": "t9-bit",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"bit\" (template B, scale 1).\nWorkbook size total: 31600 m² (494 foundations).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 433.33/min; Copper Ingot 480/min; Caterium Ingot 160/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

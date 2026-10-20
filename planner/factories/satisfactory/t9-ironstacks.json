@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "name": "ironstacks",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-ironstacks-r4",
+      "recipe": "Alternate_PureIronIngot",
+      "machines": 4
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.678Z",
+  "updatedAt": "2026-10-20T04:13:46.175Z",
+  "id": "t9-ironstacks",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"ironstacks\" (template A, scale 1, shard 1).\nWorkbook size total: 800 m² (50 foundations incl. support).",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

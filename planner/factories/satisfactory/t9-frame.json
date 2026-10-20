@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "name": "frame",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-frame-r3",
+      "recipe": "SpaceElevatorPart_2",
+      "machines": 0.277008310249308
+    },
+    {
+      "id": "t9-frame-r4",
+      "recipe": "Alternate_ModularFrame",
+      "machines": 0.23084025854109
+    },
+    {
+      "id": "t9-frame-r5",
+      "recipe": "IronPlateReinforced",
+      "machines": 0.0923361034164358
+    },
+    {
+      "id": "t9-frame-r6",
+      "recipe": "IronPlate",
+      "machines": 0.138504155124654
+    },
+    {
+      "id": "t9-frame-r7",
+      "recipe": "SteelPipe",
+      "machines": 0.115420129270545
+    },
+    {
+      "id": "t9-frame-r8",
+      "recipe": "SteelBeam",
+      "machines": 0.554016620498615
+    },
+    {
+      "id": "t9-frame-r9",
+      "recipe": "Alternate_IngotSteel_1",
+      "machines": 0.611726685133887
+    },
+    {
+      "id": "t9-frame-r10",
+      "recipe": "Alternate_Screw",
+      "machines": 0.110803324099723
+    },
+    {
+      "id": "t9-frame-r11",
+      "recipe": "IngotIron",
+      "machines": 1.00030778701139
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.640Z",
+  "updatedAt": "2026-10-20T04:13:46.135Z",
+  "id": "t9-frame",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"frame\" (template B, scale 0.277).\nWorkbook size total: 0 m² (0 foundations).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "name": "catcomp",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-catcomp-r4",
+      "recipe": "Alternate_Computer_1",
+      "machines": 6.25
+    },
+    {
+      "id": "t9-catcomp-r5",
+      "recipe": "Alternate_CircuitBoard_2",
+      "machines": 12.5
+    },
+    {
+      "id": "t9-catcomp-r6",
+      "recipe": "HighSpeedConnector",
+      "machines": 1.5625
+    },
+    {
+      "id": "t9-catcomp-r7",
+      "recipe": "Alternate_Cable_2",
+      "machines": 2.27272727272727
+    },
+    {
+      "id": "t9-catcomp-r8",
+      "recipe": "Quickwire",
+      "machines": 20
+    },
+    {
+      "id": "t9-catcomp-r9",
+      "recipe": "Alternate_PureCateriumIngot",
+      "machines": 20
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.636Z",
+  "updatedAt": "2026-10-20T04:13:46.131Z",
+  "id": "t9-catcomp",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"catcomp\" (template A, scale 1, shard 1).\nWorkbook size total: 11240 m² (703 foundations incl. support).\nLocal Mining: Miner A Iron Ore 0/min\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

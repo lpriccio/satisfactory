@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "name": "Builders Beach",
+  "mode": "manual",
+  "objective": "min-raw",
+  "targets": [],
+  "recipeChoice": {},
+  "lineSettings": {},
+  "lines": [
+    {
+      "id": "t9-builders-beach-r7",
+      "recipe": "Alternate_PureIronIngot",
+      "machines": 13.7142857142857
+    },
+    {
+      "id": "t9-builders-beach-r10",
+      "recipe": "SpaceElevatorPart_9",
+      "machines": 2
+    }
+  ],
+  "spacing": 4,
+  "createdAt": "2026-10-20T04:13:05.724Z",
+  "updatedAt": "2026-10-20T04:13:46.225Z",
+  "id": "t9-builders-beach",
+  "game": "satisfactory",
+  "notes": "Imported from T9 workbook tab \"Builders Beach\" (template A, scale 1, shard 1).\nWorkbook size total: 4624 m² (289 foundations incl. support).\nLocal Mining: Iron Ore 960/min\nImports: Raw Quartz 960/min; Coal 960/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  }
+}

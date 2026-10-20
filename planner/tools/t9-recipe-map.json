@@ -1,0 +1,884 @@
+{
+  "manual": {},
+  "generated": {
+    "Iron Ingot": {
+      "id": "IngotIron",
+      "how": "name"
+    },
+    "Copper Ingot": {
+      "id": "IngotCopper",
+      "how": "name"
+    },
+    "Caterium Ingot": {
+      "id": "IngotCaterium",
+      "how": "name"
+    },
+    "Iron Plate": {
+      "id": "IronPlate",
+      "how": "name"
+    },
+    "Iron Rod": {
+      "id": "IronRod",
+      "how": "name"
+    },
+    "Screw": {
+      "id": "Screw",
+      "how": "ingredients"
+    },
+    "Cast Screw": {
+      "id": "Alternate_Screw",
+      "how": "ingredients"
+    },
+    "Copper Sheet": {
+      "id": "CopperSheet",
+      "how": "name"
+    },
+    "Wire": {
+      "id": "Wire",
+      "how": "name"
+    },
+    "Iron Wire": {
+      "id": "Alternate_Wire_1",
+      "how": "name"
+    },
+    "Caterium Wire": {
+      "id": "Alternate_Wire_2",
+      "how": "name"
+    },
+    "Cable": {
+      "id": "Cable",
+      "how": "name"
+    },
+    "Quickwire": {
+      "id": "Quickwire",
+      "how": "name"
+    },
+    "Concrete": {
+      "id": "Concrete",
+      "how": "name"
+    },
+    "Quartz Crystal": {
+      "id": "QuartzCrystal",
+      "how": "name"
+    },
+    "Silica": {
+      "id": "Silica",
+      "how": "name"
+    },
+    "RIP": {
+      "id": "IronPlateReinforced",
+      "how": "ingredients"
+    },
+    "Bolted RIP": {
+      "id": "Alternate_ReinforcedIronPlate_1",
+      "how": "ingredients"
+    },
+    "Stitched RIP": {
+      "id": "Alternate_ReinforcedIronPlate_2",
+      "how": "ingredients"
+    },
+    "MF": {
+      "id": "ModularFrame",
+      "how": "ingredients"
+    },
+    "Rotor": {
+      "id": "Rotor",
+      "how": "name"
+    },
+    "Smart Plating": {
+      "id": "SpaceElevatorPart_1",
+      "how": "name"
+    },
+    "Fused Wire": {
+      "id": "Alternate_FusedWire",
+      "how": "name"
+    },
+    "AI Limiter": {
+      "id": "AILimiter",
+      "how": "name"
+    },
+    "Black Powder": {
+      "id": "Gunpowder",
+      "how": "name"
+    },
+    "Fine Conrete": {
+      "id": "Alternate_Concrete",
+      "how": "ingredients"
+    },
+    "Cheap Silica": {
+      "id": "Alternate_Silica",
+      "how": "name"
+    },
+    "Iron Alloy Ingot": {
+      "id": "Alternate_IngotIron",
+      "how": "name"
+    },
+    "Copper Alloy Ingot": {
+      "id": "Alternate_CopperAlloyIngot",
+      "how": "name"
+    },
+    "xxx": {
+      "id": "Alternate_ModularFrame",
+      "how": "ingredients"
+    },
+    "EIB": {
+      "id": "EncasedIndustrialBeam",
+      "how": "ingredients"
+    },
+    "Nobelisk": {
+      "id": "Nobelisk",
+      "how": "name"
+    },
+    "Versatile Framework": {
+      "id": "SpaceElevatorPart_2",
+      "how": "name"
+    },
+    "Automated Wiring": {
+      "id": "SpaceElevatorPart_3",
+      "how": "name"
+    },
+    "Steel Ingot": {
+      "id": "IngotSteel",
+      "how": "name"
+    },
+    "Steel Beam": {
+      "id": "SteelBeam",
+      "how": "name"
+    },
+    "Steel Pipe": {
+      "id": "SteelPipe",
+      "how": "name"
+    },
+    "Stator": {
+      "id": "Stator",
+      "how": "name"
+    },
+    "Motor": {
+      "id": "Motor",
+      "how": "name"
+    },
+    "Plastic": {
+      "id": "Plastic",
+      "how": "name"
+    },
+    "Residual Plastic": {
+      "id": "ResidualPlastic",
+      "how": "name"
+    },
+    "Rubber": {
+      "id": "Rubber",
+      "how": "name"
+    },
+    "Residual Rubber": {
+      "id": "ResidualRubber",
+      "how": "name"
+    },
+    "Petroleum Coke": {
+      "id": "PetroleumCoke",
+      "how": "name"
+    },
+    "Fuel": {
+      "id": "LiquidFuel",
+      "how": "name"
+    },
+    "Residual Fuel": {
+      "id": "ResidualFuel",
+      "how": "name"
+    },
+    "HOR": {
+      "id": "Alternate_HeavyOilResidue",
+      "how": "ingredients"
+    },
+    "Recycled Plastic": {
+      "id": "Alternate_Plastic_1",
+      "how": "name"
+    },
+    "Recycled Rubber": {
+      "id": "Alternate_RecycledRubber",
+      "how": "name"
+    },
+    "Diluted Fuel": {
+      "id": "Alternate_DilutedPackagedFuel",
+      "how": "ingredients"
+    },
+    "Packaged Water": {
+      "id": "PackagedWater",
+      "how": "name"
+    },
+    "Unpack Fuel": {
+      "id": "UnpackageFuel",
+      "how": "ingredients"
+    },
+    "Polyester Fabric": {
+      "id": "Alternate_PolyesterFabric",
+      "how": "name"
+    },
+    "Pure Iron": {
+      "id": "Alternate_PureIronIngot",
+      "how": "ingredients"
+    },
+    "Pure Copper": {
+      "id": "Alternate_PureCopperIngot",
+      "how": "ingredients"
+    },
+    "Pure Caterium": {
+      "id": "Alternate_PureCateriumIngot",
+      "how": "ingredients"
+    },
+    "Wet Concrete": {
+      "id": "Alternate_WetConcrete",
+      "how": "name"
+    },
+    "Steamed Copper Sheet": {
+      "id": "Alternate_SteamedCopperSheet",
+      "how": "name"
+    },
+    "Pure Quartz": {
+      "id": "Alternate_PureQuartzCrystal",
+      "how": "ingredients"
+    },
+    "Computer": {
+      "id": "Computer",
+      "how": "name"
+    },
+    "Caterium Computer": {
+      "id": "Alternate_Computer_1",
+      "how": "name"
+    },
+    "Crystal Oscillator": {
+      "id": "CrystalOscillator",
+      "how": "name"
+    },
+    "Insulated Oscillator": {
+      "id": "Alternate_CrystalOscillator",
+      "how": "ingredients"
+    },
+    "HSC": {
+      "id": "HighSpeedConnector",
+      "how": "ingredients"
+    },
+    "Silicon HSC": {
+      "id": "Alternate_HighSpeedConnector",
+      "how": "ingredients"
+    },
+    "Copper Rotor": {
+      "id": "Alternate_CopperRotor",
+      "how": "name"
+    },
+    "Steel Rotor": {
+      "id": "Alternate_Rotor",
+      "how": "name"
+    },
+    "Quickwire Stator": {
+      "id": "Alternate_Stator",
+      "how": "name"
+    },
+    "Quickwire Cable": {
+      "id": "Alternate_Cable_2",
+      "how": "name"
+    },
+    "Fused Quickwire": {
+      "id": "Alternate_Quickwire",
+      "how": "name"
+    },
+    "Circuit Board": {
+      "id": "CircuitBoard",
+      "how": "name"
+    },
+    "Electrode Circuit Board": {
+      "id": "Alternate_ElectrodeCircuitBoard",
+      "how": "name"
+    },
+    "Silicon Circuit Board": {
+      "id": "Alternate_CircuitBoard_1",
+      "how": "name"
+    },
+    "Caterium Circuit Board": {
+      "id": "Alternate_CircuitBoard_2",
+      "how": "name"
+    },
+    "Crystal Computer": {
+      "id": "Alternate_Computer_2",
+      "how": "name"
+    },
+    "Compacted Coal": {
+      "id": "Alternate_EnrichedCoal",
+      "how": "name"
+    },
+    "Fine Black Powder": {
+      "id": "Alternate_Gunpowder_1",
+      "how": "name-rates-differ",
+      "note": "Black Powder: workbook 15/min, game 45/min; Compacted Coal: workbook -3.75/min, game -15/min"
+    },
+    "Heavy Modular Frame": {
+      "id": "ModularFrameHeavy",
+      "how": "name"
+    },
+    "Heavy Flexible Frame": {
+      "id": "Alternate_HeavyFlexibleFrame",
+      "how": "name"
+    },
+    "Heavy Encased Frame": {
+      "id": "Alternate_ModularFrameHeavy",
+      "how": "name"
+    },
+    "Encased Industrial Pipe": {
+      "id": "Alternate_EncasedIndustrialBeam",
+      "how": "name"
+    },
+    "Steeled Frame": {
+      "id": "Alternate_ModularFrame",
+      "how": "name"
+    },
+    "Bolted Frame": {
+      "id": "Alternate_BoltedFrame",
+      "how": "name"
+    },
+    "Coated Iron Plate": {
+      "id": "Alternate_CoatedIronPlate",
+      "how": "name"
+    },
+    "Adhered Iron Plate": {
+      "id": "Alternate_AdheredIronPlate",
+      "how": "name"
+    },
+    "Steel Screw": {
+      "id": "Alternate_Screw_2",
+      "how": "ingredients"
+    },
+    "Solid Steel Ingot": {
+      "id": "Alternate_IngotSteel_1",
+      "how": "name"
+    },
+    "Steel Rod": {
+      "id": "Alternate_SteelRod",
+      "how": "name"
+    },
+    "Supercomputer": {
+      "id": "ComputerSuper",
+      "how": "name"
+    },
+    "Alumina Solution": {
+      "id": "AluminaSolution",
+      "how": "name"
+    },
+    "Aluminum Scrap": {
+      "id": "AluminumScrap",
+      "how": "name"
+    },
+    "Alclad Sheet": {
+      "id": "AluminumSheet",
+      "how": "ingredients"
+    },
+    "Aluminum Casing": {
+      "id": "AluminumCasing",
+      "how": "name"
+    },
+    "Aluminum Ingot": {
+      "id": "IngotAluminum",
+      "how": "name"
+    },
+    "Alclad Casing": {
+      "id": "Alternate_AlcladCasing",
+      "how": "name"
+    },
+    "Electrode Scrap": {
+      "id": "Alternate_ElectroAluminumScrap",
+      "how": "ingredients"
+    },
+    "Pure Aluminum Ingot": {
+      "id": "PureAluminumIngot",
+      "how": "name"
+    },
+    "Battery": {
+      "id": "Battery",
+      "how": "name"
+    },
+    "Sulfuric Acid": {
+      "id": "SulfuricAcid",
+      "how": "name"
+    },
+    "Sloppy Alumina": {
+      "id": "Alternate_SloppyAlumina",
+      "how": "name"
+    },
+    "Radio Control Unit": {
+      "id": "RadioControlUnit",
+      "how": "name-rates-differ",
+      "note": "Computer: workbook -1.25/min, game -2.5/min"
+    },
+    "Fused Modular Frame": {
+      "id": "FusedModularFrame",
+      "how": "name"
+    },
+    "Cooling System": {
+      "id": "CoolingSystem",
+      "how": "name"
+    },
+    "Blender Diluted Fuel": {
+      "id": "Alternate_DilutedFuel",
+      "how": "ingredients"
+    },
+    "Encased Uranium Cell": {
+      "id": "UraniumCell",
+      "how": "name"
+    },
+    "Infused Uranium Cell": {
+      "id": "Alternate_UraniumCell_1",
+      "how": "name"
+    },
+    "Uranium Fuel Rod": {
+      "id": "NuclearFuelRod",
+      "how": "name"
+    },
+    "Uranium Fuel Unit": {
+      "id": "Alternate_NuclearFuelRod_1",
+      "how": "name"
+    },
+    "Electromagnetic Control Rod": {
+      "id": "ElectromagneticControlRod",
+      "how": "name"
+    },
+    "Electromagnetic Connection Rod": {
+      "id": "Alternate_ElectromagneticControlRod_1",
+      "how": "name"
+    },
+    "Heat Sink": {
+      "id": "HeatSink",
+      "how": "name"
+    },
+    "Assembly Director System": {
+      "id": "SpaceElevatorPart_7",
+      "how": "name"
+    },
+    "Modular Engine": {
+      "id": "SpaceElevatorPart_4",
+      "how": "name"
+    },
+    "Adaptive Control Unit": {
+      "id": "SpaceElevatorPart_5",
+      "how": "name-rates-differ",
+      "note": "Adaptive Control Unit: workbook 0.5/min, game 1/min; Automated Wiring: workbook -2.5/min, game -5/min; Circuit Board: workbook -2.5/min, game -5/min; Heavy Modular Frame: workbook -0.5/min, game -1/min; Computer: workbook -1/min, game -2/min"
+    },
+    "Magnetic Field Generator": {
+      "id": "SpaceElevatorPart_6",
+      "how": "name"
+    },
+    "Gas Filter": {
+      "id": "FilterGasMask",
+      "how": "name-rates-differ",
+      "note": "Coal: workbook -37.5/min, game -30/min; Rubber: workbook -15/min, game 0/min; Iron Plate: workbook 0/min, game -15/min"
+    },
+    "Coal Generator": {
+      "id": "Power_GeneratorCoal_Coal",
+      "how": "ingredients"
+    },
+    "Radio Connection Unit": {
+      "id": "Alternate_RadioControlUnit_1",
+      "how": "name"
+    },
+    "Radio Control System": {
+      "id": "Alternate_RadioControlSystem",
+      "how": "name"
+    },
+    "Plastic Smart Plating": {
+      "id": "Alternate_PlasticSmartPlating",
+      "how": "name"
+    },
+    "Thermal Propulsion Rocket": {
+      "id": "SpaceElevatorPart_8",
+      "how": "name"
+    },
+    "Flexible Framework": {
+      "id": "Alternate_FlexibleFramework",
+      "how": "name"
+    },
+    "Automated Speed Wiring": {
+      "id": "Alternate_HighSpeedWiring",
+      "how": "name"
+    },
+    "Turbo Motor": {
+      "id": "MotorTurbo",
+      "how": "name"
+    },
+    "Rigour Motor": {
+      "id": "Alternate_Motor_1",
+      "how": "ingredients"
+    },
+    "Classic Battery": {
+      "id": "Alternate_ClassicBattery",
+      "how": "name"
+    },
+    "Turbo Electric Motor": {
+      "id": "Alternate_TurboMotor_1",
+      "how": "name"
+    },
+    "Turbo Pressure Motor": {
+      "id": "Alternate_TurboPressureMotor",
+      "how": "name"
+    },
+    "Plutonium Fuel Rod": {
+      "id": "PlutoniumFuelRod",
+      "how": "name"
+    },
+    "Uranium Reactor": {
+      "id": "Power_GeneratorNuclear_NuclearFuelRod",
+      "how": "ingredients",
+      "note": "generator; workbook omits cooling water"
+    },
+    "Plutonium Reactor": {
+      "id": "Power_GeneratorNuclear_PlutoniumFuelRod",
+      "how": "ingredients",
+      "note": "generator; workbook omits cooling water"
+    },
+    "Non-fissile Uranium": {
+      "id": "NonFissileUranium",
+      "how": "name"
+    },
+    "Fertile Uranium": {
+      "id": "Alternate_FertileUranium",
+      "how": "name"
+    },
+    "Cooling Device": {
+      "id": "Alternate_CoolingDevice",
+      "how": "name-rates-differ",
+      "note": "Heat Sink: workbook -9.375/min, game -10/min; Motor: workbook -1.875/min, game -2.5/min; Nitrogen Gas: workbook -45/min, game -60/min; Cooling System: workbook 3.75/min, game 5/min"
+    },
+    "Heat-Fused Frame": {
+      "id": "Alternate_HeatFusedFrame",
+      "how": "name"
+    },
+    "Instant Scrap": {
+      "id": "Alternate_InstantScrap",
+      "how": "name"
+    },
+    "Nitric Acid": {
+      "id": "NitricAcid",
+      "how": "name"
+    },
+    "Pressure Conversion Cube": {
+      "id": "PressureConversionCube",
+      "how": "name"
+    },
+    "Encased Plutonium Cell": {
+      "id": "PlutoniumCell",
+      "how": "name"
+    },
+    "Plutonium Fuel Unit": {
+      "id": "Alternate_PlutoniumFuelUnit",
+      "how": "name"
+    },
+    "OC Supercomputer": {
+      "id": "Alternate_OCSupercomputer",
+      "how": "name"
+    },
+    "Heat Exchanger": {
+      "id": "Alternate_HeatSink_1",
+      "how": "name"
+    },
+    "Copper Powder": {
+      "id": "CopperDust",
+      "how": "name"
+    },
+    "Empty Fluid Tank": {
+      "id": "GasTank",
+      "how": "name"
+    },
+    "Plutonium Pellet": {
+      "id": "Plutonium",
+      "how": "name"
+    },
+    "Instant Plutonium Cell": {
+      "id": "Alternate_InstantPlutoniumCell",
+      "how": "name"
+    },
+    "Nuclear Pasta": {
+      "id": "SpaceElevatorPart_9",
+      "how": "name"
+    },
+    "Fuel Generator": {
+      "id": "Power_GeneratorFuel_LiquidFuel",
+      "how": "ingredients"
+    },
+    "Coke Generator": {
+      "id": "Power_GeneratorCoal_PetroleumCoke",
+      "how": "ingredients"
+    },
+    "Package Nitrogen": {
+      "id": "PackagedNitrogen",
+      "how": "ingredients"
+    },
+    "Unpack Nitrogen": {
+      "id": "UnpackageNitrogen",
+      "how": "ingredients"
+    },
+    "Reanimated SAM": {
+      "id": "IngotSAM",
+      "how": "name"
+    },
+    "Basic Iron Ingot": {
+      "id": "Alternate_IronIngot_Basic",
+      "how": "name"
+    },
+    "Molded Beam": {
+      "id": "Alternate_SteelBeam_Molded",
+      "how": "name"
+    },
+    "Iron Pipe": {
+      "id": "Alternate_SteelPipe_Iron",
+      "how": "name"
+    },
+    "Molded Steel Pipe": {
+      "id": "Alternate_SteelPipe_Molded",
+      "how": "name"
+    },
+    "Bolted Iron Plate": {
+      "id": "Alternate_ReinforcedIronPlate_1",
+      "how": "name"
+    },
+    "Insulated Cable": {
+      "id": "Alternate_Cable_1",
+      "how": "name"
+    },
+    "Rubber Concrete": {
+      "id": "Alternate_RubberConcrete",
+      "how": "name"
+    },
+    "Plastic AI Limiter": {
+      "id": "Alternate_AILimiter_Plastic",
+      "how": "name"
+    },
+    "Fused Quartz Crystal": {
+      "id": "Alternate_Quartz_Fused",
+      "how": "name"
+    },
+    "Steel Cast Plate": {
+      "id": "Alternate_SteelCastedPlate",
+      "how": "name"
+    },
+    "Insulated Crystal Oscillator": {
+      "id": "Alternate_CrystalOscillator",
+      "how": "name"
+    },
+    "Tempered Copper Ingot": {
+      "id": "Alternate_CopperIngot_Tempered",
+      "how": "name"
+    },
+    "Automated Miner": {
+      "id": "Alternate_AutomatedMiner",
+      "how": "name"
+    },
+    "Aluminum Beam": {
+      "id": "Alternate_SteelBeam_Aluminum",
+      "how": "name"
+    },
+    "SAM Fluctator": {
+      "id": "SAMFluctuator",
+      "how": "ingredients"
+    },
+    "Turbofuel": {
+      "id": "Alternate_Turbofuel",
+      "how": "name"
+    },
+    "Turbofuel Generator": {
+      "id": "Power_GeneratorFuel_LiquidTurboFuel",
+      "how": "ingredients"
+    },
+    "Turbo Blend Fuel": {
+      "id": "Alternate_TurboBlendFuel",
+      "how": "name-rates-differ",
+      "note": "Coal: workbook -22.5/min, game 0/min; Petroleum Coke: workbook 0/min, game -22.5/min"
+    },
+    "Coated Cable": {
+      "id": "Alternate_CoatedCable",
+      "how": "name"
+    },
+    "Rocket Fuel": {
+      "id": "RocketFuel",
+      "how": "name"
+    },
+    "Nitro Rocket Fuel": {
+      "id": "Alternate_RocketFuel_Nitro",
+      "how": "name"
+    },
+    "Time Crystal": {
+      "id": "TimeCrystal",
+      "how": "name"
+    },
+    "Iron Ficsite": {
+      "id": "FicsiteIngot_Iron",
+      "how": "ingredients"
+    },
+    "Catermiun Ficsite": {
+      "id": "FicsiteIngot_CAT",
+      "how": "ingredients"
+    },
+    "Aluminum Ficsite": {
+      "id": "FicsiteIngot_AL",
+      "how": "ingredients"
+    },
+    "Limestone to Iron Ore": {
+      "id": "Iron_Limestone",
+      "how": "ingredients"
+    },
+    "Sulfur to Copper Ore": {
+      "id": "Copper_Sulfur",
+      "how": "ingredients"
+    },
+    "Raw Quartz to Copper Ore": {
+      "id": "Copper_Quartz",
+      "how": "ingredients"
+    },
+    "Sulfur to Limestone": {
+      "id": "Limestone_Sulfur",
+      "how": "ingredients"
+    },
+    "Limestone to Coal": {
+      "id": "Coal_Limestone",
+      "how": "ingredients"
+    },
+    "Iron Ore to Coal": {
+      "id": "Coal_Iron",
+      "how": "ingredients"
+    },
+    "Iron Ore to Sulfur": {
+      "id": "Sulfur_Iron",
+      "how": "ingredients"
+    },
+    "Coal to Sulfur": {
+      "id": "Sulfur_Coal",
+      "how": "ingredients"
+    },
+    "Copper Ore to Caterium Ore": {
+      "id": "Caterium_Copper",
+      "how": "ingredients"
+    },
+    "Raw Quartz to Caterium Ore": {
+      "id": "Caterium_Quartz",
+      "how": "ingredients"
+    },
+    "Coal to Raw Quartz": {
+      "id": "Quartz_Coal",
+      "how": "ingredients"
+    },
+    "Bauxite to Raw Quartz": {
+      "id": "Quartz_Bauxite",
+      "how": "ingredients"
+    },
+    "Copper Ore to Bauxite": {
+      "id": "Bauxite_Copper",
+      "how": "ingredients"
+    },
+    "Caterium Ore to Bauxite": {
+      "id": "Bauxite_Caterium",
+      "how": "ingredients"
+    },
+    "Caterium Ore to Nitrogen": {
+      "id": "Nitrogen_Caterium",
+      "how": "ingredients"
+    },
+    "Bauxite to Nitrogen": {
+      "id": "Nitrogen_Bauxite",
+      "how": "ingredients"
+    },
+    "Bauxite to Uranium Ore": {
+      "id": "Uranium_Bauxite",
+      "how": "ingredients"
+    },
+    "Diamond": {
+      "id": "Diamond",
+      "how": "ingredients"
+    },
+    "Dark Matter Crystal": {
+      "id": "DarkMatter",
+      "how": "name"
+    },
+    "Dark Matter Crystallization": {
+      "id": "Alternate_DarkMatter_Crystallization",
+      "how": "name"
+    },
+    "Turbo Diamonds": {
+      "id": "Alternate_Diamond_Turbo",
+      "how": "name"
+    },
+    "Cloudy Diamonds": {
+      "id": "Alternate_Diamond_Cloudy",
+      "how": "name"
+    },
+    "Dark Matter Trap": {
+      "id": "Alternate_DarkMatter_Trap",
+      "how": "name"
+    },
+    "Ficsite Trigon": {
+      "id": "FicsiteMesh",
+      "how": "name"
+    },
+    "Oil-Based Diamonds": {
+      "id": "Alternate_Diamond_OilBased",
+      "how": "name"
+    },
+    "Power Shard": {
+      "id": "SyntheticPowerShard",
+      "how": "ingredients"
+    },
+    "Superposition Oscillator": {
+      "id": "SuperpositionOscillator",
+      "how": "name"
+    },
+    "Neural-Quantum Processor": {
+      "id": "TemporalProcessor",
+      "how": "name"
+    },
+    "Ficsonium Fuel Rod": {
+      "id": "FicsoniumFuelRod",
+      "how": "name-rates-differ",
+      "note": "Ficsite Trigon: workbook -5/min, game -100/min; Excited Photonic Matter: workbook -100/min, game -50/min; Electromagnetic Control Rod: workbook -50/min, game -5/min"
+    },
+    "AI Expansion Server": {
+      "id": "SpaceElevatorPart_12",
+      "how": "name"
+    },
+    "Excited Photonic Matter": {
+      "id": "QuantumEnergy",
+      "how": "name"
+    },
+    "Dark Matter Residue": {
+      "id": "DarkEnergy",
+      "how": "name"
+    },
+    "Ficsonium": {
+      "id": "Ficsonium",
+      "how": "name"
+    },
+    "Biochemical Sculptor": {
+      "id": "SpaceElevatorPart_10",
+      "how": "name"
+    },
+    "Petroleum Diamonds": {
+      "id": "Alternate_Diamond_Petroleum",
+      "how": "name"
+    },
+    "Ionized Fuel": {
+      "id": "IonizedFuel",
+      "how": "name"
+    },
+    "Ballistic Warp Drive": {
+      "id": "SpaceElevatorPart_11",
+      "how": "name"
+    },
+    "Singularity Cell": {
+      "id": "SingularityCell",
+      "how": "name"
+    }
+  },
+  "unmatched": [
+    {
+      "name": "Steel Coated Plate",
+      "reason": "no game recipe with these flows or name"
+    },
+    {
+      "name": "Rifle Cartridge",
+      "reason": "unknown items: Beacon"
+    }
+  ]
+}
