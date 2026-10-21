@@ -1,0 +1,1991 @@
+{
+  "id": "b49e445f-de84-4c30-9be7-3828c2884b95",
+  "name": "AI Expansion Server 1",
+  "description": "",
+  "target_item": "AI Expansion Server",
+  "target_rate": 10.0,
+  "root_node": {
+    "id": "e5a2ba6d-71be-4bce-a248-0521749bbc36",
+    "item_name": "AI Expansion Server",
+    "recipe_name": "AI Expansion Server",
+    "target_rate": 10.0,
+    "machine_count": 2.5,
+    "is_imported": false,
+    "actual_production_rate": 10.0,
+    "power_consumption": 5000.0,
+    "floor_space": 3000.0,
+    "children": [
+      {
+        "id": "8c4aa102-ed73-41f1-a4dd-e236c6c28826",
+        "item_name": "Magnetic Field Generator",
+        "recipe_name": "Magnetic Field Generator",
+        "target_rate": 10.0,
+        "machine_count": 10.0,
+        "is_imported": false,
+        "actual_production_rate": 10.0,
+        "power_consumption": 550.0,
+        "floor_space": 3600.0,
+        "children": [
+          {
+            "id": "fc1eaa96-a566-496f-802d-17c5bc890e06",
+            "item_name": "Versatile Framework",
+            "recipe_name": "Versatile Framework",
+            "target_rate": 25.0,
+            "machine_count": 5.0,
+            "is_imported": false,
+            "actual_production_rate": 25.0,
+            "power_consumption": 75.0,
+            "floor_space": 750.0,
+            "children": [
+              {
+                "id": "2bd63d71-6316-4c27-84c7-6c3241722c8c",
+                "item_name": "MF",
+                "recipe_name": "MF",
+                "target_rate": 12.5,
+                "machine_count": 6.25,
+                "is_imported": false,
+                "actual_production_rate": 12.5,
+                "power_consumption": 93.75,
+                "floor_space": 937.5,
+                "children": [
+                  {
+                    "id": "5e542c59-7c93-4faa-b1d5-6c09b5327540",
+                    "item_name": "RIP",
+                    "recipe_name": "RIP",
+                    "target_rate": 18.75,
+                    "machine_count": 3.75,
+                    "is_imported": false,
+                    "actual_production_rate": 18.75,
+                    "power_consumption": 56.25,
+                    "floor_space": 562.5,
+                    "children": [
+                      {
+                        "id": "200f01e9-c33b-4893-a652-df731f2e17c2",
+                        "item_name": "Iron Plate",
+                        "recipe_name": "Iron Plate",
+                        "target_rate": 112.5,
+                        "machine_count": 5.625,
+                        "is_imported": false,
+                        "actual_production_rate": 112.5,
+                        "power_consumption": 22.5,
+                        "floor_space": 450.0,
+                        "children": [
+                          {
+                            "id": "5747a565-1591-442d-93c1-16f3feb9347a",
+                            "item_name": "Iron Ingot",
+                            "recipe_name": "Iron Ingot",
+                            "target_rate": 168.75,
+                            "machine_count": 5.625,
+                            "is_imported": false,
+                            "actual_production_rate": 168.75,
+                            "power_consumption": 22.5,
+                            "floor_space": 303.75,
+                            "children": [
+                              {
+                                "id": "9935ceb7-2e10-4339-acc3-942f645bac85",
+                                "item_name": "Iron Ore",
+                                "recipe_name": "",
+                                "target_rate": 168.75,
+                                "machine_count": 0.0,
+                                "is_imported": true,
+                                "actual_production_rate": 0.0,
+                                "power_consumption": 0.0,
+                                "floor_space": 0.0,
+                                "children": [],
+                                "parent_id": "5747a565-1591-442d-93c1-16f3feb9347a"
+                              }
+                            ],
+                            "parent_id": "200f01e9-c33b-4893-a652-df731f2e17c2"
+                          }
+                        ],
+                        "parent_id": "5e542c59-7c93-4faa-b1d5-6c09b5327540"
+                      },
+                      {
+                        "id": "e21bb4ea-fb11-4a68-b740-7efdf479cdb2",
+                        "item_name": "Screw",
+                        "recipe_name": "Screw",
+                        "target_rate": 225.0,
+                        "machine_count": 5.625,
+                        "is_imported": false,
+                        "actual_production_rate": 225.0,
+                        "power_consumption": 22.5,
+                        "floor_space": 450.0,
+                        "children": [
+                          {
+                            "id": "1abacf5d-a459-47f8-b821-5e92440c6082",
+                            "item_name": "Iron Rod",
+                            "recipe_name": "Iron Rod",
+                            "target_rate": 56.25,
+                            "machine_count": 3.75,
+                            "is_imported": false,
+                            "actual_production_rate": 56.25,
+                            "power_consumption": 15.0,
+                            "floor_space": 300.0,
+                            "children": [
+                              {
+                                "id": "c4e703b8-788c-461b-8885-b4f939f847b8",
+                                "item_name": "Iron Ingot",
+                                "recipe_name": "Iron Ingot",
+                                "target_rate": 56.25,
+                                "machine_count": 1.875,
+                                "is_imported": false,
+                                "actual_production_rate": 56.25,
+                                "power_consumption": 7.5,
+                                "floor_space": 101.25,
+                                "children": [
+                                  {
+                                    "id": "f928c248-8981-4186-bc73-8dc4c5956301",
+                                    "item_name": "Iron Ore",
+                                    "recipe_name": "",
+                                    "target_rate": 56.25,
+                                    "machine_count": 0.0,
+                                    "is_imported": true,
+                                    "actual_production_rate": 0.0,
+                                    "power_consumption": 0.0,
+                                    "floor_space": 0.0,
+                                    "children": [],
+                                    "parent_id": "c4e703b8-788c-461b-8885-b4f939f847b8"
+                                  }
+                                ],
+                                "parent_id": "1abacf5d-a459-47f8-b821-5e92440c6082"
+                              }
+                            ],
+                            "parent_id": "e21bb4ea-fb11-4a68-b740-7efdf479cdb2"
+                          }
+                        ],
+                        "parent_id": "5e542c59-7c93-4faa-b1d5-6c09b5327540"
+                      }
+                    ],
+                    "parent_id": "2bd63d71-6316-4c27-84c7-6c3241722c8c"
+                  },
+                  {
+                    "id": "2e3db771-86f5-4686-9d61-f2fb05915d52",
+                    "item_name": "Iron Rod",
+                    "recipe_name": "Iron Rod",
+                    "target_rate": 75.0,
+                    "machine_count": 5.0,
+                    "is_imported": false,
+                    "actual_production_rate": 75.0,
+                    "power_consumption": 20.0,
+                    "floor_space": 400.0,
+                    "children": [
+                      {
+                        "id": "50ab6af8-3f00-4733-9088-e3509540bc24",
+                        "item_name": "Iron Ingot",
+                        "recipe_name": "Iron Ingot",
+                        "target_rate": 75.0,
+                        "machine_count": 2.5,
+                        "is_imported": false,
+                        "actual_production_rate": 75.0,
+                        "power_consumption": 10.0,
+                        "floor_space": 135.0,
+                        "children": [
+                          {
+                            "id": "03272908-5d38-4b61-8e20-cee45140dac0",
+                            "item_name": "Iron Ore",
+                            "recipe_name": "",
+                            "target_rate": 75.0,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "50ab6af8-3f00-4733-9088-e3509540bc24"
+                          }
+                        ],
+                        "parent_id": "2e3db771-86f5-4686-9d61-f2fb05915d52"
+                      }
+                    ],
+                    "parent_id": "2bd63d71-6316-4c27-84c7-6c3241722c8c"
+                  }
+                ],
+                "parent_id": "fc1eaa96-a566-496f-802d-17c5bc890e06"
+              },
+              {
+                "id": "632d1c17-27ec-47bf-a962-97fcf19276b7",
+                "item_name": "Steel Beam",
+                "recipe_name": "Steel Beam",
+                "target_rate": 150.0,
+                "machine_count": 10.0,
+                "is_imported": false,
+                "actual_production_rate": 150.0,
+                "power_consumption": 40.0,
+                "floor_space": 800.0,
+                "children": [
+                  {
+                    "id": "439a4b8f-8ead-4f22-a775-055fdc3057d2",
+                    "item_name": "Steel Ingot",
+                    "recipe_name": "Steel Ingot",
+                    "target_rate": 600.0,
+                    "machine_count": 13.333333333333334,
+                    "is_imported": false,
+                    "actual_production_rate": 600.0,
+                    "power_consumption": 213.33333333333334,
+                    "floor_space": 1200.0,
+                    "children": [
+                      {
+                        "id": "53d8c20c-033b-4494-a111-61b71ffad254",
+                        "item_name": "Coal",
+                        "recipe_name": "",
+                        "target_rate": 600.0,
+                        "machine_count": 0.0,
+                        "is_imported": true,
+                        "actual_production_rate": 0.0,
+                        "power_consumption": 0.0,
+                        "floor_space": 0.0,
+                        "children": [],
+                        "parent_id": "439a4b8f-8ead-4f22-a775-055fdc3057d2"
+                      },
+                      {
+                        "id": "7ca885e5-e9c8-4a30-ab10-f8230bbd0186",
+                        "item_name": "Iron Ore",
+                        "recipe_name": "",
+                        "target_rate": 600.0,
+                        "machine_count": 0.0,
+                        "is_imported": true,
+                        "actual_production_rate": 0.0,
+                        "power_consumption": 0.0,
+                        "floor_space": 0.0,
+                        "children": [],
+                        "parent_id": "439a4b8f-8ead-4f22-a775-055fdc3057d2"
+                      }
+                    ],
+                    "parent_id": "632d1c17-27ec-47bf-a962-97fcf19276b7"
+                  }
+                ],
+                "parent_id": "fc1eaa96-a566-496f-802d-17c5bc890e06"
+              }
+            ],
+            "parent_id": "8c4aa102-ed73-41f1-a4dd-e236c6c28826"
+          },
+          {
+            "id": "46d2b101-062f-4e7c-abe3-751e800fec4d",
+            "item_name": "Electromagnetic Control Rod",
+            "recipe_name": "Electromagnetic Control Rod",
+            "target_rate": 10.0,
+            "machine_count": 2.5,
+            "is_imported": false,
+            "actual_production_rate": 10.0,
+            "power_consumption": 37.5,
+            "floor_space": 375.0,
+            "children": [
+              {
+                "id": "eb9b1274-5319-4972-9e24-32326d50d7f0",
+                "item_name": "Stator",
+                "recipe_name": "Stator",
+                "target_rate": 15.0,
+                "machine_count": 3.0,
+                "is_imported": false,
+                "actual_production_rate": 15.0,
+                "power_consumption": 45.0,
+                "floor_space": 450.0,
+                "children": [
+                  {
+                    "id": "4b82ab60-55d0-414b-836f-6de5c5f2bfd8",
+                    "item_name": "Steel Pipe",
+                    "recipe_name": "Steel Pipe",
+                    "target_rate": 45.0,
+                    "machine_count": 2.25,
+                    "is_imported": false,
+                    "actual_production_rate": 45.0,
+                    "power_consumption": 9.0,
+                    "floor_space": 180.0,
+                    "children": [
+                      {
+                        "id": "1d63aee2-de53-4b8c-bbdb-8b597fe9fd08",
+                        "item_name": "Steel Ingot",
+                        "recipe_name": "Steel Ingot",
+                        "target_rate": 67.5,
+                        "machine_count": 1.5,
+                        "is_imported": false,
+                        "actual_production_rate": 67.5,
+                        "power_consumption": 24.0,
+                        "floor_space": 135.0,
+                        "children": [
+                          {
+                            "id": "53d4061c-178c-438b-8c05-02cdef9a1feb",
+                            "item_name": "Coal",
+                            "recipe_name": "",
+                            "target_rate": 67.5,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "1d63aee2-de53-4b8c-bbdb-8b597fe9fd08"
+                          },
+                          {
+                            "id": "f6839c7f-8f7e-4ad7-9fb1-16b7bc252421",
+                            "item_name": "Iron Ore",
+                            "recipe_name": "",
+                            "target_rate": 67.5,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "1d63aee2-de53-4b8c-bbdb-8b597fe9fd08"
+                          }
+                        ],
+                        "parent_id": "4b82ab60-55d0-414b-836f-6de5c5f2bfd8"
+                      }
+                    ],
+                    "parent_id": "eb9b1274-5319-4972-9e24-32326d50d7f0"
+                  },
+                  {
+                    "id": "8a966f78-d48b-4a97-a76b-48f9ced91a23",
+                    "item_name": "Wire",
+                    "recipe_name": "Wire",
+                    "target_rate": 120.0,
+                    "machine_count": 4.0,
+                    "is_imported": false,
+                    "actual_production_rate": 120.0,
+                    "power_consumption": 16.0,
+                    "floor_space": 320.0,
+                    "children": [
+                      {
+                        "id": "2dafc8f3-9178-498e-8dfb-b40787b2186e",
+                        "item_name": "Copper Ingot",
+                        "recipe_name": "Copper Ingot",
+                        "target_rate": 60.0,
+                        "machine_count": 2.0,
+                        "is_imported": false,
+                        "actual_production_rate": 60.0,
+                        "power_consumption": 8.0,
+                        "floor_space": 108.0,
+                        "children": [
+                          {
+                            "id": "09e97bde-cbf7-46df-b93c-05dc23a2673e",
+                            "item_name": "Copper Ore",
+                            "recipe_name": "",
+                            "target_rate": 60.0,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "2dafc8f3-9178-498e-8dfb-b40787b2186e"
+                          }
+                        ],
+                        "parent_id": "8a966f78-d48b-4a97-a76b-48f9ced91a23"
+                      }
+                    ],
+                    "parent_id": "eb9b1274-5319-4972-9e24-32326d50d7f0"
+                  }
+                ],
+                "parent_id": "46d2b101-062f-4e7c-abe3-751e800fec4d"
+              },
+              {
+                "id": "d975ba61-3488-43c8-b37f-55525f775dc0",
+                "item_name": "AI Limiter",
+                "recipe_name": "AI Limiter",
+                "target_rate": 10.0,
+                "machine_count": 2.0,
+                "is_imported": false,
+                "actual_production_rate": 10.0,
+                "power_consumption": 30.0,
+                "floor_space": 300.0,
+                "children": [
+                  {
+                    "id": "67e658db-3200-4b44-beb3-e16ce734842b",
+                    "item_name": "Copper Sheet",
+                    "recipe_name": "Copper Sheet",
+                    "target_rate": 50.0,
+                    "machine_count": 5.0,
+                    "is_imported": false,
+                    "actual_production_rate": 50.0,
+                    "power_consumption": 20.0,
+                    "floor_space": 400.0,
+                    "children": [
+                      {
+                        "id": "1b6fac2c-a808-4f4f-a0f8-05888865199b",
+                        "item_name": "Copper Ingot",
+                        "recipe_name": "Copper Ingot",
+                        "target_rate": 100.0,
+                        "machine_count": 3.3333333333333335,
+                        "is_imported": false,
+                        "actual_production_rate": 100.0,
+                        "power_consumption": 13.333333333333334,
+                        "floor_space": 180.0,
+                        "children": [
+                          {
+                            "id": "fd0295e6-1dfa-44ed-a3f2-2a127666bcf9",
+                            "item_name": "Copper Ore",
+                            "recipe_name": "",
+                            "target_rate": 100.0,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "1b6fac2c-a808-4f4f-a0f8-05888865199b"
+                          }
+                        ],
+                        "parent_id": "67e658db-3200-4b44-beb3-e16ce734842b"
+                      }
+                    ],
+                    "parent_id": "d975ba61-3488-43c8-b37f-55525f775dc0"
+                  },
+                  {
+                    "id": "e49cef34-42bd-4783-a3f2-588e6025f148",
+                    "item_name": "Quickwire",
+                    "recipe_name": "Quickwire",
+                    "target_rate": 200.0,
+                    "machine_count": 3.3333333333333335,
+                    "is_imported": false,
+                    "actual_production_rate": 200.0,
+                    "power_consumption": 13.333333333333334,
+                    "floor_space": 266.6666666666667,
+                    "children": [
+                      {
+                        "id": "a80930ad-d09e-4fc1-b29b-c527a7ebaabd",
+                        "item_name": "Caterium Ingot",
+                        "recipe_name": "Caterium Ingot",
+                        "target_rate": 40.0,
+                        "machine_count": 2.6666666666666665,
+                        "is_imported": false,
+                        "actual_production_rate": 40.0,
+                        "power_consumption": 10.666666666666666,
+                        "floor_space": 144.0,
+                        "children": [
+                          {
+                            "id": "0c122d2a-7c8b-4e1a-a791-f10036a33a09",
+                            "item_name": "Caterium Ore",
+                            "recipe_name": "",
+                            "target_rate": 120.0,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "a80930ad-d09e-4fc1-b29b-c527a7ebaabd"
+                          }
+                        ],
+                        "parent_id": "e49cef34-42bd-4783-a3f2-588e6025f148"
+                      }
+                    ],
+                    "parent_id": "d975ba61-3488-43c8-b37f-55525f775dc0"
+                  }
+                ],
+                "parent_id": "46d2b101-062f-4e7c-abe3-751e800fec4d"
+              }
+            ],
+            "parent_id": "8c4aa102-ed73-41f1-a4dd-e236c6c28826"
+          },
+          {
+            "id": "a4b44cb7-8fec-44ff-a8fe-3d38da1c4eac",
+            "item_name": "Battery",
+            "recipe_name": "Battery",
+            "target_rate": 50.0,
+            "machine_count": 2.5,
+            "is_imported": false,
+            "actual_production_rate": 50.0,
+            "power_consumption": 187.5,
+            "floor_space": 720.0,
+            "children": [
+              {
+                "id": "1f39dbb9-8ff3-4e41-8f81-785988b15c9d",
+                "item_name": "Sulfuric Acid",
+                "recipe_name": "Sulfuric Acid",
+                "target_rate": 125.0,
+                "machine_count": 2.5,
+                "is_imported": false,
+                "actual_production_rate": 125.0,
+                "power_consumption": 75.0,
+                "floor_space": 500.0,
+                "children": [
+                  {
+                    "id": "fa112ac9-901e-430b-8776-bd39e9b658a4",
+                    "item_name": "Water",
+                    "recipe_name": "Aluminum Scrap",
+                    "target_rate": 125.0,
+                    "machine_count": 1.0416666666666667,
+                    "is_imported": false,
+                    "actual_production_rate": 125.0,
+                    "power_consumption": 31.250000000000004,
+                    "floor_space": 208.33333333333334,
+                    "children": [
+                      {
+                        "id": "8d2ed0c0-cd25-459a-bae3-2d30cc5203d9",
+                        "item_name": "Alumina Solution",
+                        "recipe_name": "Alumina Solution",
+                        "target_rate": 250.00000000000003,
+                        "machine_count": 2.0833333333333335,
+                        "is_imported": false,
+                        "actual_production_rate": 250.00000000000003,
+                        "power_consumption": 62.50000000000001,
+                        "floor_space": 416.6666666666667,
+                        "children": [
+                          {
+                            "id": "8f922558-daf1-4e15-94b5-63732afb2c37",
+                            "item_name": "Bauxite",
+                            "recipe_name": "",
+                            "target_rate": 250.00000000000003,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "8d2ed0c0-cd25-459a-bae3-2d30cc5203d9"
+                          },
+                          {
+                            "id": "40ecaf6b-58e8-43e6-bcc4-055b7a8ec6f3",
+                            "item_name": "Water",
+                            "recipe_name": "",
+                            "target_rate": 375.0,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "8d2ed0c0-cd25-459a-bae3-2d30cc5203d9"
+                          }
+                        ],
+                        "parent_id": "fa112ac9-901e-430b-8776-bd39e9b658a4"
+                      },
+                      {
+                        "id": "c6409913-5aaa-4dbc-ad2a-6d9aecd0f60a",
+                        "item_name": "Coal",
+                        "recipe_name": "",
+                        "target_rate": 125.00000000000001,
+                        "machine_count": 0.0,
+                        "is_imported": true,
+                        "actual_production_rate": 0.0,
+                        "power_consumption": 0.0,
+                        "floor_space": 0.0,
+                        "children": [],
+                        "parent_id": "fa112ac9-901e-430b-8776-bd39e9b658a4"
+                      }
+                    ],
+                    "parent_id": "1f39dbb9-8ff3-4e41-8f81-785988b15c9d"
+                  },
+                  {
+                    "id": "cc490502-6eae-4ff7-bf52-1d104d8f1087",
+                    "item_name": "Sulfur",
+                    "recipe_name": "",
+                    "target_rate": 125.0,
+                    "machine_count": 0.0,
+                    "is_imported": true,
+                    "actual_production_rate": 0.0,
+                    "power_consumption": 0.0,
+                    "floor_space": 0.0,
+                    "children": [],
+                    "parent_id": "1f39dbb9-8ff3-4e41-8f81-785988b15c9d"
+                  }
+                ],
+                "parent_id": "a4b44cb7-8fec-44ff-a8fe-3d38da1c4eac"
+              },
+              {
+                "id": "3abc480c-5272-4a4e-a934-9dcc8083ad83",
+                "item_name": "Aluminum Casing",
+                "recipe_name": "Aluminum Casing",
+                "target_rate": 50.0,
+                "machine_count": 0.8333333333333334,
+                "is_imported": false,
+                "actual_production_rate": 50.0,
+                "power_consumption": 3.3333333333333335,
+                "floor_space": 66.66666666666667,
+                "children": [
+                  {
+                    "id": "c47d2d7b-6dbf-45c9-8f10-76fe4923964b",
+                    "item_name": "Aluminum Ingot",
+                    "recipe_name": "Aluminum Ingot",
+                    "target_rate": 75.0,
+                    "machine_count": 1.25,
+                    "is_imported": false,
+                    "actual_production_rate": 75.0,
+                    "power_consumption": 20.0,
+                    "floor_space": 112.5,
+                    "children": [
+                      {
+                        "id": "e8abd336-839f-439e-a7d2-250f8a693e3e",
+                        "item_name": "Aluminum Scrap",
+                        "recipe_name": "Aluminum Scrap",
+                        "target_rate": 112.5,
+                        "machine_count": 0.3125,
+                        "is_imported": false,
+                        "actual_production_rate": 112.5,
+                        "power_consumption": 9.375,
+                        "floor_space": 62.5,
+                        "children": [
+                          {
+                            "id": "6935cc53-8aad-4257-96f8-9234c8152371",
+                            "item_name": "Alumina Solution",
+                            "recipe_name": "Alumina Solution",
+                            "target_rate": 75.0,
+                            "machine_count": 0.625,
+                            "is_imported": false,
+                            "actual_production_rate": 75.0,
+                            "power_consumption": 18.75,
+                            "floor_space": 125.0,
+                            "children": [
+                              {
+                                "id": "07abd466-9762-409e-a0db-4974fbfc64be",
+                                "item_name": "Bauxite",
+                                "recipe_name": "",
+                                "target_rate": 75.0,
+                                "machine_count": 0.0,
+                                "is_imported": true,
+                                "actual_production_rate": 0.0,
+                                "power_consumption": 0.0,
+                                "floor_space": 0.0,
+                                "children": [],
+                                "parent_id": "6935cc53-8aad-4257-96f8-9234c8152371"
+                              },
+                              {
+                                "id": "84396c56-144b-4cb1-a643-b631c7885432",
+                                "item_name": "Water",
+                                "recipe_name": "Aluminum Scrap",
+                                "target_rate": 112.5,
+                                "machine_count": 0.9375,
+                                "is_imported": false,
+                                "actual_production_rate": 112.5,
+                                "power_consumption": 28.125,
+                                "floor_space": 187.5,
+                                "children": [
+                                  {
+                                    "id": "32e7e701-55e5-4466-8d41-9584c12fb6dc",
+                                    "item_name": "Alumina Solution",
+                                    "recipe_name": "",
+                                    "target_rate": 225.0,
+                                    "machine_count": 0.0,
+                                    "is_imported": true,
+                                    "actual_production_rate": 0.0,
+                                    "power_consumption": 0.0,
+                                    "floor_space": 0.0,
+                                    "children": [],
+                                    "parent_id": "84396c56-144b-4cb1-a643-b631c7885432"
+                                  },
+                                  {
+                                    "id": "421fa69d-e6a6-433c-83fe-0ed9e9dc6f02",
+                                    "item_name": "Coal",
+                                    "recipe_name": "",
+                                    "target_rate": 112.5,
+                                    "machine_count": 0.0,
+                                    "is_imported": true,
+                                    "actual_production_rate": 0.0,
+                                    "power_consumption": 0.0,
+                                    "floor_space": 0.0,
+                                    "children": [],
+                                    "parent_id": "84396c56-144b-4cb1-a643-b631c7885432"
+                                  }
+                                ],
+                                "parent_id": "6935cc53-8aad-4257-96f8-9234c8152371"
+                              }
+                            ],
+                            "parent_id": "e8abd336-839f-439e-a7d2-250f8a693e3e"
+                          },
+                          {
+                            "id": "bcb9cd26-f8ca-4f9f-9156-bf277c4a528b",
+                            "item_name": "Coal",
+                            "recipe_name": "",
+                            "target_rate": 37.5,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "e8abd336-839f-439e-a7d2-250f8a693e3e"
+                          }
+                        ],
+                        "parent_id": "c47d2d7b-6dbf-45c9-8f10-76fe4923964b"
+                      },
+                      {
+                        "id": "0d6997ef-ad4a-4bb7-9e39-382c546868d8",
+                        "item_name": "Silica",
+                        "recipe_name": "Silica",
+                        "target_rate": 93.75,
+                        "machine_count": 2.5,
+                        "is_imported": false,
+                        "actual_production_rate": 93.75,
+                        "power_consumption": 10.0,
+                        "floor_space": 200.0,
+                        "children": [
+                          {
+                            "id": "17b2ee1d-03da-42a0-92a4-05e5647cf218",
+                            "item_name": "Raw Quartz",
+                            "recipe_name": "",
+                            "target_rate": 56.25,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "0d6997ef-ad4a-4bb7-9e39-382c546868d8"
+                          }
+                        ],
+                        "parent_id": "c47d2d7b-6dbf-45c9-8f10-76fe4923964b"
+                      }
+                    ],
+                    "parent_id": "3abc480c-5272-4a4e-a934-9dcc8083ad83"
+                  }
+                ],
+                "parent_id": "a4b44cb7-8fec-44ff-a8fe-3d38da1c4eac"
+              },
+              {
+                "id": "08312e03-91fa-4f59-90ad-58b094b7152d",
+                "item_name": "Alumina Solution",
+                "recipe_name": "Alumina Solution",
+                "target_rate": 100.0,
+                "machine_count": 0.8333333333333334,
+                "is_imported": false,
+                "actual_production_rate": 100.0,
+                "power_consumption": 25.0,
+                "floor_space": 166.66666666666669,
+                "children": [
+                  {
+                    "id": "ed94975f-0c97-4f7b-94d9-23c69e901c59",
+                    "item_name": "Bauxite",
+                    "recipe_name": "",
+                    "target_rate": 100.0,
+                    "machine_count": 0.0,
+                    "is_imported": true,
+                    "actual_production_rate": 0.0,
+                    "power_consumption": 0.0,
+                    "floor_space": 0.0,
+                    "children": [],
+                    "parent_id": "08312e03-91fa-4f59-90ad-58b094b7152d"
+                  },
+                  {
+                    "id": "1f1fa4a7-b2c4-4aad-9aba-69e79e510be7",
+                    "item_name": "Water",
+                    "recipe_name": "Aluminum Scrap",
+                    "target_rate": 150.0,
+                    "machine_count": 1.25,
+                    "is_imported": false,
+                    "actual_production_rate": 150.0,
+                    "power_consumption": 37.5,
+                    "floor_space": 250.0,
+                    "children": [
+                      {
+                        "id": "f0295230-16a5-4f51-9c58-db76f09bd439",
+                        "item_name": "Alumina Solution",
+                        "recipe_name": "",
+                        "target_rate": 300.0,
+                        "machine_count": 0.0,
+                        "is_imported": true,
+                        "actual_production_rate": 0.0,
+                        "power_consumption": 0.0,
+                        "floor_space": 0.0,
+                        "children": [],
+                        "parent_id": "1f1fa4a7-b2c4-4aad-9aba-69e79e510be7"
+                      },
+                      {
+                        "id": "88a43c8b-1558-4a7f-a94d-e7c557430403",
+                        "item_name": "Coal",
+                        "recipe_name": "",
+                        "target_rate": 150.0,
+                        "machine_count": 0.0,
+                        "is_imported": true,
+                        "actual_production_rate": 0.0,
+                        "power_consumption": 0.0,
+                        "floor_space": 0.0,
+                        "children": [],
+                        "parent_id": "1f1fa4a7-b2c4-4aad-9aba-69e79e510be7"
+                      }
+                    ],
+                    "parent_id": "08312e03-91fa-4f59-90ad-58b094b7152d"
+                  }
+                ],
+                "parent_id": "a4b44cb7-8fec-44ff-a8fe-3d38da1c4eac"
+              }
+            ],
+            "parent_id": "8c4aa102-ed73-41f1-a4dd-e236c6c28826"
+          }
+        ],
+        "parent_id": "e5a2ba6d-71be-4bce-a248-0521749bbc36"
+      },
+      {
+        "id": "5e8e7c22-4d56-47a2-96d8-f68eddf62889",
+        "item_name": "Neural-Quantum Processor",
+        "recipe_name": "Neural-Quantum Processor",
+        "target_rate": 10.0,
+        "machine_count": 3.3333333333333335,
+        "is_imported": false,
+        "actual_production_rate": 10.0,
+        "power_consumption": 6666.666666666667,
+        "floor_space": 4000.0,
+        "children": [
+          {
+            "id": "ba34c55c-8db1-4645-beaa-5957fd67fc45",
+            "item_name": "Time Crystal",
+            "recipe_name": "",
+            "target_rate": 50.0,
+            "machine_count": 0.0,
+            "is_imported": true,
+            "actual_production_rate": 0.0,
+            "power_consumption": 0.0,
+            "floor_space": 0.0,
+            "children": [],
+            "parent_id": "5e8e7c22-4d56-47a2-96d8-f68eddf62889"
+          },
+          {
+            "id": "d822f116-c4c6-466a-8b79-21ef46fdc748",
+            "item_name": "Supercomputer",
+            "recipe_name": "Supercomputer",
+            "target_rate": 10.0,
+            "machine_count": 5.333333333333333,
+            "is_imported": false,
+            "actual_production_rate": 10.0,
+            "power_consumption": 293.3333333333333,
+            "floor_space": 1920.0,
+            "children": [
+              {
+                "id": "97921f82-024a-402a-b5a2-bba3d9836009",
+                "item_name": "Computer",
+                "recipe_name": "Computer",
+                "target_rate": 40.0,
+                "machine_count": 16.0,
+                "is_imported": false,
+                "actual_production_rate": 40.0,
+                "power_consumption": 880.0,
+                "floor_space": 5760.0,
+                "children": [
+                  {
+                    "id": "7adda427-5e9b-4536-948e-5419c9a76fec",
+                    "item_name": "Circuit Board",
+                    "recipe_name": "Circuit Board",
+                    "target_rate": 160.0,
+                    "machine_count": 21.333333333333332,
+                    "is_imported": false,
+                    "actual_production_rate": 160.0,
+                    "power_consumption": 320.0,
+                    "floor_space": 3200.0,
+                    "children": [
+                      {
+                        "id": "d96d22c6-aaad-4ef7-9f2d-9cfd1e764e80",
+                        "item_name": "Copper Sheet",
+                        "recipe_name": "Copper Sheet",
+                        "target_rate": 320.0,
+                        "machine_count": 32.0,
+                        "is_imported": false,
+                        "actual_production_rate": 320.0,
+                        "power_consumption": 128.0,
+                        "floor_space": 2560.0,
+                        "children": [
+                          {
+                            "id": "7e6bc893-3800-4b4a-bb45-52949f554475",
+                            "item_name": "Copper Ingot",
+                            "recipe_name": "Copper Ingot",
+                            "target_rate": 640.0,
+                            "machine_count": 21.333333333333332,
+                            "is_imported": false,
+                            "actual_production_rate": 640.0,
+                            "power_consumption": 85.33333333333333,
+                            "floor_space": 1152.0,
+                            "children": [
+                              {
+                                "id": "fa6c690d-3c6b-4b77-a1d1-366915ad5967",
+                                "item_name": "Copper Ore",
+                                "recipe_name": "",
+                                "target_rate": 640.0,
+                                "machine_count": 0.0,
+                                "is_imported": true,
+                                "actual_production_rate": 0.0,
+                                "power_consumption": 0.0,
+                                "floor_space": 0.0,
+                                "children": [],
+                                "parent_id": "7e6bc893-3800-4b4a-bb45-52949f554475"
+                              }
+                            ],
+                            "parent_id": "d96d22c6-aaad-4ef7-9f2d-9cfd1e764e80"
+                          }
+                        ],
+                        "parent_id": "7adda427-5e9b-4536-948e-5419c9a76fec"
+                      },
+                      {
+                        "id": "cff3e8c8-b18a-486a-a901-8d3812846d9f",
+                        "item_name": "Plastic",
+                        "recipe_name": "Plastic",
+                        "target_rate": 640.0,
+                        "machine_count": 32.0,
+                        "is_imported": false,
+                        "actual_production_rate": 640.0,
+                        "power_consumption": 960.0,
+                        "floor_space": 6400.0,
+                        "children": [
+                          {
+                            "id": "e6379bdf-3db1-4c5a-85dd-2dd4aabdb9b8",
+                            "item_name": "Crude Oil",
+                            "recipe_name": "",
+                            "target_rate": 960.0,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "cff3e8c8-b18a-486a-a901-8d3812846d9f"
+                          }
+                        ],
+                        "parent_id": "7adda427-5e9b-4536-948e-5419c9a76fec"
+                      }
+                    ],
+                    "parent_id": "97921f82-024a-402a-b5a2-bba3d9836009"
+                  },
+                  {
+                    "id": "07bb74fe-fc6c-4d82-a4f2-046a3fd50b95",
+                    "item_name": "Cable",
+                    "recipe_name": "Cable",
+                    "target_rate": 320.0,
+                    "machine_count": 10.666666666666666,
+                    "is_imported": false,
+                    "actual_production_rate": 320.0,
+                    "power_consumption": 42.666666666666664,
+                    "floor_space": 853.3333333333333,
+                    "children": [
+                      {
+                        "id": "a794cdd7-1553-4aeb-bc2f-8f72b85508f4",
+                        "item_name": "Wire",
+                        "recipe_name": "Wire",
+                        "target_rate": 640.0,
+                        "machine_count": 21.333333333333332,
+                        "is_imported": false,
+                        "actual_production_rate": 640.0,
+                        "power_consumption": 85.33333333333333,
+                        "floor_space": 1706.6666666666665,
+                        "children": [
+                          {
+                            "id": "e3d2a770-aec2-4e41-9f9e-b7d186433382",
+                            "item_name": "Copper Ingot",
+                            "recipe_name": "Copper Ingot",
+                            "target_rate": 320.0,
+                            "machine_count": 10.666666666666666,
+                            "is_imported": false,
+                            "actual_production_rate": 320.0,
+                            "power_consumption": 42.666666666666664,
+                            "floor_space": 576.0,
+                            "children": [
+                              {
+                                "id": "e581fa67-4a19-4936-9fdf-022db204fc91",
+                                "item_name": "Copper Ore",
+                                "recipe_name": "",
+                                "target_rate": 320.0,
+                                "machine_count": 0.0,
+                                "is_imported": true,
+                                "actual_production_rate": 0.0,
+                                "power_consumption": 0.0,
+                                "floor_space": 0.0,
+                                "children": [],
+                                "parent_id": "e3d2a770-aec2-4e41-9f9e-b7d186433382"
+                              }
+                            ],
+                            "parent_id": "a794cdd7-1553-4aeb-bc2f-8f72b85508f4"
+                          }
+                        ],
+                        "parent_id": "07bb74fe-fc6c-4d82-a4f2-046a3fd50b95"
+                      }
+                    ],
+                    "parent_id": "97921f82-024a-402a-b5a2-bba3d9836009"
+                  },
+                  {
+                    "id": "2e08d8f9-53e9-41b1-84dd-f84a34d53610",
+                    "item_name": "Plastic",
+                    "recipe_name": "Plastic",
+                    "target_rate": 640.0,
+                    "machine_count": 32.0,
+                    "is_imported": false,
+                    "actual_production_rate": 640.0,
+                    "power_consumption": 960.0,
+                    "floor_space": 6400.0,
+                    "children": [
+                      {
+                        "id": "dee6ddbf-f469-4724-98a8-7a5b04d459ba",
+                        "item_name": "Crude Oil",
+                        "recipe_name": "",
+                        "target_rate": 960.0,
+                        "machine_count": 0.0,
+                        "is_imported": true,
+                        "actual_production_rate": 0.0,
+                        "power_consumption": 0.0,
+                        "floor_space": 0.0,
+                        "children": [],
+                        "parent_id": "2e08d8f9-53e9-41b1-84dd-f84a34d53610"
+                      }
+                    ],
+                    "parent_id": "97921f82-024a-402a-b5a2-bba3d9836009"
+                  }
+                ],
+                "parent_id": "d822f116-c4c6-466a-8b79-21ef46fdc748"
+              },
+              {
+                "id": "21d1898b-0465-42fe-ac8a-a7347e076265",
+                "item_name": "AI Limiter",
+                "recipe_name": "AI Limiter",
+                "target_rate": 20.0,
+                "machine_count": 4.0,
+                "is_imported": false,
+                "actual_production_rate": 20.0,
+                "power_consumption": 60.0,
+                "floor_space": 600.0,
+                "children": [
+                  {
+                    "id": "90ac0832-5e16-40b2-baf8-72d5dea8efd5",
+                    "item_name": "Copper Sheet",
+                    "recipe_name": "Copper Sheet",
+                    "target_rate": 100.0,
+                    "machine_count": 10.0,
+                    "is_imported": false,
+                    "actual_production_rate": 100.0,
+                    "power_consumption": 40.0,
+                    "floor_space": 800.0,
+                    "children": [
+                      {
+                        "id": "f58d5c2a-21ea-4fba-9d32-24429efde962",
+                        "item_name": "Copper Ingot",
+                        "recipe_name": "Copper Ingot",
+                        "target_rate": 200.0,
+                        "machine_count": 6.666666666666667,
+                        "is_imported": false,
+                        "actual_production_rate": 200.0,
+                        "power_consumption": 26.666666666666668,
+                        "floor_space": 360.0,
+                        "children": [
+                          {
+                            "id": "8fe2f017-8d6f-40c3-b268-42ad437436cc",
+                            "item_name": "Copper Ore",
+                            "recipe_name": "",
+                            "target_rate": 200.0,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "f58d5c2a-21ea-4fba-9d32-24429efde962"
+                          }
+                        ],
+                        "parent_id": "90ac0832-5e16-40b2-baf8-72d5dea8efd5"
+                      }
+                    ],
+                    "parent_id": "21d1898b-0465-42fe-ac8a-a7347e076265"
+                  },
+                  {
+                    "id": "6ea692de-5eeb-4669-9383-3fea5ebda3f5",
+                    "item_name": "Quickwire",
+                    "recipe_name": "Quickwire",
+                    "target_rate": 400.0,
+                    "machine_count": 6.666666666666667,
+                    "is_imported": false,
+                    "actual_production_rate": 400.0,
+                    "power_consumption": 26.666666666666668,
+                    "floor_space": 533.3333333333334,
+                    "children": [
+                      {
+                        "id": "b2658808-bca9-486b-bd1b-18a7075a349b",
+                        "item_name": "Caterium Ingot",
+                        "recipe_name": "Caterium Ingot",
+                        "target_rate": 80.0,
+                        "machine_count": 5.333333333333333,
+                        "is_imported": false,
+                        "actual_production_rate": 80.0,
+                        "power_consumption": 21.333333333333332,
+                        "floor_space": 288.0,
+                        "children": [
+                          {
+                            "id": "50bde3ea-dd12-4725-bc5c-7b031903d1fe",
+                            "item_name": "Caterium Ore",
+                            "recipe_name": "",
+                            "target_rate": 240.0,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "b2658808-bca9-486b-bd1b-18a7075a349b"
+                          }
+                        ],
+                        "parent_id": "6ea692de-5eeb-4669-9383-3fea5ebda3f5"
+                      }
+                    ],
+                    "parent_id": "21d1898b-0465-42fe-ac8a-a7347e076265"
+                  }
+                ],
+                "parent_id": "d822f116-c4c6-466a-8b79-21ef46fdc748"
+              },
+              {
+                "id": "76f4776d-b2cb-4994-9d18-4018e1a3ca84",
+                "item_name": "HSC",
+                "recipe_name": "HSC",
+                "target_rate": 30.0,
+                "machine_count": 8.0,
+                "is_imported": false,
+                "actual_production_rate": 30.0,
+                "power_consumption": 440.0,
+                "floor_space": 2880.0,
+                "children": [
+                  {
+                    "id": "68d5fff2-a3e0-4105-93e4-0fcfc3c83e9c",
+                    "item_name": "Quickwire",
+                    "recipe_name": "Quickwire",
+                    "target_rate": 1680.0,
+                    "machine_count": 28.0,
+                    "is_imported": false,
+                    "actual_production_rate": 1680.0,
+                    "power_consumption": 112.0,
+                    "floor_space": 2240.0,
+                    "children": [
+                      {
+                        "id": "78660aee-c3e5-4d10-902f-db318313c201",
+                        "item_name": "Caterium Ingot",
+                        "recipe_name": "Caterium Ingot",
+                        "target_rate": 336.0,
+                        "machine_count": 22.4,
+                        "is_imported": false,
+                        "actual_production_rate": 336.0,
+                        "power_consumption": 89.6,
+                        "floor_space": 1209.6,
+                        "children": [
+                          {
+                            "id": "1c1726bd-cbc4-48ca-905f-2c8e7eea30ad",
+                            "item_name": "Caterium Ore",
+                            "recipe_name": "",
+                            "target_rate": 1007.9999999999999,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "78660aee-c3e5-4d10-902f-db318313c201"
+                          }
+                        ],
+                        "parent_id": "68d5fff2-a3e0-4105-93e4-0fcfc3c83e9c"
+                      }
+                    ],
+                    "parent_id": "76f4776d-b2cb-4994-9d18-4018e1a3ca84"
+                  },
+                  {
+                    "id": "d7827496-5397-4444-95e6-fe576db930cb",
+                    "item_name": "Cable",
+                    "recipe_name": "Cable",
+                    "target_rate": 300.0,
+                    "machine_count": 10.0,
+                    "is_imported": false,
+                    "actual_production_rate": 300.0,
+                    "power_consumption": 40.0,
+                    "floor_space": 800.0,
+                    "children": [
+                      {
+                        "id": "d89c0f78-0005-4967-b652-80f5ea3359b1",
+                        "item_name": "Wire",
+                        "recipe_name": "Wire",
+                        "target_rate": 600.0,
+                        "machine_count": 20.0,
+                        "is_imported": false,
+                        "actual_production_rate": 600.0,
+                        "power_consumption": 80.0,
+                        "floor_space": 1600.0,
+                        "children": [
+                          {
+                            "id": "c9b94cd1-1b97-4d1c-8777-f4c9d1987e8a",
+                            "item_name": "Copper Ingot",
+                            "recipe_name": "Copper Ingot",
+                            "target_rate": 300.0,
+                            "machine_count": 10.0,
+                            "is_imported": false,
+                            "actual_production_rate": 300.0,
+                            "power_consumption": 40.0,
+                            "floor_space": 540.0,
+                            "children": [
+                              {
+                                "id": "ea11ee28-996b-48ee-bc6c-0dd3cb0e79b8",
+                                "item_name": "Copper Ore",
+                                "recipe_name": "",
+                                "target_rate": 300.0,
+                                "machine_count": 0.0,
+                                "is_imported": true,
+                                "actual_production_rate": 0.0,
+                                "power_consumption": 0.0,
+                                "floor_space": 0.0,
+                                "children": [],
+                                "parent_id": "c9b94cd1-1b97-4d1c-8777-f4c9d1987e8a"
+                              }
+                            ],
+                            "parent_id": "d89c0f78-0005-4967-b652-80f5ea3359b1"
+                          }
+                        ],
+                        "parent_id": "d7827496-5397-4444-95e6-fe576db930cb"
+                      }
+                    ],
+                    "parent_id": "76f4776d-b2cb-4994-9d18-4018e1a3ca84"
+                  },
+                  {
+                    "id": "9cf8c27e-28b6-455c-b3dc-8ab6111b8566",
+                    "item_name": "Circuit Board",
+                    "recipe_name": "Circuit Board",
+                    "target_rate": 30.0,
+                    "machine_count": 4.0,
+                    "is_imported": false,
+                    "actual_production_rate": 30.0,
+                    "power_consumption": 60.0,
+                    "floor_space": 600.0,
+                    "children": [
+                      {
+                        "id": "0c8bf047-975c-4682-8432-719d8189071f",
+                        "item_name": "Copper Sheet",
+                        "recipe_name": "Copper Sheet",
+                        "target_rate": 60.0,
+                        "machine_count": 6.0,
+                        "is_imported": false,
+                        "actual_production_rate": 60.0,
+                        "power_consumption": 24.0,
+                        "floor_space": 480.0,
+                        "children": [
+                          {
+                            "id": "e739b34f-151b-4f84-8130-1e7840a8292d",
+                            "item_name": "Copper Ingot",
+                            "recipe_name": "Copper Ingot",
+                            "target_rate": 120.0,
+                            "machine_count": 4.0,
+                            "is_imported": false,
+                            "actual_production_rate": 120.0,
+                            "power_consumption": 16.0,
+                            "floor_space": 216.0,
+                            "children": [
+                              {
+                                "id": "97a800b3-eb4e-4cf6-8d5c-b856403cbca3",
+                                "item_name": "Copper Ore",
+                                "recipe_name": "",
+                                "target_rate": 120.0,
+                                "machine_count": 0.0,
+                                "is_imported": true,
+                                "actual_production_rate": 0.0,
+                                "power_consumption": 0.0,
+                                "floor_space": 0.0,
+                                "children": [],
+                                "parent_id": "e739b34f-151b-4f84-8130-1e7840a8292d"
+                              }
+                            ],
+                            "parent_id": "0c8bf047-975c-4682-8432-719d8189071f"
+                          }
+                        ],
+                        "parent_id": "9cf8c27e-28b6-455c-b3dc-8ab6111b8566"
+                      },
+                      {
+                        "id": "12ecae65-f9cb-49b0-a39a-3a4282f00bcd",
+                        "item_name": "Plastic",
+                        "recipe_name": "Plastic",
+                        "target_rate": 120.0,
+                        "machine_count": 6.0,
+                        "is_imported": false,
+                        "actual_production_rate": 120.0,
+                        "power_consumption": 180.0,
+                        "floor_space": 1200.0,
+                        "children": [
+                          {
+                            "id": "d12f2610-d949-4cc1-bf2d-2d1155a1d763",
+                            "item_name": "Crude Oil",
+                            "recipe_name": "",
+                            "target_rate": 180.0,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "12ecae65-f9cb-49b0-a39a-3a4282f00bcd"
+                          }
+                        ],
+                        "parent_id": "9cf8c27e-28b6-455c-b3dc-8ab6111b8566"
+                      }
+                    ],
+                    "parent_id": "76f4776d-b2cb-4994-9d18-4018e1a3ca84"
+                  }
+                ],
+                "parent_id": "d822f116-c4c6-466a-8b79-21ef46fdc748"
+              },
+              {
+                "id": "007ca663-2fb1-4902-9a8a-4441dcc3b32e",
+                "item_name": "Plastic",
+                "recipe_name": "Plastic",
+                "target_rate": 280.0,
+                "machine_count": 14.0,
+                "is_imported": false,
+                "actual_production_rate": 280.0,
+                "power_consumption": 420.0,
+                "floor_space": 2800.0,
+                "children": [
+                  {
+                    "id": "bf6d02bc-61d9-49b6-8336-0078e45a7659",
+                    "item_name": "Crude Oil",
+                    "recipe_name": "",
+                    "target_rate": 420.0,
+                    "machine_count": 0.0,
+                    "is_imported": true,
+                    "actual_production_rate": 0.0,
+                    "power_consumption": 0.0,
+                    "floor_space": 0.0,
+                    "children": [],
+                    "parent_id": "007ca663-2fb1-4902-9a8a-4441dcc3b32e"
+                  }
+                ],
+                "parent_id": "d822f116-c4c6-466a-8b79-21ef46fdc748"
+              }
+            ],
+            "parent_id": "5e8e7c22-4d56-47a2-96d8-f68eddf62889"
+          },
+          {
+            "id": "ca9e8235-ad54-4719-afc1-e5ce97a633a5",
+            "item_name": "Ficsite Trigon",
+            "recipe_name": "Ficsite Trigon",
+            "target_rate": 150.0,
+            "machine_count": 5.0,
+            "is_imported": false,
+            "actual_production_rate": 150.0,
+            "power_consumption": 20.0,
+            "floor_space": 400.0,
+            "children": [
+              {
+                "id": "a6ac714e-dd02-4b04-b394-0f351434b14c",
+                "item_name": "Ficsite Ingot",
+                "recipe_name": "",
+                "target_rate": 50.0,
+                "machine_count": 0.0,
+                "is_imported": true,
+                "actual_production_rate": 0.0,
+                "power_consumption": 0.0,
+                "floor_space": 0.0,
+                "children": [],
+                "parent_id": "ca9e8235-ad54-4719-afc1-e5ce97a633a5"
+              }
+            ],
+            "parent_id": "5e8e7c22-4d56-47a2-96d8-f68eddf62889"
+          },
+          {
+            "id": "c32e90c6-6af4-478f-a20d-1a8ac07ff8e6",
+            "item_name": "Excited Photonic Matter",
+            "recipe_name": "",
+            "target_rate": 250.0,
+            "machine_count": 0.0,
+            "is_imported": true,
+            "actual_production_rate": 0.0,
+            "power_consumption": 0.0,
+            "floor_space": 0.0,
+            "children": [],
+            "parent_id": "5e8e7c22-4d56-47a2-96d8-f68eddf62889"
+          }
+        ],
+        "parent_id": "e5a2ba6d-71be-4bce-a248-0521749bbc36"
+      },
+      {
+        "id": "c5ab40fd-261b-4228-989e-27241a71af0d",
+        "item_name": "Superposition Oscillator",
+        "recipe_name": "Superposition Oscillator",
+        "target_rate": 10.0,
+        "machine_count": 2.0,
+        "is_imported": false,
+        "actual_production_rate": 10.0,
+        "power_consumption": 4000.0,
+        "floor_space": 2400.0,
+        "children": [
+          {
+            "id": "87699f6d-c5ba-4ab1-a02d-ccbbf15ef6e1",
+            "item_name": "Dark Matter Crystal",
+            "recipe_name": "Dark Matter Crystal",
+            "target_rate": 60.0,
+            "machine_count": 2.0,
+            "is_imported": false,
+            "actual_production_rate": 60.0,
+            "power_consumption": 2000.0,
+            "floor_space": 1824.0,
+            "children": [
+              {
+                "id": "4d5c9382-5943-43bf-b739-9f385173528e",
+                "item_name": "Diamond",
+                "recipe_name": "Diamond",
+                "target_rate": 60.0,
+                "machine_count": 2.0,
+                "is_imported": false,
+                "actual_production_rate": 60.0,
+                "power_consumption": 2000.0,
+                "floor_space": 1824.0,
+                "children": [
+                  {
+                    "id": "bfa176e7-4c7a-4ae0-9335-1eff68c5a80a",
+                    "item_name": "Coal",
+                    "recipe_name": "",
+                    "target_rate": 1200.0,
+                    "machine_count": 0.0,
+                    "is_imported": true,
+                    "actual_production_rate": 0.0,
+                    "power_consumption": 0.0,
+                    "floor_space": 0.0,
+                    "children": [],
+                    "parent_id": "4d5c9382-5943-43bf-b739-9f385173528e"
+                  }
+                ],
+                "parent_id": "87699f6d-c5ba-4ab1-a02d-ccbbf15ef6e1"
+              },
+              {
+                "id": "58a18c5b-9ac3-4a05-8853-05e0e31e47a0",
+                "item_name": "Dark Matter Residue",
+                "recipe_name": "Power Shard",
+                "target_rate": 300.0,
+                "machine_count": 5.0,
+                "is_imported": false,
+                "actual_production_rate": 300.0,
+                "power_consumption": 10000.0,
+                "floor_space": 6000.0,
+                "children": [
+                  {
+                    "id": "166daaab-b56b-496d-8112-a59d10a9ef28",
+                    "item_name": "Time Crystal",
+                    "recipe_name": "",
+                    "target_rate": 50.0,
+                    "machine_count": 0.0,
+                    "is_imported": true,
+                    "actual_production_rate": 0.0,
+                    "power_consumption": 0.0,
+                    "floor_space": 0.0,
+                    "children": [],
+                    "parent_id": "58a18c5b-9ac3-4a05-8853-05e0e31e47a0"
+                  },
+                  {
+                    "id": "1cf0ae62-b431-4b2b-81b1-80efe5c04443",
+                    "item_name": "Dark Matter Crystal",
+                    "recipe_name": "",
+                    "target_rate": 50.0,
+                    "machine_count": 0.0,
+                    "is_imported": true,
+                    "actual_production_rate": 0.0,
+                    "power_consumption": 0.0,
+                    "floor_space": 0.0,
+                    "children": [],
+                    "parent_id": "58a18c5b-9ac3-4a05-8853-05e0e31e47a0"
+                  },
+                  {
+                    "id": "390dbdc2-bada-46b5-b858-ab207e1ae0b7",
+                    "item_name": "Quartz Crystal",
+                    "recipe_name": "Quartz Crystal",
+                    "target_rate": 300.0,
+                    "machine_count": 13.333333333333334,
+                    "is_imported": false,
+                    "actual_production_rate": 300.0,
+                    "power_consumption": 53.333333333333336,
+                    "floor_space": 1066.6666666666667,
+                    "children": [
+                      {
+                        "id": "77669395-1690-4051-8d20-d515f09519be",
+                        "item_name": "Raw Quartz",
+                        "recipe_name": "",
+                        "target_rate": 500.0,
+                        "machine_count": 0.0,
+                        "is_imported": true,
+                        "actual_production_rate": 0.0,
+                        "power_consumption": 0.0,
+                        "floor_space": 0.0,
+                        "children": [],
+                        "parent_id": "390dbdc2-bada-46b5-b858-ab207e1ae0b7"
+                      }
+                    ],
+                    "parent_id": "58a18c5b-9ac3-4a05-8853-05e0e31e47a0"
+                  },
+                  {
+                    "id": "92ced49a-1b31-4fa1-a69c-927cc3cb95ba",
+                    "item_name": "Excited Photonic Matter",
+                    "recipe_name": "",
+                    "target_rate": 300.0,
+                    "machine_count": 0.0,
+                    "is_imported": true,
+                    "actual_production_rate": 0.0,
+                    "power_consumption": 0.0,
+                    "floor_space": 0.0,
+                    "children": [],
+                    "parent_id": "58a18c5b-9ac3-4a05-8853-05e0e31e47a0"
+                  }
+                ],
+                "parent_id": "87699f6d-c5ba-4ab1-a02d-ccbbf15ef6e1"
+              }
+            ],
+            "parent_id": "c5ab40fd-261b-4228-989e-27241a71af0d"
+          },
+          {
+            "id": "6426c0cf-a4c1-4cf6-a2fd-d372fcf6d5b6",
+            "item_name": "Crystal Oscillator",
+            "recipe_name": "Crystal Oscillator",
+            "target_rate": 10.0,
+            "machine_count": 10.0,
+            "is_imported": false,
+            "actual_production_rate": 10.0,
+            "power_consumption": 550.0,
+            "floor_space": 3600.0,
+            "children": [
+              {
+                "id": "5001d2ea-7a70-43f2-b43e-ac98a09761ef",
+                "item_name": "Quartz Crystal",
+                "recipe_name": "Quartz Crystal",
+                "target_rate": 180.0,
+                "machine_count": 8.0,
+                "is_imported": false,
+                "actual_production_rate": 180.0,
+                "power_consumption": 32.0,
+                "floor_space": 640.0,
+                "children": [
+                  {
+                    "id": "d98f6ef2-ebc1-4c44-bb02-3e1a7c2238ba",
+                    "item_name": "Raw Quartz",
+                    "recipe_name": "",
+                    "target_rate": 300.0,
+                    "machine_count": 0.0,
+                    "is_imported": true,
+                    "actual_production_rate": 0.0,
+                    "power_consumption": 0.0,
+                    "floor_space": 0.0,
+                    "children": [],
+                    "parent_id": "5001d2ea-7a70-43f2-b43e-ac98a09761ef"
+                  }
+                ],
+                "parent_id": "6426c0cf-a4c1-4cf6-a2fd-d372fcf6d5b6"
+              },
+              {
+                "id": "c8659caa-65be-46c7-a72e-5758f9ba41c6",
+                "item_name": "Cable",
+                "recipe_name": "Cable",
+                "target_rate": 140.0,
+                "machine_count": 4.666666666666667,
+                "is_imported": false,
+                "actual_production_rate": 140.0,
+                "power_consumption": 18.666666666666668,
+                "floor_space": 373.33333333333337,
+                "children": [
+                  {
+                    "id": "4e4fdda5-14ef-4788-9ce9-ce32292745c5",
+                    "item_name": "Wire",
+                    "recipe_name": "Wire",
+                    "target_rate": 280.0,
+                    "machine_count": 9.333333333333334,
+                    "is_imported": false,
+                    "actual_production_rate": 280.0,
+                    "power_consumption": 37.333333333333336,
+                    "floor_space": 746.6666666666667,
+                    "children": [
+                      {
+                        "id": "003865a9-4564-4c6c-a174-bab16c24fa5a",
+                        "item_name": "Copper Ingot",
+                        "recipe_name": "Copper Ingot",
+                        "target_rate": 140.0,
+                        "machine_count": 4.666666666666667,
+                        "is_imported": false,
+                        "actual_production_rate": 140.0,
+                        "power_consumption": 18.666666666666668,
+                        "floor_space": 252.00000000000003,
+                        "children": [
+                          {
+                            "id": "d011b789-d410-42ac-92f2-10178e648a83",
+                            "item_name": "Copper Ore",
+                            "recipe_name": "",
+                            "target_rate": 140.0,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "003865a9-4564-4c6c-a174-bab16c24fa5a"
+                          }
+                        ],
+                        "parent_id": "4e4fdda5-14ef-4788-9ce9-ce32292745c5"
+                      }
+                    ],
+                    "parent_id": "c8659caa-65be-46c7-a72e-5758f9ba41c6"
+                  }
+                ],
+                "parent_id": "6426c0cf-a4c1-4cf6-a2fd-d372fcf6d5b6"
+              },
+              {
+                "id": "3bd0d4a5-9636-43f4-b8f4-c16baebd3a70",
+                "item_name": "RIP",
+                "recipe_name": "RIP",
+                "target_rate": 25.0,
+                "machine_count": 5.0,
+                "is_imported": false,
+                "actual_production_rate": 25.0,
+                "power_consumption": 75.0,
+                "floor_space": 750.0,
+                "children": [
+                  {
+                    "id": "bcd3a272-8c1d-4336-b891-c1c3e014d987",
+                    "item_name": "Iron Plate",
+                    "recipe_name": "Iron Plate",
+                    "target_rate": 150.0,
+                    "machine_count": 7.5,
+                    "is_imported": false,
+                    "actual_production_rate": 150.0,
+                    "power_consumption": 30.0,
+                    "floor_space": 600.0,
+                    "children": [
+                      {
+                        "id": "807cb4f7-6e20-47b8-8a8e-421e752391b3",
+                        "item_name": "Iron Ingot",
+                        "recipe_name": "Iron Ingot",
+                        "target_rate": 225.0,
+                        "machine_count": 7.5,
+                        "is_imported": false,
+                        "actual_production_rate": 225.0,
+                        "power_consumption": 30.0,
+                        "floor_space": 405.0,
+                        "children": [
+                          {
+                            "id": "c9815f13-d287-4624-b581-bb09cec95386",
+                            "item_name": "Iron Ore",
+                            "recipe_name": "",
+                            "target_rate": 225.0,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "807cb4f7-6e20-47b8-8a8e-421e752391b3"
+                          }
+                        ],
+                        "parent_id": "bcd3a272-8c1d-4336-b891-c1c3e014d987"
+                      }
+                    ],
+                    "parent_id": "3bd0d4a5-9636-43f4-b8f4-c16baebd3a70"
+                  },
+                  {
+                    "id": "cf90af06-d503-4785-917e-5b992a844a9e",
+                    "item_name": "Screw",
+                    "recipe_name": "Screw",
+                    "target_rate": 300.0,
+                    "machine_count": 7.5,
+                    "is_imported": false,
+                    "actual_production_rate": 300.0,
+                    "power_consumption": 30.0,
+                    "floor_space": 600.0,
+                    "children": [
+                      {
+                        "id": "73686c6a-5775-401b-bc18-a5708b7afc80",
+                        "item_name": "Iron Rod",
+                        "recipe_name": "Iron Rod",
+                        "target_rate": 75.0,
+                        "machine_count": 5.0,
+                        "is_imported": false,
+                        "actual_production_rate": 75.0,
+                        "power_consumption": 20.0,
+                        "floor_space": 400.0,
+                        "children": [
+                          {
+                            "id": "5bf8ce64-ecdd-4ab1-b99c-e0659261e97e",
+                            "item_name": "Iron Ingot",
+                            "recipe_name": "Iron Ingot",
+                            "target_rate": 75.0,
+                            "machine_count": 2.5,
+                            "is_imported": false,
+                            "actual_production_rate": 75.0,
+                            "power_consumption": 10.0,
+                            "floor_space": 135.0,
+                            "children": [
+                              {
+                                "id": "4829fbfa-d162-4143-9bf2-4811f98e1998",
+                                "item_name": "Iron Ore",
+                                "recipe_name": "",
+                                "target_rate": 75.0,
+                                "machine_count": 0.0,
+                                "is_imported": true,
+                                "actual_production_rate": 0.0,
+                                "power_consumption": 0.0,
+                                "floor_space": 0.0,
+                                "children": [],
+                                "parent_id": "5bf8ce64-ecdd-4ab1-b99c-e0659261e97e"
+                              }
+                            ],
+                            "parent_id": "73686c6a-5775-401b-bc18-a5708b7afc80"
+                          }
+                        ],
+                        "parent_id": "cf90af06-d503-4785-917e-5b992a844a9e"
+                      }
+                    ],
+                    "parent_id": "3bd0d4a5-9636-43f4-b8f4-c16baebd3a70"
+                  }
+                ],
+                "parent_id": "6426c0cf-a4c1-4cf6-a2fd-d372fcf6d5b6"
+              }
+            ],
+            "parent_id": "c5ab40fd-261b-4228-989e-27241a71af0d"
+          },
+          {
+            "id": "a3316f9b-e4bf-4ecc-89fc-087c583fa42e",
+            "item_name": "Alclad Sheet",
+            "recipe_name": "Alclad Sheet",
+            "target_rate": 90.0,
+            "machine_count": 3.0,
+            "is_imported": false,
+            "actual_production_rate": 90.0,
+            "power_consumption": 45.0,
+            "floor_space": 450.0,
+            "children": [
+              {
+                "id": "fa41a349-dd8b-4e25-a429-5d397b3b0214",
+                "item_name": "Aluminum Ingot",
+                "recipe_name": "Aluminum Ingot",
+                "target_rate": 90.0,
+                "machine_count": 1.5,
+                "is_imported": false,
+                "actual_production_rate": 90.0,
+                "power_consumption": 24.0,
+                "floor_space": 135.0,
+                "children": [
+                  {
+                    "id": "3260776f-a509-496c-9d34-df004afb1c77",
+                    "item_name": "Aluminum Scrap",
+                    "recipe_name": "Aluminum Scrap",
+                    "target_rate": 135.0,
+                    "machine_count": 0.375,
+                    "is_imported": false,
+                    "actual_production_rate": 135.0,
+                    "power_consumption": 11.25,
+                    "floor_space": 75.0,
+                    "children": [
+                      {
+                        "id": "bba1641d-2276-480d-a2cf-1bf3092fea86",
+                        "item_name": "Alumina Solution",
+                        "recipe_name": "Alumina Solution",
+                        "target_rate": 90.0,
+                        "machine_count": 0.75,
+                        "is_imported": false,
+                        "actual_production_rate": 90.0,
+                        "power_consumption": 22.5,
+                        "floor_space": 150.0,
+                        "children": [
+                          {
+                            "id": "421699a1-fe1d-4f50-bfc4-e78ba001cb93",
+                            "item_name": "Bauxite",
+                            "recipe_name": "",
+                            "target_rate": 90.0,
+                            "machine_count": 0.0,
+                            "is_imported": true,
+                            "actual_production_rate": 0.0,
+                            "power_consumption": 0.0,
+                            "floor_space": 0.0,
+                            "children": [],
+                            "parent_id": "bba1641d-2276-480d-a2cf-1bf3092fea86"
+                          },
+                          {
+                            "id": "86165e4a-0196-4ecc-a608-8a08ee75af17",
+                            "item_name": "Water",
+                            "recipe_name": "Aluminum Scrap",
+                            "target_rate": 135.0,
+                            "machine_count": 1.125,
+                            "is_imported": false,
+                            "actual_production_rate": 135.0,
+                            "power_consumption": 33.75,
+                            "floor_space": 225.0,
+                            "children": [
+                              {
+                                "id": "e45fdd5e-c15d-445f-8b39-1a19968edbcc",
+                                "item_name": "Alumina Solution",
+                                "recipe_name": "",
+                                "target_rate": 270.0,
+                                "machine_count": 0.0,
+                                "is_imported": true,
+                                "actual_production_rate": 0.0,
+                                "power_consumption": 0.0,
+                                "floor_space": 0.0,
+                                "children": [],
+                                "parent_id": "86165e4a-0196-4ecc-a608-8a08ee75af17"
+                              },
+                              {
+                                "id": "223c5cd9-4ac0-4b4c-9939-ee24b5eb384d",
+                                "item_name": "Coal",
+                                "recipe_name": "",
+                                "target_rate": 135.0,
+                                "machine_count": 0.0,
+                                "is_imported": true,
+                                "actual_production_rate": 0.0,
+                                "power_consumption": 0.0,
+                                "floor_space": 0.0,
+                                "children": [],
+                                "parent_id": "86165e4a-0196-4ecc-a608-8a08ee75af17"
+                              }
+                            ],
+                            "parent_id": "bba1641d-2276-480d-a2cf-1bf3092fea86"
+                          }
+                        ],
+                        "parent_id": "3260776f-a509-496c-9d34-df004afb1c77"
+                      },
+                      {
+                        "id": "1bf8b502-52a4-49c1-b2e2-b4cc52741a4c",
+                        "item_name": "Coal",
+                        "recipe_name": "",
+                        "target_rate": 45.0,
+                        "machine_count": 0.0,
+                        "is_imported": true,
+                        "actual_production_rate": 0.0,
+                        "power_consumption": 0.0,
+                        "floor_space": 0.0,
+                        "children": [],
+                        "parent_id": "3260776f-a509-496c-9d34-df004afb1c77"
+                      }
+                    ],
+                    "parent_id": "fa41a349-dd8b-4e25-a429-5d397b3b0214"
+                  },
+                  {
+                    "id": "927d405c-a616-496c-b6ec-edf70629b3a2",
+                    "item_name": "Silica",
+                    "recipe_name": "Silica",
+                    "target_rate": 112.5,
+                    "machine_count": 3.0,
+                    "is_imported": false,
+                    "actual_production_rate": 112.5,
+                    "power_consumption": 12.0,
+                    "floor_space": 240.0,
+                    "children": [
+                      {
+                        "id": "735ca0d5-0b36-4edd-90c4-a9bbbf5d972c",
+                        "item_name": "Raw Quartz",
+                        "recipe_name": "",
+                        "target_rate": 67.5,
+                        "machine_count": 0.0,
+                        "is_imported": true,
+                        "actual_production_rate": 0.0,
+                        "power_consumption": 0.0,
+                        "floor_space": 0.0,
+                        "children": [],
+                        "parent_id": "927d405c-a616-496c-b6ec-edf70629b3a2"
+                      }
+                    ],
+                    "parent_id": "fa41a349-dd8b-4e25-a429-5d397b3b0214"
+                  }
+                ],
+                "parent_id": "a3316f9b-e4bf-4ecc-89fc-087c583fa42e"
+              },
+              {
+                "id": "56394815-06c7-4b5c-b6da-68d9262df644",
+                "item_name": "Copper Ingot",
+                "recipe_name": "Copper Ingot",
+                "target_rate": 30.0,
+                "machine_count": 1.0,
+                "is_imported": false,
+                "actual_production_rate": 30.0,
+                "power_consumption": 4.0,
+                "floor_space": 54.0,
+                "children": [
+                  {
+                    "id": "c9bbe81a-922f-441e-b233-4468a69ce3f2",
+                    "item_name": "Copper Ore",
+                    "recipe_name": "",
+                    "target_rate": 30.0,
+                    "machine_count": 0.0,
+                    "is_imported": true,
+                    "actual_production_rate": 0.0,
+                    "power_consumption": 0.0,
+                    "floor_space": 0.0,
+                    "children": [],
+                    "parent_id": "56394815-06c7-4b5c-b6da-68d9262df644"
+                  }
+                ],
+                "parent_id": "a3316f9b-e4bf-4ecc-89fc-087c583fa42e"
+              }
+            ],
+            "parent_id": "c5ab40fd-261b-4228-989e-27241a71af0d"
+          },
+          {
+            "id": "4d239b5d-9a4e-4a06-bd2a-56075727d476",
+            "item_name": "Excited Photonic Matter",
+            "recipe_name": "",
+            "target_rate": 250.0,
+            "machine_count": 0.0,
+            "is_imported": true,
+            "actual_production_rate": 0.0,
+            "power_consumption": 0.0,
+            "floor_space": 0.0,
+            "children": [],
+            "parent_id": "c5ab40fd-261b-4228-989e-27241a71af0d"
+          }
+        ],
+        "parent_id": "e5a2ba6d-71be-4bce-a248-0521749bbc36"
+      },
+      {
+        "id": "b38324b6-4808-4f62-8459-93072a6ef5c9",
+        "item_name": "Excited Photonic Matter",
+        "recipe_name": "",
+        "target_rate": 250.0,
+        "machine_count": 0.0,
+        "is_imported": true,
+        "actual_production_rate": 0.0,
+        "power_consumption": 0.0,
+        "floor_space": 0.0,
+        "children": [],
+        "parent_id": "e5a2ba6d-71be-4bce-a248-0521749bbc36"
+      }
+    ],
+    "parent_id": null
+  },
+  "recipe_selections": {
+    "Versatile Framework": "Versatile Framework",
+    "MF": "MF",
+    "RIP": "RIP",
+    "Iron Plate": "Iron Plate",
+    "Iron Ingot": "Iron Ingot",
+    "Screw": "Screw",
+    "Iron Rod": "Iron Rod",
+    "Steel Beam": "Steel Beam",
+    "Steel Ingot": "Steel Ingot",
+    "Electromagnetic Control Rod": "Electromagnetic Control Rod",
+    "Stator": "Stator",
+    "Steel Pipe": "Steel Pipe",
+    "Wire": "Wire",
+    "Copper Ingot": "Copper Ingot",
+    "AI Limiter": "AI Limiter",
+    "Copper Sheet": "Copper Sheet",
+    "Quickwire": "Quickwire",
+    "Caterium Ingot": "Caterium Ingot",
+    "Battery": "Battery",
+    "Sulfuric Acid": "Sulfuric Acid",
+    "Water": "Aluminum Scrap",
+    "Alumina Solution": "Alumina Solution",
+    "Aluminum Casing": "Aluminum Casing",
+    "Aluminum Ingot": "Aluminum Ingot",
+    "Aluminum Scrap": "Aluminum Scrap",
+    "Silica": "Silica",
+    "Supercomputer": "Supercomputer",
+    "Computer": "Computer",
+    "Circuit Board": "Circuit Board",
+    "Plastic": "Plastic",
+    "Cable": "Cable",
+    "HSC": "HSC",
+    "Dark Matter Crystal": "Dark Matter Crystal",
+    "Diamond": "Diamond",
+    "Dark Matter Residue": "Power Shard",
+    "Quartz Crystal": "Quartz Crystal",
+    "Crystal Oscillator": "Crystal Oscillator"
+  },
+  "speed_multipliers": {},
+  "imported_items": [
+    "Coal",
+    "Beacon",
+    "Limestone",
+    "Iron Ore",
+    "Crude Oil",
+    "Time Crystal",
+    "Copper Ore",
+    "Uranium",
+    "Modular Frame",
+    "Ficsite Ingot",
+    "Bauxite",
+    "Uranium Ore",
+    "Sulfur",
+    "Excited Photonic Matter",
+    "Caterium Ore",
+    "Packaged Turbo Fuel",
+    "SAM",
+    "Singularity Cell",
+    "Raw Quartz"
+  ],
+  "created_at": "2026-01-11T15:49:28.721807",
+  "updated_at": "2026-01-11T15:49:28.721807"
+}

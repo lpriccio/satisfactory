@@ -1,7 +1,10 @@
 {
   "schema": 1,
+  "id": "t9-babyhmf",
+  "game": "satisfactory",
   "name": "babyhmf",
-  "mode": "manual",
+  "notes": "Imported from T9 workbook tab \"babyhmf\" (template B, scale 6).\nWorkbook size total: 56759.6965 m² (887 foundations).\nLocal Mining: Miner A Limestone\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
+  "mode": "target",
   "objective": "min-raw",
   "targets": [],
   "recipeChoice": {},
@@ -10,7 +13,7 @@
     {
       "id": "t9-babyhmf-r3",
       "recipe": "Alternate_ModularFrameHeavy",
-      "machines": 6
+      "machines": 6.0
     },
     {
       "id": "t9-babyhmf-r4",
@@ -20,7 +23,7 @@
     {
       "id": "t9-babyhmf-r5",
       "recipe": "Concrete",
-      "machines": 27
+      "machines": 27.0
     },
     {
       "id": "t9-babyhmf-r6",
@@ -35,17 +38,17 @@
     {
       "id": "t9-babyhmf-r8",
       "recipe": "Alternate_ReinforcedIronPlate_2",
-      "machines": 12
+      "machines": 12.0
     },
     {
       "id": "t9-babyhmf-r9",
       "recipe": "IronRod",
-      "machines": 18
+      "machines": 18.0
     },
     {
       "id": "t9-babyhmf-r10",
       "recipe": "Alternate_Wire_1",
-      "machines": 20
+      "machines": 20.0
     },
     {
       "id": "t9-babyhmf-r11",
@@ -58,15 +61,12 @@
       "machines": 100.5834
     }
   ],
-  "spacing": 4,
-  "createdAt": "2026-10-20T04:13:05.743Z",
-  "updatedAt": "2026-10-20T04:13:46.245Z",
-  "id": "t9-babyhmf",
-  "game": "satisfactory",
-  "notes": "Imported from T9 workbook tab \"babyhmf\" (template B, scale 6).\nWorkbook size total: 56759.6965 m² (887 foundations).\nLocal Mining: Miner A Limestone\nImports: Plastic 0/min; Sulfur 0/min\nExports/Waste: Copper Alloy Ingot Copper Ore 0/min; Copper Alloy Ingot Iron Ore",
   "imports": {
     "items": [],
     "edges": [],
     "exclude": []
-  }
+  },
+  "spacing": 4.0,
+  "createdAt": "2026-10-20T04:13:05.743Z",
+  "updatedAt": "2026-10-20T05:03:01.482Z"
 }

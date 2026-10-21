@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "id": "ib6zgrdqze0g",
+  "game": "satisfactory",
+  "name": "Spaghetti",
+  "mode": "target",
+  "objective": "min-raw",
+  "targets": [
+    {
+      "item": "SpaceElevatorPart_9",
+      "rate": 10.0
+    }
+  ],
+  "recipeChoice": {
+    "CircuitBoardHighSpeed": "Alternate_AILimiter_Plastic",
+    "CopperIngot": "Alternate_CopperIngot_Tempered",
+    "HighSpeedWire": "Alternate_Quickwire"
+  },
+  "lineSettings": {},
+  "lines": [],
+  "imports": {
+    "items": [],
+    "edges": [],
+    "exclude": []
+  },
+  "spacing": 4.0,
+  "createdAt": "2026-10-20T05:03:03.749Z",
+  "updatedAt": "2026-10-20T12:46:35.148Z"
+}

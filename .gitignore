@@ -39,3 +39,6 @@ ENV/
 
 # Project specific
 saved_chains/*.json
+
+# LibreOffice lock files
+.~lock.*#

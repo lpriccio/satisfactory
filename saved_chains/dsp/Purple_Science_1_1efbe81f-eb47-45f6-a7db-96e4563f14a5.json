@@ -1,0 +1,402 @@
+{
+  "id": "1efbe81f-eb47-45f6-a7db-96e4563f14a5",
+  "name": "Purple Science 1",
+  "description": "",
+  "target_item": "Purple Science",
+  "target_rate": 10000.0,
+  "root_node": {
+    "id": "4313e762-4549-4a00-b966-c76f1d985912",
+    "item_name": "Purple Science",
+    "recipe_name": "Purple Science",
+    "target_rate": 10000.0,
+    "machine_count": 1333.3333333333333,
+    "is_imported": false,
+    "path": [
+      "Purple Science"
+    ],
+    "actual_production_rate": 10000.0,
+    "power_consumption": 0.0,
+    "floor_space": 0.0,
+    "speed_multiplier": 1.0,
+    "productivity_multiplier": 1.25,
+    "children": [
+      {
+        "id": "74ef7963-3332-4a85-b14b-977af1dad19f",
+        "item_name": "Broadband",
+        "recipe_name": "Broadband",
+        "target_rate": 8000.0,
+        "machine_count": 853.3333333333334,
+        "is_imported": false,
+        "path": [
+          "Purple Science",
+          "Broadband"
+        ],
+        "actual_production_rate": 8000.0,
+        "power_consumption": 0.0,
+        "floor_space": 0.0,
+        "speed_multiplier": 1.0,
+        "productivity_multiplier": 1.25,
+        "children": [
+          {
+            "id": "b3710964-905b-4152-a111-872ffa69b0ad",
+            "item_name": "Plastic",
+            "recipe_name": "Plastic",
+            "target_rate": 6400.0,
+            "machine_count": 256.0,
+            "is_imported": false,
+            "path": [
+              "Purple Science",
+              "Broadband",
+              "Plastic"
+            ],
+            "actual_production_rate": 6400.0,
+            "power_consumption": 0.0,
+            "floor_space": 0.0,
+            "speed_multiplier": 1.0,
+            "productivity_multiplier": 1.25,
+            "children": [
+              {
+                "id": "5bee08a4-07c5-4f28-96e2-965c72f47ba8",
+                "item_name": "Refoil",
+                "recipe_name": "",
+                "target_rate": 10240.0,
+                "machine_count": 0.0,
+                "is_imported": true,
+                "path": [
+                  "Purple Science",
+                  "Broadband",
+                  "Plastic",
+                  "Refoil"
+                ],
+                "actual_production_rate": 0.0,
+                "power_consumption": 0.0,
+                "floor_space": 0.0,
+                "speed_multiplier": 1.0,
+                "productivity_multiplier": 1.0,
+                "children": [],
+                "parent_id": "b3710964-905b-4152-a111-872ffa69b0ad"
+              },
+              {
+                "id": "4288b636-8dfc-4992-b708-fcf219800622",
+                "item_name": "Graphite",
+                "recipe_name": "Graphite",
+                "target_rate": 5120.0,
+                "machine_count": 136.53333333333333,
+                "is_imported": false,
+                "path": [
+                  "Purple Science",
+                  "Broadband",
+                  "Plastic",
+                  "Graphite"
+                ],
+                "actual_production_rate": 5120.0,
+                "power_consumption": 0.0,
+                "floor_space": 0.0,
+                "speed_multiplier": 1.0,
+                "productivity_multiplier": 1.25,
+                "children": [
+                  {
+                    "id": "0c308987-00b8-4ed0-8cf8-5d0d3d5f0198",
+                    "item_name": "Coal",
+                    "recipe_name": "",
+                    "target_rate": 8192.0,
+                    "machine_count": 0.0,
+                    "is_imported": true,
+                    "path": [
+                      "Purple Science",
+                      "Broadband",
+                      "Plastic",
+                      "Graphite",
+                      "Coal"
+                    ],
+                    "actual_production_rate": 0.0,
+                    "power_consumption": 0.0,
+                    "floor_space": 0.0,
+                    "speed_multiplier": 1.0,
+                    "productivity_multiplier": 1.0,
+                    "children": [],
+                    "parent_id": "4288b636-8dfc-4992-b708-fcf219800622"
+                  }
+                ],
+                "parent_id": "b3710964-905b-4152-a111-872ffa69b0ad"
+              }
+            ],
+            "parent_id": "74ef7963-3332-4a85-b14b-977af1dad19f"
+          },
+          {
+            "id": "dcf9740c-b2a4-48c0-947d-d2e0659adec9",
+            "item_name": "Si Crystal",
+            "recipe_name": "Si Crystal",
+            "target_rate": 12800.0,
+            "machine_count": 341.3333333333333,
+            "is_imported": false,
+            "path": [
+              "Purple Science",
+              "Broadband",
+              "Si Crystal"
+            ],
+            "actual_production_rate": 12800.0,
+            "power_consumption": 0.0,
+            "floor_space": 0.0,
+            "speed_multiplier": 1.0,
+            "productivity_multiplier": 1.25,
+            "children": [
+              {
+                "id": "caa0b7bd-e7e5-4ef7-a6d5-22d85cde7d5c",
+                "item_name": "Silicon",
+                "recipe_name": "Silicon",
+                "target_rate": 10240.0,
+                "machine_count": 273.06666666666666,
+                "is_imported": false,
+                "path": [
+                  "Purple Science",
+                  "Broadband",
+                  "Si Crystal",
+                  "Silicon"
+                ],
+                "actual_production_rate": 10240.0,
+                "power_consumption": 0.0,
+                "floor_space": 0.0,
+                "speed_multiplier": 1.0,
+                "productivity_multiplier": 1.25,
+                "children": [],
+                "parent_id": "dcf9740c-b2a4-48c0-947d-d2e0659adec9"
+              }
+            ],
+            "parent_id": "74ef7963-3332-4a85-b14b-977af1dad19f"
+          },
+          {
+            "id": "8250dfb5-2d49-4574-bd51-91b44d20ef59",
+            "item_name": "Tubes",
+            "recipe_name": "Tubes+",
+            "target_rate": 12800.0,
+            "machine_count": 341.3333333333333,
+            "is_imported": false,
+            "path": [
+              "Purple Science",
+              "Broadband",
+              "Tubes"
+            ],
+            "actual_production_rate": 12800.0,
+            "power_consumption": 0.0,
+            "floor_space": 0.0,
+            "speed_multiplier": 1.0,
+            "productivity_multiplier": 1.25,
+            "children": [
+              {
+                "id": "6648b338-759c-4653-a980-3d5f1f512bb9",
+                "item_name": "Stalagmite",
+                "recipe_name": "",
+                "target_rate": 30720.0,
+                "machine_count": 0.0,
+                "is_imported": true,
+                "path": [
+                  "Purple Science",
+                  "Broadband",
+                  "Tubes",
+                  "Stalagmite"
+                ],
+                "actual_production_rate": 0.0,
+                "power_consumption": 0.0,
+                "floor_space": 0.0,
+                "speed_multiplier": 1.0,
+                "productivity_multiplier": 1.0,
+                "children": [],
+                "parent_id": "8250dfb5-2d49-4574-bd51-91b44d20ef59"
+              }
+            ],
+            "parent_id": "74ef7963-3332-4a85-b14b-977af1dad19f"
+          }
+        ],
+        "parent_id": "4313e762-4549-4a00-b966-c76f1d985912"
+      },
+      {
+        "id": "373a9564-e076-4e47-8357-562066290337",
+        "item_name": "Processor",
+        "recipe_name": "Processor",
+        "target_rate": 16000.0,
+        "machine_count": 640.0,
+        "is_imported": false,
+        "path": [
+          "Purple Science",
+          "Processor"
+        ],
+        "actual_production_rate": 16000.0,
+        "power_consumption": 0.0,
+        "floor_space": 0.0,
+        "speed_multiplier": 1.0,
+        "productivity_multiplier": 1.25,
+        "children": [
+          {
+            "id": "3c243683-d81b-4398-8ca8-111fece19191",
+            "item_name": "CB",
+            "recipe_name": "CB",
+            "target_rate": 25600.0,
+            "machine_count": 170.66666666666666,
+            "is_imported": false,
+            "path": [
+              "Purple Science",
+              "Processor",
+              "CB"
+            ],
+            "actual_production_rate": 25600.0,
+            "power_consumption": 0.0,
+            "floor_space": 0.0,
+            "speed_multiplier": 1.0,
+            "productivity_multiplier": 1.25,
+            "children": [
+              {
+                "id": "65cc662c-3d73-4644-a1b7-24e7b7c30f84",
+                "item_name": "Iron",
+                "recipe_name": "Iron",
+                "target_rate": 20480.0,
+                "machine_count": 273.06666666666666,
+                "is_imported": false,
+                "path": [
+                  "Purple Science",
+                  "Processor",
+                  "CB",
+                  "Iron"
+                ],
+                "actual_production_rate": 20480.0,
+                "power_consumption": 0.0,
+                "floor_space": 0.0,
+                "speed_multiplier": 1.0,
+                "productivity_multiplier": 1.25,
+                "children": [],
+                "parent_id": "3c243683-d81b-4398-8ca8-111fece19191"
+              },
+              {
+                "id": "9f2306b5-1720-40e3-91ff-acf3157404b0",
+                "item_name": "Copper",
+                "recipe_name": "Copper",
+                "target_rate": 10240.0,
+                "machine_count": 136.53333333333333,
+                "is_imported": false,
+                "path": [
+                  "Purple Science",
+                  "Processor",
+                  "CB",
+                  "Copper"
+                ],
+                "actual_production_rate": 10240.0,
+                "power_consumption": 0.0,
+                "floor_space": 0.0,
+                "speed_multiplier": 1.0,
+                "productivity_multiplier": 1.25,
+                "children": [],
+                "parent_id": "3c243683-d81b-4398-8ca8-111fece19191"
+              }
+            ],
+            "parent_id": "373a9564-e076-4e47-8357-562066290337"
+          },
+          {
+            "id": "87181b41-5fff-458a-85ef-fbc3b7f49cf6",
+            "item_name": "Micro",
+            "recipe_name": "Micro",
+            "target_rate": 25600.0,
+            "machine_count": 682.6666666666666,
+            "is_imported": false,
+            "path": [
+              "Purple Science",
+              "Processor",
+              "Micro"
+            ],
+            "actual_production_rate": 25600.0,
+            "power_consumption": 0.0,
+            "floor_space": 0.0,
+            "speed_multiplier": 1.0,
+            "productivity_multiplier": 1.25,
+            "children": [
+              {
+                "id": "599ae7b5-e788-448f-bedf-a7bce3652eed",
+                "item_name": "Silicon",
+                "recipe_name": "Silicon",
+                "target_rate": 40960.0,
+                "machine_count": 1092.2666666666667,
+                "is_imported": false,
+                "path": [
+                  "Purple Science",
+                  "Processor",
+                  "Micro",
+                  "Silicon"
+                ],
+                "actual_production_rate": 40960.0,
+                "power_consumption": 0.0,
+                "floor_space": 0.0,
+                "speed_multiplier": 1.0,
+                "productivity_multiplier": 1.25,
+                "children": [],
+                "parent_id": "87181b41-5fff-458a-85ef-fbc3b7f49cf6"
+              },
+              {
+                "id": "55bafc65-223a-45c0-9708-8d4cd2b5a2d9",
+                "item_name": "Copper",
+                "recipe_name": "Copper",
+                "target_rate": 20480.0,
+                "machine_count": 273.06666666666666,
+                "is_imported": false,
+                "path": [
+                  "Purple Science",
+                  "Processor",
+                  "Micro",
+                  "Copper"
+                ],
+                "actual_production_rate": 20480.0,
+                "power_consumption": 0.0,
+                "floor_space": 0.0,
+                "speed_multiplier": 1.0,
+                "productivity_multiplier": 1.25,
+                "children": [],
+                "parent_id": "87181b41-5fff-458a-85ef-fbc3b7f49cf6"
+              }
+            ],
+            "parent_id": "373a9564-e076-4e47-8357-562066290337"
+          }
+        ],
+        "parent_id": "4313e762-4549-4a00-b966-c76f1d985912"
+      }
+    ],
+    "parent_id": null
+  },
+  "recipe_selections": {
+    "Tubes": "Tubes+"
+  },
+  "speed_multipliers": {},
+  "productivity_multipliers": {
+    "Purple Science": 1.25,
+    "Broadband": 1.25,
+    "Plastic": 1.25,
+    "Graphite": 1.25,
+    "Si Crystal": 1.25,
+    "Silicon": 1.25,
+    "Tubes+": 1.25,
+    "Processor": 1.25,
+    "CB": 1.25,
+    "Iron": 1.25,
+    "Copper": 1.25,
+    "Micro": 1.25
+  },
+  "imported_items": [
+    "Stalagmite",
+    "Strange Matter",
+    "Organic Crystal",
+    "Refoil",
+    "TI Alloy",
+    "Deut Rod",
+    "Water",
+    "Stone",
+    "Deut",
+    "Kimberlite",
+    "Crystal Explosive Unit",
+    "Unipolar",
+    "H2SO4",
+    "Charged Accumulator",
+    "Fire Ice",
+    "Coal",
+    "Spiniform"
+  ],
+  "imported_node_overrides": {},
+  "created_at": "2026-09-06T18:04:59.348023",
+  "updated_at": "2026-09-06T18:04:59.348023"
+}

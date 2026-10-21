@@ -1,0 +1,213 @@
+{
+  "id": "2b49aeec-c29d-4940-a2b0-a6212031c631",
+  "name": "Computer Caterium 2",
+  "description": "",
+  "target_item": "Computer",
+  "target_rate": 77.0,
+  "root_node": {
+    "id": "55f709d0-0e09-4484-a1bc-920c4fd9f17b",
+    "item_name": "Computer",
+    "recipe_name": "Caterium Computer",
+    "target_rate": 77.0,
+    "machine_count": 20.533333333333335,
+    "is_imported": false,
+    "actual_production_rate": 77.0,
+    "power_consumption": 1129.3333333333335,
+    "floor_space": 7392.000000000001,
+    "children": [
+      {
+        "id": "399cc92e-03c1-4286-b537-d7c33b151f1b",
+        "item_name": "Quickwire",
+        "recipe_name": "Quickwire",
+        "target_rate": 1078.0,
+        "machine_count": 17.966666666666665,
+        "is_imported": false,
+        "actual_production_rate": 1078.0,
+        "power_consumption": 71.86666666666666,
+        "floor_space": 1437.3333333333333,
+        "children": [
+          {
+            "id": "81807168-4272-459b-8c11-6e66511c71d2",
+            "item_name": "Caterium Ingot",
+            "recipe_name": "Pure Caterium",
+            "target_rate": 215.59999999999997,
+            "machine_count": 17.966666666666665,
+            "is_imported": false,
+            "actual_production_rate": 215.59999999999997,
+            "power_consumption": 539.0,
+            "floor_space": 3593.333333333333,
+            "children": [
+              {
+                "id": "bc60beb0-ef11-4531-85d9-0b9260142d5e",
+                "item_name": "Caterium Ore",
+                "recipe_name": "",
+                "target_rate": 431.19999999999993,
+                "machine_count": 0.0,
+                "is_imported": true,
+                "actual_production_rate": 0.0,
+                "power_consumption": 0.0,
+                "floor_space": 0.0,
+                "children": [],
+                "parent_id": "81807168-4272-459b-8c11-6e66511c71d2"
+              },
+              {
+                "id": "a04c905d-bad1-4e48-95fb-bcd483880ddc",
+                "item_name": "Water",
+                "recipe_name": "",
+                "target_rate": 431.19999999999993,
+                "machine_count": 0.0,
+                "is_imported": true,
+                "actual_production_rate": 0.0,
+                "power_consumption": 0.0,
+                "floor_space": 0.0,
+                "children": [],
+                "parent_id": "81807168-4272-459b-8c11-6e66511c71d2"
+              }
+            ],
+            "parent_id": "399cc92e-03c1-4286-b537-d7c33b151f1b"
+          }
+        ],
+        "parent_id": "55f709d0-0e09-4484-a1bc-920c4fd9f17b"
+      },
+      {
+        "id": "0dbcf31c-4033-46e7-b6d3-e2eab2451b5a",
+        "item_name": "Rubber",
+        "recipe_name": "",
+        "target_rate": 462.00000000000006,
+        "machine_count": 0.0,
+        "is_imported": true,
+        "actual_production_rate": 0.0,
+        "power_consumption": 0.0,
+        "floor_space": 0.0,
+        "children": [],
+        "parent_id": "55f709d0-0e09-4484-a1bc-920c4fd9f17b"
+      },
+      {
+        "id": "d6f52296-fa33-471e-a858-9e6f6eb64a45",
+        "item_name": "Circuit Board",
+        "recipe_name": "Caterium Circuit Board",
+        "target_rate": 308.0,
+        "machine_count": 35.2,
+        "is_imported": false,
+        "actual_production_rate": 308.0,
+        "power_consumption": 528.0,
+        "floor_space": 5280.0,
+        "children": [
+          {
+            "id": "a5209628-c547-44f2-bc77-6b2add1f1eee",
+            "item_name": "Plastic",
+            "recipe_name": "",
+            "target_rate": 440.00000000000006,
+            "machine_count": 0.0,
+            "is_imported": true,
+            "actual_production_rate": 0.0,
+            "power_consumption": 0.0,
+            "floor_space": 0.0,
+            "children": [],
+            "parent_id": "d6f52296-fa33-471e-a858-9e6f6eb64a45"
+          },
+          {
+            "id": "6ba52656-4415-4868-a631-4bd3bb66fd75",
+            "item_name": "Quickwire",
+            "recipe_name": "Quickwire",
+            "target_rate": 1320.0,
+            "machine_count": 22.0,
+            "is_imported": false,
+            "actual_production_rate": 1320.0,
+            "power_consumption": 88.0,
+            "floor_space": 1760.0,
+            "children": [
+              {
+                "id": "4a00bcd0-0088-42bf-973f-5791f64705b7",
+                "item_name": "Caterium Ingot",
+                "recipe_name": "Pure Caterium",
+                "target_rate": 264.0,
+                "machine_count": 22.0,
+                "is_imported": false,
+                "actual_production_rate": 264.0,
+                "power_consumption": 660.0,
+                "floor_space": 4400.0,
+                "children": [
+                  {
+                    "id": "f998e531-d508-44ee-8396-5696bf7cf142",
+                    "item_name": "Caterium Ore",
+                    "recipe_name": "",
+                    "target_rate": 528.0,
+                    "machine_count": 0.0,
+                    "is_imported": true,
+                    "actual_production_rate": 0.0,
+                    "power_consumption": 0.0,
+                    "floor_space": 0.0,
+                    "children": [],
+                    "parent_id": "4a00bcd0-0088-42bf-973f-5791f64705b7"
+                  },
+                  {
+                    "id": "dde7c2c3-469c-4ede-bbfa-99ce34593a2d",
+                    "item_name": "Water",
+                    "recipe_name": "",
+                    "target_rate": 528.0,
+                    "machine_count": 0.0,
+                    "is_imported": true,
+                    "actual_production_rate": 0.0,
+                    "power_consumption": 0.0,
+                    "floor_space": 0.0,
+                    "children": [],
+                    "parent_id": "4a00bcd0-0088-42bf-973f-5791f64705b7"
+                  }
+                ],
+                "parent_id": "6ba52656-4415-4868-a631-4bd3bb66fd75"
+              }
+            ],
+            "parent_id": "d6f52296-fa33-471e-a858-9e6f6eb64a45"
+          }
+        ],
+        "parent_id": "55f709d0-0e09-4484-a1bc-920c4fd9f17b"
+      }
+    ],
+    "parent_id": null
+  },
+  "recipe_selections": {
+    "Computer": "Caterium Computer",
+    "Circuit Board": "Caterium Circuit Board",
+    "Copper Sheet": "Copper Sheet",
+    "Copper Ingot": "Pure Copper",
+    "Plastic": "Plastic",
+    "Cable": "Cable",
+    "Wire": "Iron Wire",
+    "Copper Ore": "Sulfur to Copper Ore",
+    "Iron Ingot": "Iron Ingot",
+    "Water": "Aluminum Scrap",
+    "Alumina Solution": "Alumina Solution",
+    "Sulfur": "Iron Ore to Sulfur",
+    "Quickwire": "Quickwire",
+    "Caterium Ingot": "Pure Caterium",
+    "Rubber": "Rubber"
+  },
+  "speed_multipliers": {},
+  "imported_items": [
+    "Uranium Ore",
+    "Excited Photonic Matter",
+    "Ficsite Ingot",
+    "Beacon",
+    "Iron Ore",
+    "Plastic",
+    "Modular Frame",
+    "SAM",
+    "Bauxite",
+    "Packaged Turbo Fuel",
+    "Copper Ore",
+    "Crude Oil",
+    "Time Crystal",
+    "Water",
+    "Uranium",
+    "Rubber",
+    "Singularity Cell",
+    "Raw Quartz",
+    "Coal",
+    "Limestone",
+    "Sulfur",
+    "Caterium Ore"
+  ],
+  "created_at": "2026-01-11T17:33:10.947068",
+  "updated_at": "2026-01-11T17:33:10.947068"
+}

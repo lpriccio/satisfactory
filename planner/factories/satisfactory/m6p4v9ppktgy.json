@@ -1,24 +1,45 @@
 {
   "schema": 1,
+  "id": "m6p4v9ppktgy",
+  "game": "satisfactory",
   "name": "New factory",
   "mode": "target",
   "objective": "min-raw",
   "targets": [
     {
       "item": "CircuitBoardHighSpeed",
-      "rate": 24
+      "rate": 10.0
     }
   ],
-  "recipeChoice": {
-    "CircuitBoardHighSpeed": "Alternate_AILimiter_Plastic"
-  },
+  "recipeChoice": {},
   "lineSettings": {},
-  "lines": [],
-  "spacing": 4,
-  "createdAt": "2026-10-20T04:26:10.354Z",
-  "updatedAt": "2026-10-20T04:28:39.392Z",
-  "id": "m6p4v9ppktgy",
-  "game": "satisfactory",
+  "lines": [
+    {
+      "id": "jjrqdonzzrs9",
+      "recipe": "AILimiter",
+      "machines": 2.0
+    },
+    {
+      "id": "wxzrbqn9fvhe",
+      "recipe": "CopperSheet",
+      "machines": 5.0
+    },
+    {
+      "id": "3hth0ppnez8v",
+      "recipe": "Quickwire",
+      "machines": 3.333333
+    },
+    {
+      "id": "53y4vr45yu13",
+      "recipe": "IngotCopper",
+      "machines": 3.333333
+    },
+    {
+      "id": "hx5jipgsmegp",
+      "recipe": "IngotCaterium",
+      "machines": 2.666667
+    }
+  ],
   "imports": {
     "items": [],
     "edges": [],
@@ -26,5 +47,7 @@
       "LiquidOil"
     ]
   },
-  "optimize": false
+  "spacing": 4.0,
+  "createdAt": "2026-10-20T04:26:10.354Z",
+  "updatedAt": "2026-10-20T12:48:12.073Z"
 }
